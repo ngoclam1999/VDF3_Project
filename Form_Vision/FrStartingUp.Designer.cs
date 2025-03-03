@@ -109,7 +109,6 @@
             this.pnlStartingUpCont.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlStartingUpCont.MinimumSize = new System.Drawing.Size(1, 1);
             this.pnlStartingUpCont.Name = "pnlStartingUpCont";
-            this.pnlStartingUpCont.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlStartingUpCont.Size = new System.Drawing.Size(577, 339);
             this.pnlStartingUpCont.Style = Sunny.UI.UIStyle.Custom;
             this.pnlStartingUpCont.TabIndex = 16;
@@ -286,14 +285,12 @@
             // 
             this.uiGroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiGroupBox2.FillColor = System.Drawing.Color.White;
             this.uiGroupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiGroupBox2.Location = new System.Drawing.Point(9, 401);
             this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox2.Name = "uiGroupBox2";
             this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox2.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.uiGroupBox2.Size = new System.Drawing.Size(734, 194);
             this.uiGroupBox2.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox2.TabIndex = 14;
@@ -336,7 +333,7 @@
             this.btnInterface.Name = "btnInterface";
             this.btnInterface.Size = new System.Drawing.Size(150, 93);
             this.btnInterface.TabIndex = 11;
-            this.btnInterface.Text = "Setting Light";
+            this.btnInterface.Text = "Setting";
             this.btnInterface.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnInterface.UseVisualStyleBackColor = true;
             // 
@@ -365,6 +362,7 @@
             this.uiLabel1.Location = new System.Drawing.Point(5, 318);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(441, 35);
+            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel1.TabIndex = 2;
             this.uiLabel1.Text = "MV-CS004-10GC";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -413,6 +411,7 @@
             this.uiLabel12.Location = new System.Drawing.Point(12, 44);
             this.uiLabel12.Name = "uiLabel12";
             this.uiLabel12.Size = new System.Drawing.Size(80, 60);
+            this.uiLabel12.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel12.TabIndex = 8;
             this.uiLabel12.Text = "Model :";
             this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -424,6 +423,7 @@
             this.uiLabel13.Location = new System.Drawing.Point(107, 44);
             this.uiLabel13.Name = "uiLabel13";
             this.uiLabel13.Size = new System.Drawing.Size(317, 60);
+            this.uiLabel13.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel13.TabIndex = 9;
             this.uiLabel13.Text = "MV-CS004-10GC";
             this.uiLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -435,8 +435,10 @@
             this.uiLabel14.Location = new System.Drawing.Point(12, 104);
             this.uiLabel14.Name = "uiLabel14";
             this.uiLabel14.Size = new System.Drawing.Size(80, 40);
+            this.uiLabel14.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel14.TabIndex = 10;
             this.uiLabel14.Text = "Detail :";
+            this.uiLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel14.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiLabel15
@@ -445,8 +447,10 @@
             this.uiLabel15.Location = new System.Drawing.Point(107, 104);
             this.uiLabel15.Name = "uiLabel15";
             this.uiLabel15.Size = new System.Drawing.Size(317, 60);
+            this.uiLabel15.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel15.TabIndex = 11;
             this.uiLabel15.Text = "0.4MP Area Scan Camera, GigE, IMX297, Color";
+            this.uiLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel15.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiLabel16
@@ -455,8 +459,10 @@
             this.uiLabel16.Location = new System.Drawing.Point(12, 164);
             this.uiLabel16.Name = "uiLabel16";
             this.uiLabel16.Size = new System.Drawing.Size(80, 40);
+            this.uiLabel16.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel16.TabIndex = 14;
             this.uiLabel16.Text = "Lens :";
+            this.uiLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel16.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiLabel17
@@ -465,8 +471,10 @@
             this.uiLabel17.Location = new System.Drawing.Point(107, 164);
             this.uiLabel17.Name = "uiLabel17";
             this.uiLabel17.Size = new System.Drawing.Size(317, 40);
+            this.uiLabel17.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel17.TabIndex = 15;
             this.uiLabel17.Text = "MVL-HF0628M-6MPE";
+            this.uiLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel17.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiLabel18
@@ -475,8 +483,10 @@
             this.uiLabel18.Location = new System.Drawing.Point(12, 204);
             this.uiLabel18.Name = "uiLabel18";
             this.uiLabel18.Size = new System.Drawing.Size(80, 40);
+            this.uiLabel18.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel18.TabIndex = 12;
             this.uiLabel18.Text = "Status :";
+            this.uiLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel18.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiLabel19
@@ -485,8 +495,10 @@
             this.uiLabel19.Location = new System.Drawing.Point(107, 204);
             this.uiLabel19.Name = "uiLabel19";
             this.uiLabel19.Size = new System.Drawing.Size(317, 40);
+            this.uiLabel19.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel19.TabIndex = 13;
             this.uiLabel19.Text = "Online";
+            this.uiLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel19.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiLabel3
@@ -496,6 +508,7 @@
             this.uiLabel3.Location = new System.Drawing.Point(5, 5);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(441, 34);
+            this.uiLabel3.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel3.TabIndex = 1;
             this.uiLabel3.Text = "Camera Status";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
