@@ -44,6 +44,7 @@ namespace VDF3_Solution3
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            
         }
         private void mdiProp()
         {

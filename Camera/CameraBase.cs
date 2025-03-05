@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvCameraControl;
+using System;
 using System.Drawing; // Để sử dụng Bitmap
 
 public enum CameraStatus

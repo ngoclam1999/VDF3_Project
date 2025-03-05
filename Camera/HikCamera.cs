@@ -1,9 +1,10 @@
-﻿using MvCameraControl;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Net;
 using System.Threading;
+using MvCameraControl;
 
 public class Hikcamera : CameraBase
 {
@@ -50,7 +51,7 @@ public class Hikcamera : CameraBase
             }
 
             // Cấu hình camera
-            
+
             device.Parameters.SetEnumValueByString("AcquisitionMode", "Continuous");
             device.Parameters.SetEnumValueByString("TriggerSource", "Software");
             device.Parameters.SetEnumValueByString("TriggerMode", "Off");
@@ -63,6 +64,21 @@ public class Hikcamera : CameraBase
             ErrorCode = -1;
             throw new Exception("Error starting camera: " + ex.Message);
         }
+    }
+    public void StartLive()
+    {
+        if (device == null) throw new Exception("Device not connected.");
+        isGrabbing = true;
+        receiveThread = new Thread(ReceiveThreadProcess);
+        receiveThread.Start();
+        device.StreamGrabber.StartGrabbing();
+    }
+
+    public void StopLive()
+    {
+        isGrabbing = false;
+        receiveThread?.Join();
+        device.StreamGrabber.StopGrabbing();
     }
 
     public override void Stop()
@@ -174,19 +190,19 @@ public class Hikcamera : CameraBase
             throw new Exception("Enumerate devices fail!");
         }
 
-    List<string> deviceNames = new List<string>();
-    
-    // Tạo danh sách tên thiết bị
-    foreach (var deviceInfo in deviceInfoList)
-        {
-        string deviceName = string.IsNullOrEmpty(deviceInfo.UserDefinedName)
-            ? $"{deviceInfo.TLayerType}: {deviceInfo.ManufacturerName} {deviceInfo.ModelName} ({deviceInfo.SerialNumber})"
-            : $"{deviceInfo.TLayerType}: {deviceInfo.UserDefinedName} ({deviceInfo.SerialNumber})";
+        List<string> deviceNames = new List<string>();
 
-        deviceNames.Add(deviceName);
+        // Tạo danh sách tên thiết bị
+        foreach (var deviceInfo in deviceInfoList)
+        {
+            string deviceName = string.IsNullOrEmpty(deviceInfo.UserDefinedName)
+                ? $"{deviceInfo.TLayerType}: {deviceInfo.ManufacturerName} {deviceInfo.ModelName} ({deviceInfo.SerialNumber})"
+                : $"{deviceInfo.TLayerType}: {deviceInfo.UserDefinedName} ({deviceInfo.SerialNumber})";
+
+            deviceNames.Add(deviceName);
         }
 
-    return deviceNames;
+        return deviceNames;
     }
     public void ForceIp(string ip, string subnetMask, string gateway, int deviceIndex)
     {
@@ -238,6 +254,7 @@ public class Hikcamera : CameraBase
             device = null;
         }
     }
+
     public (string IP, string SubnetMask, string Gateway, string Range) GetDeviceNetworkInfo(int deviceIndex)
     {
         if (deviceInfoList == null || deviceInfoList.Count == 0 || deviceIndex < 0 || deviceIndex >= deviceInfoList.Count)

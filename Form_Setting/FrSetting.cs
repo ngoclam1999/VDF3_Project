@@ -15,9 +15,12 @@ namespace VDF3_Solution3
 
     public partial class FrSetting : Form
     {
-        private Hikcamera hikCamera;
+  
+        public static Hikcamera hikCamera;
         private List<string> deviceNames;
         private CameraStatus Status;
+
+        
         FrSettingRobot _ConfigRobot;
         public FrSetting()
         {
@@ -113,6 +116,11 @@ namespace VDF3_Solution3
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            RefreshDeviceList();
+        }
+
+        private void btnDisconnect_Click(object sender, EventArgs e)
+        {
             try
             {
                 hikCamera.Stop();
@@ -124,14 +132,13 @@ namespace VDF3_Solution3
             }
         }
 
-        private void btnDisconnect_Click(object sender, EventArgs e)
-        {
-            RefreshDeviceList();
-        }
-
         private void btnCamRead_Click(object sender, EventArgs e)
         {
-
+            var netinfor = hikCamera.GetDeviceNetworkInfo(cbDeviceList.SelectedIndex);
+            txtIPaddress.Text = netinfor.IP;
+            txtSubnet.Text = netinfor.SubnetMask;
+            txtGateway.Text = netinfor.Gateway;
+            txtDeviceID.Text = cbDeviceList.SelectedIndex.ToString();
         }
 
         private void btnCamApply_Click(object sender, EventArgs e)
@@ -143,7 +150,7 @@ namespace VDF3_Solution3
 
             try
             {
-                hikCamera.ForceIp(ip, subnet, gateway, deviceIndex);
+                hikCamera.ForceIp(ip, subnet, gateway,deviceIndex);
                 MessageBox.Show("IP forced successfully!");
             }
             catch (Exception ex)

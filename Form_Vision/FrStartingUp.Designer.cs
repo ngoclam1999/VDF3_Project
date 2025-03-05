@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrStartingUp));
             this.uiPanel3 = new Sunny.UI.UIPanel();
             this.pnlStartingUpCont = new Sunny.UI.UIPanel();
@@ -63,6 +64,7 @@
             this.uiLabel18 = new Sunny.UI.UILabel();
             this.uiLabel19 = new Sunny.UI.UILabel();
             this.uiLabel3 = new Sunny.UI.UILabel();
+            this.timerCamera = new System.Windows.Forms.Timer(this.components);
             this.uiPanel3.SuspendLayout();
             this.pnlStartingUpCont.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Capture)).BeginInit();
@@ -104,16 +106,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlStartingUpCont.Controls.Add(this.Pic_Capture);
-            this.pnlStartingUpCont.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.pnlStartingUpCont.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.pnlStartingUpCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.pnlStartingUpCont.Location = new System.Drawing.Point(166, 54);
             this.pnlStartingUpCont.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlStartingUpCont.MinimumSize = new System.Drawing.Size(1, 1);
             this.pnlStartingUpCont.Name = "pnlStartingUpCont";
-            this.pnlStartingUpCont.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.pnlStartingUpCont.Size = new System.Drawing.Size(577, 339);
-            this.pnlStartingUpCont.Style = Sunny.UI.UIStyle.Gray;
+            this.pnlStartingUpCont.Style = Sunny.UI.UIStyle.Custom;
             this.pnlStartingUpCont.TabIndex = 16;
             this.pnlStartingUpCont.Text = "uiPanel5";
             this.pnlStartingUpCont.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -175,6 +174,7 @@
             this.tsbtnOpenFile.Name = "tsbtnOpenFile";
             this.tsbtnOpenFile.Size = new System.Drawing.Size(40, 29);
             this.tsbtnOpenFile.Text = "toolStripButton2";
+            this.tsbtnOpenFile.Click += new System.EventHandler(this.tsbtnOpenFile_Click);
             // 
             // tsbtnSaveFile
             // 
@@ -195,6 +195,7 @@
             this.tsbtnTrigger.Name = "tsbtnTrigger";
             this.tsbtnTrigger.Size = new System.Drawing.Size(40, 29);
             this.tsbtnTrigger.Text = "toolStripButton1";
+            this.tsbtnTrigger.Click += new System.EventHandler(this.tsbtnTrigger_Click);
             // 
             // tsbtnContinuousTrigger
             // 
@@ -205,6 +206,7 @@
             this.tsbtnContinuousTrigger.Name = "tsbtnContinuousTrigger";
             this.tsbtnContinuousTrigger.Size = new System.Drawing.Size(40, 29);
             this.tsbtnContinuousTrigger.Text = "toolStripButton2";
+            this.tsbtnContinuousTrigger.Click += new System.EventHandler(this.tsbtnContinuousTrigger_Click);
             // 
             // tsbtnLive
             // 
@@ -215,6 +217,7 @@
             this.tsbtnLive.Name = "tsbtnLive";
             this.tsbtnLive.Size = new System.Drawing.Size(40, 29);
             this.tsbtnLive.Text = "toolStripButton3";
+            this.tsbtnLive.Click += new System.EventHandler(this.tsbtnLive_Click);
             // 
             // tsbtnRotation_left
             // 
@@ -288,15 +291,12 @@
             // 
             this.uiGroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiGroupBox2.FillColor = System.Drawing.Color.White;
-            this.uiGroupBox2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.uiGroupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiGroupBox2.Location = new System.Drawing.Point(9, 401);
+            this.uiGroupBox2.Location = new System.Drawing.Point(9, 408);
             this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox2.Name = "uiGroupBox2";
             this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox2.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.uiGroupBox2.Size = new System.Drawing.Size(734, 194);
             this.uiGroupBox2.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox2.TabIndex = 14;
@@ -520,6 +520,11 @@
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // timerCamera
+            // 
+            this.timerCamera.Interval = 250;
+            this.timerCamera.Tick += new System.EventHandler(this.timerCamera_Tick);
+            // 
             // FrStartingUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -581,5 +586,6 @@
         private Sunny.UI.UILabel uiLabel18;
         private Sunny.UI.UILabel uiLabel19;
         private Sunny.UI.UILabel uiLabel3;
+        private System.Windows.Forms.Timer timerCamera;
     }
 }
