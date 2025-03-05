@@ -58,12 +58,16 @@
             this.txtGateway = new Sunny.UI.UITextBox();
             this.txtIPaddress = new Sunny.UI.UITextBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
-            this.txtDeviceID = new Sunny.UI.UITextBox();
+            this.txtDeviceBrand = new Sunny.UI.UITextBox();
             this.grb_Cam = new Sunny.UI.UIGroupBox();
             this.btnDisconnect = new Sunny.UI.UISymbolButton();
             this.btnConnect = new Sunny.UI.UISymbolButton();
             this.cbDeviceList = new Sunny.UI.UIComboBox();
             this.btnRefresh = new FontAwesome.Sharp.IconButton();
+            this.txtSerial = new Sunny.UI.UITextBox();
+            this.uiLabel2 = new Sunny.UI.UILabel();
+            this.txtVersion = new Sunny.UI.UITextBox();
+            this.uiLabel11 = new Sunny.UI.UILabel();
             this.panel1.SuspendLayout();
             this.uiGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_campreview)).BeginInit();
@@ -171,11 +175,9 @@
             this.uiTrackBar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.uiTrackBar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiTrackBar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTrackBar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
             this.uiTrackBar2.Location = new System.Drawing.Point(520, 564);
             this.uiTrackBar2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTrackBar2.Name = "uiTrackBar2";
-            this.uiTrackBar2.RectColor = System.Drawing.Color.Green;
             this.uiTrackBar2.Size = new System.Drawing.Size(143, 20);
             this.uiTrackBar2.Style = Sunny.UI.UIStyle.Custom;
             this.uiTrackBar2.TabIndex = 24;
@@ -187,12 +189,10 @@
             this.uiTrackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.uiTrackBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiTrackBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTrackBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
             this.uiTrackBar1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.uiTrackBar1.Location = new System.Drawing.Point(520, 526);
             this.uiTrackBar1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTrackBar1.Name = "uiTrackBar1";
-            this.uiTrackBar1.RectColor = System.Drawing.Color.Green;
             this.uiTrackBar1.Size = new System.Drawing.Size(143, 20);
             this.uiTrackBar1.Style = Sunny.UI.UIStyle.Custom;
             this.uiTrackBar1.TabIndex = 23;
@@ -203,21 +203,12 @@
             // 
             this.btnTrigger.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTrigger.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTrigger.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnTrigger.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnTrigger.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.btnTrigger.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.btnTrigger.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.btnTrigger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnTrigger.Location = new System.Drawing.Point(690, 519);
             this.btnTrigger.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnTrigger.Name = "btnTrigger";
-            this.btnTrigger.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnTrigger.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.btnTrigger.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.btnTrigger.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.btnTrigger.Size = new System.Drawing.Size(151, 35);
-            this.btnTrigger.Style = Sunny.UI.UIStyle.Green;
+            this.btnTrigger.Style = Sunny.UI.UIStyle.Custom;
             this.btnTrigger.Symbol = 61488;
             this.btnTrigger.TabIndex = 22;
             this.btnTrigger.Text = "Capture";
@@ -229,21 +220,12 @@
             // 
             this.btnCamSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCamSet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCamSet.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnCamSet.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnCamSet.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.btnCamSet.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.btnCamSet.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.btnCamSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnCamSet.Location = new System.Drawing.Point(690, 561);
             this.btnCamSet.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnCamSet.Name = "btnCamSet";
-            this.btnCamSet.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnCamSet.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.btnCamSet.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.btnCamSet.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.btnCamSet.Size = new System.Drawing.Size(151, 35);
-            this.btnCamSet.Style = Sunny.UI.UIStyle.Green;
+            this.btnCamSet.Style = Sunny.UI.UIStyle.Custom;
             this.btnCamSet.TabIndex = 18;
             this.btnCamSet.Text = "SET";
             this.btnCamSet.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -280,15 +262,8 @@
             // txtExposure
             // 
             this.txtExposure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtExposure.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtExposure.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtExposure.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.txtExposure.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtExposure.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtExposure.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.txtExposure.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtExposure.DoubleValue = 100D;
-            this.txtExposure.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(251)))), ((int)(((byte)(241)))));
             this.txtExposure.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtExposure.IntValue = 100;
             this.txtExposure.Location = new System.Drawing.Point(421, 523);
@@ -296,8 +271,6 @@
             this.txtExposure.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtExposure.Name = "txtExposure";
             this.txtExposure.Padding = new System.Windows.Forms.Padding(5);
-            this.txtExposure.RectColor = System.Drawing.Color.Green;
-            this.txtExposure.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
             this.txtExposure.ShowText = false;
             this.txtExposure.Size = new System.Drawing.Size(92, 28);
             this.txtExposure.Style = Sunny.UI.UIStyle.Custom;
@@ -310,23 +283,14 @@
             // txtGain
             // 
             this.txtGain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGain.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtGain.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtGain.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.txtGain.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtGain.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtGain.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.txtGain.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGain.DoubleValue = 1D;
-            this.txtGain.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(251)))), ((int)(((byte)(241)))));
             this.txtGain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtGain.Location = new System.Drawing.Point(421, 561);
             this.txtGain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGain.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtGain.Name = "txtGain";
             this.txtGain.Padding = new System.Windows.Forms.Padding(5);
-            this.txtGain.RectColor = System.Drawing.Color.Green;
-            this.txtGain.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
             this.txtGain.ShowText = false;
             this.txtGain.Size = new System.Drawing.Size(92, 28);
             this.txtGain.Style = Sunny.UI.UIStyle.Custom;
@@ -366,11 +330,15 @@
             this.grb_camsetting.Controls.Add(this.txtWidth);
             this.grb_camsetting.Controls.Add(this.txtSubnet);
             this.grb_camsetting.Controls.Add(this.uiLabel4);
+            this.grb_camsetting.Controls.Add(this.uiLabel11);
+            this.grb_camsetting.Controls.Add(this.uiLabel2);
             this.grb_camsetting.Controls.Add(this.uiLabel3);
             this.grb_camsetting.Controls.Add(this.txtGateway);
+            this.grb_camsetting.Controls.Add(this.txtVersion);
+            this.grb_camsetting.Controls.Add(this.txtSerial);
             this.grb_camsetting.Controls.Add(this.txtIPaddress);
             this.grb_camsetting.Controls.Add(this.uiLabel1);
-            this.grb_camsetting.Controls.Add(this.txtDeviceID);
+            this.grb_camsetting.Controls.Add(this.txtDeviceBrand);
             this.grb_camsetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.grb_camsetting.Location = new System.Drawing.Point(6, 206);
             this.grb_camsetting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -389,7 +357,7 @@
             // 
             this.uiLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel6.Location = new System.Drawing.Point(8, 89);
+            this.uiLabel6.Location = new System.Drawing.Point(8, 87);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(111, 23);
             this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
@@ -401,21 +369,12 @@
             // btnCamApply
             // 
             this.btnCamApply.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCamApply.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnCamApply.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnCamApply.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.btnCamApply.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.btnCamApply.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.btnCamApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnCamApply.Location = new System.Drawing.Point(193, 365);
+            this.btnCamApply.Location = new System.Drawing.Point(190, 403);
             this.btnCamApply.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnCamApply.Name = "btnCamApply";
-            this.btnCamApply.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnCamApply.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.btnCamApply.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.btnCamApply.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.btnCamApply.Size = new System.Drawing.Size(151, 35);
-            this.btnCamApply.Style = Sunny.UI.UIStyle.Green;
+            this.btnCamApply.Style = Sunny.UI.UIStyle.Custom;
             this.btnCamApply.Symbol = 558052;
             this.btnCamApply.TabIndex = 17;
             this.btnCamApply.Text = "Apply";
@@ -425,22 +384,13 @@
             // 
             // txtModel
             // 
-            this.txtModel.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtModel.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtModel.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.txtModel.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtModel.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtModel.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.txtModel.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtModel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(251)))), ((int)(((byte)(241)))));
             this.txtModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtModel.Location = new System.Drawing.Point(126, 86);
+            this.txtModel.Location = new System.Drawing.Point(126, 84);
             this.txtModel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtModel.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtModel.Name = "txtModel";
             this.txtModel.Padding = new System.Windows.Forms.Padding(5);
-            this.txtModel.RectColor = System.Drawing.Color.Green;
-            this.txtModel.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
             this.txtModel.ShowText = false;
             this.txtModel.Size = new System.Drawing.Size(218, 28);
             this.txtModel.Style = Sunny.UI.UIStyle.Custom;
@@ -452,21 +402,12 @@
             // btnCamRead
             // 
             this.btnCamRead.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCamRead.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnCamRead.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnCamRead.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.btnCamRead.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.btnCamRead.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.btnCamRead.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnCamRead.Location = new System.Drawing.Point(14, 365);
+            this.btnCamRead.Location = new System.Drawing.Point(11, 403);
             this.btnCamRead.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnCamRead.Name = "btnCamRead";
-            this.btnCamRead.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnCamRead.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.btnCamRead.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.btnCamRead.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.btnCamRead.Size = new System.Drawing.Size(148, 35);
-            this.btnCamRead.Style = Sunny.UI.UIStyle.Green;
+            this.btnCamRead.Style = Sunny.UI.UIStyle.Custom;
             this.btnCamRead.Symbol = 57489;
             this.btnCamRead.TabIndex = 9;
             this.btnCamRead.Text = "Read ";
@@ -478,7 +419,7 @@
             // 
             this.uiLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel7.Location = new System.Drawing.Point(8, 294);
+            this.uiLabel7.Location = new System.Drawing.Point(8, 360);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(111, 23);
             this.uiLabel7.Style = Sunny.UI.UIStyle.Custom;
@@ -489,22 +430,13 @@
             // 
             // txtHeight
             // 
-            this.txtHeight.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtHeight.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtHeight.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.txtHeight.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtHeight.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtHeight.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.txtHeight.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHeight.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(251)))), ((int)(((byte)(241)))));
             this.txtHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtHeight.Location = new System.Drawing.Point(126, 291);
+            this.txtHeight.Location = new System.Drawing.Point(126, 357);
             this.txtHeight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtHeight.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Padding = new System.Windows.Forms.Padding(5);
-            this.txtHeight.RectColor = System.Drawing.Color.Green;
-            this.txtHeight.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
             this.txtHeight.ShowText = false;
             this.txtHeight.Size = new System.Drawing.Size(218, 28);
             this.txtHeight.Style = Sunny.UI.UIStyle.Custom;
@@ -517,7 +449,7 @@
             // 
             this.uiLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel8.Location = new System.Drawing.Point(8, 253);
+            this.uiLabel8.Location = new System.Drawing.Point(8, 321);
             this.uiLabel8.Name = "uiLabel8";
             this.uiLabel8.Size = new System.Drawing.Size(111, 23);
             this.uiLabel8.Style = Sunny.UI.UIStyle.Custom;
@@ -530,7 +462,7 @@
             // 
             this.uiLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel5.Location = new System.Drawing.Point(8, 212);
+            this.uiLabel5.Location = new System.Drawing.Point(8, 282);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(111, 23);
             this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
@@ -541,22 +473,13 @@
             // 
             // txtWidth
             // 
-            this.txtWidth.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtWidth.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtWidth.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.txtWidth.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtWidth.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtWidth.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.txtWidth.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtWidth.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(251)))), ((int)(((byte)(241)))));
             this.txtWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtWidth.Location = new System.Drawing.Point(126, 250);
+            this.txtWidth.Location = new System.Drawing.Point(126, 318);
             this.txtWidth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtWidth.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtWidth.Name = "txtWidth";
             this.txtWidth.Padding = new System.Windows.Forms.Padding(5);
-            this.txtWidth.RectColor = System.Drawing.Color.Green;
-            this.txtWidth.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
             this.txtWidth.ShowText = false;
             this.txtWidth.Size = new System.Drawing.Size(218, 28);
             this.txtWidth.Style = Sunny.UI.UIStyle.Custom;
@@ -567,22 +490,13 @@
             // 
             // txtSubnet
             // 
-            this.txtSubnet.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtSubnet.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtSubnet.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.txtSubnet.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtSubnet.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtSubnet.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.txtSubnet.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSubnet.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(251)))), ((int)(((byte)(241)))));
             this.txtSubnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtSubnet.Location = new System.Drawing.Point(126, 209);
+            this.txtSubnet.Location = new System.Drawing.Point(126, 279);
             this.txtSubnet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSubnet.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtSubnet.Name = "txtSubnet";
             this.txtSubnet.Padding = new System.Windows.Forms.Padding(5);
-            this.txtSubnet.RectColor = System.Drawing.Color.Green;
-            this.txtSubnet.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
             this.txtSubnet.ShowText = false;
             this.txtSubnet.Size = new System.Drawing.Size(218, 28);
             this.txtSubnet.Style = Sunny.UI.UIStyle.Custom;
@@ -595,7 +509,7 @@
             // 
             this.uiLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel4.Location = new System.Drawing.Point(8, 171);
+            this.uiLabel4.Location = new System.Drawing.Point(8, 243);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(111, 23);
             this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
@@ -608,7 +522,7 @@
             // 
             this.uiLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel3.Location = new System.Drawing.Point(8, 130);
+            this.uiLabel3.Location = new System.Drawing.Point(8, 204);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(111, 23);
             this.uiLabel3.Style = Sunny.UI.UIStyle.Custom;
@@ -619,22 +533,13 @@
             // 
             // txtGateway
             // 
-            this.txtGateway.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtGateway.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtGateway.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.txtGateway.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtGateway.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtGateway.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.txtGateway.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGateway.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(251)))), ((int)(((byte)(241)))));
             this.txtGateway.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtGateway.Location = new System.Drawing.Point(126, 168);
+            this.txtGateway.Location = new System.Drawing.Point(126, 240);
             this.txtGateway.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGateway.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtGateway.Name = "txtGateway";
             this.txtGateway.Padding = new System.Windows.Forms.Padding(5);
-            this.txtGateway.RectColor = System.Drawing.Color.Green;
-            this.txtGateway.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
             this.txtGateway.ShowText = false;
             this.txtGateway.Size = new System.Drawing.Size(218, 28);
             this.txtGateway.Style = Sunny.UI.UIStyle.Custom;
@@ -645,22 +550,13 @@
             // 
             // txtIPaddress
             // 
-            this.txtIPaddress.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtIPaddress.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtIPaddress.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.txtIPaddress.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtIPaddress.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtIPaddress.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.txtIPaddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIPaddress.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(251)))), ((int)(((byte)(241)))));
             this.txtIPaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtIPaddress.Location = new System.Drawing.Point(126, 127);
+            this.txtIPaddress.Location = new System.Drawing.Point(126, 201);
             this.txtIPaddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIPaddress.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtIPaddress.Name = "txtIPaddress";
             this.txtIPaddress.Padding = new System.Windows.Forms.Padding(5);
-            this.txtIPaddress.RectColor = System.Drawing.Color.Green;
-            this.txtIPaddress.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
             this.txtIPaddress.ShowText = false;
             this.txtIPaddress.Size = new System.Drawing.Size(218, 28);
             this.txtIPaddress.Style = Sunny.UI.UIStyle.Custom;
@@ -678,35 +574,26 @@
             this.uiLabel1.Size = new System.Drawing.Size(111, 23);
             this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel1.TabIndex = 2;
-            this.uiLabel1.Text = "Device ID";
+            this.uiLabel1.Text = "Brand";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // txtDeviceID
+            // txtDeviceBrand
             // 
-            this.txtDeviceID.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtDeviceID.ButtonFillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtDeviceID.ButtonFillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.txtDeviceID.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtDeviceID.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.txtDeviceID.ButtonRectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.txtDeviceID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDeviceID.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(251)))), ((int)(((byte)(241)))));
-            this.txtDeviceID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtDeviceID.Location = new System.Drawing.Point(126, 45);
-            this.txtDeviceID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDeviceID.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtDeviceID.Name = "txtDeviceID";
-            this.txtDeviceID.Padding = new System.Windows.Forms.Padding(5);
-            this.txtDeviceID.RectColor = System.Drawing.Color.Green;
-            this.txtDeviceID.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.txtDeviceID.ShowText = false;
-            this.txtDeviceID.Size = new System.Drawing.Size(218, 28);
-            this.txtDeviceID.Style = Sunny.UI.UIStyle.Custom;
-            this.txtDeviceID.TabIndex = 1;
-            this.txtDeviceID.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtDeviceID.Watermark = "";
-            this.txtDeviceID.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtDeviceBrand.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDeviceBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtDeviceBrand.Location = new System.Drawing.Point(126, 45);
+            this.txtDeviceBrand.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDeviceBrand.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtDeviceBrand.Name = "txtDeviceBrand";
+            this.txtDeviceBrand.Padding = new System.Windows.Forms.Padding(5);
+            this.txtDeviceBrand.ShowText = false;
+            this.txtDeviceBrand.Size = new System.Drawing.Size(218, 28);
+            this.txtDeviceBrand.Style = Sunny.UI.UIStyle.Custom;
+            this.txtDeviceBrand.TabIndex = 1;
+            this.txtDeviceBrand.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtDeviceBrand.Watermark = "";
+            this.txtDeviceBrand.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // grb_Cam
             // 
@@ -732,21 +619,12 @@
             // btnDisconnect
             // 
             this.btnDisconnect.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDisconnect.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnDisconnect.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnDisconnect.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.btnDisconnect.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDisconnect.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDisconnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnDisconnect.Location = new System.Drawing.Point(158, 88);
             this.btnDisconnect.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnDisconnect.Name = "btnDisconnect";
-            this.btnDisconnect.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnDisconnect.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.btnDisconnect.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDisconnect.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDisconnect.Size = new System.Drawing.Size(121, 41);
-            this.btnDisconnect.Style = Sunny.UI.UIStyle.Red;
+            this.btnDisconnect.Style = Sunny.UI.UIStyle.Custom;
             this.btnDisconnect.Symbol = 61735;
             this.btnDisconnect.TabIndex = 9;
             this.btnDisconnect.Text = "Disconnect";
@@ -757,19 +635,10 @@
             // btnConnect
             // 
             this.btnConnect.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConnect.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnConnect.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(190)))), ((int)(((byte)(40)))));
-            this.btnConnect.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.btnConnect.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.btnConnect.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnConnect.Location = new System.Drawing.Point(14, 88);
             this.btnConnect.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnConnect.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(203)))), ((int)(((byte)(83)))));
-            this.btnConnect.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
-            this.btnConnect.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(152)))), ((int)(((byte)(32)))));
             this.btnConnect.Size = new System.Drawing.Size(121, 41);
             this.btnConnect.Style = Sunny.UI.UIStyle.Custom;
             this.btnConnect.Symbol = 61926;
@@ -812,6 +681,66 @@
             this.btnRefresh.TabIndex = 5;
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // txtSerial
+            // 
+            this.txtSerial.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSerial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtSerial.Location = new System.Drawing.Point(126, 123);
+            this.txtSerial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSerial.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtSerial.Name = "txtSerial";
+            this.txtSerial.Padding = new System.Windows.Forms.Padding(5);
+            this.txtSerial.ShowText = false;
+            this.txtSerial.Size = new System.Drawing.Size(218, 28);
+            this.txtSerial.Style = Sunny.UI.UIStyle.Custom;
+            this.txtSerial.TabIndex = 5;
+            this.txtSerial.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtSerial.Watermark = "";
+            this.txtSerial.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiLabel2
+            // 
+            this.uiLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.uiLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiLabel2.Location = new System.Drawing.Point(8, 126);
+            this.uiLabel2.Name = "uiLabel2";
+            this.uiLabel2.Size = new System.Drawing.Size(111, 23);
+            this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel2.TabIndex = 6;
+            this.uiLabel2.Text = "Serial";
+            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtVersion
+            // 
+            this.txtVersion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtVersion.Location = new System.Drawing.Point(126, 162);
+            this.txtVersion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtVersion.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtVersion.Name = "txtVersion";
+            this.txtVersion.Padding = new System.Windows.Forms.Padding(5);
+            this.txtVersion.ShowText = false;
+            this.txtVersion.Size = new System.Drawing.Size(218, 28);
+            this.txtVersion.Style = Sunny.UI.UIStyle.Custom;
+            this.txtVersion.TabIndex = 5;
+            this.txtVersion.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtVersion.Watermark = "";
+            this.txtVersion.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiLabel11
+            // 
+            this.uiLabel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.uiLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiLabel11.Location = new System.Drawing.Point(8, 165);
+            this.uiLabel11.Name = "uiLabel11";
+            this.uiLabel11.Size = new System.Drawing.Size(111, 23);
+            this.uiLabel11.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel11.TabIndex = 6;
+            this.uiLabel11.Text = "Version";
+            this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel11.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // FrSetting
             // 
@@ -867,11 +796,15 @@
         private Sunny.UI.UITextBox txtGateway;
         private Sunny.UI.UITextBox txtIPaddress;
         private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UITextBox txtDeviceID;
+        private Sunny.UI.UITextBox txtDeviceBrand;
         private Sunny.UI.UIGroupBox grb_Cam;
         private Sunny.UI.UISymbolButton btnDisconnect;
         private Sunny.UI.UISymbolButton btnConnect;
         private Sunny.UI.UIComboBox cbDeviceList;
         private FontAwesome.Sharp.IconButton btnRefresh;
+        private Sunny.UI.UILabel uiLabel11;
+        private Sunny.UI.UILabel uiLabel2;
+        private Sunny.UI.UITextBox txtVersion;
+        private Sunny.UI.UITextBox txtSerial;
     }
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDF3_Solution3", "VDF3_Solution3.csproj", "{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigE_ForceIP", "GigE_ForceIP\GigE_ForceIP.csproj", "{12B48D20-1D93-4858-89E0-6678A08BABC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12B48D20-1D93-4858-89E0-6678A08BABC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B48D20-1D93-4858-89E0-6678A08BABC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B48D20-1D93-4858-89E0-6678A08BABC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B48D20-1D93-4858-89E0-6678A08BABC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

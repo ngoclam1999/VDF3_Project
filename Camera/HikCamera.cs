@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Net;
 using System.Threading;
+using System.Windows;
 using MvCameraControl;
 
 public class Hikcamera : CameraBase
@@ -184,6 +185,7 @@ public class Hikcamera : CameraBase
 
     public List<string> RefreshDeviceList()
     {
+        string deviceName;
         int nRet = DeviceEnumerator.EnumDevices(enumTLayerType, out deviceInfoList);
         if (nRet != MvError.MV_OK)
         {
@@ -195,15 +197,51 @@ public class Hikcamera : CameraBase
         // Tạo danh sách tên thiết bị
         foreach (var deviceInfo in deviceInfoList)
         {
-            string deviceName = string.IsNullOrEmpty(deviceInfo.UserDefinedName)
-                ? $"{deviceInfo.TLayerType}: {deviceInfo.ManufacturerName} {deviceInfo.ModelName} ({deviceInfo.SerialNumber})"
-                : $"{deviceInfo.TLayerType}: {deviceInfo.UserDefinedName} ({deviceInfo.SerialNumber})";
+            if (string.IsNullOrEmpty(deviceInfo.UserDefinedName))
+            {
+                deviceName = deviceInfo.ModelName+ " (" + deviceInfo.SerialNumber + ")";
+            }
+            else
+            {
+                deviceName = deviceInfo.TLayerType + ": "
+                           + deviceInfo.UserDefinedName
+                           + " (" + deviceInfo.SerialNumber + ")";
+            }
 
             deviceNames.Add(deviceName);
         }
 
         return deviceNames;
     }
+
+    public (string Manufacturer, string ModelName, string SerialNumber, string version, string UserDefinedName) GetDeviceInfo(string selectedDeviceName)
+    {
+        int nRet = DeviceEnumerator.EnumDevices(enumTLayerType, out deviceInfoList);
+        if (nRet != MvError.MV_OK)
+        {
+            throw new Exception("Enumerate devices fail!");
+        }
+
+        foreach (var deviceInfo in deviceInfoList)
+        {
+            string deviceName = string.IsNullOrEmpty(deviceInfo.UserDefinedName)
+                ? $"{deviceInfo.ModelName} ({deviceInfo.SerialNumber})"
+                : $"{deviceInfo.TLayerType}: {deviceInfo.UserDefinedName} ({deviceInfo.SerialNumber})";
+
+            if (deviceName == selectedDeviceName)
+            {
+                return (deviceInfo.ManufacturerName,
+                        deviceInfo.ModelName,
+                        deviceInfo.SerialNumber,
+                        deviceInfo.DeviceVersion,
+                        deviceInfo.UserDefinedName);
+            }
+        }
+
+        // Trả về giá trị mặc định nếu không tìm thấy thiết bị
+        return ("N/A", "N/A", "N/A", "N/A", "N/A");
+    }
+    /*
     public void ForceIp(string ip, string subnetMask, string gateway, int deviceIndex)
     {
         if (deviceInfoList.Count == 0 || deviceIndex < 0 || deviceIndex >= deviceInfoList.Count)
@@ -254,6 +292,115 @@ public class Hikcamera : CameraBase
             device = null;
         }
     }
+    */
+    public void ForceIp(string ip, string subnetMask, string gateway, int deviceIndex)
+    {
+        if (deviceInfoList.Count == 0)
+        {
+            MessageBox.Show("No Device");
+            return;
+        }
+
+        // ch:IP转换 | en:IP conversion
+        IPAddress clsIpAddr;
+        if (false == IPAddress.TryParse(ip, out clsIpAddr))
+        {
+            MessageBox.Show("Please enter correct IP");
+            return;
+        }
+        long nIp = IPAddress.NetworkToHostOrder(clsIpAddr.Address);
+
+        // ch:掩码转换 | en:Mask conversion
+        IPAddress clsSubMask;
+        if (false == IPAddress.TryParse(subnetMask, out clsSubMask))
+        {
+            MessageBox.Show("Please enter correct IP");
+            return;
+        }
+        long nSubMask = IPAddress.NetworkToHostOrder(clsSubMask.Address);
+
+        // ch:网关转换 | en:Gateway conversion
+        IPAddress clsDefaultWay;
+        if (false == IPAddress.TryParse(gateway, out clsDefaultWay))
+        {
+            MessageBox.Show("Please enter correct IP");
+            return;
+        }
+        long nDefaultWay = IPAddress.NetworkToHostOrder(clsDefaultWay.Address);
+
+        if (deviceInfoList == null || deviceInfoList.Count == 0 || deviceInfoList[deviceIndex] == null)
+        {
+            return;
+        }
+
+        int ret = MvError.MV_OK;
+        // ch:创建设备 | en:Create device
+
+        device = DeviceFactory.CreateDevice(deviceInfoList[deviceIndex]);
+        IGigEDevice gigeDevice = device as IGigEDevice;
+        // ch:判断设备IP是否可达 | en: If device ip is accessible
+        bool accessible = DeviceEnumerator.IsDeviceAccessible(deviceInfoList[deviceIndex], DeviceAccessMode.AccessExclusive);
+        if (accessible)
+        {
+
+
+            ret = gigeDevice.SetIpConfig(IpConfigType.Static);
+            if (MvError.MV_OK != ret)
+            {
+                MessageBox.Show("Set Ip config fail");
+                gigeDevice.Dispose();
+                device = null;
+                return;
+            }
+
+            ret = gigeDevice.ForceIp((uint)(nIp >> 32), (uint)(nSubMask >> 32), (uint)(nDefaultWay >> 32));
+            if (MvError.MV_OK != ret)
+            {
+                MessageBox.Show("ForceIp fail");
+                gigeDevice.Dispose();
+                device = null;
+                return;
+            }
+        }
+        else
+        {
+            ret = gigeDevice.ForceIp((uint)(nIp >> 32), (uint)(nSubMask >> 32), (uint)(nDefaultWay >> 32));
+            if (MvError.MV_OK != ret)
+            {
+                MessageBox.Show("ForceIp fail");
+                gigeDevice.Dispose();
+                device = null;
+                return;
+            }
+            gigeDevice.Dispose();
+
+            IDeviceInfo deviceInfo = deviceInfoList[deviceIndex];
+            IGigEDeviceInfo gigeDevInfo = deviceInfo as IGigEDeviceInfo;
+
+            uint nIp1 = ((gigeDevInfo.NetExport & 0xff000000) >> 24);
+            uint nIp2 = ((gigeDevInfo.NetExport & 0x00ff0000) >> 16);
+            uint nIp3 = ((gigeDevInfo.NetExport & 0x0000ff00) >> 8);
+            uint nIp4 = (gigeDevInfo.NetExport & 0x000000ff);
+            string netExportIp = nIp1.ToString() + "." + nIp2.ToString() + "." + nIp3.ToString() + "." + nIp4.ToString();
+            //ch:需要重新创建句柄，设置为静态IP方式进行保存 | en:  Need to recreate the handle and set it to static IP mode for saving
+            //ch: 创建设备 | en: Create device
+            device = DeviceFactory.CreateDeviceByIp(ip, netExportIp);
+            if (null == device)
+            {
+                MessageBox.Show("Create handle fail");
+                return;
+            }
+            gigeDevice = device as IGigEDevice;
+            ret = gigeDevice.SetIpConfig(IpConfigType.Static);
+            if (MvError.MV_OK != ret)
+            {
+                MessageBox.Show("Set Ip config fail");
+                gigeDevice.Dispose();
+                device = null;
+                return;
+            }
+        }
+    }    
 
     public (string IP, string SubnetMask, string Gateway, string Range) GetDeviceNetworkInfo(int deviceIndex)
     {

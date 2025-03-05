@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.Media3D;
+using System.Diagnostics;
 
 namespace VDF3_Solution3
 {
@@ -15,6 +16,7 @@ namespace VDF3_Solution3
     {
         private bool _EnbContinuous = false;
         private bool _EnbLive = false;
+        Stopwatch stopwatch = new Stopwatch();
         public FrStartingUp()
         {
             InitializeComponent();
@@ -34,16 +36,24 @@ namespace VDF3_Solution3
                 if (bitmap != null)
                 {
                     // Hiển thị hình ảnh hoặc lưu hình ảnh
-                    pictureBox1.Image = bitmap; // Giả sử bạn có một PictureBox để hiển thị hình ảnh
+                    Pic_Capture.SizeMode = PictureBoxSizeMode.Zoom;
+                    Pic_Capture.Image = bitmap; // Giả sử bạn có một PictureBox để hiển thị hình ảnh
                 }
                 else
                 {
                     MessageBox.Show("No image captured.");
                 }
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error capturing image: " + ex.Message);
+            }
+            finally
+            {
+                stopwatch.Stop();
+                Console.WriteLine($"Trigger Time: {stopwatch.ElapsedMilliseconds} ms");
+                stopwatch.Reset();
             }
         }
 
@@ -78,7 +88,7 @@ namespace VDF3_Solution3
                 if (bitmap != null)
                 {
                     // Hiển thị hình ảnh hoặc lưu hình ảnh
-                    pictureBox1.Image = bitmap; // Giả sử bạn có một PictureBox để hiển thị hình ảnh
+                    Pic_Capture.Image = bitmap; // Giả sử bạn có một PictureBox để hiển thị hình ảnh
                 }
                 else
                 {

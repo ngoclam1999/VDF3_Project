@@ -56,3 +56,9 @@ C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\OpenCvSharp.WpfE
 C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\System.Drawing.Common.pdb
 C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\System.Drawing.Common.xml
 C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\MvCameraControl.Net.xml
+C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\GigE_ForceIP.exe
+C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\GigE_ForceIP.pdb
+C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\GigE_ForceIP.exe.config
+C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\en-US\GigE_ForceIP.resources.dll
+C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\zh-CHS\GigE_ForceIP.resources.dll
+C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\zh-CN\GigE_ForceIP.resources.dll

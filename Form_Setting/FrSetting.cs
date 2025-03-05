@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MvCameraControl;
 using VDF3_Solution3.Properties;
+using GigE_ForceIP;
 
 namespace VDF3_Solution3
 {
@@ -81,6 +82,7 @@ namespace VDF3_Solution3
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
+            btnRefresh_Click(null, null);
             if (cbDeviceList.SelectedIndex == -1)
             {
                 MessageBox.Show("No device selected, please select a device.");
@@ -102,6 +104,11 @@ namespace VDF3_Solution3
                     txtIPaddress.Text = networkInfo.IP;
                     txtSubnet.Text = networkInfo.SubnetMask;
                     txtGateway.Text = networkInfo.Gateway;
+                    var DeviceInfo = hikCamera.GetDeviceInfo(cbDeviceList.Text);
+                    txtDeviceBrand.Text = DeviceInfo.Manufacturer;
+                    txtModel.Text = DeviceInfo.ModelName;
+                    txtSerial.Text = DeviceInfo.SerialNumber;
+                    txtVersion.Text = DeviceInfo.version;
                 }
                 catch (Exception ex)
                 {
@@ -138,7 +145,11 @@ namespace VDF3_Solution3
             txtIPaddress.Text = netinfor.IP;
             txtSubnet.Text = netinfor.SubnetMask;
             txtGateway.Text = netinfor.Gateway;
-            txtDeviceID.Text = cbDeviceList.SelectedIndex.ToString();
+            var DeviceInfo = hikCamera.GetDeviceInfo(cbDeviceList.Text);
+            txtDeviceBrand.Text = DeviceInfo.Manufacturer;
+            txtModel.Text = DeviceInfo.ModelName;
+            txtSerial.Text = DeviceInfo.SerialNumber;
+            txtVersion.Text = DeviceInfo.version;
         }
 
         private void btnCamApply_Click(object sender, EventArgs e)
@@ -147,16 +158,12 @@ namespace VDF3_Solution3
             string subnet = txtSubnet.Text; // Lấy subnet từ textbox
             string gateway = txtGateway.Text; // Lấy gateway từ textbox
             int deviceIndex = cbDeviceList.SelectedIndex; // Lấy index thiết bị từ combobox
-
-            try
+            btnDisconnect_Click(null, null);
+            using (GigE_ForceIP.GigE_ForceIP frceIP = new GigE_ForceIP.GigE_ForceIP())
             {
-                hikCamera.ForceIp(ip, subnet, gateway,deviceIndex);
-                MessageBox.Show("IP forced successfully!");
+                frceIP.ShowDialog();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            MessageBox.Show("Change the Network successfully, please select and reconnect the device to check");
         }
 
         private void btnTrigger_Click(object sender, EventArgs e)
