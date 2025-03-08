@@ -20,7 +20,20 @@ namespace VDF3_Solution3
         private List<string> imageFiles = new List<string>(); // Danh sách ảnh trong thư mục
         private int currentIndex = -1; // Vị trí ảnh hiện tại
         private bool Selected_BoundBox = false;
-
+        private bool Resize_BoundBox = false;
+        private enum ControlPointType
+        {
+            None,
+            TopLeft,
+            TopCenter,
+            TopRight,
+            MiddleLeft,
+            MiddleRight,
+            BottomLeft,
+            BottomCenter,
+            BottomRight
+        }
+        private ControlPointType resizingHandle = ControlPointType.None;
         private List<BoundingBox> boundingBoxes = new List<BoundingBox>();
         private Point startPoint;
         private Point centerPoint;
@@ -345,6 +358,53 @@ namespace VDF3_Solution3
                     UpdateListBox();
                     pictureBox.Invalidate();
                 }
+                else if (isResizing && selectedBox != null)
+                {
+                    int dx = e.X - resizeStartPoint.X;
+                    int dy = e.Y - resizeStartPoint.Y;
+
+                    switch (resizingHandle)
+                    {
+                        case ControlPointType.TopLeft:
+                            selectedBox.X += dx;
+                            selectedBox.Y += dy;
+                            selectedBox.Width -= dx;
+                            selectedBox.Height -= dy;
+                            break;
+                        case ControlPointType.TopRight:
+                            selectedBox.Y += dy;
+                            selectedBox.Width += dx;
+                            selectedBox.Height -= dy;
+                            break;
+                        case ControlPointType.BottomLeft:
+                            selectedBox.X += dx;
+                            selectedBox.Width -= dx;
+                            selectedBox.Height += dy;
+                            break;
+                        case ControlPointType.BottomRight:
+                            selectedBox.Width += dx;
+                            selectedBox.Height += dy;
+                            break;
+                        case ControlPointType.MiddleLeft:
+                            selectedBox.X += dx;
+                            selectedBox.Width -= dx;
+                            break;
+                        case ControlPointType.MiddleRight:
+                            selectedBox.Width += dx;
+                            break;
+                        case ControlPointType.TopCenter:
+                            selectedBox.Y += dy;
+                            selectedBox.Height -= dy;
+                            break;
+                        case ControlPointType.BottomCenter:
+                            selectedBox.Height += dy;
+                            break;
+                    }
+
+                    resizeStartPoint = e.Location;
+                    UpdateBoundingBoxVertices(selectedBox);
+                    pictureBox.Invalidate();
+                }
                 else if (isDragging && selectedBox != null)
                 {
                     int dx = e.X - startPoint.X;
@@ -427,15 +487,25 @@ namespace VDF3_Solution3
                     if (selectedBox != null)
                     {
                         Point rotationPoint = GetRotationPoint(selectedBox);
+                        resizingHandle = GetResizeHandleUnderMouse(selectedBox, e.Location);
                         if (IsNearRotationPoint(e.Location, rotationPoint))
                         {
                             isRotating = true;
                             isDragging = false;
+                            isResizing = false;
+                        }
+                        else if (resizingHandle != ControlPointType.None || Resize_BoundBox)
+                        {
+                            isResizing = true;
+                            isDragging = false;
+                            isRotating = false;
+                            resizeStartPoint = e.Location;
                         }
                         else
                         {
                             isDragging = true;
                             isRotating = false;
+                            isResizing = false;
                             startPoint = e.Location;
                         }
                     }
@@ -447,6 +517,72 @@ namespace VDF3_Solution3
                     pictureBox.Invalidate();
                 }
             }
+        }
+        private ControlPointType GetResizeHandleUnderMouse(BoundingBox box, Point mouseLocation)
+        {
+            foreach (ControlPointType handleType in Enum.GetValues(typeof(ControlPointType)))
+            {
+                if (handleType == ControlPointType.None) continue;
+
+                Rectangle handleRect = GetHandleRectangle(box, handleType);
+                if (handleRect.Contains(mouseLocation))
+                {
+                    return handleType;
+                }
+            }
+            return ControlPointType.None;
+        }
+        private Rectangle GetHandleRectangle(BoundingBox box, ControlPointType handleType)
+        {
+            Point handleCenter = GetHandleCenter(box, handleType);
+            return new Rectangle(handleCenter.X - handleSize / 2, handleCenter.Y - handleSize / 2, handleSize, handleSize);
+        }
+
+        private Point GetHandleCenter(BoundingBox box, ControlPointType handleType)
+        {
+            float centerX = box.X + box.Width / 2f;
+            float centerY = box.Y + box.Height / 2f;
+            float x = 0, y = 0;
+
+            switch (handleType)
+            {
+                case ControlPointType.TopLeft:
+                    x = box.X;
+                    y = box.Y;
+                    break;
+                case ControlPointType.TopCenter:
+                    x = centerX;
+                    y = box.Y;
+                    break;
+                case ControlPointType.TopRight:
+                    x = box.X + box.Width;
+                    y = box.Y;
+                    break;
+                case ControlPointType.MiddleLeft:
+                    x = box.X;
+                    y = centerY;
+                    break;
+                case ControlPointType.MiddleRight:
+                    x = box.X + box.Width;
+                    y = centerY;
+                    break;
+                case ControlPointType.BottomLeft:
+                    x = box.X;
+                    y = box.Y + box.Height;
+                    break;
+                case ControlPointType.BottomCenter:
+                    x = centerX;
+                    y = box.Y + box.Height;
+                    break;
+                case ControlPointType.BottomRight:
+                    x = box.X + box.Width;
+                    y = box.Y + box.Height;
+                    break;
+                default:
+                    return Point.Empty;
+            }
+
+            return new Point((int)x, (int)y);
         }
         private BoundingBox GetBoundingBoxAtPoint(Point point)
         {
@@ -676,6 +812,10 @@ namespace VDF3_Solution3
             {
                 isDragging = false; // Kết thúc kéo
             }
+            else if(isResizing)
+            {
+                isResizing = false;
+            }
             else if (isRotating)
             {
                 isRotating = false; // Kết thúc xoay
@@ -683,7 +823,7 @@ namespace VDF3_Solution3
             else if (currentRectangle.Width > 0 && currentRectangle.Height > 0)
             {
                 string imgpath = imageFiles[currentIndex];
-                Console.WriteLine(imgpath); 
+                Console.WriteLine(imgpath);
                 boundingBoxes.Add(new BoundingBox
                 {
                     imgpath = imageFiles[currentIndex],
@@ -734,6 +874,20 @@ namespace VDF3_Solution3
         private void btnTraning_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tsbtnEditBoudingBox_Click(object sender, EventArgs e)
+        {
+            if (!Resize_BoundBox)
+            {
+                Resize_BoundBox = true;
+                tsbtnEditBoudingBox.BackColor = Color.Gray;
+            }
+            else
+            {
+                Resize_BoundBox = false;
+                tsbtnEditBoudingBox.BackColor = Color.White;
+            }
         }
     }
 

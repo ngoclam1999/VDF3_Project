@@ -163,7 +163,7 @@ namespace VDF3_Solution3
             {
                 frceIP.ShowDialog();
             }
-            MessageBox.Show("Change the Network successfully, please select and reconnect the device to check");
+            MessageBox.Show("Change The Network Successfully, Please Reboot Application");
         }
 
         private void btnTrigger_Click(object sender, EventArgs e)

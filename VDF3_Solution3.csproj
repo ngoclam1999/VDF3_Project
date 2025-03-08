@@ -145,7 +145,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Manager_Project\AutoClearParameter.cs" />
+    <Compile Include="Manager_Project\BacklightParameter.cs" />
     <Compile Include="Camera\CameraBase.cs" />
+    <Compile Include="Manager_Project\ConfigItem.cs" />
+    <Compile Include="Manager_Project\ConfigManager.cs" />
+    <Compile Include="Manager_Project\CustomizedVibrationParameter.cs" />
     <Compile Include="Form_Vision\FrFinish.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,7 +236,9 @@
     <Compile Include="Form_Vision\FrResultEvaluation.Designer.cs">
       <DependentUpon>FrResultEvaluation.cs</DependentUpon>
     </Compile>
+    <Compile Include="SequenceParameter.cs" />
     <Compile Include="ToolImageProcess.cs" />
+    <Compile Include="VibrationParameter.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

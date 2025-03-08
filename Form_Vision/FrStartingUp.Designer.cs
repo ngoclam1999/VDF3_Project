@@ -47,7 +47,7 @@
             this.tsbtnZoomIn = new System.Windows.Forms.ToolStripButton();
             this.tsbtnZoomOut = new System.Windows.Forms.ToolStripButton();
             this.tsbtnFixScr = new System.Windows.Forms.ToolStripButton();
-            this.uiGroupBox2 = new Sunny.UI.UIGroupBox();
+            this.gbImageSetting = new Sunny.UI.UIGroupBox();
             this.btnCommunication = new FontAwesome.Sharp.IconButton();
             this.btnSetting = new FontAwesome.Sharp.IconButton();
             this.btnInterface = new FontAwesome.Sharp.IconButton();
@@ -65,10 +65,20 @@
             this.uiLabel19 = new Sunny.UI.UILabel();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.timerCamera = new System.Windows.Forms.Timer(this.components);
+            this.gbLightSetting = new Sunny.UI.UIGroupBox();
+            this.gbCommunication = new Sunny.UI.UIGroupBox();
+            this.uiTrackBar2 = new Sunny.UI.UITrackBar();
+            this.uiTrackBar1 = new Sunny.UI.UITrackBar();
+            this.btnCamSet = new Sunny.UI.UISymbolButton();
+            this.uiLabel10 = new Sunny.UI.UILabel();
+            this.txtExposure = new Sunny.UI.UITextBox();
+            this.txtGain = new Sunny.UI.UITextBox();
+            this.uiLabel9 = new Sunny.UI.UILabel();
             this.uiPanel3.SuspendLayout();
             this.pnlStartingUpCont.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Capture)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            this.gbImageSetting.SuspendLayout();
             this.uiPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.uiPanel1.SuspendLayout();
@@ -81,7 +91,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel3.Controls.Add(this.pnlStartingUpCont);
             this.uiPanel3.Controls.Add(this.toolStrip1);
-            this.uiPanel3.Controls.Add(this.uiGroupBox2);
+            this.uiPanel3.Controls.Add(this.gbImageSetting);
             this.uiPanel3.Controls.Add(this.btnCommunication);
             this.uiPanel3.Controls.Add(this.btnSetting);
             this.uiPanel3.Controls.Add(this.btnInterface);
@@ -106,13 +116,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlStartingUpCont.Controls.Add(this.Pic_Capture);
+            this.pnlStartingUpCont.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.pnlStartingUpCont.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.pnlStartingUpCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.pnlStartingUpCont.Location = new System.Drawing.Point(166, 54);
             this.pnlStartingUpCont.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlStartingUpCont.MinimumSize = new System.Drawing.Size(1, 1);
             this.pnlStartingUpCont.Name = "pnlStartingUpCont";
+            this.pnlStartingUpCont.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.pnlStartingUpCont.Size = new System.Drawing.Size(577, 339);
-            this.pnlStartingUpCont.Style = Sunny.UI.UIStyle.Custom;
+            this.pnlStartingUpCont.Style = Sunny.UI.UIStyle.Gray;
             this.pnlStartingUpCont.TabIndex = 16;
             this.pnlStartingUpCont.Text = "uiPanel5";
             this.pnlStartingUpCont.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -287,22 +300,32 @@
             this.tsbtnFixScr.Size = new System.Drawing.Size(40, 29);
             this.tsbtnFixScr.Text = "toolStripButton3";
             // 
-            // uiGroupBox2
+            // gbImageSetting
             // 
-            this.uiGroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbImageSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiGroupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiGroupBox2.Location = new System.Drawing.Point(9, 408);
-            this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiGroupBox2.Name = "uiGroupBox2";
-            this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox2.Size = new System.Drawing.Size(734, 194);
-            this.uiGroupBox2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiGroupBox2.TabIndex = 14;
-            this.uiGroupBox2.Text = "Setting";
-            this.uiGroupBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiGroupBox2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.gbImageSetting.Controls.Add(this.uiTrackBar2);
+            this.gbImageSetting.Controls.Add(this.uiTrackBar1);
+            this.gbImageSetting.Controls.Add(this.btnCamSet);
+            this.gbImageSetting.Controls.Add(this.uiLabel10);
+            this.gbImageSetting.Controls.Add(this.txtExposure);
+            this.gbImageSetting.Controls.Add(this.txtGain);
+            this.gbImageSetting.Controls.Add(this.uiLabel9);
+            this.gbImageSetting.FillColor = System.Drawing.Color.White;
+            this.gbImageSetting.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.gbImageSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.gbImageSetting.Location = new System.Drawing.Point(9, 396);
+            this.gbImageSetting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbImageSetting.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbImageSetting.Name = "gbImageSetting";
+            this.gbImageSetting.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.gbImageSetting.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gbImageSetting.Size = new System.Drawing.Size(734, 206);
+            this.gbImageSetting.Style = Sunny.UI.UIStyle.Custom;
+            this.gbImageSetting.TabIndex = 14;
+            this.gbImageSetting.Text = "Image Setting";
+            this.gbImageSetting.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.gbImageSetting.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // btnCommunication
             // 
@@ -326,7 +349,7 @@
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(150, 93);
             this.btnSetting.TabIndex = 13;
-            this.btnSetting.Text = "Setting";
+            this.btnSetting.Text = "Image Setting";
             this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSetting.UseVisualStyleBackColor = true;
             // 
@@ -339,12 +362,13 @@
             this.btnInterface.Name = "btnInterface";
             this.btnInterface.Size = new System.Drawing.Size(150, 93);
             this.btnInterface.TabIndex = 11;
-            this.btnInterface.Text = "Setting Light";
+            this.btnInterface.Text = "Light Setting";
             this.btnInterface.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnInterface.UseVisualStyleBackColor = true;
             // 
             // uiPanel2
             // 
+            this.uiPanel2.Controls.Add(this.gbLightSetting);
             this.uiPanel2.Controls.Add(this.uiLabel1);
             this.uiPanel2.Controls.Add(this.pictureBox1);
             this.uiPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -387,6 +411,7 @@
             // 
             // uiPanel1
             // 
+            this.uiPanel1.Controls.Add(this.gbCommunication);
             this.uiPanel1.Controls.Add(this.uiLabel12);
             this.uiPanel1.Controls.Add(this.uiLabel13);
             this.uiPanel1.Controls.Add(this.uiLabel14);
@@ -525,6 +550,153 @@
             this.timerCamera.Interval = 250;
             this.timerCamera.Tick += new System.EventHandler(this.timerCamera_Tick);
             // 
+            // gbLightSetting
+            // 
+            this.gbLightSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbLightSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.gbLightSetting.Location = new System.Drawing.Point(136, 53);
+            this.gbLightSetting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbLightSetting.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbLightSetting.Name = "gbLightSetting";
+            this.gbLightSetting.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.gbLightSetting.Size = new System.Drawing.Size(734, 194);
+            this.gbLightSetting.Style = Sunny.UI.UIStyle.Custom;
+            this.gbLightSetting.TabIndex = 14;
+            this.gbLightSetting.Text = "Light Setting";
+            this.gbLightSetting.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.gbLightSetting.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // gbCommunication
+            // 
+            this.gbCommunication.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbCommunication.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.gbCommunication.Location = new System.Drawing.Point(159, 177);
+            this.gbCommunication.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbCommunication.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbCommunication.Name = "gbCommunication";
+            this.gbCommunication.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.gbCommunication.Size = new System.Drawing.Size(734, 194);
+            this.gbCommunication.Style = Sunny.UI.UIStyle.Custom;
+            this.gbCommunication.TabIndex = 14;
+            this.gbCommunication.Text = "Communication";
+            this.gbCommunication.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.gbCommunication.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiTrackBar2
+            // 
+            this.uiTrackBar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiTrackBar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.uiTrackBar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiTrackBar2.Location = new System.Drawing.Point(236, 87);
+            this.uiTrackBar2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiTrackBar2.Name = "uiTrackBar2";
+            this.uiTrackBar2.Size = new System.Drawing.Size(143, 20);
+            this.uiTrackBar2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiTrackBar2.TabIndex = 31;
+            this.uiTrackBar2.Text = "uiTrackBar2";
+            this.uiTrackBar2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiTrackBar1
+            // 
+            this.uiTrackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiTrackBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.uiTrackBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiTrackBar1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.uiTrackBar1.Location = new System.Drawing.Point(236, 49);
+            this.uiTrackBar1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiTrackBar1.Name = "uiTrackBar1";
+            this.uiTrackBar1.Size = new System.Drawing.Size(143, 20);
+            this.uiTrackBar1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiTrackBar1.TabIndex = 30;
+            this.uiTrackBar1.Text = "uiTrackBar1";
+            this.uiTrackBar1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // btnCamSet
+            // 
+            this.btnCamSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCamSet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCamSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnCamSet.Location = new System.Drawing.Point(228, 120);
+            this.btnCamSet.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnCamSet.Name = "btnCamSet";
+            this.btnCamSet.Size = new System.Drawing.Size(151, 35);
+            this.btnCamSet.Style = Sunny.UI.UIStyle.Custom;
+            this.btnCamSet.TabIndex = 27;
+            this.btnCamSet.Text = "SET";
+            this.btnCamSet.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnCamSet.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiLabel10
+            // 
+            this.uiLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiLabel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.uiLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiLabel10.Location = new System.Drawing.Point(13, 46);
+            this.uiLabel10.Name = "uiLabel10";
+            this.uiLabel10.Size = new System.Drawing.Size(117, 23);
+            this.uiLabel10.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel10.TabIndex = 29;
+            this.uiLabel10.Text = "Exposure (us)";
+            this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel10.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtExposure
+            // 
+            this.txtExposure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtExposure.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtExposure.DoubleValue = 100D;
+            this.txtExposure.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtExposure.IntValue = 100;
+            this.txtExposure.Location = new System.Drawing.Point(137, 46);
+            this.txtExposure.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtExposure.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtExposure.Name = "txtExposure";
+            this.txtExposure.Padding = new System.Windows.Forms.Padding(5);
+            this.txtExposure.ShowText = false;
+            this.txtExposure.Size = new System.Drawing.Size(92, 28);
+            this.txtExposure.Style = Sunny.UI.UIStyle.Custom;
+            this.txtExposure.TabIndex = 28;
+            this.txtExposure.Text = "100";
+            this.txtExposure.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtExposure.Watermark = "";
+            this.txtExposure.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtGain
+            // 
+            this.txtGain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGain.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGain.DoubleValue = 1D;
+            this.txtGain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtGain.Location = new System.Drawing.Point(137, 84);
+            this.txtGain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtGain.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtGain.Name = "txtGain";
+            this.txtGain.Padding = new System.Windows.Forms.Padding(5);
+            this.txtGain.ShowText = false;
+            this.txtGain.Size = new System.Drawing.Size(92, 28);
+            this.txtGain.Style = Sunny.UI.UIStyle.Custom;
+            this.txtGain.TabIndex = 25;
+            this.txtGain.Text = "1.0";
+            this.txtGain.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtGain.Watermark = "";
+            this.txtGain.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiLabel9
+            // 
+            this.uiLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.uiLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiLabel9.Location = new System.Drawing.Point(13, 87);
+            this.uiLabel9.Name = "uiLabel9";
+            this.uiLabel9.Size = new System.Drawing.Size(107, 23);
+            this.uiLabel9.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel9.TabIndex = 26;
+            this.uiLabel9.Text = "Gain (dB)";
+            this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel9.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // FrStartingUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,6 +715,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Capture)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.gbImageSetting.ResumeLayout(false);
             this.uiPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.uiPanel1.ResumeLayout(false);
@@ -569,7 +742,7 @@
         private System.Windows.Forms.ToolStripButton tsbtnZoomIn;
         private System.Windows.Forms.ToolStripButton tsbtnZoomOut;
         private System.Windows.Forms.ToolStripButton tsbtnFixScr;
-        private Sunny.UI.UIGroupBox uiGroupBox2;
+        private Sunny.UI.UIGroupBox gbImageSetting;
         private FontAwesome.Sharp.IconButton btnCommunication;
         private FontAwesome.Sharp.IconButton btnSetting;
         private FontAwesome.Sharp.IconButton btnInterface;
@@ -587,5 +760,14 @@
         private Sunny.UI.UILabel uiLabel19;
         private Sunny.UI.UILabel uiLabel3;
         private System.Windows.Forms.Timer timerCamera;
+        private Sunny.UI.UIGroupBox gbCommunication;
+        private Sunny.UI.UIGroupBox gbLightSetting;
+        private Sunny.UI.UITrackBar uiTrackBar2;
+        private Sunny.UI.UITrackBar uiTrackBar1;
+        private Sunny.UI.UISymbolButton btnCamSet;
+        private Sunny.UI.UILabel uiLabel10;
+        private Sunny.UI.UITextBox txtExposure;
+        private Sunny.UI.UITextBox txtGain;
+        private Sunny.UI.UILabel uiLabel9;
     }
 }

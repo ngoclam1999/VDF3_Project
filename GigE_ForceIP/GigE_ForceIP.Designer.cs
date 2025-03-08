@@ -57,6 +57,7 @@
             // 
             resources.ApplyResources(this.initGroupBox, "initGroupBox");
             this.initGroupBox.Controls.Add(this.enumButton);
+            this.initGroupBox.Controls.Add(this.deviceListComboBox);
             this.initGroupBox.Name = "initGroupBox";
             this.initGroupBox.TabStop = false;
             // 
@@ -135,7 +136,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.forceIPGroupBox);
             this.Controls.Add(this.initGroupBox);
-            this.Controls.Add(this.deviceListComboBox);
             this.Name = "GigE_ForceIP";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GigE_ForceIP_Closing);
             this.initGroupBox.ResumeLayout(false);

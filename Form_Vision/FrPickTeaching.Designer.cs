@@ -40,15 +40,22 @@
             this.btnZoomIn = new System.Windows.Forms.ToolStripButton();
             this.tsbtnFindROI = new System.Windows.Forms.ToolStripButton();
             this.lstResults = new System.Windows.Forms.ListView();
+            this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.tsbtnReadImg = new System.Windows.Forms.ToolStripButton();
+            this.btnTraning = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.toolStrip2.SuspendLayout();
+            this.uiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(30, 71);
+            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(927, 502);
+            this.pictureBox.Size = new System.Drawing.Size(929, 570);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             this.pictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.picBox_Paint);
@@ -62,6 +69,7 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(25, 25);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnLoadImg,
+            this.tsbtnReadImg,
             this.btnTrigger,
             this.btnRotateLeft,
             this.btnRotateRight,
@@ -157,17 +165,64 @@
             this.tsbtnFindROI.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnFindROI.Name = "tsbtnFindROI";
             this.tsbtnFindROI.Size = new System.Drawing.Size(100, 29);
-            this.tsbtnFindROI.Text = "Select Tool";
+            this.tsbtnFindROI.Text = "Pick Tool";
             this.tsbtnFindROI.Click += new System.EventHandler(this.tsbtnFindROI_Click);
             // 
             // lstResults
             // 
+            this.lstResults.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstResults.HideSelection = false;
-            this.lstResults.Location = new System.Drawing.Point(977, 71);
+            this.lstResults.Location = new System.Drawing.Point(951, 55);
             this.lstResults.Name = "lstResults";
-            this.lstResults.Size = new System.Drawing.Size(276, 238);
+            this.lstResults.Size = new System.Drawing.Size(302, 470);
             this.lstResults.TabIndex = 16;
             this.lstResults.UseCompatibleStateImageBehavior = false;
+            // 
+            // uiPanel1
+            // 
+            this.uiPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiPanel1.Controls.Add(this.pictureBox);
+            this.uiPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.uiPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiPanel1.Location = new System.Drawing.Point(9, 55);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel1.Name = "uiPanel1";
+            this.uiPanel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.uiPanel1.Size = new System.Drawing.Size(935, 576);
+            this.uiPanel1.Style = Sunny.UI.UIStyle.Gray;
+            this.uiPanel1.TabIndex = 17;
+            this.uiPanel1.Text = "uiPanel1";
+            this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // tsbtnReadImg
+            // 
+            this.tsbtnReadImg.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnReadImg.Image")));
+            this.tsbtnReadImg.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnReadImg.Name = "tsbtnReadImg";
+            this.tsbtnReadImg.Size = new System.Drawing.Size(98, 29);
+            this.tsbtnReadImg.Text = "Read Image";
+            this.tsbtnReadImg.Click += new System.EventHandler(this.tsbtnReadImg_Click);
+            // 
+            // btnTraning
+            // 
+            this.btnTraning.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTraning.IconChar = FontAwesome.Sharp.IconChar.Running;
+            this.btnTraning.IconColor = System.Drawing.Color.Black;
+            this.btnTraning.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTraning.Location = new System.Drawing.Point(951, 531);
+            this.btnTraning.Name = "btnTraning";
+            this.btnTraning.Size = new System.Drawing.Size(302, 100);
+            this.btnTraning.TabIndex = 25;
+            this.btnTraning.Text = "Running";
+            this.btnTraning.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTraning.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTraning.UseVisualStyleBackColor = true;
             // 
             // FrPickTeaching
             // 
@@ -175,15 +230,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1261, 641);
             this.ControlBox = false;
+            this.Controls.Add(this.btnTraning);
+            this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.lstResults);
             this.Controls.Add(this.toolStrip2);
-            this.Controls.Add(this.pictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrPickTeaching";
             this.Padding = new System.Windows.Forms.Padding(5);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            this.uiPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +259,8 @@
         private System.Windows.Forms.ToolStripButton btnZoomIn;
         private System.Windows.Forms.ToolStripButton tsbtnFindROI;
         private System.Windows.Forms.ListView lstResults;
+        private Sunny.UI.UIPanel uiPanel1;
+        private System.Windows.Forms.ToolStripButton tsbtnReadImg;
+        private FontAwesome.Sharp.IconButton btnTraning;
     }
 }

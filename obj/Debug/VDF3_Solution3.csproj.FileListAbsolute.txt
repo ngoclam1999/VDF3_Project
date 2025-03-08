@@ -11,7 +11,6 @@ C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\obj\Debug\VDF3_Solution3.F
 C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\obj\Debug\VDF3_Solution3.FrSetting.resources
 C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\obj\Debug\VDF3_Solution3.FrStartingUp.resources
 C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\obj\Debug\VDF3_Solution3.FrVision.resources
-C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\obj\Debug\VDF3_Solution3.csproj.CopyComplete
 C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\obj\Debug\VDF3_Solution3.exe
 C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\obj\Debug\VDF3_Solution3.pdb
 C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\obj\Debug\VDF3_Solution3.FrProject.resources
@@ -62,3 +61,4 @@ C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\GigE_ForceIP.exe
 C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\en-US\GigE_ForceIP.resources.dll
 C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\zh-CHS\GigE_ForceIP.resources.dll
 C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\bin\Debug\zh-CN\GigE_ForceIP.resources.dll
+C:\Users\trila\Desktop\VDF3\Solution_3\VDF3_Solution3\obj\Debug\VDF3_Sol.D376128F.Up2Date

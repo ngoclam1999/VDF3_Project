@@ -121,13 +121,6 @@
   <data name="deviceListComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>391, 20</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gatewayTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;rangeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="recommendLabel.Text" xml:space="preserve">
     <value>Recommend IP range:</value>
   </data>
@@ -152,16 +145,17 @@
   <data name="&gt;&gt;ipLabel.Name" xml:space="preserve">
     <value>ipLabel</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="setButton.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="enumButton.Text" xml:space="preserve">
-    <value>Search Device</value>
+  <data name="ipLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;subnetTextBox.Name" xml:space="preserve">
     <value>subnetTextBox</value>
   </data>
-  <data name="&gt;&gt;gatewayLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;subnetTextBox.Parent" xml:space="preserve">
     <value>forceIPGroupBox</value>
   </data>
   <data name="&gt;&gt;forceIPGroupBox.ZOrder" xml:space="preserve">
@@ -173,8 +167,8 @@
   <data name="&gt;&gt;ipLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="rangeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;ipTextBox.Parent" xml:space="preserve">
+    <value>forceIPGroupBox</value>
   </data>
   <data name="&gt;&gt;setButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -188,8 +182,14 @@
   <data name="&gt;&gt;ipLabel.Parent" xml:space="preserve">
     <value>forceIPGroupBox</value>
   </data>
+  <data name="&gt;&gt;forceIPGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="initGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="subnetTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="initGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>44, 68</value>
@@ -206,17 +206,20 @@
   <data name="&gt;&gt;rangeLabel.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="recommendLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 42</value>
+  </data>
   <data name="deviceListComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>44, 23</value>
   </data>
   <data name="&gt;&gt;enumButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;recommendLabel.Parent" xml:space="preserve">
+    <value>forceIPGroupBox</value>
+  </data>
   <data name="ipLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 79</value>
-  </data>
-  <data name="subnetLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 123</value>
   </data>
   <data name="&gt;&gt;recommendLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -224,8 +227,8 @@
   <data name="&gt;&gt;enumButton.Parent" xml:space="preserve">
     <value>initGroupBox</value>
   </data>
-  <data name="&gt;&gt;subnetTextBox.Parent" xml:space="preserve">
-    <value>forceIPGroupBox</value>
+  <data name="recommendLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="subnetTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>251, 21</value>
@@ -251,6 +254,9 @@
   <data name="&gt;&gt;ipTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;gatewayLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="initGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>391, 100</value>
   </data>
@@ -259,9 +265,6 @@
   </data>
   <data name="subnetLabel.Text" xml:space="preserve">
     <value>Subnet Mask</value>
-  </data>
-  <data name="subnetLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>GigE_ForceIP</value>
@@ -274,9 +277,6 @@
   </data>
   <data name="&gt;&gt;subnetTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;deviceListComboBox.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;setButton.Parent" xml:space="preserve">
     <value>forceIPGroupBox</value>
@@ -305,14 +305,11 @@
   <data name="&gt;&gt;recommendLabel.Name" xml:space="preserve">
     <value>recommendLabel</value>
   </data>
-  <data name="recommendLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;deviceListComboBox.Parent" xml:space="preserve">
+    <value>initGroupBox</value>
   </data>
-  <data name="&gt;&gt;gatewayTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;forceIPGroupBox.Name" xml:space="preserve">
     <value>forceIPGroupBox</value>
-  </data>
-  <data name="rangeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="&gt;&gt;deviceListComboBox.Name" xml:space="preserve">
     <value>deviceListComboBox</value>
@@ -320,8 +317,8 @@
   <data name="&gt;&gt;subnetTextBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;subnetLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="rangeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;recommendLabel.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -329,23 +326,23 @@
   <data name="recommendLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 12</value>
   </data>
-  <data name="&gt;&gt;enumButton.Name" xml:space="preserve">
-    <value>enumButton</value>
-  </data>
   <data name="&gt;&gt;deviceListComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;initGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ipTextBox.Parent" xml:space="preserve">
-    <value>forceIPGroupBox</value>
+  <data name="&gt;&gt;rangeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 12</value>
   </data>
-  <data name="ipLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>GigE_ForceIP</value>
+  </data>
+  <data name="enumButton.Text" xml:space="preserve">
+    <value>Search Device</value>
   </data>
   <data name="&gt;&gt;forceIPGroupBox.Parent" xml:space="preserve">
     <value>$this</value>
@@ -356,6 +353,9 @@
   <data name="&gt;&gt;initGroupBox.Name" xml:space="preserve">
     <value>initGroupBox</value>
   </data>
+  <data name="&gt;&gt;gatewayTextBox.Name" xml:space="preserve">
+    <value>gatewayTextBox</value>
+  </data>
   <data name="subnetLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -364,9 +364,6 @@
   </data>
   <data name="&gt;&gt;subnetLabel.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="rangeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
   </data>
   <data name="recommendLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -377,17 +374,20 @@
   <data name="&gt;&gt;gatewayLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>GigE_ForceIP</value>
+  <data name="forceIPGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>391, 286</value>
   </data>
-  <data name="&gt;&gt;recommendLabel.Parent" xml:space="preserve">
-    <value>forceIPGroupBox</value>
+  <data name="subnetLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 123</value>
+  </data>
+  <data name="rangeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
   </data>
   <data name="&gt;&gt;setButton.Name" xml:space="preserve">
     <value>setButton</value>
   </data>
-  <data name="&gt;&gt;forceIPGroupBox.Name" xml:space="preserve">
-    <value>forceIPGroupBox</value>
+  <data name="gatewayTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;deviceListComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -401,17 +401,14 @@
   <data name="setButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>323, 23</value>
   </data>
-  <data name="recommendLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 42</value>
+  <data name="rangeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;gatewayLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;gatewayLabel.Parent" xml:space="preserve">
+    <value>forceIPGroupBox</value>
   </data>
   <data name="gatewayTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>251, 21</value>
-  </data>
-  <data name="gatewayLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
   </data>
   <data name="gatewayLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 166</value>
@@ -419,20 +416,23 @@
   <data name="&gt;&gt;gatewayTextBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="ipLabel.Text" xml:space="preserve">
-    <value>IP Address</value>
+  <data name="&gt;&gt;subnetLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="forceIPGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>391, 286</value>
+  <data name="gatewayLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;forceIPGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ipLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="subnetLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="ipTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;gatewayTextBox.Name" xml:space="preserve">
-    <value>gatewayTextBox</value>
+  <data name="&gt;&gt;gatewayTextBox.Parent" xml:space="preserve">
+    <value>forceIPGroupBox</value>
   </data>
   <data name="&gt;&gt;gatewayLabel.Name" xml:space="preserve">
     <value>gatewayLabel</value>
@@ -440,14 +440,14 @@
   <data name="&gt;&gt;enumButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ipLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 12</value>
+  <data name="&gt;&gt;enumButton.Name" xml:space="preserve">
+    <value>enumButton</value>
   </data>
   <data name="subnetLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 12</value>
   </data>
-  <data name="subnetTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="ipLabel.Text" xml:space="preserve">
+    <value>IP Address</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

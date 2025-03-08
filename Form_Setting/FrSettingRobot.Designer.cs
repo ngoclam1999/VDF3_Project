@@ -55,17 +55,17 @@
             this.btnConnect = new Sunny.UI.UISymbolButton();
             this.btnRefresh = new FontAwesome.Sharp.IconButton();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
-            this.listBoxRec = new System.Windows.Forms.ListBox();
+            this.uiSymbolLabel4 = new Sunny.UI.UISymbolLabel();
             this.listBoxSend = new System.Windows.Forms.ListBox();
             this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
-            this.uiSymbolLabel4 = new Sunny.UI.UISymbolLabel();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
+            this.listBoxRec = new System.Windows.Forms.ListBox();
             this.uiTextBox2 = new Sunny.UI.UITextBox();
+            this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
             this.uiSymbolButton2 = new Sunny.UI.UISymbolButton();
-            this.uiSymbolButton3 = new Sunny.UI.UISymbolButton();
-            this.uiSymbolButton4 = new Sunny.UI.UISymbolButton();
             this.uiSymbolButton5 = new Sunny.UI.UISymbolButton();
+            this.uiSymbolButton4 = new Sunny.UI.UISymbolButton();
+            this.uiSymbolButton3 = new Sunny.UI.UISymbolButton();
             this.uiSymbolButton6 = new Sunny.UI.UISymbolButton();
             this.panel1.SuspendLayout();
             this.grb_RobotSetting.SuspendLayout();
@@ -519,19 +519,22 @@
             // 
             // uiGroupBox1
             // 
+            this.uiGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiGroupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.uiGroupBox1.Controls.Add(this.uiTextBox2);
-            this.uiGroupBox1.Controls.Add(this.uiTextBox1);
-            this.uiGroupBox1.Controls.Add(this.uiSymbolLabel4);
-            this.uiGroupBox1.Controls.Add(this.uiSymbolButton6);
+            this.uiGroupBox1.Controls.Add(this.uiSymbolButton2);
             this.uiGroupBox1.Controls.Add(this.uiSymbolButton5);
             this.uiGroupBox1.Controls.Add(this.uiSymbolButton4);
             this.uiGroupBox1.Controls.Add(this.uiSymbolButton3);
-            this.uiGroupBox1.Controls.Add(this.uiSymbolButton2);
-            this.uiGroupBox1.Controls.Add(this.uiSymbolLabel3);
+            this.uiGroupBox1.Controls.Add(this.uiSymbolButton6);
+            this.uiGroupBox1.Controls.Add(this.uiSymbolLabel4);
             this.uiGroupBox1.Controls.Add(this.listBoxSend);
-            this.uiGroupBox1.Controls.Add(this.uiSymbolButton1);
+            this.uiGroupBox1.Controls.Add(this.uiSymbolLabel3);
             this.uiGroupBox1.Controls.Add(this.listBoxRec);
+            this.uiGroupBox1.Controls.Add(this.uiTextBox2);
+            this.uiGroupBox1.Controls.Add(this.uiTextBox1);
+            this.uiGroupBox1.Controls.Add(this.uiSymbolButton1);
             this.uiGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiGroupBox1.Location = new System.Drawing.Point(380, 43);
             this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -546,72 +549,59 @@
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiGroupBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // listBoxRec
-            // 
-            this.listBoxRec.FormattingEnabled = true;
-            this.listBoxRec.ItemHeight = 20;
-            this.listBoxRec.Location = new System.Drawing.Point(13, 75);
-            this.listBoxRec.Name = "listBoxRec";
-            this.listBoxRec.Size = new System.Drawing.Size(838, 204);
-            this.listBoxRec.TabIndex = 0;
-            // 
-            // listBoxSend
-            // 
-            this.listBoxSend.FormattingEnabled = true;
-            this.listBoxSend.ItemHeight = 20;
-            this.listBoxSend.Location = new System.Drawing.Point(13, 322);
-            this.listBoxSend.Name = "listBoxSend";
-            this.listBoxSend.Size = new System.Drawing.Size(838, 204);
-            this.listBoxSend.TabIndex = 0;
-            // 
-            // uiSymbolLabel3
-            // 
-            this.uiSymbolLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel3.Location = new System.Drawing.Point(13, 283);
-            this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel3.Name = "uiSymbolLabel3";
-            this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.uiSymbolLabel3.Size = new System.Drawing.Size(170, 35);
-            this.uiSymbolLabel3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel3.Symbol = 361912;
-            this.uiSymbolLabel3.TabIndex = 1;
-            this.uiSymbolLabel3.Text = "Sent";
-            this.uiSymbolLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiSymbolLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // uiSymbolLabel4
             // 
             this.uiSymbolLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiSymbolLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel4.Location = new System.Drawing.Point(13, 36);
+            this.uiSymbolLabel4.Location = new System.Drawing.Point(15, 30);
             this.uiSymbolLabel4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel4.Name = "uiSymbolLabel4";
             this.uiSymbolLabel4.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
             this.uiSymbolLabel4.Size = new System.Drawing.Size(170, 35);
             this.uiSymbolLabel4.Style = Sunny.UI.UIStyle.Custom;
             this.uiSymbolLabel4.Symbol = 362114;
-            this.uiSymbolLabel4.TabIndex = 1;
+            this.uiSymbolLabel4.TabIndex = 55;
             this.uiSymbolLabel4.Text = "Received";
             this.uiSymbolLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiSymbolLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiTextBox1
+            // listBoxSend
             // 
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiTextBox1.Location = new System.Drawing.Point(13, 573);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(638, 41);
-            this.uiTextBox1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox1.TabIndex = 2;
-            this.uiTextBox1.TagString = "";
-            this.uiTextBox1.Text = "24;12;42;56";
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.listBoxSend.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxSend.FormattingEnabled = true;
+            this.listBoxSend.ItemHeight = 20;
+            this.listBoxSend.Location = new System.Drawing.Point(15, 71);
+            this.listBoxSend.Name = "listBoxSend";
+            this.listBoxSend.Size = new System.Drawing.Size(838, 204);
+            this.listBoxSend.TabIndex = 54;
+            // 
+            // uiSymbolLabel3
+            // 
+            this.uiSymbolLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel3.Location = new System.Drawing.Point(15, 281);
+            this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel3.Name = "uiSymbolLabel3";
+            this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.uiSymbolLabel3.Size = new System.Drawing.Size(170, 35);
+            this.uiSymbolLabel3.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel3.Symbol = 361912;
+            this.uiSymbolLabel3.TabIndex = 56;
+            this.uiSymbolLabel3.Text = "Sent";
+            this.uiSymbolLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiSymbolLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // listBoxRec
+            // 
+            this.listBoxRec.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxRec.FormattingEnabled = true;
+            this.listBoxRec.ItemHeight = 20;
+            this.listBoxRec.Location = new System.Drawing.Point(15, 322);
+            this.listBoxRec.Name = "listBoxRec";
+            this.listBoxRec.Size = new System.Drawing.Size(838, 184);
+            this.listBoxRec.TabIndex = 57;
             // 
             // uiTextBox2
             // 
@@ -619,29 +609,46 @@
             this.uiTextBox2.DoubleValue = 4D;
             this.uiTextBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiTextBox2.IntValue = 4;
-            this.uiTextBox2.Location = new System.Drawing.Point(659, 573);
+            this.uiTextBox2.Location = new System.Drawing.Point(15, 569);
             this.uiTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox2.Name = "uiTextBox2";
             this.uiTextBox2.ShowText = false;
             this.uiTextBox2.Size = new System.Drawing.Size(99, 41);
             this.uiTextBox2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox2.TabIndex = 2;
+            this.uiTextBox2.TabIndex = 58;
             this.uiTextBox2.Text = "4";
             this.uiTextBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTextBox2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiTextBox1
+            // 
+            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.uiTextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiTextBox1.Location = new System.Drawing.Point(123, 569);
+            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
+            this.uiTextBox1.Name = "uiTextBox1";
+            this.uiTextBox1.ShowText = false;
+            this.uiTextBox1.Size = new System.Drawing.Size(588, 41);
+            this.uiTextBox1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiTextBox1.TabIndex = 59;
+            this.uiTextBox1.TagString = "";
+            this.uiTextBox1.Text = "24;12;42;56";
+            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiTextBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolButton1
             // 
             this.uiSymbolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiSymbolButton1.Location = new System.Drawing.Point(765, 573);
+            this.uiSymbolButton1.Location = new System.Drawing.Point(718, 569);
             this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton1.Name = "uiSymbolButton1";
-            this.uiSymbolButton1.Size = new System.Drawing.Size(86, 41);
+            this.uiSymbolButton1.Size = new System.Drawing.Size(135, 41);
             this.uiSymbolButton1.Style = Sunny.UI.UIStyle.Custom;
             this.uiSymbolButton1.Symbol = 362894;
-            this.uiSymbolButton1.TabIndex = 8;
+            this.uiSymbolButton1.TabIndex = 60;
             this.uiSymbolButton1.Text = "Send";
             this.uiSymbolButton1.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.uiSymbolButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -650,73 +657,73 @@
             // 
             this.uiSymbolButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiSymbolButton2.Location = new System.Drawing.Point(13, 532);
+            this.uiSymbolButton2.Location = new System.Drawing.Point(15, 524);
             this.uiSymbolButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton2.Name = "uiSymbolButton2";
             this.uiSymbolButton2.Size = new System.Drawing.Size(118, 35);
             this.uiSymbolButton2.Style = Sunny.UI.UIStyle.Custom;
             this.uiSymbolButton2.Symbol = 362718;
-            this.uiSymbolButton2.TabIndex = 9;
+            this.uiSymbolButton2.TabIndex = 70;
             this.uiSymbolButton2.Text = "Calibration";
             this.uiSymbolButton2.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.uiSymbolButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiSymbolButton3
-            // 
-            this.uiSymbolButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiSymbolButton3.Location = new System.Drawing.Point(143, 532);
-            this.uiSymbolButton3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolButton3.Name = "uiSymbolButton3";
-            this.uiSymbolButton3.Size = new System.Drawing.Size(118, 35);
-            this.uiSymbolButton3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolButton3.Symbol = 57489;
-            this.uiSymbolButton3.TabIndex = 9;
-            this.uiSymbolButton3.Text = "Read ";
-            this.uiSymbolButton3.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.uiSymbolButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiSymbolButton4
-            // 
-            this.uiSymbolButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiSymbolButton4.Location = new System.Drawing.Point(273, 532);
-            this.uiSymbolButton4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolButton4.Name = "uiSymbolButton4";
-            this.uiSymbolButton4.Size = new System.Drawing.Size(118, 35);
-            this.uiSymbolButton4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolButton4.Symbol = 57489;
-            this.uiSymbolButton4.TabIndex = 9;
-            this.uiSymbolButton4.Text = "Read ";
-            this.uiSymbolButton4.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.uiSymbolButton4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolButton5
             // 
             this.uiSymbolButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiSymbolButton5.Location = new System.Drawing.Point(403, 532);
+            this.uiSymbolButton5.Location = new System.Drawing.Point(140, 524);
             this.uiSymbolButton5.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton5.Name = "uiSymbolButton5";
             this.uiSymbolButton5.Size = new System.Drawing.Size(118, 35);
             this.uiSymbolButton5.Style = Sunny.UI.UIStyle.Custom;
             this.uiSymbolButton5.Symbol = 57489;
-            this.uiSymbolButton5.TabIndex = 9;
+            this.uiSymbolButton5.TabIndex = 67;
             this.uiSymbolButton5.Text = "Read ";
             this.uiSymbolButton5.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.uiSymbolButton5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiSymbolButton4
+            // 
+            this.uiSymbolButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiSymbolButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiSymbolButton4.Location = new System.Drawing.Point(264, 524);
+            this.uiSymbolButton4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolButton4.Name = "uiSymbolButton4";
+            this.uiSymbolButton4.Size = new System.Drawing.Size(118, 35);
+            this.uiSymbolButton4.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolButton4.Symbol = 57489;
+            this.uiSymbolButton4.TabIndex = 68;
+            this.uiSymbolButton4.Text = "Read ";
+            this.uiSymbolButton4.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.uiSymbolButton4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiSymbolButton3
+            // 
+            this.uiSymbolButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiSymbolButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiSymbolButton3.Location = new System.Drawing.Point(388, 524);
+            this.uiSymbolButton3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolButton3.Name = "uiSymbolButton3";
+            this.uiSymbolButton3.Size = new System.Drawing.Size(118, 35);
+            this.uiSymbolButton3.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolButton3.Symbol = 57489;
+            this.uiSymbolButton3.TabIndex = 69;
+            this.uiSymbolButton3.Text = "Read ";
+            this.uiSymbolButton3.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.uiSymbolButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolButton6
             // 
             this.uiSymbolButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiSymbolButton6.Location = new System.Drawing.Point(533, 532);
+            this.uiSymbolButton6.Location = new System.Drawing.Point(512, 524);
             this.uiSymbolButton6.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton6.Name = "uiSymbolButton6";
             this.uiSymbolButton6.Size = new System.Drawing.Size(118, 35);
             this.uiSymbolButton6.Style = Sunny.UI.UIStyle.Custom;
             this.uiSymbolButton6.Symbol = 57489;
-            this.uiSymbolButton6.TabIndex = 9;
+            this.uiSymbolButton6.TabIndex = 66;
             this.uiSymbolButton6.Text = "Read ";
             this.uiSymbolButton6.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.uiSymbolButton6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -772,17 +779,17 @@
         private Sunny.UI.UISymbolLabel uiSymbolLabel2;
         private Sunny.UI.UITextBox txtRobotPort;
         private Sunny.UI.UIGroupBox uiGroupBox1;
-        private System.Windows.Forms.ListBox listBoxSend;
-        private System.Windows.Forms.ListBox listBoxRec;
         private Sunny.UI.UISymbolLabel uiSymbolLabel4;
+        private System.Windows.Forms.ListBox listBoxSend;
         private Sunny.UI.UISymbolLabel uiSymbolLabel3;
+        private System.Windows.Forms.ListBox listBoxRec;
         private Sunny.UI.UITextBox uiTextBox2;
         private Sunny.UI.UITextBox uiTextBox1;
-        private Sunny.UI.UISymbolButton uiSymbolButton6;
+        private Sunny.UI.UISymbolButton uiSymbolButton1;
+        private Sunny.UI.UISymbolButton uiSymbolButton2;
         private Sunny.UI.UISymbolButton uiSymbolButton5;
         private Sunny.UI.UISymbolButton uiSymbolButton4;
         private Sunny.UI.UISymbolButton uiSymbolButton3;
-        private Sunny.UI.UISymbolButton uiSymbolButton2;
-        private Sunny.UI.UISymbolButton uiSymbolButton1;
+        private Sunny.UI.UISymbolButton uiSymbolButton6;
     }
 }

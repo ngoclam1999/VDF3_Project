@@ -54,8 +54,12 @@
             this.txtWidth = new Sunny.UI.UITextBox();
             this.txtSubnet = new Sunny.UI.UITextBox();
             this.uiLabel4 = new Sunny.UI.UILabel();
+            this.uiLabel11 = new Sunny.UI.UILabel();
+            this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.txtGateway = new Sunny.UI.UITextBox();
+            this.txtVersion = new Sunny.UI.UITextBox();
+            this.txtSerial = new Sunny.UI.UITextBox();
             this.txtIPaddress = new Sunny.UI.UITextBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.txtDeviceBrand = new Sunny.UI.UITextBox();
@@ -64,10 +68,6 @@
             this.btnConnect = new Sunny.UI.UISymbolButton();
             this.cbDeviceList = new Sunny.UI.UIComboBox();
             this.btnRefresh = new FontAwesome.Sharp.IconButton();
-            this.txtSerial = new Sunny.UI.UITextBox();
-            this.uiLabel2 = new Sunny.UI.UILabel();
-            this.txtVersion = new Sunny.UI.UITextBox();
-            this.uiLabel11 = new Sunny.UI.UILabel();
             this.panel1.SuspendLayout();
             this.uiGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_campreview)).BeginInit();
@@ -375,9 +375,9 @@
             this.btnCamApply.Name = "btnCamApply";
             this.btnCamApply.Size = new System.Drawing.Size(151, 35);
             this.btnCamApply.Style = Sunny.UI.UIStyle.Custom;
-            this.btnCamApply.Symbol = 558052;
+            this.btnCamApply.Symbol = 363231;
             this.btnCamApply.TabIndex = 17;
-            this.btnCamApply.Text = "Apply";
+            this.btnCamApply.Text = "Config Network";
             this.btnCamApply.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnCamApply.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.btnCamApply.Click += new System.EventHandler(this.btnCamApply_Click);
@@ -518,6 +518,32 @@
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // uiLabel11
+            // 
+            this.uiLabel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.uiLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiLabel11.Location = new System.Drawing.Point(8, 165);
+            this.uiLabel11.Name = "uiLabel11";
+            this.uiLabel11.Size = new System.Drawing.Size(111, 23);
+            this.uiLabel11.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel11.TabIndex = 6;
+            this.uiLabel11.Text = "Version";
+            this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel11.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiLabel2
+            // 
+            this.uiLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.uiLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiLabel2.Location = new System.Drawing.Point(8, 126);
+            this.uiLabel2.Name = "uiLabel2";
+            this.uiLabel2.Size = new System.Drawing.Size(111, 23);
+            this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel2.TabIndex = 6;
+            this.uiLabel2.Text = "Serial";
+            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // uiLabel3
             // 
             this.uiLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
@@ -547,6 +573,40 @@
             this.txtGateway.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtGateway.Watermark = "";
             this.txtGateway.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtVersion
+            // 
+            this.txtVersion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtVersion.Location = new System.Drawing.Point(126, 162);
+            this.txtVersion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtVersion.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtVersion.Name = "txtVersion";
+            this.txtVersion.Padding = new System.Windows.Forms.Padding(5);
+            this.txtVersion.ShowText = false;
+            this.txtVersion.Size = new System.Drawing.Size(218, 28);
+            this.txtVersion.Style = Sunny.UI.UIStyle.Custom;
+            this.txtVersion.TabIndex = 5;
+            this.txtVersion.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtVersion.Watermark = "";
+            this.txtVersion.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtSerial
+            // 
+            this.txtSerial.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSerial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtSerial.Location = new System.Drawing.Point(126, 123);
+            this.txtSerial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSerial.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtSerial.Name = "txtSerial";
+            this.txtSerial.Padding = new System.Windows.Forms.Padding(5);
+            this.txtSerial.ShowText = false;
+            this.txtSerial.Size = new System.Drawing.Size(218, 28);
+            this.txtSerial.Style = Sunny.UI.UIStyle.Custom;
+            this.txtSerial.TabIndex = 5;
+            this.txtSerial.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtSerial.Watermark = "";
+            this.txtSerial.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // txtIPaddress
             // 
@@ -681,66 +741,6 @@
             this.btnRefresh.TabIndex = 5;
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // txtSerial
-            // 
-            this.txtSerial.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSerial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtSerial.Location = new System.Drawing.Point(126, 123);
-            this.txtSerial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSerial.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtSerial.Name = "txtSerial";
-            this.txtSerial.Padding = new System.Windows.Forms.Padding(5);
-            this.txtSerial.ShowText = false;
-            this.txtSerial.Size = new System.Drawing.Size(218, 28);
-            this.txtSerial.Style = Sunny.UI.UIStyle.Custom;
-            this.txtSerial.TabIndex = 5;
-            this.txtSerial.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtSerial.Watermark = "";
-            this.txtSerial.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiLabel2
-            // 
-            this.uiLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.uiLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel2.Location = new System.Drawing.Point(8, 126);
-            this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(111, 23);
-            this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel2.TabIndex = 6;
-            this.uiLabel2.Text = "Serial";
-            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // txtVersion
-            // 
-            this.txtVersion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtVersion.Location = new System.Drawing.Point(126, 162);
-            this.txtVersion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtVersion.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtVersion.Name = "txtVersion";
-            this.txtVersion.Padding = new System.Windows.Forms.Padding(5);
-            this.txtVersion.ShowText = false;
-            this.txtVersion.Size = new System.Drawing.Size(218, 28);
-            this.txtVersion.Style = Sunny.UI.UIStyle.Custom;
-            this.txtVersion.TabIndex = 5;
-            this.txtVersion.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtVersion.Watermark = "";
-            this.txtVersion.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiLabel11
-            // 
-            this.uiLabel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.uiLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel11.Location = new System.Drawing.Point(8, 165);
-            this.uiLabel11.Name = "uiLabel11";
-            this.uiLabel11.Size = new System.Drawing.Size(111, 23);
-            this.uiLabel11.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel11.TabIndex = 6;
-            this.uiLabel11.Text = "Version";
-            this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel11.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // FrSetting
             // 
