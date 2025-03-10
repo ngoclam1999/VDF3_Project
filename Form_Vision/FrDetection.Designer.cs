@@ -1,4 +1,7 @@
-﻿namespace VDF3_Solution3
+﻿using System;
+using System.Threading.Tasks;
+
+namespace VDF3_Solution3
 {
     partial class FrDetection
     {
@@ -26,7 +29,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private async Task InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrDetection));
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -38,6 +41,7 @@
             this.btnZoomOut = new System.Windows.Forms.ToolStripButton();
             this.btnZoomIn = new System.Windows.Forms.ToolStripButton();
             this.tsbtnBoundTool = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnEditBoudingBox = new System.Windows.Forms.ToolStripButton();
             this.btnTraning = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.uiPanel4 = new Sunny.UI.UIPanel();
@@ -49,11 +53,15 @@
             this.uiListBox1 = new Sunny.UI.UIListBox();
             this.pnlContaner = new Sunny.UI.UIPanel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.tsbtnEditBoudingBox = new System.Windows.Forms.ToolStripButton();
+            this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.picTemplate = new System.Windows.Forms.PictureBox();
+            this.btnPickTemplate = new FontAwesome.Sharp.IconButton();
             this.toolStrip2.SuspendLayout();
             this.uiPanel4.SuspendLayout();
             this.pnlContaner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.uiPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTemplate)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip2
@@ -167,21 +175,30 @@
             this.tsbtnBoundTool.Text = "Bound Tool";
             this.tsbtnBoundTool.Click += new System.EventHandler(this.tsbtnBoundTool_Click);
             // 
+            // tsbtnEditBoudingBox
+            // 
+            this.tsbtnEditBoudingBox.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnEditBoudingBox.Image")));
+            this.tsbtnEditBoudingBox.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnEditBoudingBox.Name = "tsbtnEditBoudingBox";
+            this.tsbtnEditBoudingBox.Size = new System.Drawing.Size(104, 29);
+            this.tsbtnEditBoudingBox.Text = "Edit Bouding";
+            this.tsbtnEditBoudingBox.Click += new System.EventHandler(this.tsbtnEditBoudingBox_Click);
+            // 
             // btnTraning
             // 
             this.btnTraning.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTraning.IconChar = FontAwesome.Sharp.IconChar.BattleNet;
             this.btnTraning.IconColor = System.Drawing.Color.Black;
             this.btnTraning.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTraning.Location = new System.Drawing.Point(996, 433);
+            this.btnTraning.Location = new System.Drawing.Point(1081, 463);
             this.btnTraning.Name = "btnTraning";
-            this.btnTraning.Size = new System.Drawing.Size(125, 100);
+            this.btnTraning.Size = new System.Drawing.Size(85, 70);
             this.btnTraning.TabIndex = 24;
             this.btnTraning.Text = "Training";
             this.btnTraning.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTraning.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTraning.UseVisualStyleBackColor = true;
-            this.btnTraning.Click += new System.EventHandler(this.btnTraning_Click);
+            this.btnTraning.Click += new System.EventHandler(this.btnTraining_Click);
             // 
             // btnDelete
             // 
@@ -189,9 +206,9 @@
             this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btnDelete.IconColor = System.Drawing.Color.Black;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDelete.Location = new System.Drawing.Point(1125, 433);
+            this.btnDelete.Location = new System.Drawing.Point(1166, 463);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(125, 100);
+            this.btnDelete.Size = new System.Drawing.Size(85, 70);
             this.btnDelete.TabIndex = 25;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -355,7 +372,7 @@
             this.uiListBox1.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.uiListBox1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.uiListBox1.ShowText = false;
-            this.uiListBox1.Size = new System.Drawing.Size(254, 378);
+            this.uiListBox1.Size = new System.Drawing.Size(254, 240);
             this.uiListBox1.Style = Sunny.UI.UIStyle.Custom;
             this.uiListBox1.TabIndex = 18;
             this.uiListBox1.Text = "uiListBox1";
@@ -400,14 +417,51 @@
             this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
             this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
             // 
-            // tsbtnEditBoudingBox
+            // uiPanel1
             // 
-            this.tsbtnEditBoudingBox.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnEditBoudingBox.Image")));
-            this.tsbtnEditBoudingBox.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnEditBoudingBox.Name = "tsbtnEditBoudingBox";
-            this.tsbtnEditBoudingBox.Size = new System.Drawing.Size(104, 29);
-            this.tsbtnEditBoudingBox.Text = "Edit Bouding";
-            this.tsbtnEditBoudingBox.Click += new System.EventHandler(this.tsbtnEditBoudingBox_Click);
+            this.uiPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiPanel1.Controls.Add(this.picTemplate);
+            this.uiPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.uiPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiPanel1.Location = new System.Drawing.Point(996, 291);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel1.Name = "uiPanel1";
+            this.uiPanel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.uiPanel1.Size = new System.Drawing.Size(259, 165);
+            this.uiPanel1.Style = Sunny.UI.UIStyle.Gray;
+            this.uiPanel1.TabIndex = 26;
+            this.uiPanel1.Text = "uiPanel1";
+            this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // picTemplate
+            // 
+            this.picTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picTemplate.Location = new System.Drawing.Point(3, 4);
+            this.picTemplate.Name = "picTemplate";
+            this.picTemplate.Size = new System.Drawing.Size(253, 158);
+            this.picTemplate.TabIndex = 0;
+            this.picTemplate.TabStop = false;
+            // 
+            // btnPickTemplate
+            // 
+            this.btnPickTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPickTemplate.IconChar = FontAwesome.Sharp.IconChar.TicketSimple;
+            this.btnPickTemplate.IconColor = System.Drawing.Color.Black;
+            this.btnPickTemplate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPickTemplate.Location = new System.Drawing.Point(996, 463);
+            this.btnPickTemplate.Name = "btnPickTemplate";
+            this.btnPickTemplate.Size = new System.Drawing.Size(85, 70);
+            this.btnPickTemplate.TabIndex = 24;
+            this.btnPickTemplate.Text = "Template";
+            this.btnPickTemplate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPickTemplate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPickTemplate.UseVisualStyleBackColor = true;
+            this.btnPickTemplate.Click += new System.EventHandler(this.btnPickTemplate_Click);
             // 
             // FrDetection
             // 
@@ -415,6 +469,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1261, 682);
             this.ControlBox = false;
+            this.Controls.Add(this.uiPanel1);
+            this.Controls.Add(this.btnPickTemplate);
             this.Controls.Add(this.btnTraning);
             this.Controls.Add(this.uiListBox1);
             this.Controls.Add(this.btnDelete);
@@ -433,6 +489,8 @@
             this.uiPanel4.ResumeLayout(false);
             this.pnlContaner.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            this.uiPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picTemplate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,5 +519,10 @@
         private Sunny.UI.UIPanel pnlContaner;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.ToolStripButton tsbtnEditBoudingBox;
+        private Sunny.UI.UIPanel uiPanel1;
+        private System.Windows.Forms.PictureBox picTemplate;
+        private FontAwesome.Sharp.IconButton btnPickTemplate;
+
+        public EventHandler btnTraning_Click { get; private set; }
     }
 }

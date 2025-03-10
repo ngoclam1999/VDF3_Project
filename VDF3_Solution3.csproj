@@ -145,6 +145,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiClient.cs" />
+    <Compile Include="BoundingBoxDrawer.cs" />
     <Compile Include="Manager_Project\AutoClearParameter.cs" />
     <Compile Include="Manager_Project\BacklightParameter.cs" />
     <Compile Include="Camera\CameraBase.cs" />
@@ -237,6 +239,7 @@
       <DependentUpon>FrResultEvaluation.cs</DependentUpon>
     </Compile>
     <Compile Include="SequenceParameter.cs" />
+    <Compile Include="SystemMode.cs" />
     <Compile Include="ToolImageProcess.cs" />
     <Compile Include="VibrationParameter.cs" />
     <EmbeddedResource Include="Form1.resx">

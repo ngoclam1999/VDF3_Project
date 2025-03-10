@@ -8,6 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text.Json;
+using System.Drawing.Drawing2D;
+using Newtonsoft.Json;
 
 namespace VDF3_Solution3
 {
@@ -21,6 +26,7 @@ namespace VDF3_Solution3
         private int currentIndex = -1; // Vị trí ảnh hiện tại
         private bool Selected_BoundBox = false;
         private bool Resize_BoundBox = false;
+        string savePath;
         private enum ControlPointType
         {
             None,
@@ -34,10 +40,11 @@ namespace VDF3_Solution3
             BottomRight
         }
         private ControlPointType resizingHandle = ControlPointType.None;
-        private List<BoundingBox> boundingBoxes = new List<BoundingBox>();
+        private List<BoundingBox> BoundingBoxes = new List<BoundingBox>();
         private Point startPoint;
         private Point centerPoint;
         private Rectangle currentRectangle;
+        private Rectangle _ReadApiRectangle;
         private BoundingBox selectedBox = null;
         private bool isDragging = false;
         private bool isRotating = false;
@@ -178,7 +185,7 @@ namespace VDF3_Solution3
             imageFiles = Directory.GetFiles(directory, "*.*")
                                             .Where(f => f.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) ||
                                                         f.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) ||
-                                                        f.EndsWith(".png", StringComparison.OrdinalIgnoreCase) ||
+                                                        //f.EndsWith(".png", StringComparison.OrdinalIgnoreCase) ||
                                                         f.EndsWith(".bmp", StringComparison.OrdinalIgnoreCase))
                                             .ToList();
             currentIndex = -1;
@@ -228,6 +235,7 @@ namespace VDF3_Solution3
                 {
                     thumb.BorderStyle = BorderStyle.Fixed3D; // Tô viền xanh
                     thumb.BackColor = Color.Green;
+                    SystemMode.PresentFilePath = filePath;
                 }
                 else
                 {
@@ -586,7 +594,7 @@ namespace VDF3_Solution3
         }
         private BoundingBox GetBoundingBoxAtPoint(Point point)
         {
-            foreach (var box in boundingBoxes)
+            foreach (var box in BoundingBoxes)
             {
                 // Kiểm tra nếu điểm click nằm trong vùng điểm xoay
                 Point rotationPoint = GetRotationPoint(box);
@@ -671,7 +679,7 @@ namespace VDF3_Solution3
                 e.Graphics.DrawRectangle(Pens.Red, currentRectangle);
             }
 
-            foreach (var box in boundingBoxes)
+            foreach (var box in BoundingBoxes)
             {
                 // Lưu trạng thái transform
                 var state = e.Graphics.Save();
@@ -776,16 +784,17 @@ namespace VDF3_Solution3
         {
             uiListBox1.Items.Clear(); // Xóa toàn bộ nội dung cũ trong ListBox
 
-            foreach (var box in boundingBoxes)
+            foreach (var box in BoundingBoxes)
             {
                 // Hiển thị thông tin chính của Bounding Box
                 uiListBox1.Items.Add($"ImagePath: {box.imgpath}");
+                Console.WriteLine($"{box.imgpath}, {box.X}, {box.Y}, {box.Width}, {box.Height},{box.Angle}");
             }
         }
 
         private void pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            foreach (var box in boundingBoxes)
+            foreach (var box in BoundingBoxes)
             {
                 // Kiểm tra nếu chuột nhấp vào bên trong BBox
                 if (e.X >= box.X && e.X <= box.X + box.Width &&
@@ -812,7 +821,7 @@ namespace VDF3_Solution3
             {
                 isDragging = false; // Kết thúc kéo
             }
-            else if(isResizing)
+            else if (isResizing)
             {
                 isResizing = false;
             }
@@ -824,7 +833,7 @@ namespace VDF3_Solution3
             {
                 string imgpath = imageFiles[currentIndex];
                 Console.WriteLine(imgpath);
-                boundingBoxes.Add(new BoundingBox
+                BoundingBoxes.Add(new BoundingBox
                 {
                     imgpath = imageFiles[currentIndex],
                     X = currentRectangle.X,
@@ -857,7 +866,7 @@ namespace VDF3_Solution3
                 pictureBox.Invalidate();
                 return;
             }
-            selectedBox = boundingBoxes[uiListBox1.SelectedIndex];
+            selectedBox = BoundingBoxes[uiListBox1.SelectedIndex];
             pictureBox.Invalidate();
         }
 
@@ -865,15 +874,38 @@ namespace VDF3_Solution3
         {
             if (selectedBox != null)
             {
-                boundingBoxes.Remove(selectedBox); // Xóa BBox khỏi danh sách
+                BoundingBoxes.Remove(selectedBox); // Xóa BBox khỏi danh sách
                 selectedBox = null; // Bỏ chọn
                 pictureBox.Invalidate(); // Vẽ lại giao diện
             }
         }
 
-        private void btnTraning_Click(object sender, EventArgs e)
-        {
+        List<VDF3_Solution3.BoundingBox> boxes;
+        string body;
 
+        private async Task Trainning(object sender, EventArgs e)
+        {
+            
+            string imagePath = SystemMode.PresentFilePath;  // Ảnh lớn
+            Console.WriteLine(imagePath);
+            string templatePath = savePath;  // Ảnh mẫu
+            Console.WriteLine(templatePath);
+            try
+            {
+                body = await ApiClient.MatchTemplate(imagePath, templatePath, 0.4f);
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                Console.WriteLine("1:" + body);
+                if (body != null)
+                {
+                    DrawRotatedRectangles(body, imagePath, templatePath);
+                }
+            }
         }
 
         private void tsbtnEditBoudingBox_Click(object sender, EventArgs e)
@@ -889,6 +921,192 @@ namespace VDF3_Solution3
                 tsbtnEditBoudingBox.BackColor = Color.White;
             }
         }
+
+        private void btnPickTemplate_Click(object sender, EventArgs e)
+        {
+            CropAndSaveSelectedBoundingBox(originalImage, selectedBox);
+        }
+
+        public static int templateW;
+        public static int templateH;
+        private void CropAndSaveSelectedBoundingBox(Image originalImage, BoundingBox selectedBox)
+        {
+            if (originalImage == null || selectedBox == null)
+            {
+                MessageBox.Show("Không có Bounding Box nào được chọn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tạo thư mục Template nếu chưa tồn tại
+            // Lấy đường dẫn thư mục chứa file chạy (.exe)
+            string appFolder = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Đường dẫn thư mục "Template" trong thư mục chứa app
+            string templateFolder = Path.Combine(appFolder, "Template");
+
+            if (!Directory.Exists(templateFolder))
+            {
+                Directory.CreateDirectory(templateFolder);
+            }
+
+            // Tạo bitmap chứa vùng Bounding Box cần cắt
+            Rectangle cropRect = new Rectangle(selectedBox.X, selectedBox.Y, selectedBox.Width, selectedBox.Height);
+            Bitmap originalBitmap = new Bitmap(originalImage);
+            Bitmap croppedBitmap = new Bitmap(cropRect.Width, cropRect.Height);
+            templateW = selectedBox.Width;
+            templateH = selectedBox.Height;
+            using (Graphics g = Graphics.FromImage(croppedBitmap))
+            {
+                g.DrawImage(originalBitmap, new Rectangle(0, 0, cropRect.Width, cropRect.Height), cropRect, GraphicsUnit.Pixel);
+                picTemplate.Image = croppedBitmap;
+            }
+           
+
+            // Lưu ảnh đã crop vào thư mục Template
+            savePath = Path.Combine(templateFolder, $"template_{DateTime.Now:yyyyMMdd_HHmmss}.jpg");
+            croppedBitmap.Save(savePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+            MessageBox.Show($"Đã lưu template: {savePath}", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /*
+        public static void DrawBoundingBoxes(PictureBox picBox, string imagePath, string jsonContent)
+        {
+            if (!File.Exists(imagePath))
+            {
+                MessageBox.Show("Không tìm thấy ảnh!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Parse JSON từ chuỗi
+            BoundingBoxData data = JsonConvert.DeserializeObject<BoundingBoxData>(jsonContent);
+
+            // Load ảnh gốc
+            Image originalImage = Image.FromFile(imagePath);
+            Bitmap bitmap = new Bitmap(originalImage);
+
+            using (Graphics g = Graphics.FromImage(bitmap))
+            {
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+
+                foreach (var box in data.Matches)
+                {
+                    int size = (int)(100);  // Scale là kích thước Bounding Box
+                    Rectangle rect = new Rectangle(box.X, box.Y, templateW, templateH);
+
+                    using (Pen pen = new Pen(Color.Red, 2))
+                    {
+                        g.DrawRectangle(pen, rect);
+                    }
+
+                    // Hiển thị thông tin `Score` ngay trên Bounding Box
+                    using (Font font = new Font("Arial", 10, FontStyle.Bold))
+                    using (SolidBrush brush = new SolidBrush(Color.Yellow))
+                    {
+                        string text = $"Score: {box.Score:F2}";
+                        g.DrawString(text, font, brush, box.X, box.Y - 20);
+                    }
+                }
+            }
+
+            // Hiển thị ảnh với Bounding Box trên PictureBox
+            picBox.Image = bitmap;
+            picBox.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+        */
+        private void DrawRotatedRectangles(string jsonContent, string imagePath, string templateImagePath)
+        {
+            float _scaleX = 1f;
+            float _scaleY = 1f;
+            // Load ảnh lớn và template
+            Bitmap largeImage = new Bitmap(imagePath);
+            float LargeWidth = largeImage.Width;
+            float LargeHeight = largeImage.Height;
+            if(LargeWidth >= 970 || LargeHeight >= 480)
+            {
+                _scaleX = 970 / LargeWidth;
+                _scaleY = 480 / LargeHeight;
+            }
+            Bitmap templateImage = new Bitmap(templateImagePath);
+            float width = templateImage.Width;
+            float height = templateImage.Height;
+
+            // Parse JSON để lấy danh sách matches
+            using (var jsonDoc = JsonDocument.Parse(jsonContent))
+            {
+                var root = jsonDoc.RootElement;
+                var matches = root.GetProperty("matches");
+
+                using (Graphics g = Graphics.FromImage(largeImage))
+                {
+                    g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias; // Làm mượt đường vẽ
+                    Pen greenPen = new Pen(Color.Green, 2);
+
+                    foreach (var match in matches.EnumerateArray())
+                    {
+                        int x = match.GetProperty("x").GetInt32();
+                        int y = match.GetProperty("y").GetInt32();
+                        float angle = match.GetProperty("angle").GetSingle();
+                        float scale = match.GetProperty("scale").GetSingle();
+
+                        // Tính kích thước dựa trên scale
+                        float scaledWidth = width * scale / 100;
+                        float scaledHeight = height * scale / 100;
+
+                        // Tâm xoay
+                        float centerX = x + scaledWidth / 2;
+                        float centerY = y + scaledHeight / 2;
+
+                        // Tạo ma trận xoay
+                        g.TranslateTransform(centerX, centerY);
+                        g.RotateTransform(angle); // Dùng -angle để khớp với OpenCV
+                        g.TranslateTransform(-centerX, -centerY);
+
+                        // Các đỉnh của hình chữ nhật (trước khi xoay)
+                        PointF[] rectPoints = new PointF[]
+                        {
+                            new PointF(x, y),
+                            new PointF(x + scaledWidth, y),
+                            new PointF(x + scaledWidth, y + scaledHeight),
+                            new PointF(x, y + scaledHeight)
+                        };
+
+                        // Vẽ hình chữ nhật xoay bằng cách nối các đường thẳng
+                        for (int i = 0; i < 4; i++)
+                        {
+                            g.DrawLine(greenPen, rectPoints[i], rectPoints[(i + 1) % 4]);
+                        }
+
+                        // Reset ma trận xoay để không ảnh hưởng đến các hình tiếp theo
+                        g.ResetTransform();
+
+                        // Lưu Bounding Box
+                        BoundingBoxes.Add(new BoundingBox
+                        {
+                            imgpath = imageFiles[currentIndex],
+                            X = (int)x,
+                            Y = (int)y,
+                            Width = (int)scaledWidth,
+                            Height = (int)scaledHeight,
+                            Angle = angle,
+                            Vertices = new List<PointF>(rectPoints)
+                        });
+
+                        Console.WriteLine(match.ToString() + BoundingBoxes);
+                        UpdateListBox();
+                    }
+                }
+
+                // Hiển thị ảnh đã vẽ lên PictureBox
+                pictureBox.Image = largeImage;
+            }
+        }
+
+
+        private void btnTraining_Click(object sender, EventArgs e)
+        {
+            Trainning(null, null);
+        }
     }
 
     public class BoundingBox
@@ -899,6 +1117,9 @@ namespace VDF3_Solution3
         public int Width { get; set; }
         public int Height { get; set; }
         public float Angle { get; set; }
+
+        public float Score { get; set; }
         public List<PointF> Vertices { get; set; } = new List<PointF>(); // Danh sách tọa độ các đỉnh
     }
 }
+

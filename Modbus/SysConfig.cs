@@ -32,10 +32,7 @@ public static class SystemCongfig
     /// <summary>
     /// Lưu đường dẫn khi mở 1 project bất kỳ
     /// </summary>
-    public static string PresentFilePath;
-    /// <summary>
-    /// 
-    /// </summary>
+   
     public static int addr_ProjectId = 100;
     /// <summary>
     /// Auto/Manu mode

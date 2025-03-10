@@ -89,7 +89,7 @@ namespace ImageProcessingLib
                     }
                 }
             });
-
+            
             foreach (var region in detectedScores)
             {
                 Cv2.Polylines(resultImage, new List<IEnumerable<OpenCvSharp.Point>>

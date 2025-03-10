@@ -109,5 +109,33 @@ namespace VDF3_Solution3
         {
             tsbtnTrigger_Click(null, null);
         }
+
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            gbCommunication.Visible = false;
+            gbLightSetting.Visible = false;
+            gbImageSetting.Visible = true;
+        }
+
+        private void FrStartingUp_Load(object sender, EventArgs e)
+        {
+            gbCommunication.Visible = false;
+            gbLightSetting.Visible = false;
+            gbImageSetting.Visible = false;
+        }
+
+        private void btnInterface_Click(object sender, EventArgs e)
+        {
+            gbCommunication.Visible = false;
+            gbLightSetting.Visible = true;
+            gbImageSetting.Visible = false;
+        }
+
+        private void btnCommunication_Click(object sender, EventArgs e)
+        {
+            gbCommunication.Visible = true;
+            gbLightSetting.Visible = false;
+            gbImageSetting.Visible = false;
+        }
     }
 }

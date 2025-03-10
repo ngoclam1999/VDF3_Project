@@ -68,7 +68,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(201, 724);
+            this.pnlMenu.Size = new System.Drawing.Size(201, 734);
             this.pnlMenu.TabIndex = 0;
             // 
             // btnRun
@@ -105,7 +105,7 @@
             this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHelp.IconSize = 32;
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(0, 604);
+            this.btnHelp.Location = new System.Drawing.Point(0, 614);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnHelp.Size = new System.Drawing.Size(201, 60);
@@ -126,7 +126,7 @@
             this.btnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAbout.IconSize = 32;
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.Location = new System.Drawing.Point(0, 664);
+            this.btnAbout.Location = new System.Drawing.Point(0, 674);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnAbout.Size = new System.Drawing.Size(201, 60);
@@ -362,7 +362,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1448, 724);
+            this.ClientSize = new System.Drawing.Size(1448, 734);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlMenu);
