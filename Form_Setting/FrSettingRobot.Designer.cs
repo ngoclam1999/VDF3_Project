@@ -69,24 +69,25 @@
             this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
             this.uiGroupBox2 = new Sunny.UI.UIGroupBox();
+            this.txtGripA = new Sunny.UI.UITextBox();
+            this.txtGripD2 = new Sunny.UI.UITextBox();
+            this.txtGripD1 = new Sunny.UI.UITextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnSaveGripper = new Sunny.UI.UISymbolButton();
+            this.btnSaveVacum = new Sunny.UI.UISymbolButton();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtVaCumD = new Sunny.UI.UITextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rdiGripper = new Sunny.UI.UIRadioButton();
             this.rdiVacum = new Sunny.UI.UIRadioButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtGripD1 = new Sunny.UI.UITextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtGripD2 = new Sunny.UI.UITextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtGripA = new Sunny.UI.UITextBox();
-            this.btnSaveVacum = new Sunny.UI.UISymbolButton();
-            this.btnSaveGripper = new Sunny.UI.UISymbolButton();
+            this.lbSttModbus = new Sunny.UI.UISymbolLabel();
             this.panel1.SuspendLayout();
             this.grb_RobotSetting.SuspendLayout();
             this.grb_Robot.SuspendLayout();
@@ -182,13 +183,13 @@
             this.grb_RobotSetting.Controls.Add(this.uiLabel1);
             this.grb_RobotSetting.Controls.Add(this.txtDeviceID);
             this.grb_RobotSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.grb_RobotSetting.Location = new System.Drawing.Point(13, 299);
+            this.grb_RobotSetting.Location = new System.Drawing.Point(13, 324);
             this.grb_RobotSetting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grb_RobotSetting.MinimumSize = new System.Drawing.Size(1, 1);
             this.grb_RobotSetting.Name = "grb_RobotSetting";
             this.grb_RobotSetting.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
             this.grb_RobotSetting.RectColor = System.Drawing.Color.Green;
-            this.grb_RobotSetting.Size = new System.Drawing.Size(359, 384);
+            this.grb_RobotSetting.Size = new System.Drawing.Size(359, 359);
             this.grb_RobotSetting.Style = Sunny.UI.UIStyle.Custom;
             this.grb_RobotSetting.TabIndex = 13;
             this.grb_RobotSetting.Text = "Information";
@@ -408,6 +409,7 @@
             // grb_Robot
             // 
             this.grb_Robot.BackColor = System.Drawing.SystemColors.Control;
+            this.grb_Robot.Controls.Add(this.lbSttModbus);
             this.grb_Robot.Controls.Add(this.uiSymbolLabel2);
             this.grb_Robot.Controls.Add(this.uiSymbolLabel1);
             this.grb_Robot.Controls.Add(this.txtRobotPort);
@@ -422,7 +424,7 @@
             this.grb_Robot.Name = "grb_Robot";
             this.grb_Robot.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
             this.grb_Robot.RectColor = System.Drawing.Color.Green;
-            this.grb_Robot.Size = new System.Drawing.Size(359, 252);
+            this.grb_Robot.Size = new System.Drawing.Size(359, 280);
             this.grb_Robot.Style = Sunny.UI.UIStyle.Custom;
             this.grb_Robot.TabIndex = 12;
             this.grb_Robot.Text = "Connection";
@@ -433,7 +435,7 @@
             // 
             this.uiSymbolLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiSymbolLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiSymbolLabel2.Location = new System.Drawing.Point(12, 109);
+            this.uiSymbolLabel2.Location = new System.Drawing.Point(12, 102);
             this.uiSymbolLabel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel2.Name = "uiSymbolLabel2";
             this.uiSymbolLabel2.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
@@ -467,7 +469,7 @@
             this.txtRobotPort.DoubleValue = 502D;
             this.txtRobotPort.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.txtRobotPort.IntValue = 502;
-            this.txtRobotPort.Location = new System.Drawing.Point(12, 149);
+            this.txtRobotPort.Location = new System.Drawing.Point(12, 138);
             this.txtRobotPort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRobotPort.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtRobotPort.Name = "txtRobotPort";
@@ -483,7 +485,7 @@
             // 
             this.txtRobotIPaddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRobotIPaddress.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtRobotIPaddress.Location = new System.Drawing.Point(12, 75);
+            this.txtRobotIPaddress.Location = new System.Drawing.Point(12, 71);
             this.txtRobotIPaddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRobotIPaddress.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtRobotIPaddress.Name = "txtRobotIPaddress";
@@ -499,7 +501,7 @@
             // 
             this.btnDisconnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDisconnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnDisconnect.Location = new System.Drawing.Point(158, 194);
+            this.btnDisconnect.Location = new System.Drawing.Point(158, 178);
             this.btnDisconnect.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnDisconnect.Name = "btnDisconnect";
             this.btnDisconnect.Size = new System.Drawing.Size(121, 41);
@@ -509,12 +511,13 @@
             this.btnDisconnect.Text = "Disconnect";
             this.btnDisconnect.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnDisconnect.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
             // 
             // btnConnect
             // 
             this.btnConnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnConnect.Location = new System.Drawing.Point(12, 194);
+            this.btnConnect.Location = new System.Drawing.Point(12, 178);
             this.btnConnect.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(121, 41);
@@ -524,6 +527,7 @@
             this.btnConnect.Text = "Connect";
             this.btnConnect.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnConnect.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // btnRefresh
             // 
@@ -790,6 +794,122 @@
             this.uiGroupBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiGroupBox2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // txtGripA
+            // 
+            this.txtGripA.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGripA.DoubleValue = 5D;
+            this.txtGripA.Enabled = false;
+            this.txtGripA.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.txtGripA.IntValue = 5;
+            this.txtGripA.Location = new System.Drawing.Point(226, 480);
+            this.txtGripA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtGripA.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtGripA.Name = "txtGripA";
+            this.txtGripA.ShowText = false;
+            this.txtGripA.Size = new System.Drawing.Size(103, 29);
+            this.txtGripA.Style = Sunny.UI.UIStyle.Custom;
+            this.txtGripA.TabIndex = 6;
+            this.txtGripA.Text = "5";
+            this.txtGripA.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtGripA.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtGripD2
+            // 
+            this.txtGripD2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGripD2.DoubleValue = 5D;
+            this.txtGripD2.Enabled = false;
+            this.txtGripD2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.txtGripD2.IntValue = 5;
+            this.txtGripD2.Location = new System.Drawing.Point(226, 405);
+            this.txtGripD2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtGripD2.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtGripD2.Name = "txtGripD2";
+            this.txtGripD2.ShowText = false;
+            this.txtGripD2.Size = new System.Drawing.Size(103, 29);
+            this.txtGripD2.Style = Sunny.UI.UIStyle.Custom;
+            this.txtGripD2.TabIndex = 6;
+            this.txtGripD2.Text = "5";
+            this.txtGripD2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtGripD2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtGripD1
+            // 
+            this.txtGripD1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGripD1.DoubleValue = 5D;
+            this.txtGripD1.Enabled = false;
+            this.txtGripD1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.txtGripD1.IntValue = 5;
+            this.txtGripD1.Location = new System.Drawing.Point(226, 330);
+            this.txtGripD1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtGripD1.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtGripD1.Name = "txtGripD1";
+            this.txtGripD1.ShowText = false;
+            this.txtGripD1.Size = new System.Drawing.Size(103, 29);
+            this.txtGripD1.Style = Sunny.UI.UIStyle.Custom;
+            this.txtGripD1.TabIndex = 6;
+            this.txtGripD1.Text = "5";
+            this.txtGripD1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtGripD1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(329, 484);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 21);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "(mm)";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(329, 409);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 21);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "(mm)";
+            // 
+            // btnSaveGripper
+            // 
+            this.btnSaveGripper.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveGripper.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnSaveGripper.Location = new System.Drawing.Point(228, 562);
+            this.btnSaveGripper.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnSaveGripper.Name = "btnSaveGripper";
+            this.btnSaveGripper.Size = new System.Drawing.Size(152, 41);
+            this.btnSaveGripper.Style = Sunny.UI.UIStyle.Custom;
+            this.btnSaveGripper.Symbol = 361639;
+            this.btnSaveGripper.TabIndex = 8;
+            this.btnSaveGripper.Text = "Save";
+            this.btnSaveGripper.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnSaveGripper.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnSaveGripper.Click += new System.EventHandler(this.btnSaveGripper_Click);
+            // 
+            // btnSaveVacum
+            // 
+            this.btnSaveVacum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveVacum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnSaveVacum.Location = new System.Drawing.Point(227, 211);
+            this.btnSaveVacum.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnSaveVacum.Name = "btnSaveVacum";
+            this.btnSaveVacum.Size = new System.Drawing.Size(152, 41);
+            this.btnSaveVacum.Style = Sunny.UI.UIStyle.Custom;
+            this.btnSaveVacum.Symbol = 361639;
+            this.btnSaveVacum.TabIndex = 8;
+            this.btnSaveVacum.Text = "Save";
+            this.btnSaveVacum.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnSaveVacum.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnSaveVacum.Click += new System.EventHandler(this.btnSaveVacum_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(329, 334);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 21);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "(mm)";
+            // 
             // txtVaCumD
             // 
             this.txtVaCumD.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -808,6 +928,33 @@
             this.txtVaCumD.Text = "5";
             this.txtVaCumD.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtVaCumD.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(222, 449);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(145, 21);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Grip diameter (A):";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(222, 374);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(165, 21);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Open diameter (D2):";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(222, 299);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 21);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Close diameter (D1):";
             // 
             // label2
             // 
@@ -877,148 +1024,21 @@
             this.rdiVacum.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.rdiVacum.CheckedChanged += new System.EventHandler(this.rdiVacum_CheckedChanged);
             // 
-            // label3
+            // lbSttModbus
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(222, 299);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 21);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Close diameter (D1):";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(329, 334);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 21);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "(mm)";
-            // 
-            // txtGripD1
-            // 
-            this.txtGripD1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGripD1.DoubleValue = 5D;
-            this.txtGripD1.Enabled = false;
-            this.txtGripD1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtGripD1.IntValue = 5;
-            this.txtGripD1.Location = new System.Drawing.Point(226, 330);
-            this.txtGripD1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtGripD1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtGripD1.Name = "txtGripD1";
-            this.txtGripD1.ShowText = false;
-            this.txtGripD1.Size = new System.Drawing.Size(103, 29);
-            this.txtGripD1.Style = Sunny.UI.UIStyle.Custom;
-            this.txtGripD1.TabIndex = 6;
-            this.txtGripD1.Text = "5";
-            this.txtGripD1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtGripD1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(222, 374);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(165, 21);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Open diameter (D2):";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(329, 409);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 21);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "(mm)";
-            // 
-            // txtGripD2
-            // 
-            this.txtGripD2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGripD2.DoubleValue = 5D;
-            this.txtGripD2.Enabled = false;
-            this.txtGripD2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtGripD2.IntValue = 5;
-            this.txtGripD2.Location = new System.Drawing.Point(226, 405);
-            this.txtGripD2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtGripD2.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtGripD2.Name = "txtGripD2";
-            this.txtGripD2.ShowText = false;
-            this.txtGripD2.Size = new System.Drawing.Size(103, 29);
-            this.txtGripD2.Style = Sunny.UI.UIStyle.Custom;
-            this.txtGripD2.TabIndex = 6;
-            this.txtGripD2.Text = "5";
-            this.txtGripD2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtGripD2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(222, 449);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 21);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Grip diameter (A):";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(329, 484);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 21);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "(mm)";
-            // 
-            // txtGripA
-            // 
-            this.txtGripA.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGripA.DoubleValue = 5D;
-            this.txtGripA.Enabled = false;
-            this.txtGripA.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtGripA.IntValue = 5;
-            this.txtGripA.Location = new System.Drawing.Point(226, 480);
-            this.txtGripA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtGripA.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtGripA.Name = "txtGripA";
-            this.txtGripA.ShowText = false;
-            this.txtGripA.Size = new System.Drawing.Size(103, 29);
-            this.txtGripA.Style = Sunny.UI.UIStyle.Custom;
-            this.txtGripA.TabIndex = 6;
-            this.txtGripA.Text = "5";
-            this.txtGripA.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtGripA.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // btnSaveVacum
-            // 
-            this.btnSaveVacum.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveVacum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSaveVacum.Location = new System.Drawing.Point(227, 211);
-            this.btnSaveVacum.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnSaveVacum.Name = "btnSaveVacum";
-            this.btnSaveVacum.Size = new System.Drawing.Size(152, 41);
-            this.btnSaveVacum.Style = Sunny.UI.UIStyle.Custom;
-            this.btnSaveVacum.Symbol = 361639;
-            this.btnSaveVacum.TabIndex = 8;
-            this.btnSaveVacum.Text = "Save";
-            this.btnSaveVacum.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnSaveVacum.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.btnSaveVacum.Click += new System.EventHandler(this.btnSaveVacum_Click);
-            // 
-            // btnSaveGripper
-            // 
-            this.btnSaveGripper.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveGripper.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSaveGripper.Location = new System.Drawing.Point(228, 562);
-            this.btnSaveGripper.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnSaveGripper.Name = "btnSaveGripper";
-            this.btnSaveGripper.Size = new System.Drawing.Size(152, 41);
-            this.btnSaveGripper.Style = Sunny.UI.UIStyle.Custom;
-            this.btnSaveGripper.Symbol = 361639;
-            this.btnSaveGripper.TabIndex = 8;
-            this.btnSaveGripper.Text = "Save";
-            this.btnSaveGripper.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnSaveGripper.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.btnSaveGripper.Click += new System.EventHandler(this.btnSaveGripper_Click);
+            this.lbSttModbus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.lbSttModbus.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.lbSttModbus.Location = new System.Drawing.Point(12, 231);
+            this.lbSttModbus.MinimumSize = new System.Drawing.Size(1, 1);
+            this.lbSttModbus.Name = "lbSttModbus";
+            this.lbSttModbus.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.lbSttModbus.Size = new System.Drawing.Size(328, 31);
+            this.lbSttModbus.Style = Sunny.UI.UIStyle.Custom;
+            this.lbSttModbus.Symbol = 61553;
+            this.lbSttModbus.TabIndex = 15;
+            this.lbSttModbus.Text = "Lost Connection Modbus";
+            this.lbSttModbus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbSttModbus.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // FrSettingRobot
             // 
@@ -1108,5 +1128,6 @@
         private System.Windows.Forms.Label label3;
         private Sunny.UI.UISymbolButton btnSaveGripper;
         private Sunny.UI.UISymbolButton btnSaveVacum;
+        private Sunny.UI.UISymbolLabel lbSttModbus;
     }
 }

@@ -156,35 +156,26 @@ namespace VDF3_Solution3
 
             return new PointF(newX, newY);
         }
+        public class BoundingBox
+        {
+            public string imgpath { get; set; }
+            public int X { get; set; }
+            public int Y { get; set; }
+            public int Width { get; set; }
+            public int Height { get; set; }
+            public float Angle { get; set; }
+            public float Score { get; set; }
+            public List<PointF> Vertices { get; set; } = new List<PointF>();
+
+            // Thuộc tính TransformMatrix
+            public Matrix TransformMatrix { get; set; } = new Matrix();
+
+            // Constructor
+            public BoundingBox()
+            {
+                TransformMatrix = new Matrix();
+            }
+        }
+
     }
-}
-/// <summary>
-/// Represents a bounding box with position, size, and rotation angle.
-/// </summary>
-public class BoundingBox
-{
-    /// <summary>
-    /// Gets or sets the x-coordinate of the top-left corner of the bounding box.
-    /// </summary>
-    public int X { get; set; }
-
-    /// <summary>
-    /// Gets or sets the y-coordinate of the top-left corner of the bounding box.
-    /// </summary>
-    public int Y { get; set; }
-
-    /// <summary>
-    /// Gets or sets the width of the bounding box.
-    /// </summary>
-    public int Width { get; set; }
-
-    /// <summary>
-    /// Gets or sets the height of the bounding box.
-    /// </summary>
-    public int Height { get; set; }
-
-    /// <summary>
-    /// Gets or sets the rotation angle of the bounding box in degrees.
-    /// </summary>
-    public float Angle { get; set; }
 }

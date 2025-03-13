@@ -20,6 +20,19 @@ namespace VDF3_Solution3
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; 
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            BackgroundWorkerService.Instance.OnDataUpdated += UpdateUI;
+        }
+        private void UpdateUI(string key, object value)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(() => UpdateUI(key, value)));
+                return;
+            }
+            if (key == "RbtMode")
+            {
+                uiLabel1.Text = value.ToString();
+            }
         }
     }
 }

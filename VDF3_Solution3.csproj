@@ -146,13 +146,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiClient.cs" />
+    <Compile Include="BackgroundWorkerService.cs" />
+    <Compile Include="Transform.cs" />
     <Compile Include="BoundingBoxDrawer.cs" />
-    <Compile Include="Manager_Project\AutoClearParameter.cs" />
-    <Compile Include="Manager_Project\BacklightParameter.cs" />
     <Compile Include="Camera\CameraBase.cs" />
-    <Compile Include="Manager_Project\ConfigItem.cs" />
-    <Compile Include="Manager_Project\ConfigManager.cs" />
-    <Compile Include="Manager_Project\CustomizedVibrationParameter.cs" />
     <Compile Include="Form_Vision\FrFinish.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,10 +235,9 @@
     <Compile Include="Form_Vision\FrResultEvaluation.Designer.cs">
       <DependentUpon>FrResultEvaluation.cs</DependentUpon>
     </Compile>
-    <Compile Include="SequenceParameter.cs" />
     <Compile Include="SystemMode.cs" />
     <Compile Include="ToolImageProcess.cs" />
-    <Compile Include="VibrationParameter.cs" />
+    <Compile Include="VariableRobot.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,6 +300,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Manager_Project\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

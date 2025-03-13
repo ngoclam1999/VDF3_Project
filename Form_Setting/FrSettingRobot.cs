@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace VDF3_Solution3
     public partial class FrSettingRobot : Form
     {
         FrSetting _ConfigCamera;
+        
         public FrSettingRobot()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace VDF3_Solution3
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            BackgroundWorkerService.Instance.OnDataUpdated += UpdateUI;
         }
 
         private void btnCamera_Click(object sender, EventArgs e)
@@ -136,6 +139,30 @@ namespace VDF3_Solution3
             SystemMode.GripDistance_Open = Convert.ToInt32(txtGripD2.Text);
             SystemMode.Grip_Thickness = Convert.ToInt32(txtGripA.Text);
             refresh();
+        }
+        private void UpdateUI(string key, object value)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(() => UpdateUI(key, value)));
+                return;
+            }
+            if (key == "DoworkMess")
+            {
+                lbSttModbus.Text = value.ToString();
+            }
+        }
+ 
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            BackgroundWorkerService.Instance.Start();
+            InvokeService.SendData("IpAddress", txtRobotIPaddress.Text);
+        }
+
+        private void btnDisconnect_Click(object sender, EventArgs e)
+        {
+            BackgroundWorkerService.Instance.Stop();
+            InvokeService.SendData("IpAddress", txtRobotIPaddress.Text);
         }
     }
 }

@@ -9,11 +9,7 @@ public static class SystemMode
     /// <summary>
     /// 
     /// </summary>
-    public static string ProjectName;
-    /// <summary>
-    /// 
-    /// </summary>
-    public static string PresentFilePath;
+    public static string PresentImagePath;
     /// <summary>
     /// 0: Tool Not use
     /// 1: Vacum

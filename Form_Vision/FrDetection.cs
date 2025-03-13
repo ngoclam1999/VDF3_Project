@@ -13,20 +13,25 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Drawing.Drawing2D;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace VDF3_Solution3
 {
     public partial class FrDetection : Form
     {
+        private Transform imageTransform = new Transform(); // Thêm biến transform cho ảnh
+        private Transform boxTransform = new Transform();   // Transform cho bounding box
         private float scaleFactor = 1.0f; // Hệ số phóng to/thu nhỏ
         private int rotationAngle = 0; // Góc xoay của ảnh
         private System.Drawing.Image originalImage; // Ảnh gốc
-        private Point mouseDownLocation;
+        private System.Drawing.Point mouseDownLocation;
         private List<string> imageFiles = new List<string>(); // Danh sách ảnh trong thư mục
         private int currentIndex = -1; // Vị trí ảnh hiện tại
         private bool Selected_BoundBox = false;
         private bool Resize_BoundBox = false;
+        private bool Rotate_BoundBox = false;
         string savePath;
+        private System.Drawing.Point imageMouseDownLocation;  // Dùng cho chế độ cuộn ảnh
         private enum ControlPointType
         {
             None,
@@ -41,17 +46,20 @@ namespace VDF3_Solution3
         }
         private ControlPointType resizingHandle = ControlPointType.None;
         private List<BoundingBox> BoundingBoxes = new List<BoundingBox>();
-        private Point startPoint;
-        private Point centerPoint;
+        private System.Drawing.PointF startPoint;
+        private System.Drawing.PointF centerPoint;
         private Rectangle currentRectangle;
         private Rectangle _ReadApiRectangle;
         private BoundingBox selectedBox = null;
         private bool isDragging = false;
         private bool isRotating = false;
         private bool isResizing = false;
-        private Point resizeStartPoint;
+        private System.Drawing.Point resizeStartPoint;
         private Rectangle resizeRectangle;
         private int handleSize = 10;
+        // Biến cho xoay bounding box
+        private float initialBoxAngle = 0f;
+        private PointF startRotationPoint;
         public FrDetection()
         {
             InitializeComponent();
@@ -82,7 +90,30 @@ namespace VDF3_Solution3
 
         private void btnTrigger_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var bitmap = FrSetting.hikCamera.Capture();
+                if (bitmap != null)
+                {
+                    // Hiển thị hình ảnh hoặc lưu hình ảnh
+                    pictureBox.SizeMode = PictureBoxSizeMode.Normal;
+                    pictureBox.Image = bitmap; // Giả sử bạn có một PictureBox để hiển thị hình ảnh
+                    originalImage = bitmap;
+                }
+                else
+                {
+                    MessageBox.Show("No image captured.");
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error capturing image: " + ex.Message);
+            }
+            finally
+            {
+
+            }
         }
 
         private void tsbtnBoundTool_Click(object sender, EventArgs e)
@@ -107,6 +138,7 @@ namespace VDF3_Solution3
         private void btnZoomOut_Click(object sender, EventArgs e)
         {
             ZoomImage(0.8f);
+
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -219,7 +251,15 @@ namespace VDF3_Solution3
 
         private void LoadImage(string filePath)
         {
-            originalImage = System.Drawing.Image.FromFile(filePath);
+            if (imageFiles == null)
+            {
+                originalImage = pictureBox.Image;
+            }
+            else
+            {
+                originalImage = System.Drawing.Image.FromFile(filePath);
+            }
+
             pictureBox.Image = (System.Drawing.Image)originalImage.Clone(); // Hiển thị ảnh gốc
             pictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             rotationAngle = 0;
@@ -235,7 +275,7 @@ namespace VDF3_Solution3
                 {
                     thumb.BorderStyle = BorderStyle.Fixed3D; // Tô viền xanh
                     thumb.BackColor = Color.Green;
-                    SystemMode.PresentFilePath = filePath;
+                    SystemMode.PresentImagePath = filePath;
                 }
                 else
                 {
@@ -256,52 +296,50 @@ namespace VDF3_Solution3
             btnLast.Enabled = currentIndex < imageFiles.Count - 1;
         }
 
-        private void RotateImage(int angle)
+        // --- Các phương thức xử lý ảnh bằng Transform ---
+
+        private void RotateImage(float angle)
         {
             if (pictureBox.Image == null) return;
-            rotationAngle = (rotationAngle + angle) % 360;
-            Console.WriteLine(rotationAngle);
-            pictureBox.Image = new Bitmap(originalImage);
-            switch (Math.Abs(rotationAngle))
-            {
-                case 90:
-                    pictureBox.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                    break;
-                case 180:
-                    pictureBox.Image.RotateFlip(RotateFlipType.Rotate180FlipNone);
-                    break;
-                case 270:
-                    pictureBox.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
-                    break;
-                default:
-                    pictureBox.Image.RotateFlip(RotateFlipType.RotateNoneFlipNone);
-                    break;
-            }
-            pictureBox.Refresh(); // Cập nhật lại giao diện
-            KeepImageInPanel(pnlContaner, pictureBox);
 
+            // Tính tâm của ảnh gốc
+            float centerX = originalImage.Width / 2f;
+            float centerY = originalImage.Height / 2f;
+            imageTransform.Rotate(angle, centerX, centerY);
+            ApplyImageTransformation();
         }
 
         private void ZoomImage(float factor)
         {
-            if (pictureBox.Image == null) return;
-            scaleFactor *= factor;
-            pictureBox.Width = (int)(pictureBox.Image.Width * scaleFactor);
-            pictureBox.Height = (int)(pictureBox.Image.Height * scaleFactor);
-            KeepImageInPanel(pnlContaner, pictureBox);
+            float centerX = pictureBox.Width / 2f;
+            float centerY = pictureBox.Height / 2f;
+            imageTransform.Scale(factor, factor, centerX, centerY);
+            ApplyImageTransformation();
+        }
 
+        private void ApplyImageTransformation()
+        {
+            if (originalImage == null) return;
+
+            // Tạo ảnh mới theo kích thước ảnh gốc và áp dụng ma trận biến đổi
+            Bitmap transformedImage = new Bitmap(originalImage.Width, originalImage.Height);
+            using (Graphics g = Graphics.FromImage(transformedImage))
+            {
+                imageTransform.Apply(g);
+                g.DrawImage(originalImage, 0, 0, originalImage.Width, originalImage.Height);
+            }
+            pictureBox.Image = transformedImage;
+            pictureBox.Invalidate();
         }
 
         private void ResetImage()
         {
-
             if (originalImage == null) return;
-            pictureBox.Image = (System.Drawing.Image)originalImage.Clone();
-            rotationAngle = 0;
-            scaleFactor = 1.0f;
-            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-            CenterImage(pnlContaner, pictureBox);
+
+            imageTransform.Reset();
+            pictureBox.Invalidate();
         }
+
 
         // Giữ ảnh luôn trong Panel khi zoom hoặc di chuyển
         private void KeepImageInPanel(Sunny.UI.UIPanel pnl, PictureBox pic)
@@ -312,7 +350,7 @@ namespace VDF3_Solution3
             int x = Math.Max(pnl.Width - pic.Width, 0) / 2;
             int y = Math.Max(pnl.Height - pic.Height, 0) / 2;
 
-            pic.Location = new Point(x, y);
+            pic.Location = new System.Drawing.Point(x, y);
         }
 
         // Căn giữa ảnh khi reset hoặc load
@@ -323,226 +361,370 @@ namespace VDF3_Solution3
             int x = (pnlContaner.Width - Img.Width) / 2;
             int y = (pnlContaner.Height - Img.Height) / 2;
 
-            Img.Location = new Point(x, y);
+            Img.Location = new System.Drawing.Point(x, y);
+        }
+        //------------------------------------------------------------------
+        private void pictureBox_Paint(object sender, PaintEventArgs e)
+        {
+            if (originalImage == null) return;
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+
+            // Áp dụng ma trận biến đổi cho graphics trước khi vẽ ảnh và bounding box
+            imageTransform.Apply(e.Graphics);
+            e.Graphics.DrawImage(originalImage, 0, 0);
+            DrawBoundingBoxes(e.Graphics);
         }
 
-        private void pictureBox_MouseMove(object sender, MouseEventArgs e)
+        private void DrawBoundingBoxes(Graphics g)
         {
-            if (!Selected_BoundBox)
+            foreach (var box in BoundingBoxes)
             {
-                //Scroll image
-                if (e.Button == MouseButtons.Left && pictureBox.Image != null)
+                PointF[] points = box.Vertices.ToArray();
+                // Vẽ bounding box
+                g.DrawPolygon(Pens.Blue, points);
+
+                // Nếu bounding box đang được chọn thì vẽ thêm viền nổi bật, các handle resize và handle xoay.
+                if (selectedBox != null && box == selectedBox)
                 {
-                    int newX = pictureBox.Left + (e.X - mouseDownLocation.X);
-                    int newY = pictureBox.Top + (e.Y - mouseDownLocation.Y);
+                    // Vẽ viền nổi bật (màu trắng, độ dày 2)
+                    using (Pen selPen = new Pen(Color.White, 2))
+                    {
+                        g.DrawPolygon(selPen, points);
+                    }
 
-                    // Giữ ảnh không vượt ra khỏi panel
-                    newX = Math.Min(0, Math.Max(pnlContaner.Width - pictureBox.Width, newX));
-                    newY = Math.Min(0, Math.Max(pnlContaner.Height - pictureBox.Height, newY));
+                    int handleSize = 20;
+                    // Vẽ các handle resize ở các đỉnh
+                    foreach (PointF pt in points)
+                    {
+                        RectangleF handleRect = new RectangleF(pt.X - handleSize / 2, pt.Y - handleSize / 2, handleSize, handleSize);
+                        using (Brush handleBrush = new SolidBrush(Color.White))
+                        {
+                            g.FillRectangle(handleBrush, handleRect);
+                        }
+                        g.DrawRectangle(Pens.Black, (int)handleRect.X, (int)handleRect.Y, (int)handleRect.Width, (int)handleRect.Height);
+                    }
 
-                    pictureBox.Location = new Point(newX, newY);
+                    // Vẽ handle resize ở các trung điểm của cạnh
+                    for (int i = 0; i < points.Length; i++)
+                    {
+                        PointF p1 = points[i];
+                        PointF p2 = points[(i + 1) % points.Length];
+                        PointF midPoint = new PointF((p1.X + p2.X) / 2, (p1.Y + p2.Y) / 2);
+                        RectangleF midHandleRect = new RectangleF(midPoint.X - handleSize / 2, midPoint.Y - handleSize / 2, handleSize, handleSize);
+                        using (Brush midBrush = new SolidBrush(Color.Yellow))
+                        {
+                            g.FillRectangle(midBrush, midHandleRect);
+                        }
+                        g.DrawRectangle(Pens.Black, (int)midHandleRect.X, (int)midHandleRect.Y, (int)midHandleRect.Width, (int)midHandleRect.Height);
+                    }
+
+                    // Vẽ handle xoay (RotationHandle) ở vị trí tính từ đỉnh TopRight với offset 10 pixel
+                    PointF rotationHandle = GetRotationHandle(selectedBox);
+                    RectangleF rotHandleRect = new RectangleF(rotationHandle.X - handleSize / 2, rotationHandle.Y - handleSize / 2, handleSize, handleSize);
+                    using (Brush rotBrush = new SolidBrush(Color.Red))
+                    {
+                        g.FillRectangle(rotBrush, rotHandleRect);
+                    }
+                    g.DrawRectangle(Pens.Black, (int)rotHandleRect.X, (int)rotHandleRect.Y, (int)rotHandleRect.Width, (int)rotHandleRect.Height);
+                }
+            }
+        }
+
+        // --- Xử lý các sự kiện chuột ---
+
+        private void pictureBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Nếu đang ở chế độ bounding box thì xử lý vẽ/chỉnh sửa bounding box
+            if (Selected_BoundBox)
+            {
+                // Chuyển tọa độ chuột từ PictureBox sang hệ tọa độ ảnh gốc
+                PointF[] pts = new PointF[] { e.Location };
+                Matrix invMatrix = imageTransform.Matrix.Clone();
+                invMatrix.Invert();
+                invMatrix.TransformPoints(pts);
+                PointF transformedPoint = pts[0];
+
+                // Kiểm tra xem có bounding box nào được chọn không
+                selectedBox = GetBoundingBoxAtPoint(transformedPoint);
+                if (selectedBox != null)
+                {
+                    // Nếu bật Resize_BoundBox, kiểm tra xem chuột nhấp vào handle resize chưa
+                    if (Resize_BoundBox)
+                    {
+                        ControlPointType handle = GetResizeHandleUnderMouse(selectedBox, transformedPoint);
+                        if (handle != ControlPointType.None)
+                        {
+                            isResizing = true;
+                            resizingHandle = handle;
+                            resizeStartPoint = Point.Round(transformedPoint);
+                            return;
+                        }
+                    }
+                    // Nếu không resize và bật Rotate_BoundBox, kiểm tra xem nhấp vào handle xoay chưa
+                    if (Rotate_BoundBox && !Resize_BoundBox)
+                    {
+                        PointF rotationHandle = GetRotationHandle(selectedBox);
+                        if (DistanceBetweenPoints(transformedPoint, rotationHandle) < 20)
+                        {
+                            isRotating = true;
+                            startRotationPoint = transformedPoint;
+                            initialBoxAngle = selectedBox.Angle;
+                            return;
+                        }
+                    }
+                    // Nếu không nhấp vào handle xoay/resize, bật chế độ kéo di chuyển bounding box
+                    isDragging = true;
+                    startPoint = transformedPoint;
+                }
+                else
+                {
+                    // Nếu không nhấp vào bounding box nào, bắt đầu vẽ bounding box mới
+                    startPoint = transformedPoint;
+                    currentRectangle = new Rectangle((int)startPoint.X, (int)startPoint.Y, 0, 0);
                 }
             }
             else
             {
-                //Bounding Box
-                if (isRotating && selectedBox != null)
+                // Chế độ cuộn ảnh: lưu vị trí nhấn chuột
+                imageMouseDownLocation = e.Location;
+            }
+        }
+
+        // MouseMove: Tùy chế độ, nếu Selected_BoundBox true thì cập nhật bounding box (di chuyển hoặc vẽ mới),
+        // còn nếu false thì cập nhật vị trí PictureBox để cuộn ảnh.
+        private void pictureBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Selected_BoundBox)
+            {
+                // Chuyển đổi tọa độ chuột
+                PointF[] pts = new PointF[] { e.Location };
+                Matrix invMatrix = imageTransform.Matrix.Clone();
+                invMatrix.Invert();
+                invMatrix.TransformPoints(pts);
+                PointF transformedPoint = pts[0];
+
+                if (isResizing && selectedBox != null)
                 {
-                    // Tính góc xoay dựa trên vị trí chuột và điểm trung tâm
-                    float centerX = selectedBox.X + selectedBox.Width / 2;
-                    float centerY = selectedBox.Y + selectedBox.Height / 2;
+                    float dx = transformedPoint.X - resizeStartPoint.X;
+                    float dy = transformedPoint.Y - resizeStartPoint.Y;
 
-                    // Tính góc giữa điểm chuột và trung tâm
-                    float deltaX = e.X - centerX;
-                    float deltaY = e.Y - centerY;
-                    float angle = (float)(Math.Atan2(deltaY, deltaX) * 180.0 / Math.PI);
-
-                    // Điều chỉnh góc để có được góc xoay mong muốn
-                    selectedBox.Angle = angle + 90; // Cộng thêm 90 độ để điều chỉnh hướng
-                                                    // Cập nhật tọa độ các đỉnh
-                    UpdateBoundingBoxVertices(selectedBox);
-
-                    // Cập nhật ListBox
-                    UpdateListBox();
-                    pictureBox.Invalidate();
-                }
-                else if (isResizing && selectedBox != null)
-                {
-                    int dx = e.X - resizeStartPoint.X;
-                    int dy = e.Y - resizeStartPoint.Y;
-
+                    // Cập nhật kích thước bounding box theo handle được chọn
                     switch (resizingHandle)
                     {
                         case ControlPointType.TopLeft:
-                            selectedBox.X += dx;
-                            selectedBox.Y += dy;
-                            selectedBox.Width -= dx;
-                            selectedBox.Height -= dy;
-                            break;
-                        case ControlPointType.TopRight:
-                            selectedBox.Y += dy;
-                            selectedBox.Width += dx;
-                            selectedBox.Height -= dy;
-                            break;
-                        case ControlPointType.BottomLeft:
-                            selectedBox.X += dx;
-                            selectedBox.Width -= dx;
-                            selectedBox.Height += dy;
-                            break;
-                        case ControlPointType.BottomRight:
-                            selectedBox.Width += dx;
-                            selectedBox.Height += dy;
-                            break;
-                        case ControlPointType.MiddleLeft:
-                            selectedBox.X += dx;
-                            selectedBox.Width -= dx;
-                            break;
-                        case ControlPointType.MiddleRight:
-                            selectedBox.Width += dx;
+                            selectedBox.X += (int)dx;
+                            selectedBox.Y += (int)dy;
+                            selectedBox.Width -= (int)dx;
+                            selectedBox.Height -= (int)dy;
                             break;
                         case ControlPointType.TopCenter:
-                            selectedBox.Y += dy;
-                            selectedBox.Height -= dy;
+                            selectedBox.Y += (int)dy;
+                            selectedBox.Height -= (int)dy;
+                            break;
+                        case ControlPointType.TopRight:
+                            selectedBox.Y += (int)dy;
+                            selectedBox.Width += (int)dx;
+                            selectedBox.Height -= (int)dy;
+                            break;
+                        case ControlPointType.MiddleLeft:
+                            selectedBox.X += (int)dx;
+                            selectedBox.Width -= (int)dx;
+                            break;
+                        case ControlPointType.MiddleRight:
+                            selectedBox.Width += (int)dx;
+                            break;
+                        case ControlPointType.BottomLeft:
+                            selectedBox.X += (int)dx;
+                            selectedBox.Width -= (int)dx;
+                            selectedBox.Height += (int)dy;
                             break;
                         case ControlPointType.BottomCenter:
-                            selectedBox.Height += dy;
+                            selectedBox.Height += (int)dy;
+                            break;
+                        case ControlPointType.BottomRight:
+                            selectedBox.Width += (int)dx;
+                            selectedBox.Height += (int)dy;
+                            break;
+                        default:
                             break;
                     }
-
-                    resizeStartPoint = e.Location;
+                    // Cập nhật lại các đỉnh gốc dựa trên X, Y, Width, Height mới
+                    selectedBox.OriginalVertices = new List<PointF>
+                    {
+                        new PointF(selectedBox.X, selectedBox.Y),
+                        new PointF(selectedBox.X + selectedBox.Width, selectedBox.Y),
+                        new PointF(selectedBox.X + selectedBox.Width, selectedBox.Y + selectedBox.Height),
+                        new PointF(selectedBox.X, selectedBox.Y + selectedBox.Height)
+                    };
                     UpdateBoundingBoxVertices(selectedBox);
-                    pictureBox.Invalidate();
+                    resizeStartPoint = Point.Round(transformedPoint);
+                }
+                else if (isRotating && selectedBox != null)
+                {
+                    float cx = selectedBox.X + selectedBox.Width / 2f;
+                    float cy = selectedBox.Y + selectedBox.Height / 2f;
+                    float startAngle = (float)Math.Atan2(startRotationPoint.Y - cy, startRotationPoint.X - cx);
+                    float currentAngle = (float)Math.Atan2(transformedPoint.Y - cy, transformedPoint.X - cx);
+                    float deltaAngle = (currentAngle - startAngle) * 180f / (float)Math.PI;
+                    selectedBox.Angle = initialBoxAngle + deltaAngle;
+                    UpdateBoundingBoxVertices(selectedBox);
                 }
                 else if (isDragging && selectedBox != null)
                 {
-                    int dx = e.X - startPoint.X;
-                    int dy = e.Y - startPoint.Y;
-                    selectedBox.X += dx;
-                    selectedBox.Y += dy;
-                    startPoint = e.Location;
+                    float dx = transformedPoint.X - startPoint.X;
+                    float dy = transformedPoint.Y - startPoint.Y;
+                    for (int i = 0; i < selectedBox.OriginalVertices.Count; i++)
+                    {
+                        selectedBox.OriginalVertices[i] = new PointF(
+                            selectedBox.OriginalVertices[i].X + dx,
+                            selectedBox.OriginalVertices[i].Y + dy);
+                    }
                     UpdateBoundingBoxVertices(selectedBox);
-                    // Cập nhật ListBox
-                    UpdateListBox();
-                    pictureBox.Invalidate();
+                    startPoint = transformedPoint;
                 }
-                else if (e.Button == MouseButtons.Left)
+                else
                 {
-                    currentRectangle.Width = e.X - startPoint.X;
-                    currentRectangle.Height = e.Y - startPoint.Y;
-                    pictureBox.Invalidate();
+                    // Nếu không ở chế độ chỉnh sửa bounding box, cập nhật kích thước bounding box mới đang vẽ
+                    currentRectangle.Width = (int)(transformedPoint.X - startPoint.X);
+                    currentRectangle.Height = (int)(transformedPoint.Y - startPoint.Y);
+                }
+                pictureBox.Invalidate();
+            }
+            else
+            {
+                // Chế độ cuộn ảnh
+                if (e.Button == MouseButtons.Left && pictureBox.Image != null)
+                {
+                    int newX = pictureBox.Left + (e.X - imageMouseDownLocation.X);
+                    int newY = pictureBox.Top + (e.Y - imageMouseDownLocation.Y);
+                    pictureBox.Location = new Point(newX, newY);
                 }
             }
+        }
+
+
+        // MouseUp: Tùy chế độ, nếu Selected_BoundBox true thì xử lý kết thúc thao tác vẽ/chỉnh sửa bounding box,
+        // còn nếu false thì không làm gì thêm.
+        private void pictureBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (Selected_BoundBox)
+            {
+                if (pictureBox.Image == null)
+                {
+                    MessageBox.Show("Please select an image before drawing a bounding box.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (isDragging)
+                {
+                    isDragging = false;
+                }
+                else if (isResizing)
+                {
+                    isResizing = false;
+                }
+                else if (isRotating)
+                {
+                    isRotating = false;
+                }
+                else if (currentRectangle.Width != 0 && currentRectangle.Height != 0)
+                {
+                    // Tạo bounding box mới từ currentRectangle
+                    string _imgpath = imageFiles == null ? null : SystemMode.PresentImagePath;
+                    BoundingBox newBox = new BoundingBox
+                    {
+                        imgpath = _imgpath,
+                        X = currentRectangle.X,
+                        Y = currentRectangle.Y,
+                        Width = currentRectangle.Width,
+                        Height = currentRectangle.Height,
+                        Angle = 0,
+                        OriginalVertices = new List<PointF>
+                        {
+                            new PointF(currentRectangle.X, currentRectangle.Y),
+                            new PointF(currentRectangle.X + currentRectangle.Width, currentRectangle.Y),
+                            new PointF(currentRectangle.X + currentRectangle.Width, currentRectangle.Y + currentRectangle.Height),
+                            new PointF(currentRectangle.X, currentRectangle.Y + currentRectangle.Height)
+                        }
+                    };
+                    UpdateBoundingBoxVertices(newBox);
+                    BoundingBoxes.Add(newBox);
+                }
+                currentRectangle = Rectangle.Empty;
+                pictureBox.Invalidate();
+            }
+            // Nếu chế độ cuộn ảnh thì không cần xử lý gì thêm.
+        }
+
+
+        // ------------------- Hàm hỗ trợ cho bounding box -------------------
+
+        private BoundingBox GetBoundingBoxAtPoint(PointF point)
+        {
+            foreach (var box in BoundingBoxes)
+            {
+                if (IsPointInsideBoundingBox(point, box))
+                    return box;
+            }
+            return null;
+        }
+
+        private bool IsPointInsideBoundingBox(PointF point, BoundingBox box)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.AddPolygon(box.Vertices.ToArray());
+            return path.IsVisible(point);
         }
 
         private void UpdateBoundingBoxVertices(BoundingBox box)
         {
-            // Tính tọa độ tâm của Bounding Box
-            float centerX = box.X + box.Width / 2f;
-            float centerY = box.Y + box.Height / 2f;
-
-            // Chuyển góc từ độ sang radian
-            float angleRad = box.Angle * (float)Math.PI / 180f;
-
-            // Tính các đỉnh ban đầu (trước khi xoay)
-            PointF topLeft = new PointF(box.X, box.Y);
-            PointF topRight = new PointF(box.X + box.Width, box.Y);
-            PointF bottomLeft = new PointF(box.X, box.Y + box.Height);
-            PointF bottomRight = new PointF(box.X + box.Width, box.Y + box.Height);
-
-            // Tính các đỉnh sau khi xoay
-            box.Vertices = new List<PointF>
+            // Tính tâm của bounding box từ các điểm OriginalVertices
+            float minX = float.MaxValue, minY = float.MaxValue, maxX = float.MinValue, maxY = float.MinValue;
+            foreach (var pt in box.OriginalVertices)
             {
-                RotatePoint(topLeft, centerX, centerY, angleRad),
-                RotatePoint(topRight, centerX, centerY, angleRad),
-                RotatePoint(bottomLeft, centerX, centerY, angleRad),
-                RotatePoint(bottomRight, centerX, centerY, angleRad)
-            };
-        }
-
-        // Hàm xoay một điểm quanh tâm
-        private PointF RotatePoint(PointF point, float cx, float cy, float angleRad)
-        {
-            float x = point.X;
-            float y = point.Y;
-
-            float newX = (float)(Math.Cos(angleRad) * (x - cx) - Math.Sin(angleRad) * (y - cy) + cx);
-            float newY = (float)(Math.Sin(angleRad) * (x - cx) + Math.Cos(angleRad) * (y - cy) + cy);
-
-            return new PointF(newX, newY);
-        }
-
-        private void pictureBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (!Selected_BoundBox)
-            {
-                //Scroll image
-                if (e.Button == MouseButtons.Left)
-                {
-                    mouseDownLocation = e.Location;
-                }
+                if (pt.X < minX) minX = pt.X;
+                if (pt.Y < minY) minY = pt.Y;
+                if (pt.X > maxX) maxX = pt.X;
+                if (pt.Y > maxY) maxY = pt.Y;
             }
-            else
-            {
-                //Bounding Box
-                if (pictureBox.Image == null)
-                {
-                    MessageBox.Show("No image loaded.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                if (e.Button == MouseButtons.Left)
-                {
-                    selectedBox = GetBoundingBoxAtPoint(e.Location);
-                    if (selectedBox != null)
-                    {
-                        Point rotationPoint = GetRotationPoint(selectedBox);
-                        resizingHandle = GetResizeHandleUnderMouse(selectedBox, e.Location);
-                        if (IsNearRotationPoint(e.Location, rotationPoint))
-                        {
-                            isRotating = true;
-                            isDragging = false;
-                            isResizing = false;
-                        }
-                        else if (resizingHandle != ControlPointType.None || Resize_BoundBox)
-                        {
-                            isResizing = true;
-                            isDragging = false;
-                            isRotating = false;
-                            resizeStartPoint = e.Location;
-                        }
-                        else
-                        {
-                            isDragging = true;
-                            isRotating = false;
-                            isResizing = false;
-                            startPoint = e.Location;
-                        }
-                    }
-                    else
-                    {
-                        startPoint = e.Location;
-                        currentRectangle = new Rectangle(startPoint.X, startPoint.Y, 0, 0);
-                    }
-                    pictureBox.Invalidate();
-                }
-            }
-        }
-        private ControlPointType GetResizeHandleUnderMouse(BoundingBox box, Point mouseLocation)
-        {
-            foreach (ControlPointType handleType in Enum.GetValues(typeof(ControlPointType)))
-            {
-                if (handleType == ControlPointType.None) continue;
+            PointF center = new PointF((minX + maxX) / 2, (minY + maxY) / 2);
 
-                Rectangle handleRect = GetHandleRectangle(box, handleType);
-                if (handleRect.Contains(mouseLocation))
-                {
-                    return handleType;
-                }
+            // Tạo ma trận xoay cho bounding box theo góc box.Angle quanh tâm vừa tính
+            Matrix rotationMatrix = new Matrix();
+            rotationMatrix.RotateAt(box.Angle, center);
+
+            // Áp dụng ma trận xoay lên các đỉnh ban đầu
+            PointF[] rotatedPoints = box.OriginalVertices.ToArray();
+            rotationMatrix.TransformPoints(rotatedPoints);
+
+            // Áp dụng ma trận biến đổi toàn cục của ảnh lên các đỉnh sau xoay
+            List<PointF> finalVertices = new List<PointF>();
+            foreach (var pt in rotatedPoints)
+            {
+                PointF[] temp = new PointF[] { pt };
+                imageTransform.Matrix.TransformPoints(temp);
+                finalVertices.Add(temp[0]);
+            }
+            box.Vertices = finalVertices;
+        }
+
+        // Hàm trả về handle resize dưới chuột nếu có
+        private ControlPointType GetResizeHandleUnderMouse(BoundingBox box, PointF mousePoint)
+        {
+            foreach (ControlPointType handle in Enum.GetValues(typeof(ControlPointType)))
+            {
+                if (handle == ControlPointType.None)
+                    continue;
+                Rectangle handleRect = GetHandleRectangle(box, handle);
+                if (handleRect.Contains(Point.Round(mousePoint)))
+                    return handle;
             }
             return ControlPointType.None;
         }
+
         private Rectangle GetHandleRectangle(BoundingBox box, ControlPointType handleType)
         {
             Point handleCenter = GetHandleCenter(box, handleType);
+            int handleSize = 20;
             return new Rectangle(handleCenter.X - handleSize / 2, handleCenter.Y - handleSize / 2, handleSize, handleSize);
         }
 
@@ -551,7 +733,6 @@ namespace VDF3_Solution3
             float centerX = box.X + box.Width / 2f;
             float centerY = box.Y + box.Height / 2f;
             float x = 0, y = 0;
-
             switch (handleType)
             {
                 case ControlPointType.TopLeft:
@@ -587,325 +768,72 @@ namespace VDF3_Solution3
                     y = box.Y + box.Height;
                     break;
                 default:
-                    return Point.Empty;
+                    break;
             }
-
             return new Point((int)x, (int)y);
         }
-        private BoundingBox GetBoundingBoxAtPoint(Point point)
+
+        // Hàm trả về handle xoay: dựa vào đỉnh TopRight của bounding box trước khi xoay, sau đó áp dụng xoay và offset 10 pixel
+        private PointF GetRotationHandle(BoundingBox box)
         {
-            foreach (var box in BoundingBoxes)
+            if (box.Vertices != null && box.Vertices.Count == 4)
             {
-                // Kiểm tra nếu điểm click nằm trong vùng điểm xoay
-                Point rotationPoint = GetRotationPoint(box);
-                if (Math.Abs(point.X - rotationPoint.X) <= 5 &&
-                    Math.Abs(point.Y - rotationPoint.Y) <= 5)
+                // Sử dụng đỉnh thứ 2 (index 1) là top-right
+                PointF topRight = box.Vertices[1];
+                // Tính tâm của bounding box dựa trên các đỉnh
+                float cx = 0, cy = 0;
+                foreach (PointF pt in box.Vertices)
                 {
-                    return box;
+                    cx += pt.X;
+                    cy += pt.Y;
                 }
+                cx /= box.Vertices.Count;
+                cy /= box.Vertices.Count;
 
-                // Kiểm tra nếu điểm click nằm trong bounding box
-                if (box.X <= point.X && point.X <= box.X + box.Width &&
-                    box.Y <= point.Y && point.Y <= box.Y + box.Height)
+                // Tính vector từ tâm đến topRight
+                float vx = topRight.X - cx;
+                float vy = topRight.Y - cy;
+                float len = (float)Math.Sqrt(vx * vx + vy * vy);
+                if (len != 0)
                 {
-                    return box;
+                    vx /= len;
+                    vy /= len;
                 }
+                // Dịch handle ra ngoài 10 pixel theo hướng từ tâm đến topRight
+                topRight.X += vx * 10;
+                topRight.Y += vy * 10;
+                return topRight;
             }
-            return null;
-        }
-
-
-        private Point GetRotationPoint(BoundingBox box)
-        {
-            // Tính điểm trung tâm
-            float centerX = box.X + box.Width / 2f;
-            float centerY = box.Y + box.Height / 2f;
-
-            // Tính toán điểm xoay dựa trên góc hiện tại
-            float angle = box.Angle * (float)Math.PI / 180f; // Chuyển đổi độ sang radian
-            float distance = box.Height / 2f + 15; // Khoảng cách từ tâm đến điểm xoay
-
-            // Tính tọa độ điểm xoay sau khi xoay
-            float rotatedX = centerX + (float)Math.Sin(angle) * distance;
-            float rotatedY = centerY - (float)Math.Cos(angle) * distance;
-            return new Point((int)rotatedX, (int)rotatedY);
-        }
-
-
-        private bool IsNearRotationPoint(Point mousePoint, Point rotationPoint, int threshold = 10)
-        {
-            // Kiểm tra xem chuột có gần điểm xoay không
-            int dx = mousePoint.X - rotationPoint.X;
-            int dy = mousePoint.Y - rotationPoint.Y;
-            return Math.Sqrt(dx * dx + dy * dy) <= threshold;
-        }
-
-        private bool IsMouseOnRotateHandle(BoundingBox box, Point mouseLocation)
-        {
-            int handleSize = 10; // Kích thước điểm điều khiển
-
-            // Tính tọa độ tâm của bounding box
-            float centerX = box.X + box.Width / 2;
-            float centerY = box.Y + box.Height / 2;
-
-            // Tính tọa độ của điểm điều khiển xoay (trên trục y phía trên bounding box)
-            float rotateHandleX = centerX;
-            float rotateHandleY = centerY - box.Height / 2 - 15;
-
-            // Nếu bounding box có góc xoay, cần tính lại tọa độ điểm xoay
-            if (box.Angle != 0)
+            else
             {
-                double angleRad = box.Angle * Math.PI / 180.0; // Chuyển góc sang radian
-                float offsetX = 0;
-                float offsetY = -(box.Height / 2 + 15); // Khoảng cách từ tâm đến điểm xoay
-
-                // Áp dụng phép xoay
-                rotateHandleX = centerX + (float)(offsetX * Math.Cos(angleRad) - offsetY * Math.Sin(angleRad));
-                rotateHandleY = centerY + (float)(offsetX * Math.Sin(angleRad) + offsetY * Math.Cos(angleRad));
-                Console.WriteLine($"Rotate Handle: ({rotateHandleX}, {rotateHandleY})");
-                Console.WriteLine($"Mouse Location: ({mouseLocation.X}, {mouseLocation.Y})");
-            }
-
-            // Kiểm tra xem chuột có nằm gần điểm xoay không
-            return true;
-        }
-        private void pictureBox_Paint(object sender, PaintEventArgs e)
-        {
-            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            Graphics g = e.Graphics;
-
-            if (currentRectangle != Rectangle.Empty)
-            {
-                e.Graphics.DrawRectangle(Pens.Red, currentRectangle);
-            }
-
-            foreach (var box in BoundingBoxes)
-            {
-                // Lưu trạng thái transform
-                var state = e.Graphics.Save();
-
-                float scaleX = pictureBox.Width / originalImage.Width;
-                float scaleY = pictureBox.Height / originalImage.Height;
-                // Tính điểm trung tâm
-                float centerX = (box.X + box.Width / 2) * scaleX;
-                float centerY = (box.Y + box.Height / 2) * scaleY;
-
-                // Áp dụng transform cho bounding box
-                e.Graphics.TranslateTransform(centerX, centerY);
-                e.Graphics.RotateTransform(box.Angle);
-
-                // Vẽ bounding box
-                e.Graphics.DrawRectangle(Pens.Blue,
-                    (-box.Width / 2f) * scaleX,
-                    (-box.Height / 2f) * scaleY,
-                    box.Width * scaleX,
-                    box.Height * scaleY);
-
-                // Vẽ điểm xoay (điểm đỏ) với cùng transform
-                using (SolidBrush brush = new SolidBrush(Color.YellowGreen))
+                // Nếu chưa có vertices hoặc không đủ, dùng cách tính cũ dựa trên box.X, box.Y, Width, Height và Angle.
+                PointF topRight = new PointF(box.X + box.Width, box.Y);
+                float cx = box.X + box.Width / 2f;
+                float cy = box.Y + box.Height / 2f;
+                Matrix m = new Matrix();
+                m.RotateAt(box.Angle, new PointF(cx, cy));
+                PointF[] pts = new PointF[] { topRight };
+                m.TransformPoints(pts);
+                float vx = pts[0].X - cx;
+                float vy = pts[0].Y - cy;
+                float len = (float)Math.Sqrt(vx * vx + vy * vy);
+                if (len != 0)
                 {
-                    e.Graphics.FillEllipse(brush,
-                        0,              // Điểm giữa theo chiều ngang
-                        -box.Height / 2 - 15,  // Điểm trên cùng của box
-                        10, 10);
+                    vx /= len;
+                    vy /= len;
                 }
-
-                if (box == selectedBox)
-                {
-                    g.DrawRectangle(Pens.White,
-                    -box.Width / 2f,
-                    -box.Height / 2f,
-                    box.Width,
-                    box.Height);
-
-                    // Vẽ hình chữ nhật nhỏ (handle) ở góc trên bên trái của hình chữ nhật lớn
-                    g.DrawRectangle(Pens.White,
-                                    -box.Width / 2f - handleSize / 2f,
-                                    -box.Height / 2f - handleSize / 2f,
-                                    handleSize,
-                                    handleSize);
-
-                    // Vẽ hình chữ nhật nhỏ (handle) ở góc trên bên phải của hình chữ nhật lớn
-                    g.DrawRectangle(Pens.White,
-                                    box.Width / 2f - handleSize / 2f,
-                                    -box.Height / 2f - handleSize / 2f,
-                                    handleSize,
-                                    handleSize);
-
-                    // Vẽ hình chữ nhật nhỏ (handle) ở góc dưới bên trái của hình chữ nhật lớn
-                    g.DrawRectangle(Pens.White,
-                                    -box.Width / 2f - handleSize / 2f,
-                                    box.Height / 2f - handleSize / 2f,
-                                    handleSize,
-                                    handleSize);
-
-                    // Vẽ hình chữ nhật nhỏ (handle) ở góc dưới bên phải của hình chữ nhật lớn
-                    g.DrawRectangle(Pens.White,
-                                    box.Width / 2f - handleSize / 2f,
-                                    box.Height / 2f - handleSize / 2f,
-                                    handleSize,
-                                    handleSize);
-
-                    // Vẽ hình chữ nhật nhỏ (handle) ở điểm giữa trên (Top Center)
-                    g.DrawRectangle(Pens.White,
-                                    0, // X = 0 vì là giữa
-                                    -box.Height / 2f - handleSize / 2f, // Y = Top Center
-                                    handleSize,
-                                    handleSize);
-
-                    // Vẽ hình chữ nhật nhỏ (handle) ở điểm giữa trái (Left Center)
-                    g.DrawRectangle(Pens.White,
-                                    -box.Width / 2f - handleSize / 2f, // X = Left Center
-                                    0, // Y = 0 vì là giữa
-                                    handleSize,
-                                    handleSize);
-
-                    // Vẽ hình chữ nhật nhỏ (handle) ở điểm giữa phải (Right Center)
-                    g.DrawRectangle(Pens.White,
-                                    box.Width / 2f - handleSize / 2f, // X = Right Center
-                                    0, // Y = 0 vì là giữa
-                                    handleSize,
-                                    handleSize);
-
-                    // Vẽ hình chữ nhật nhỏ (handle) ở điểm giữa dưới (Bottom Center)
-                    g.DrawRectangle(Pens.White,
-                                    0, // X = 0 vì là giữa
-                                    box.Height / 2f - handleSize / 2f, // Y = Bottom Center
-                                    handleSize,
-                                    handleSize);
-                }
-
-                // Khôi phục transform
-                UpdateListBox();
-                e.Graphics.Restore(state);
-            }
-        }
-        private void UpdateListBox()
-        {
-            uiListBox1.Items.Clear(); // Xóa toàn bộ nội dung cũ trong ListBox
-
-            foreach (var box in BoundingBoxes)
-            {
-                // Hiển thị thông tin chính của Bounding Box
-                uiListBox1.Items.Add($"ImagePath: {box.imgpath}");
-                Console.WriteLine($"{box.imgpath}, {box.X}, {box.Y}, {box.Width}, {box.Height},{box.Angle}");
+                pts[0].X += vx * 10;
+                pts[0].Y += vy * 10;
+                return pts[0];
             }
         }
 
-        private void pictureBox_MouseClick(object sender, MouseEventArgs e)
+        // Hàm tính khoảng cách giữa 2 điểm
+        private float DistanceBetweenPoints(PointF p1, PointF p2)
         {
-            foreach (var box in BoundingBoxes)
-            {
-                // Kiểm tra nếu chuột nhấp vào bên trong BBox
-                if (e.X >= box.X && e.X <= box.X + box.Width &&
-                    e.Y >= box.Y && e.Y <= box.Y + box.Height)
-                {
-                    selectedBox = box; // Lưu BBox đang được chọn
-                    pictureBox.Invalidate(); // Vẽ lại để hiển thị trạng thái chọn
-                    return;
-                }
-            }
-
-            selectedBox = null; // Không chọn BBox nào
-            pictureBox.Invalidate();
-        }
-
-        private void pictureBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (pictureBox.Image == null)
-            {
-                MessageBox.Show("Please select a image before drawing a bounding box.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Không thêm Bounding Box nếu nhãn chưa được chọn
-            }
-            if (isDragging)
-            {
-                isDragging = false; // Kết thúc kéo
-            }
-            else if (isResizing)
-            {
-                isResizing = false;
-            }
-            else if (isRotating)
-            {
-                isRotating = false; // Kết thúc xoay
-            }
-            else if (currentRectangle.Width > 0 && currentRectangle.Height > 0)
-            {
-                string imgpath = imageFiles[currentIndex];
-                Console.WriteLine(imgpath);
-                BoundingBoxes.Add(new BoundingBox
-                {
-                    imgpath = imageFiles[currentIndex],
-                    X = currentRectangle.X,
-                    Y = currentRectangle.Y,
-                    Width = currentRectangle.Width,
-                    Height = currentRectangle.Height,
-                    Angle = 0, // Góc ban đầu
-                    Vertices = new List<PointF>
-                    {
-                        new PointF(currentRectangle.X, currentRectangle.Y), // Góc trên bên trái
-                        new PointF(currentRectangle.X + currentRectangle.Width, currentRectangle.Y), // Góc trên bên phải
-                        new PointF(currentRectangle.X + currentRectangle.Width, currentRectangle.Y + currentRectangle.Height), // Góc dưới bên phải
-                        new PointF(currentRectangle.X, currentRectangle.Y + currentRectangle.Height) // Góc dưới bên trái
-                    }
-                }); ;
-
-
-            }
-
-            currentRectangle = Rectangle.Empty;
-
-            pictureBox.Invalidate();
-        }
-
-        private void uiListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (uiListBox1.SelectedIndex == -1)
-            {
-                selectedBox = null;
-                pictureBox.Invalidate();
-                return;
-            }
-            selectedBox = BoundingBoxes[uiListBox1.SelectedIndex];
-            pictureBox.Invalidate();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (selectedBox != null)
-            {
-                BoundingBoxes.Remove(selectedBox); // Xóa BBox khỏi danh sách
-                selectedBox = null; // Bỏ chọn
-                pictureBox.Invalidate(); // Vẽ lại giao diện
-            }
-        }
-
-        List<VDF3_Solution3.BoundingBox> boxes;
-        string body;
-
-        private async Task Trainning(object sender, EventArgs e)
-        {
-            
-            string imagePath = SystemMode.PresentFilePath;  // Ảnh lớn
-            Console.WriteLine(imagePath);
-            string templatePath = savePath;  // Ảnh mẫu
-            Console.WriteLine(templatePath);
-            try
-            {
-                body = await ApiClient.MatchTemplate(imagePath, templatePath, 0.4f);
-            }
-            catch
-            {
-
-            }
-            finally
-            {
-                Console.WriteLine("1:" + body);
-                if (body != null)
-                {
-                    DrawRotatedRectangles(body, imagePath, templatePath);
-                }
-            }
+            float dx = p1.X - p2.X;
+            float dy = p1.Y - p2.Y;
+            return (float)Math.Sqrt(dx * dx + dy * dy);
         }
 
         private void tsbtnEditBoudingBox_Click(object sender, EventArgs e)
@@ -922,204 +850,35 @@ namespace VDF3_Solution3
             }
         }
 
-        private void btnPickTemplate_Click(object sender, EventArgs e)
+        private void tsbtnRotateBouding_Click(object sender, EventArgs e)
         {
-            CropAndSaveSelectedBoundingBox(originalImage, selectedBox);
-        }
-
-        public static int templateW;
-        public static int templateH;
-        private void CropAndSaveSelectedBoundingBox(Image originalImage, BoundingBox selectedBox)
-        {
-            if (originalImage == null || selectedBox == null)
+            if (!Rotate_BoundBox)
             {
-                MessageBox.Show("Không có Bounding Box nào được chọn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                Rotate_BoundBox = true;
+                tsbtnRotateBouding.BackColor = Color.Gray;
             }
-
-            // Tạo thư mục Template nếu chưa tồn tại
-            // Lấy đường dẫn thư mục chứa file chạy (.exe)
-            string appFolder = AppDomain.CurrentDomain.BaseDirectory;
-
-            // Đường dẫn thư mục "Template" trong thư mục chứa app
-            string templateFolder = Path.Combine(appFolder, "Template");
-
-            if (!Directory.Exists(templateFolder))
+            else
             {
-                Directory.CreateDirectory(templateFolder);
-            }
-
-            // Tạo bitmap chứa vùng Bounding Box cần cắt
-            Rectangle cropRect = new Rectangle(selectedBox.X, selectedBox.Y, selectedBox.Width, selectedBox.Height);
-            Bitmap originalBitmap = new Bitmap(originalImage);
-            Bitmap croppedBitmap = new Bitmap(cropRect.Width, cropRect.Height);
-            templateW = selectedBox.Width;
-            templateH = selectedBox.Height;
-            using (Graphics g = Graphics.FromImage(croppedBitmap))
-            {
-                g.DrawImage(originalBitmap, new Rectangle(0, 0, cropRect.Width, cropRect.Height), cropRect, GraphicsUnit.Pixel);
-                picTemplate.Image = croppedBitmap;
-            }
-           
-
-            // Lưu ảnh đã crop vào thư mục Template
-            savePath = Path.Combine(templateFolder, $"template_{DateTime.Now:yyyyMMdd_HHmmss}.jpg");
-            croppedBitmap.Save(savePath, System.Drawing.Imaging.ImageFormat.Jpeg);
-
-            MessageBox.Show($"Đã lưu template: {savePath}", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        /*
-        public static void DrawBoundingBoxes(PictureBox picBox, string imagePath, string jsonContent)
-        {
-            if (!File.Exists(imagePath))
-            {
-                MessageBox.Show("Không tìm thấy ảnh!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Parse JSON từ chuỗi
-            BoundingBoxData data = JsonConvert.DeserializeObject<BoundingBoxData>(jsonContent);
-
-            // Load ảnh gốc
-            Image originalImage = Image.FromFile(imagePath);
-            Bitmap bitmap = new Bitmap(originalImage);
-
-            using (Graphics g = Graphics.FromImage(bitmap))
-            {
-                g.SmoothingMode = SmoothingMode.AntiAlias;
-
-                foreach (var box in data.Matches)
-                {
-                    int size = (int)(100);  // Scale là kích thước Bounding Box
-                    Rectangle rect = new Rectangle(box.X, box.Y, templateW, templateH);
-
-                    using (Pen pen = new Pen(Color.Red, 2))
-                    {
-                        g.DrawRectangle(pen, rect);
-                    }
-
-                    // Hiển thị thông tin `Score` ngay trên Bounding Box
-                    using (Font font = new Font("Arial", 10, FontStyle.Bold))
-                    using (SolidBrush brush = new SolidBrush(Color.Yellow))
-                    {
-                        string text = $"Score: {box.Score:F2}";
-                        g.DrawString(text, font, brush, box.X, box.Y - 20);
-                    }
-                }
-            }
-
-            // Hiển thị ảnh với Bounding Box trên PictureBox
-            picBox.Image = bitmap;
-            picBox.SizeMode = PictureBoxSizeMode.Zoom;
-        }
-        */
-        private void DrawRotatedRectangles(string jsonContent, string imagePath, string templateImagePath)
-        {
-            float _scaleX = 1f;
-            float _scaleY = 1f;
-            // Load ảnh lớn và template
-            Bitmap largeImage = new Bitmap(imagePath);
-            float LargeWidth = largeImage.Width;
-            float LargeHeight = largeImage.Height;
-            if(LargeWidth >= 970 || LargeHeight >= 480)
-            {
-                _scaleX = 970 / LargeWidth;
-                _scaleY = 480 / LargeHeight;
-            }
-            Bitmap templateImage = new Bitmap(templateImagePath);
-            float width = templateImage.Width;
-            float height = templateImage.Height;
-
-            // Parse JSON để lấy danh sách matches
-            using (var jsonDoc = JsonDocument.Parse(jsonContent))
-            {
-                var root = jsonDoc.RootElement;
-                var matches = root.GetProperty("matches");
-
-                using (Graphics g = Graphics.FromImage(largeImage))
-                {
-                    g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias; // Làm mượt đường vẽ
-                    Pen greenPen = new Pen(Color.Green, 2);
-
-                    foreach (var match in matches.EnumerateArray())
-                    {
-                        int x = match.GetProperty("x").GetInt32();
-                        int y = match.GetProperty("y").GetInt32();
-                        float angle = match.GetProperty("angle").GetSingle();
-                        float scale = match.GetProperty("scale").GetSingle();
-
-                        // Tính kích thước dựa trên scale
-                        float scaledWidth = width * scale / 100;
-                        float scaledHeight = height * scale / 100;
-
-                        // Tâm xoay
-                        float centerX = x + scaledWidth / 2;
-                        float centerY = y + scaledHeight / 2;
-
-                        // Tạo ma trận xoay
-                        g.TranslateTransform(centerX, centerY);
-                        g.RotateTransform(angle); // Dùng -angle để khớp với OpenCV
-                        g.TranslateTransform(-centerX, -centerY);
-
-                        // Các đỉnh của hình chữ nhật (trước khi xoay)
-                        PointF[] rectPoints = new PointF[]
-                        {
-                            new PointF(x, y),
-                            new PointF(x + scaledWidth, y),
-                            new PointF(x + scaledWidth, y + scaledHeight),
-                            new PointF(x, y + scaledHeight)
-                        };
-
-                        // Vẽ hình chữ nhật xoay bằng cách nối các đường thẳng
-                        for (int i = 0; i < 4; i++)
-                        {
-                            g.DrawLine(greenPen, rectPoints[i], rectPoints[(i + 1) % 4]);
-                        }
-
-                        // Reset ma trận xoay để không ảnh hưởng đến các hình tiếp theo
-                        g.ResetTransform();
-
-                        // Lưu Bounding Box
-                        BoundingBoxes.Add(new BoundingBox
-                        {
-                            imgpath = imageFiles[currentIndex],
-                            X = (int)x,
-                            Y = (int)y,
-                            Width = (int)scaledWidth,
-                            Height = (int)scaledHeight,
-                            Angle = angle,
-                            Vertices = new List<PointF>(rectPoints)
-                        });
-
-                        Console.WriteLine(match.ToString() + BoundingBoxes);
-                        UpdateListBox();
-                    }
-                }
-
-                // Hiển thị ảnh đã vẽ lên PictureBox
-                pictureBox.Image = largeImage;
+                Rotate_BoundBox = false;
+                tsbtnRotateBouding.BackColor = Color.White;
             }
         }
 
-
-        private void btnTraining_Click(object sender, EventArgs e)
-        {
-            Trainning(null, null);
-        }
+        // Các phương thức khác như LoadImage, UpdateNavigationButtons, v.v… giữ nguyên logic cũ.
     }
 
     public class BoundingBox
     {
         public string imgpath { get; set; }
-        public int X { get; set; }
-        public int Y { get; set; }
-        public int Width { get; set; }
-        public int Height { get; set; }
-        public float Angle { get; set; }
+        public int X, Y, Width, Height;
+        public float Angle;
+        public List<PointF> OriginalVertices { get; set; }
+        public List<PointF> Vertices { get; set; }
 
-        public float Score { get; set; }
-        public List<PointF> Vertices { get; set; } = new List<PointF>(); // Danh sách tọa độ các đỉnh
+        public BoundingBox()
+        {
+            OriginalVertices = new List<PointF>();
+            Vertices = new List<PointF>();
+        }
     }
 }
-
