@@ -235,7 +235,20 @@ namespace VDF3_Solution3
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show(
+                   "Are you sure you want to exit?",
+                   "Exit the application",
+                   MessageBoxButtons.YesNo,
+                   MessageBoxIcon.Question
+               );
+
+            if (result == DialogResult.Yes)
+            {
+                FrSetting.hikCamera.Stop();
+                BackgroundWorkerService.Instance.Stop();
+                Application.Exit(); // Đóng ứng dụng nếu người dùng chọn Yes
+            }
+           
         }
         private void btnMaximize_Click(object sender, EventArgs e)
         {

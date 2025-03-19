@@ -38,6 +38,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Basler.Pylon, Version=1.2.0.0, Culture=neutral, PublicKeyToken=e389355f398382ab, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Basler.Pylon.dll</HintPath>
+    </Reference>
     <Reference Include="EasyModbus, Version=5.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\EasyModbus.dll</HintPath>
@@ -147,6 +151,7 @@
   <ItemGroup>
     <Compile Include="ApiClient.cs" />
     <Compile Include="BackgroundWorkerService.cs" />
+    <Compile Include="Camera\BaslerCamera .cs" />
     <Compile Include="Transform.cs" />
     <Compile Include="BoundingBoxDrawer.cs" />
     <Compile Include="Camera\CameraBase.cs" />

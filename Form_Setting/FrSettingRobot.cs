@@ -162,7 +162,7 @@ namespace VDF3_Solution3
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
             BackgroundWorkerService.Instance.Stop();
-            InvokeService.SendData("IpAddress", txtRobotIPaddress.Text);
+            
         }
     }
 }

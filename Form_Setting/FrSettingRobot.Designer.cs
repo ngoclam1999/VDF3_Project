@@ -48,6 +48,7 @@
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.txtDeviceID = new Sunny.UI.UITextBox();
             this.grb_Robot = new Sunny.UI.UIGroupBox();
+            this.lbSttModbus = new Sunny.UI.UISymbolLabel();
             this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
             this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
             this.txtRobotPort = new Sunny.UI.UITextBox();
@@ -87,7 +88,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rdiGripper = new Sunny.UI.UIRadioButton();
             this.rdiVacum = new Sunny.UI.UIRadioButton();
-            this.lbSttModbus = new Sunny.UI.UISymbolLabel();
             this.panel1.SuspendLayout();
             this.grb_RobotSetting.SuspendLayout();
             this.grb_Robot.SuspendLayout();
@@ -189,7 +189,7 @@
             this.grb_RobotSetting.Name = "grb_RobotSetting";
             this.grb_RobotSetting.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
             this.grb_RobotSetting.RectColor = System.Drawing.Color.Green;
-            this.grb_RobotSetting.Size = new System.Drawing.Size(359, 359);
+            this.grb_RobotSetting.Size = new System.Drawing.Size(359, 318);
             this.grb_RobotSetting.Style = Sunny.UI.UIStyle.Custom;
             this.grb_RobotSetting.TabIndex = 13;
             this.grb_RobotSetting.Text = "Information";
@@ -200,7 +200,7 @@
             // 
             this.uiLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel6.Location = new System.Drawing.Point(8, 92);
+            this.uiLabel6.Location = new System.Drawing.Point(8, 72);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(111, 23);
             this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
@@ -213,7 +213,7 @@
             // 
             this.btnCamApply.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCamApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnCamApply.Location = new System.Drawing.Point(191, 317);
+            this.btnCamApply.Location = new System.Drawing.Point(191, 270);
             this.btnCamApply.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnCamApply.Name = "btnCamApply";
             this.btnCamApply.Size = new System.Drawing.Size(151, 35);
@@ -228,7 +228,7 @@
             // 
             this.txtModel.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtModel.Location = new System.Drawing.Point(126, 89);
+            this.txtModel.Location = new System.Drawing.Point(126, 69);
             this.txtModel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtModel.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtModel.Name = "txtModel";
@@ -245,7 +245,7 @@
             // 
             this.btnCamRead.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCamRead.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnCamRead.Location = new System.Drawing.Point(12, 317);
+            this.btnCamRead.Location = new System.Drawing.Point(12, 270);
             this.btnCamRead.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnCamRead.Name = "btnCamRead";
             this.btnCamRead.Size = new System.Drawing.Size(148, 35);
@@ -260,7 +260,7 @@
             // 
             this.uiLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel7.Location = new System.Drawing.Point(8, 268);
+            this.uiLabel7.Location = new System.Drawing.Point(8, 220);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(111, 23);
             this.uiLabel7.Style = Sunny.UI.UIStyle.Custom;
@@ -273,7 +273,7 @@
             // 
             this.txtHeight.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtHeight.Location = new System.Drawing.Point(126, 265);
+            this.txtHeight.Location = new System.Drawing.Point(126, 217);
             this.txtHeight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtHeight.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtHeight.Name = "txtHeight";
@@ -290,7 +290,7 @@
             // 
             this.uiLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel8.Location = new System.Drawing.Point(8, 224);
+            this.uiLabel8.Location = new System.Drawing.Point(8, 183);
             this.uiLabel8.Name = "uiLabel8";
             this.uiLabel8.Size = new System.Drawing.Size(111, 23);
             this.uiLabel8.Style = Sunny.UI.UIStyle.Custom;
@@ -303,7 +303,7 @@
             // 
             this.uiLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel5.Location = new System.Drawing.Point(8, 180);
+            this.uiLabel5.Location = new System.Drawing.Point(8, 146);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(111, 23);
             this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
@@ -316,7 +316,7 @@
             // 
             this.txtWidth.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtWidth.Location = new System.Drawing.Point(126, 221);
+            this.txtWidth.Location = new System.Drawing.Point(126, 180);
             this.txtWidth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtWidth.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtWidth.Name = "txtWidth";
@@ -333,7 +333,7 @@
             // 
             this.txtSubnet.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSubnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtSubnet.Location = new System.Drawing.Point(126, 177);
+            this.txtSubnet.Location = new System.Drawing.Point(126, 143);
             this.txtSubnet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSubnet.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtSubnet.Name = "txtSubnet";
@@ -350,7 +350,7 @@
             // 
             this.uiLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel4.Location = new System.Drawing.Point(8, 136);
+            this.uiLabel4.Location = new System.Drawing.Point(8, 109);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(111, 23);
             this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
@@ -363,7 +363,7 @@
             // 
             this.txtGateway.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGateway.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtGateway.Location = new System.Drawing.Point(126, 133);
+            this.txtGateway.Location = new System.Drawing.Point(126, 106);
             this.txtGateway.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGateway.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtGateway.Name = "txtGateway";
@@ -380,7 +380,7 @@
             // 
             this.uiLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(8, 48);
+            this.uiLabel1.Location = new System.Drawing.Point(8, 35);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(111, 23);
             this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
@@ -393,7 +393,7 @@
             // 
             this.txtDeviceID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDeviceID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtDeviceID.Location = new System.Drawing.Point(126, 45);
+            this.txtDeviceID.Location = new System.Drawing.Point(126, 32);
             this.txtDeviceID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDeviceID.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtDeviceID.Name = "txtDeviceID";
@@ -430,6 +430,22 @@
             this.grb_Robot.Text = "Connection";
             this.grb_Robot.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.grb_Robot.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // lbSttModbus
+            // 
+            this.lbSttModbus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.lbSttModbus.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.lbSttModbus.Location = new System.Drawing.Point(12, 231);
+            this.lbSttModbus.MinimumSize = new System.Drawing.Size(1, 1);
+            this.lbSttModbus.Name = "lbSttModbus";
+            this.lbSttModbus.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.lbSttModbus.Size = new System.Drawing.Size(328, 31);
+            this.lbSttModbus.Style = Sunny.UI.UIStyle.Custom;
+            this.lbSttModbus.Symbol = 61553;
+            this.lbSttModbus.TabIndex = 15;
+            this.lbSttModbus.Text = "Lost Connection Modbus";
+            this.lbSttModbus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbSttModbus.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolLabel2
             // 
@@ -569,7 +585,7 @@
             this.uiGroupBox1.Name = "uiGroupBox1";
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
             this.uiGroupBox1.RectColor = System.Drawing.Color.Green;
-            this.uiGroupBox1.Size = new System.Drawing.Size(482, 640);
+            this.uiGroupBox1.Size = new System.Drawing.Size(482, 599);
             this.uiGroupBox1.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox1.TabIndex = 12;
             this.uiGroupBox1.Text = "Save";
@@ -584,7 +600,7 @@
             this.listBoxSend.ItemHeight = 20;
             this.listBoxSend.Location = new System.Drawing.Point(15, 71);
             this.listBoxSend.Name = "listBoxSend";
-            this.listBoxSend.Size = new System.Drawing.Size(448, 204);
+            this.listBoxSend.Size = new System.Drawing.Size(448, 184);
             this.listBoxSend.TabIndex = 71;
             // 
             // listBoxRec
@@ -593,7 +609,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxRec.FormattingEnabled = true;
             this.listBoxRec.ItemHeight = 20;
-            this.listBoxRec.Location = new System.Drawing.Point(15, 322);
+            this.listBoxRec.Location = new System.Drawing.Point(15, 302);
             this.listBoxRec.Name = "listBoxRec";
             this.listBoxRec.Size = new System.Drawing.Size(448, 184);
             this.listBoxRec.TabIndex = 72;
@@ -602,7 +618,7 @@
             // 
             this.uiSymbolButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiSymbolButton2.Location = new System.Drawing.Point(15, 524);
+            this.uiSymbolButton2.Location = new System.Drawing.Point(15, 504);
             this.uiSymbolButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton2.Name = "uiSymbolButton2";
             this.uiSymbolButton2.Size = new System.Drawing.Size(81, 35);
@@ -617,7 +633,7 @@
             // 
             this.uiSymbolButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiSymbolButton5.Location = new System.Drawing.Point(105, 524);
+            this.uiSymbolButton5.Location = new System.Drawing.Point(105, 504);
             this.uiSymbolButton5.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton5.Name = "uiSymbolButton5";
             this.uiSymbolButton5.Size = new System.Drawing.Size(81, 35);
@@ -632,7 +648,7 @@
             // 
             this.uiSymbolButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiSymbolButton4.Location = new System.Drawing.Point(195, 524);
+            this.uiSymbolButton4.Location = new System.Drawing.Point(195, 504);
             this.uiSymbolButton4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton4.Name = "uiSymbolButton4";
             this.uiSymbolButton4.Size = new System.Drawing.Size(81, 35);
@@ -647,7 +663,7 @@
             // 
             this.uiSymbolButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiSymbolButton3.Location = new System.Drawing.Point(285, 524);
+            this.uiSymbolButton3.Location = new System.Drawing.Point(285, 504);
             this.uiSymbolButton3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton3.Name = "uiSymbolButton3";
             this.uiSymbolButton3.Size = new System.Drawing.Size(81, 35);
@@ -662,7 +678,7 @@
             // 
             this.uiSymbolButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiSymbolButton6.Location = new System.Drawing.Point(377, 524);
+            this.uiSymbolButton6.Location = new System.Drawing.Point(377, 504);
             this.uiSymbolButton6.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton6.Name = "uiSymbolButton6";
             this.uiSymbolButton6.Size = new System.Drawing.Size(81, 35);
@@ -693,7 +709,7 @@
             // 
             this.uiSymbolLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel3.Location = new System.Drawing.Point(15, 281);
+            this.uiSymbolLabel3.Location = new System.Drawing.Point(15, 261);
             this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel3.Name = "uiSymbolLabel3";
             this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
@@ -711,7 +727,7 @@
             this.uiTextBox2.DoubleValue = 4D;
             this.uiTextBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiTextBox2.IntValue = 4;
-            this.uiTextBox2.Location = new System.Drawing.Point(15, 569);
+            this.uiTextBox2.Location = new System.Drawing.Point(15, 549);
             this.uiTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox2.Name = "uiTextBox2";
@@ -729,7 +745,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.uiTextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiTextBox1.Location = new System.Drawing.Point(84, 569);
+            this.uiTextBox1.Location = new System.Drawing.Point(84, 549);
             this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox1.Name = "uiTextBox1";
@@ -747,7 +763,7 @@
             this.uiSymbolButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiSymbolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiSymbolButton1.Location = new System.Drawing.Point(368, 569);
+            this.uiSymbolButton1.Location = new System.Drawing.Point(368, 549);
             this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton1.Name = "uiSymbolButton1";
             this.uiSymbolButton1.Size = new System.Drawing.Size(95, 41);
@@ -787,7 +803,7 @@
             this.uiGroupBox2.Name = "uiGroupBox2";
             this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
             this.uiGroupBox2.RectColor = System.Drawing.Color.Green;
-            this.uiGroupBox2.Size = new System.Drawing.Size(389, 640);
+            this.uiGroupBox2.Size = new System.Drawing.Size(389, 599);
             this.uiGroupBox2.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox2.TabIndex = 14;
             this.uiGroupBox2.Text = "Tool";
@@ -873,7 +889,7 @@
             // 
             this.btnSaveGripper.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSaveGripper.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSaveGripper.Location = new System.Drawing.Point(228, 562);
+            this.btnSaveGripper.Location = new System.Drawing.Point(228, 545);
             this.btnSaveGripper.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnSaveGripper.Name = "btnSaveGripper";
             this.btnSaveGripper.Size = new System.Drawing.Size(152, 41);
@@ -990,7 +1006,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(13, 299);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(206, 304);
+            this.pictureBox2.Size = new System.Drawing.Size(206, 291);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -1024,28 +1040,12 @@
             this.rdiVacum.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.rdiVacum.CheckedChanged += new System.EventHandler(this.rdiVacum_CheckedChanged);
             // 
-            // lbSttModbus
-            // 
-            this.lbSttModbus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.lbSttModbus.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lbSttModbus.Location = new System.Drawing.Point(12, 231);
-            this.lbSttModbus.MinimumSize = new System.Drawing.Size(1, 1);
-            this.lbSttModbus.Name = "lbSttModbus";
-            this.lbSttModbus.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.lbSttModbus.Size = new System.Drawing.Size(328, 31);
-            this.lbSttModbus.Style = Sunny.UI.UIStyle.Custom;
-            this.lbSttModbus.Symbol = 61553;
-            this.lbSttModbus.TabIndex = 15;
-            this.lbSttModbus.Text = "Lost Connection Modbus";
-            this.lbSttModbus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbSttModbus.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // FrSettingRobot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1266, 694);
+            this.ClientSize = new System.Drawing.Size(1266, 646);
             this.ControlBox = false;
             this.Controls.Add(this.uiGroupBox2);
             this.Controls.Add(this.grb_RobotSetting);

@@ -22,4 +22,13 @@ public abstract class CameraBase
     public abstract void SetExposure(Int32 exposure);
     public abstract void SetBrightness(Int32 brigness);
     public abstract void SetGain(float gain);
+    /*
+    public abstract bool SetGainPercent(double percent);
+
+    public abstract void Trigger();
+
+    public abstract void SetParameter(string parameterName, object value);
+
+    public abstract Bitmap ReadImage();
+    */
 }

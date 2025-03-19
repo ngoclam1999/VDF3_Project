@@ -18,6 +18,7 @@ namespace VDF3_Solution3
     {
   
         public static Hikcamera hikCamera;
+        public static BaslerCamera baslerCamera;
         private List<string> deviceNames;
         private CameraStatus Status;
 
@@ -32,6 +33,7 @@ namespace VDF3_Solution3
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
+            baslerCamera = new BaslerCamera("Basler Camera", "Local");
             Control.CheckForIllegalCrossThreadCalls = false;
             RefreshDeviceList();
         }
@@ -40,7 +42,10 @@ namespace VDF3_Solution3
             try
             {
                 hikCamera = new Hikcamera("HikCamera", "ConnectionInfo"); // Thay đổi nếu cần
+                //baslerCamera = new BaslerCamera("BaslerCamera", "Local");
+
                 deviceNames = hikCamera.RefreshDeviceList();
+                //deviceNames = baslerCamera.RefreshDeviceList();
 
                 cbDeviceList.Items.Clear(); // Xóa danh sách cũ
                 foreach (var device in deviceNames)

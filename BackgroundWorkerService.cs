@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Net;
 using System.Threading;
 using EasyModbus;
-using static OpenCvSharp.FileStorage;
 
 public class BackgroundWorkerService
 {
@@ -42,50 +41,65 @@ public class BackgroundWorkerService
         _worker = new BackgroundWorker();
         _worker.WorkerSupportsCancellation = true;
         _worker.DoWork += Worker_DoWork;
-        _worker.RunWorkerCompleted += _worker_RunWorkerCompleted; ;
+        _worker.RunWorkerCompleted += _worker_RunWorkerCompleted;
     }
 
     private void _worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
     {
-   
+        // Nếu _isRunning vẫn true, nghĩa là có yêu cầu dừng worker
         if (_isRunning)
         {
-            _modbusClient.Disconnect();
+            try
+            {
+                _modbusClient.Disconnect();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi khi ngắt kết nối: {ex.Message}");
+            }
             _worker.CancelAsync();
         }
         else
         {
             UpdateData("DoworkMess", "Mất kết nối");
+            // Khởi tạo workerReload mới để cố gắng kết nối lại
             _workerReload = new BackgroundWorker();
             _workerReload.WorkerSupportsCancellation = true;
             _workerReload.DoWork += _workerReload_DoWork;
             _workerReload.RunWorkerCompleted += _workerReload_RunWorkerCompleted;
             _workerReload.RunWorkerAsync();
         }
-
     }
 
     private void _workerReload_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
     {
-        UpdateData("DoworkMess", "Mất kết nối, thành công kết nối lại");
+        UpdateData("DoworkMess", "Kết nối lại thành công");
     }
 
     private void _workerReload_DoWork(object sender, DoWorkEventArgs e)
     {
-        while (_modbusClient.Connected)
+        // Sửa lại điều kiện: lặp lại cho đến khi _modbusClient kết nối thành công
+        while (!_modbusClient.Connected)
         {
             try
             {
+                // Cố gắng kết nối lại
                 _modbusClient.Connect();
                 if (_modbusClient.Connected)
                 {
+                    // Khi kết nối thành công, khởi động lại worker chính
                     _worker.RunWorkerAsync();
                     break;
                 }
             }
             catch (Exception ex)
             {
-                UpdateData("DoworkMess", "Mất kết nối, đang thực hiện kết nối lại");
+                // Cập nhật thông báo lỗi chi tiết và in ra console
+                string errorMsg = $"Mất kết nối, đang cố gắng kết nối lại: {ex.Message}";
+                Console.WriteLine(errorMsg);
+                UpdateData("DoworkMess", errorMsg);
+                // Tạm dừng 2 giây trước khi thử lại để tránh loop quá nhanh
+                Thread.Sleep(2000);
             }
         }
     }
@@ -96,52 +110,114 @@ public class BackgroundWorkerService
 
         while (!_worker.CancellationPending)
         {
-            do
+            // Kiểm tra dữ liệu IP và khởi tạo ModbusClient nếu cần
+            if (_dataStore.TryGetValue("IpAddress", out object sIp))
             {
-                if (_dataStore.TryGetValue("IpAddress", out object sIp))
+                if (!IsValidIP(sIp.ToString()))
                 {
-                    if(!IsValidIP(sIp.ToString()))
-                    {
-                        UpdateData("DoworkMess", "Địa chỉ IP không hợp lệ");
-                        return;
-                    }      
-                }
-                else
-                {
-                    UpdateData("DoworkMess", "Chưa nhập địa chỉ IP");
+                    UpdateData("DoworkMess", "Địa chỉ IP không hợp lệ");
                     return;
                 }
+            }
+            else
+            {
+                UpdateData("DoworkMess", "Chưa nhập địa chỉ IP");
+                return;
+            }
 
-                if(_modbusClient == null)
+            if (_modbusClient == null)
+            {
+                _modbusClient = new ModbusClient();
+                _modbusClient.IPAddress = sIp.ToString();
+                _modbusClient.Port = 502;
+                _modbusClient.ConnectionTimeout = 5000;
+            }
+
+            // Nếu chưa kết nối, thử kết nối
+            if (!_modbusClient.Connected)
+            {
+                try
                 {
-                    _modbusClient = new ModbusClient();
-                    // cấu hình mặc định modbus
-                    _modbusClient.IPAddress = sIp.ToString();
-                    _modbusClient.Port = Convert.ToInt32(502);
-                    _modbusClient.ConnectionTimeout = Convert.ToInt32(5000);
                     _modbusClient.Connect();
                 }
-                
+                catch (Exception ex)
+                {
+                    string errorMsg = $"Lỗi khi kết nối Modbus: {ex.Message}";
+                    Console.WriteLine(errorMsg);
+                    UpdateData("DoworkMess", errorMsg);
+                    // Nếu không kết nối được, dừng worker để kích hoạt quá trình tái kết nối
+                    _isRunning = false;
+                    break;
+                }
             }
-            while (!_modbusClient.Connected);
+
+            // Kiểm tra lại kết nối
+            if (!_modbusClient.Connected)
+            {
+                UpdateData("DoworkMess", "Không thể kết nối Modbus");
+                _isRunning = false;
+                break;
+            }
+
             UpdateData("DoworkMess", "Kết nối Modbus thành công");
 
             try
             {
-                if (_dataStore.TryGetValue("InputData", out object inputData)) // Kiểm tra nếu có dữ liệu từ UI
+                // Nếu có dữ liệu từ UI, xử lý (ví dụ gửi đi qua modbus)
+                if (_dataStore.TryGetValue("InputData", out object inputData))
                 {
-                    //Xử lý dữ liệu nhận được từ UI và gửi đi qua modbus
+                    // Xử lý dữ liệu inputData tại đây
                 }
 
-                VariableRobot.RbtMode = _modbusClient.ReadHoldingRegisters(187, 1)[0];
-                UpdateData("RbtMode", VariableRobot.RbtMode);
+                // Đọc dữ liệu từ Modbus
+                int[] registerValues = _modbusClient.ReadHoldingRegisters(31,1);
+                if (registerValues != null && registerValues.Length > 0)
+                {
+                    // Giả sử VariableRobot là biến toàn cục hoặc thuộc tính của một lớp khác
+                    VariableRobot.RbtMode = registerValues[0];
+                    UpdateData("RbtMode", VariableRobot.RbtMode);
+                }
+                else
+                {
+                    UpdateData("DoworkMess", "Không nhận được dữ liệu từ Modbus");
+                }
 
-                Thread.Sleep(100); // Giảm tải CPU
+                float RobotX = ModbusClient.ConvertRegistersToFloat(_modbusClient.ReadInputRegisters(51, 2));
+
+                if (RobotX != null)
+                {
+                    // Giả sử VariableRobot là biến toàn cục hoặc thuộc tính của một lớp khác
+                    VariableRobot.CurrentX = RobotX;
+                    UpdateData("CurrentX", VariableRobot.CurrentX);
+                }
+                else
+                {
+                    UpdateData("DoworkMess", "Không nhận được dữ liệu từ Modbus");
+                }
+
+                float RobotY = ModbusClient.ConvertRegistersToFloat(_modbusClient.ReadInputRegisters(53, 2));
+                if (RobotY != null)
+                {
+                    // Giả sử VariableRobot là biến toàn cục hoặc thuộc tính của một lớp khác
+                    VariableRobot.CurrentY = RobotY;
+                    UpdateData("CurrentY", VariableRobot.CurrentY);
+                }
+                else
+                {
+                    UpdateData("DoworkMess", "Không nhận được dữ liệu từ Modbus");
+                }
+
+
+                // Giảm tải CPU
+                Thread.Sleep(100);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Lỗi: {ex.Message}");
+                string errorMsg = $"Lỗi trong quá trình xử lý: {ex.Message}";
+                Console.WriteLine(errorMsg);
+                UpdateData("DoworkMess", errorMsg);
                 _isRunning = false;
+                break;
             }
         }
     }
@@ -156,6 +232,9 @@ public class BackgroundWorkerService
     {
         if (_worker.IsBusy)
             _worker.CancelAsync();
+
+        if(_modbusClient.Connected)
+            _modbusClient.Disconnect();
     }
 
     public void UpdateData(string key, object value)
@@ -175,6 +254,7 @@ public class BackgroundWorkerService
         return IPAddress.TryParse(ip, out _);
     }
 }
+
 public class InvokeService
 {
     public static void SendData(string key, object value)
@@ -187,4 +267,3 @@ public class InvokeService
         return BackgroundWorkerService.Instance.GetData(key);
     }
 }
-

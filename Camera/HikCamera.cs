@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Net;
 using System.Threading;
 using System.Windows;
@@ -116,6 +117,26 @@ public class Hikcamera : CameraBase
         }
 
         return null; // Nếu không có hình ảnh
+    }
+    public int SaveImage(ImageFormatInfo imageFormatInfo)
+    {
+        if (frameForSave == null)
+        {
+            throw new Exception("No vaild image");
+        }
+
+        string imagesFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Image");
+        if (!Directory.Exists(imagesFolder))
+        {
+            Directory.CreateDirectory(imagesFolder);
+        }
+        string imagePath = Path.Combine(imagesFolder, $"images_w{frameForSave.Image.Width.ToString()}_h{frameForSave.Image.Height.ToString()}_{DateTime.Now:yyyyMMdd_HHmmss}.jpg");
+        
+
+        lock (saveImageLock)
+        {
+            return device.ImageSaver.SaveImageToFile(imagePath, frameForSave.Image, imageFormatInfo, CFAMethod.Equilibrated);
+        }
     }
 
     public override void SetExposure(int exposure)

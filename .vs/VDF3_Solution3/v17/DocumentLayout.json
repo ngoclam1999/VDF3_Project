@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|c:\\users\\trila\\desktop\\vdf3\\solution_3\\vdf3_solution3\\backgroundworkerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:backgroundworkerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|c:\\users\\trila\\desktop\\vdf3\\solution_3\\vdf3_solution3\\form_vision\\frdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:form_vision\\frdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +15,36 @@
       "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:form_vision\\frdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|c:\\users\\trila\\desktop\\vdf3\\solution_3\\vdf3_solution3\\form_vision\\frpickteaching.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:form_vision\\frpickteaching.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\frrobot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:frrobot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|c:\\users\\trila\\desktop\\vdf3\\solution_3\\vdf3_solution3\\form_vision\\frpickteaching.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:form_vision\\frpickteaching.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|c:\\users\\trila\\desktop\\vdf3\\solution_3\\vdf3_solution3\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|c:\\users\\trila\\desktop\\vdf3\\solution_3\\vdf3_solution3\\form_vision\\frdetection.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:form_vision\\frdetection.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\frrobot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:frrobot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|c:\\users\\trila\\desktop\\vdf3\\solution_3\\vdf3_solution3\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\variablerobot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:variablerobot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\form_setting\\frsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:form_setting\\frsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\form_setting\\frsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:form_setting\\frsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\frrun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:frrun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\frrun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ED0E396E-342F-41AF-804C-ECBD2A7B2DE1}|VDF3_Solution3.csproj|solutionrelative:frrun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,78 +62,141 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FrDetection.cs",
               "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Vision\\FrDetection.cs",
               "RelativeDocumentMoniker": "Form_Vision\\FrDetection.cs",
               "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Vision\\FrDetection.cs",
               "RelativeToolTip": "Form_Vision\\FrDetection.cs",
-              "ViewState": "AgIAAJ4CAAAAAAAAAAA9wLYCAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAEAAAAAAAAAAAkwBgEAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T07:19:34.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrDetection.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Vision\\FrDetection.Designer.cs",
-              "RelativeDocumentMoniker": "Form_Vision\\FrDetection.Designer.cs",
-              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Vision\\FrDetection.Designer.cs",
-              "RelativeToolTip": "Form_Vision\\FrDetection.Designer.cs",
-              "ViewState": "AgIAAI0BAAAAAAAAAAAnwJwBAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T07:15:45.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Transform.cs",
-              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Transform.cs",
-              "RelativeDocumentMoniker": "Transform.cs",
-              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Transform.cs",
-              "RelativeToolTip": "Transform.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAtwDIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T04:26:53.296Z",
+              "WhenOpened": "2025-03-19T04:22:29.175Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FrPickTeaching.cs",
-              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Vision\\FrPickTeaching.cs",
-              "RelativeDocumentMoniker": "Form_Vision\\FrPickTeaching.cs",
-              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Vision\\FrPickTeaching.cs",
-              "RelativeToolTip": "Form_Vision\\FrPickTeaching.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAQwEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T03:46:07.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrPickTeaching.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Vision\\FrPickTeaching.cs",
-              "RelativeDocumentMoniker": "Form_Vision\\FrPickTeaching.cs",
-              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Vision\\FrPickTeaching.cs [Design]",
-              "RelativeToolTip": "Form_Vision\\FrPickTeaching.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T03:46:01.44Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "FrDetection.cs [Design]",
               "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Vision\\FrDetection.cs",
               "RelativeDocumentMoniker": "Form_Vision\\FrDetection.cs",
               "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Vision\\FrDetection.cs [Design]",
               "RelativeToolTip": "Form_Vision\\FrDetection.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T03:32:50.637Z",
+              "WhenOpened": "2025-03-19T04:22:26.954Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApiClient.cs",
+              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\ApiClient.cs",
+              "RelativeDocumentMoniker": "ApiClient.cs",
+              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\ApiClient.cs",
+              "RelativeToolTip": "ApiClient.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAgwJEAAACJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T04:00:04.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BackgroundWorkerService.cs",
+              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\BackgroundWorkerService.cs",
+              "RelativeDocumentMoniker": "BackgroundWorkerService.cs",
+              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\BackgroundWorkerService.cs",
+              "RelativeToolTip": "BackgroundWorkerService.cs",
+              "ViewState": "AgIAANYAAAAAAAAAAAAAwOsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T02:26:17.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FrSetting.cs",
+              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Setting\\FrSetting.cs",
+              "RelativeDocumentMoniker": "Form_Setting\\FrSetting.cs",
+              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Setting\\FrSetting.cs",
+              "RelativeToolTip": "Form_Setting\\FrSetting.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowFcAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T09:53:07.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrSetting.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Setting\\FrSetting.cs",
+              "RelativeDocumentMoniker": "Form_Setting\\FrSetting.cs",
+              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\Form_Setting\\FrSetting.cs [Design]",
+              "RelativeToolTip": "Form_Setting\\FrSetting.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T09:53:01.969Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FrRun.cs",
+              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\FrRun.cs",
+              "RelativeDocumentMoniker": "FrRun.cs",
+              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\FrRun.cs",
+              "RelativeToolTip": "FrRun.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T03:48:04.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FrRun.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\FrRun.cs",
+              "RelativeDocumentMoniker": "FrRun.cs",
+              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\FrRun.cs [Design]",
+              "RelativeToolTip": "FrRun.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T02:08:56.261Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VariableRobot.cs",
+              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\VariableRobot.cs",
+              "RelativeDocumentMoniker": "VariableRobot.cs",
+              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\VariableRobot.cs",
+              "RelativeToolTip": "VariableRobot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T01:47:57.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrRobot.cs",
+              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\FrRobot.cs",
+              "RelativeDocumentMoniker": "FrRobot.cs",
+              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\FrRobot.cs",
+              "RelativeToolTip": "FrRobot.cs",
+              "ViewState": "AgIAABABAAAAAAAAAAAuwOIAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T02:47:35.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrRobot.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\FrRobot.cs",
+              "RelativeDocumentMoniker": "FrRobot.cs",
+              "ToolTip": "C:\\Users\\trila\\Desktop\\VDF3\\Solution_3\\VDF3_Solution3\\FrRobot.cs [Design]",
+              "RelativeToolTip": "FrRobot.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T01:57:35.294Z",
               "EditorCaption": " [Design]"
             }
           ]

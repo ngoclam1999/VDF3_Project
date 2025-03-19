@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,18 @@ public static class SystemMode
     /// 
     /// </summary>
     public static string PresentImagePath;
+    /// <summary>
+    /// 
+    /// </summary>
+    public static string PresentTemplatePath;
+    /// <summary>
+    /// 
+    /// </summary>
+    public static Image PresentImage;
+    /// <summary>
+    /// 
+    /// </summary>
+    public static Image ImgTemplate;
     /// <summary>
     /// 0: Tool Not use
     /// 1: Vacum
