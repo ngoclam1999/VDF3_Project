@@ -112,14 +112,14 @@ namespace VDF3_Solution3
             {
                 if (value != null && float.TryParse(value.ToString(), out float x))
                 {
-                    textBoxX.Text = x.ToString();
+                    textBoxX.Text = (x).ToString();
                 }
             }
             if (key == "CurrentY")
             {
                 if (value != null && float.TryParse(value.ToString(), out float y))
                 {
-                    textBoxY.Text = y.ToString();
+                    textBoxY.Text = (y).ToString();
                 }
             }
            
