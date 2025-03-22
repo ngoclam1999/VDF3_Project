@@ -31,11 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrRobot));
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btnTrigger = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnCancel = new System.Windows.Forms.ToolStripButton();
             this.tsbtnBack = new System.Windows.Forms.ToolStripButton();
             this.labelPointIndex = new System.Windows.Forms.ToolStripLabel();
             this.tsbtnNext = new System.Windows.Forms.ToolStripButton();
             this.tsbtnTeach = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnCalibration = new System.Windows.Forms.ToolStripButton();
             this.textBoxY = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
@@ -107,8 +109,6 @@
             this.uiLabel6 = new Sunny.UI.UILabel();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip2.SuspendLayout();
             this.uiPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCamRobot)).BeginInit();
@@ -149,6 +149,11 @@
             this.btnTrigger.Size = new System.Drawing.Size(100, 29);
             this.btnTrigger.Text = "Trigger";
             this.btnTrigger.Click += new System.EventHandler(this.btnTrigger_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
             // 
             // tsbtnCancel
             // 
@@ -199,6 +204,11 @@
             this.tsbtnTeach.Text = "Teach";
             this.tsbtnTeach.Click += new System.EventHandler(this.tsbtnTeach_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
+            // 
             // tsbtnCalibration
             // 
             this.tsbtnCalibration.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnCalibration.Image")));
@@ -213,7 +223,7 @@
             this.textBoxY.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.textBoxY.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxY.Name = "textBoxY";
-            this.textBoxY.Size = new System.Drawing.Size(100, 32);
+            this.textBoxY.Size = new System.Drawing.Size(130, 32);
             // 
             // toolStripLabel2
             // 
@@ -227,7 +237,7 @@
             this.textBoxX.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.textBoxX.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxX.Name = "textBoxX";
-            this.textBoxX.Size = new System.Drawing.Size(100, 32);
+            this.textBoxX.Size = new System.Drawing.Size(130, 32);
             // 
             // toolStripLabel1
             // 
@@ -250,7 +260,7 @@
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.uiPanel1.Size = new System.Drawing.Size(1000, 657);
+            this.uiPanel1.Size = new System.Drawing.Size(922, 657);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Gray;
             this.uiPanel1.TabIndex = 16;
             this.uiPanel1.Text = "uiPanel1";
@@ -264,7 +274,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picBoxCamRobot.Location = new System.Drawing.Point(3, 3);
             this.picBoxCamRobot.Name = "picBoxCamRobot";
-            this.picBoxCamRobot.Size = new System.Drawing.Size(994, 651);
+            this.picBoxCamRobot.Size = new System.Drawing.Size(916, 651);
             this.picBoxCamRobot.TabIndex = 0;
             this.picBoxCamRobot.TabStop = false;
             this.picBoxCamRobot.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -336,9 +346,9 @@
             this.panel1.Controls.Add(this.uiLabel6);
             this.panel1.Controls.Add(this.uiLabel3);
             this.panel1.Controls.Add(this.uiLabel2);
-            this.panel1.Location = new System.Drawing.Point(1013, 37);
+            this.panel1.Location = new System.Drawing.Point(931, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(371, 667);
+            this.panel1.Size = new System.Drawing.Size(453, 667);
             this.panel1.TabIndex = 17;
             // 
             // txtPointY9
@@ -346,12 +356,12 @@
             this.txtPointY9.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPointY9.DoubleValue = 200D;
             this.txtPointY9.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtPointY9.Location = new System.Drawing.Point(223, 623);
+            this.txtPointY9.Location = new System.Drawing.Point(265, 623);
             this.txtPointY9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPointY9.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointY9.Name = "txtPointY9";
             this.txtPointY9.ShowText = false;
-            this.txtPointY9.Size = new System.Drawing.Size(73, 29);
+            this.txtPointY9.Size = new System.Drawing.Size(119, 29);
             this.txtPointY9.TabIndex = 81;
             this.txtPointY9.Text = "200.0";
             this.txtPointY9.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -362,12 +372,12 @@
             this.txtPointY8.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPointY8.DoubleValue = 199.5D;
             this.txtPointY8.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtPointY8.Location = new System.Drawing.Point(223, 550);
+            this.txtPointY8.Location = new System.Drawing.Point(265, 550);
             this.txtPointY8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPointY8.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointY8.Name = "txtPointY8";
             this.txtPointY8.ShowText = false;
-            this.txtPointY8.Size = new System.Drawing.Size(73, 29);
+            this.txtPointY8.Size = new System.Drawing.Size(119, 29);
             this.txtPointY8.TabIndex = 65;
             this.txtPointY8.Text = "199.5";
             this.txtPointY8.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -378,12 +388,12 @@
             this.txtPointY7.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPointY7.DoubleValue = 198.25D;
             this.txtPointY7.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtPointY7.Location = new System.Drawing.Point(223, 477);
+            this.txtPointY7.Location = new System.Drawing.Point(265, 477);
             this.txtPointY7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPointY7.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointY7.Name = "txtPointY7";
             this.txtPointY7.ShowText = false;
-            this.txtPointY7.Size = new System.Drawing.Size(73, 29);
+            this.txtPointY7.Size = new System.Drawing.Size(119, 29);
             this.txtPointY7.TabIndex = 66;
             this.txtPointY7.Text = "198.25";
             this.txtPointY7.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -394,12 +404,12 @@
             this.txtPointY6.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPointY6.DoubleValue = 136.25D;
             this.txtPointY6.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtPointY6.Location = new System.Drawing.Point(223, 404);
+            this.txtPointY6.Location = new System.Drawing.Point(265, 404);
             this.txtPointY6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPointY6.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointY6.Name = "txtPointY6";
             this.txtPointY6.ShowText = false;
-            this.txtPointY6.Size = new System.Drawing.Size(73, 29);
+            this.txtPointY6.Size = new System.Drawing.Size(119, 29);
             this.txtPointY6.TabIndex = 67;
             this.txtPointY6.Text = "136.25";
             this.txtPointY6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -410,12 +420,12 @@
             this.txtPointY5.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPointY5.DoubleValue = 135.7D;
             this.txtPointY5.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtPointY5.Location = new System.Drawing.Point(223, 331);
+            this.txtPointY5.Location = new System.Drawing.Point(265, 331);
             this.txtPointY5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPointY5.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointY5.Name = "txtPointY5";
             this.txtPointY5.ShowText = false;
-            this.txtPointY5.Size = new System.Drawing.Size(73, 29);
+            this.txtPointY5.Size = new System.Drawing.Size(119, 29);
             this.txtPointY5.TabIndex = 68;
             this.txtPointY5.Text = "135.7";
             this.txtPointY5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -426,12 +436,12 @@
             this.txtPointY4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPointY4.DoubleValue = 134.5D;
             this.txtPointY4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtPointY4.Location = new System.Drawing.Point(223, 258);
+            this.txtPointY4.Location = new System.Drawing.Point(265, 258);
             this.txtPointY4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPointY4.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointY4.Name = "txtPointY4";
             this.txtPointY4.ShowText = false;
-            this.txtPointY4.Size = new System.Drawing.Size(73, 29);
+            this.txtPointY4.Size = new System.Drawing.Size(119, 29);
             this.txtPointY4.TabIndex = 69;
             this.txtPointY4.Text = "134.5";
             this.txtPointY4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -442,12 +452,12 @@
             this.txtPointY3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPointY3.DoubleValue = 72D;
             this.txtPointY3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtPointY3.Location = new System.Drawing.Point(223, 185);
+            this.txtPointY3.Location = new System.Drawing.Point(265, 185);
             this.txtPointY3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPointY3.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointY3.Name = "txtPointY3";
             this.txtPointY3.ShowText = false;
-            this.txtPointY3.Size = new System.Drawing.Size(73, 29);
+            this.txtPointY3.Size = new System.Drawing.Size(119, 29);
             this.txtPointY3.TabIndex = 70;
             this.txtPointY3.Text = "72.0";
             this.txtPointY3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -458,12 +468,12 @@
             this.txtPointY2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPointY2.DoubleValue = 70.7D;
             this.txtPointY2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtPointY2.Location = new System.Drawing.Point(223, 112);
+            this.txtPointY2.Location = new System.Drawing.Point(265, 112);
             this.txtPointY2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPointY2.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointY2.Name = "txtPointY2";
             this.txtPointY2.ShowText = false;
-            this.txtPointY2.Size = new System.Drawing.Size(73, 29);
+            this.txtPointY2.Size = new System.Drawing.Size(119, 29);
             this.txtPointY2.TabIndex = 64;
             this.txtPointY2.Text = "70.7";
             this.txtPointY2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -474,12 +484,12 @@
             this.txtPointY1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPointY1.DoubleValue = 70.5D;
             this.txtPointY1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtPointY1.Location = new System.Drawing.Point(223, 39);
+            this.txtPointY1.Location = new System.Drawing.Point(265, 39);
             this.txtPointY1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPointY1.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointY1.Name = "txtPointY1";
             this.txtPointY1.ShowText = false;
-            this.txtPointY1.Size = new System.Drawing.Size(73, 29);
+            this.txtPointY1.Size = new System.Drawing.Size(119, 29);
             this.txtPointY1.TabIndex = 71;
             this.txtPointY1.Text = "70.5";
             this.txtPointY1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -495,7 +505,7 @@
             this.txtPointX9.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointX9.Name = "txtPointX9";
             this.txtPointX9.ShowText = false;
-            this.txtPointX9.Size = new System.Drawing.Size(73, 29);
+            this.txtPointX9.Size = new System.Drawing.Size(119, 29);
             this.txtPointX9.TabIndex = 80;
             this.txtPointX9.Text = "283.5";
             this.txtPointX9.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -511,7 +521,7 @@
             this.txtPointX8.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointX8.Name = "txtPointX8";
             this.txtPointX8.ShowText = false;
-            this.txtPointX8.Size = new System.Drawing.Size(73, 29);
+            this.txtPointX8.Size = new System.Drawing.Size(119, 29);
             this.txtPointX8.TabIndex = 73;
             this.txtPointX8.Text = "206.5";
             this.txtPointX8.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -527,7 +537,7 @@
             this.txtPointX7.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointX7.Name = "txtPointX7";
             this.txtPointX7.ShowText = false;
-            this.txtPointX7.Size = new System.Drawing.Size(73, 29);
+            this.txtPointX7.Size = new System.Drawing.Size(119, 29);
             this.txtPointX7.TabIndex = 74;
             this.txtPointX7.Text = "127.0";
             this.txtPointX7.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -543,7 +553,7 @@
             this.txtPointX6.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointX6.Name = "txtPointX6";
             this.txtPointX6.ShowText = false;
-            this.txtPointX6.Size = new System.Drawing.Size(73, 29);
+            this.txtPointX6.Size = new System.Drawing.Size(119, 29);
             this.txtPointX6.TabIndex = 75;
             this.txtPointX6.Text = "284.5";
             this.txtPointX6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -559,7 +569,7 @@
             this.txtPointX5.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointX5.Name = "txtPointX5";
             this.txtPointX5.ShowText = false;
-            this.txtPointX5.Size = new System.Drawing.Size(73, 29);
+            this.txtPointX5.Size = new System.Drawing.Size(119, 29);
             this.txtPointX5.TabIndex = 76;
             this.txtPointX5.Text = "207.5";
             this.txtPointX5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -575,7 +585,7 @@
             this.txtPointX4.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointX4.Name = "txtPointX4";
             this.txtPointX4.ShowText = false;
-            this.txtPointX4.Size = new System.Drawing.Size(73, 29);
+            this.txtPointX4.Size = new System.Drawing.Size(119, 29);
             this.txtPointX4.TabIndex = 77;
             this.txtPointX4.Text = "128.0";
             this.txtPointX4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -591,7 +601,7 @@
             this.txtPointX3.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointX3.Name = "txtPointX3";
             this.txtPointX3.ShowText = false;
-            this.txtPointX3.Size = new System.Drawing.Size(73, 29);
+            this.txtPointX3.Size = new System.Drawing.Size(119, 29);
             this.txtPointX3.TabIndex = 72;
             this.txtPointX3.Text = "285.5";
             this.txtPointX3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -607,7 +617,7 @@
             this.txtPointX2.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointX2.Name = "txtPointX2";
             this.txtPointX2.ShowText = false;
-            this.txtPointX2.Size = new System.Drawing.Size(73, 29);
+            this.txtPointX2.Size = new System.Drawing.Size(119, 29);
             this.txtPointX2.TabIndex = 78;
             this.txtPointX2.Text = "208.5";
             this.txtPointX2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -623,7 +633,7 @@
             this.txtPointX1.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPointX1.Name = "txtPointX1";
             this.txtPointX1.ShowText = false;
-            this.txtPointX1.Size = new System.Drawing.Size(73, 29);
+            this.txtPointX1.Size = new System.Drawing.Size(119, 29);
             this.txtPointX1.TabIndex = 79;
             this.txtPointX1.Text = "129.0";
             this.txtPointX1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -688,7 +698,7 @@
             // uiLabel36
             // 
             this.uiLabel36.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel36.Location = new System.Drawing.Point(303, 620);
+            this.uiLabel36.Location = new System.Drawing.Point(394, 620);
             this.uiLabel36.Name = "uiLabel36";
             this.uiLabel36.Size = new System.Drawing.Size(51, 34);
             this.uiLabel36.TabIndex = 54;
@@ -713,7 +723,7 @@
             // uiLabel32
             // 
             this.uiLabel32.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel32.Location = new System.Drawing.Point(303, 547);
+            this.uiLabel32.Location = new System.Drawing.Point(394, 547);
             this.uiLabel32.Name = "uiLabel32";
             this.uiLabel32.Size = new System.Drawing.Size(51, 34);
             this.uiLabel32.TabIndex = 53;
@@ -738,7 +748,7 @@
             // uiLabel28
             // 
             this.uiLabel28.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel28.Location = new System.Drawing.Point(303, 474);
+            this.uiLabel28.Location = new System.Drawing.Point(394, 474);
             this.uiLabel28.Name = "uiLabel28";
             this.uiLabel28.Size = new System.Drawing.Size(51, 34);
             this.uiLabel28.TabIndex = 52;
@@ -763,7 +773,7 @@
             // uiLabel25
             // 
             this.uiLabel25.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel25.Location = new System.Drawing.Point(303, 401);
+            this.uiLabel25.Location = new System.Drawing.Point(394, 401);
             this.uiLabel25.Name = "uiLabel25";
             this.uiLabel25.Size = new System.Drawing.Size(51, 34);
             this.uiLabel25.TabIndex = 50;
@@ -788,7 +798,7 @@
             // uiLabel35
             // 
             this.uiLabel35.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel35.Location = new System.Drawing.Point(128, 620);
+            this.uiLabel35.Location = new System.Drawing.Point(177, 620);
             this.uiLabel35.Name = "uiLabel35";
             this.uiLabel35.Size = new System.Drawing.Size(51, 34);
             this.uiLabel35.TabIndex = 51;
@@ -799,7 +809,7 @@
             // uiLabel21
             // 
             this.uiLabel21.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel21.Location = new System.Drawing.Point(303, 328);
+            this.uiLabel21.Location = new System.Drawing.Point(394, 328);
             this.uiLabel21.Name = "uiLabel21";
             this.uiLabel21.Size = new System.Drawing.Size(51, 34);
             this.uiLabel21.TabIndex = 19;
@@ -810,7 +820,7 @@
             // uiLabel31
             // 
             this.uiLabel31.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel31.Location = new System.Drawing.Point(128, 547);
+            this.uiLabel31.Location = new System.Drawing.Point(177, 547);
             this.uiLabel31.Name = "uiLabel31";
             this.uiLabel31.Size = new System.Drawing.Size(51, 34);
             this.uiLabel31.TabIndex = 47;
@@ -835,7 +845,7 @@
             // uiLabel27
             // 
             this.uiLabel27.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel27.Location = new System.Drawing.Point(128, 474);
+            this.uiLabel27.Location = new System.Drawing.Point(177, 474);
             this.uiLabel27.Name = "uiLabel27";
             this.uiLabel27.Size = new System.Drawing.Size(51, 34);
             this.uiLabel27.TabIndex = 20;
@@ -846,7 +856,7 @@
             // uiLabel17
             // 
             this.uiLabel17.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel17.Location = new System.Drawing.Point(303, 255);
+            this.uiLabel17.Location = new System.Drawing.Point(394, 255);
             this.uiLabel17.Name = "uiLabel17";
             this.uiLabel17.Size = new System.Drawing.Size(51, 34);
             this.uiLabel17.TabIndex = 21;
@@ -857,7 +867,7 @@
             // uiLabel24
             // 
             this.uiLabel24.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel24.Location = new System.Drawing.Point(128, 401);
+            this.uiLabel24.Location = new System.Drawing.Point(177, 401);
             this.uiLabel24.Name = "uiLabel24";
             this.uiLabel24.Size = new System.Drawing.Size(51, 34);
             this.uiLabel24.TabIndex = 22;
@@ -868,7 +878,7 @@
             // uiLabel13
             // 
             this.uiLabel13.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel13.Location = new System.Drawing.Point(303, 182);
+            this.uiLabel13.Location = new System.Drawing.Point(394, 182);
             this.uiLabel13.Name = "uiLabel13";
             this.uiLabel13.Size = new System.Drawing.Size(51, 34);
             this.uiLabel13.TabIndex = 23;
@@ -879,7 +889,7 @@
             // uiLabel20
             // 
             this.uiLabel20.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel20.Location = new System.Drawing.Point(128, 328);
+            this.uiLabel20.Location = new System.Drawing.Point(177, 328);
             this.uiLabel20.Name = "uiLabel20";
             this.uiLabel20.Size = new System.Drawing.Size(51, 34);
             this.uiLabel20.TabIndex = 24;
@@ -890,7 +900,7 @@
             // uiLabel34
             // 
             this.uiLabel34.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel34.Location = new System.Drawing.Point(185, 620);
+            this.uiLabel34.Location = new System.Drawing.Point(227, 620);
             this.uiLabel34.Name = "uiLabel34";
             this.uiLabel34.Size = new System.Drawing.Size(31, 34);
             this.uiLabel34.TabIndex = 25;
@@ -901,7 +911,7 @@
             // uiLabel30
             // 
             this.uiLabel30.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel30.Location = new System.Drawing.Point(185, 547);
+            this.uiLabel30.Location = new System.Drawing.Point(227, 547);
             this.uiLabel30.Name = "uiLabel30";
             this.uiLabel30.Size = new System.Drawing.Size(31, 34);
             this.uiLabel30.TabIndex = 26;
@@ -912,7 +922,7 @@
             // uiLabel16
             // 
             this.uiLabel16.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel16.Location = new System.Drawing.Point(128, 255);
+            this.uiLabel16.Location = new System.Drawing.Point(177, 255);
             this.uiLabel16.Name = "uiLabel16";
             this.uiLabel16.Size = new System.Drawing.Size(51, 34);
             this.uiLabel16.TabIndex = 27;
@@ -923,7 +933,7 @@
             // uiLabel26
             // 
             this.uiLabel26.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel26.Location = new System.Drawing.Point(185, 474);
+            this.uiLabel26.Location = new System.Drawing.Point(227, 474);
             this.uiLabel26.Name = "uiLabel26";
             this.uiLabel26.Size = new System.Drawing.Size(31, 34);
             this.uiLabel26.TabIndex = 28;
@@ -934,7 +944,7 @@
             // uiLabel9
             // 
             this.uiLabel9.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel9.Location = new System.Drawing.Point(303, 109);
+            this.uiLabel9.Location = new System.Drawing.Point(394, 109);
             this.uiLabel9.Name = "uiLabel9";
             this.uiLabel9.Size = new System.Drawing.Size(51, 34);
             this.uiLabel9.TabIndex = 29;
@@ -945,7 +955,7 @@
             // uiLabel23
             // 
             this.uiLabel23.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel23.Location = new System.Drawing.Point(185, 401);
+            this.uiLabel23.Location = new System.Drawing.Point(227, 401);
             this.uiLabel23.Name = "uiLabel23";
             this.uiLabel23.Size = new System.Drawing.Size(31, 34);
             this.uiLabel23.TabIndex = 30;
@@ -956,7 +966,7 @@
             // uiLabel12
             // 
             this.uiLabel12.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel12.Location = new System.Drawing.Point(128, 182);
+            this.uiLabel12.Location = new System.Drawing.Point(177, 182);
             this.uiLabel12.Name = "uiLabel12";
             this.uiLabel12.Size = new System.Drawing.Size(51, 34);
             this.uiLabel12.TabIndex = 31;
@@ -967,7 +977,7 @@
             // uiLabel19
             // 
             this.uiLabel19.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel19.Location = new System.Drawing.Point(185, 328);
+            this.uiLabel19.Location = new System.Drawing.Point(227, 328);
             this.uiLabel19.Name = "uiLabel19";
             this.uiLabel19.Size = new System.Drawing.Size(31, 34);
             this.uiLabel19.TabIndex = 32;
@@ -1000,7 +1010,7 @@
             // uiLabel15
             // 
             this.uiLabel15.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel15.Location = new System.Drawing.Point(185, 255);
+            this.uiLabel15.Location = new System.Drawing.Point(227, 255);
             this.uiLabel15.Name = "uiLabel15";
             this.uiLabel15.Size = new System.Drawing.Size(31, 34);
             this.uiLabel15.TabIndex = 35;
@@ -1022,7 +1032,7 @@
             // uiLabel8
             // 
             this.uiLabel8.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel8.Location = new System.Drawing.Point(128, 109);
+            this.uiLabel8.Location = new System.Drawing.Point(177, 109);
             this.uiLabel8.Name = "uiLabel8";
             this.uiLabel8.Size = new System.Drawing.Size(51, 34);
             this.uiLabel8.TabIndex = 37;
@@ -1044,7 +1054,7 @@
             // uiLabel11
             // 
             this.uiLabel11.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel11.Location = new System.Drawing.Point(185, 182);
+            this.uiLabel11.Location = new System.Drawing.Point(227, 182);
             this.uiLabel11.Name = "uiLabel11";
             this.uiLabel11.Size = new System.Drawing.Size(31, 34);
             this.uiLabel11.TabIndex = 39;
@@ -1066,7 +1076,7 @@
             // uiLabel5
             // 
             this.uiLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel5.Location = new System.Drawing.Point(303, 36);
+            this.uiLabel5.Location = new System.Drawing.Point(394, 36);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(51, 34);
             this.uiLabel5.TabIndex = 41;
@@ -1088,7 +1098,7 @@
             // uiLabel7
             // 
             this.uiLabel7.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel7.Location = new System.Drawing.Point(185, 109);
+            this.uiLabel7.Location = new System.Drawing.Point(227, 109);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(31, 34);
             this.uiLabel7.TabIndex = 43;
@@ -1110,7 +1120,7 @@
             // uiLabel4
             // 
             this.uiLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel4.Location = new System.Drawing.Point(128, 36);
+            this.uiLabel4.Location = new System.Drawing.Point(177, 36);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(51, 34);
             this.uiLabel4.TabIndex = 45;
@@ -1132,7 +1142,7 @@
             // uiLabel3
             // 
             this.uiLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel3.Location = new System.Drawing.Point(185, 36);
+            this.uiLabel3.Location = new System.Drawing.Point(227, 36);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(31, 34);
             this.uiLabel3.TabIndex = 48;
@@ -1151,16 +1161,6 @@
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
-            // 
             // FrRobot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1173,6 +1173,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrRobot";
             this.Padding = new System.Windows.Forms.Padding(2);
+            this.Activated += new System.EventHandler(this.FrRobot_Activated);
+            this.Load += new System.EventHandler(this.FrRobot_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.uiPanel1.ResumeLayout(false);

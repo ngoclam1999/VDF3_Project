@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 public static class SystemMode
 {
+    
     /// <summary>
     /// 
     /// </summary>

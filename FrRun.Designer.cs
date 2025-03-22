@@ -33,23 +33,18 @@
             this.tsbtnNewFile = new System.Windows.Forms.ToolStripButton();
             this.tsbtnOpenFile = new System.Windows.Forms.ToolStripButton();
             this.tsbtnSaveFile = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnTrigger = new System.Windows.Forms.ToolStripButton();
             this.tsbtnContinuousTrigger = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnRotation_left = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnRotation_right = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnStart = new System.Windows.Forms.ToolStripButton();
             this.tsbtnStop = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnZoomIn = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnZoomOut = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnFixScr = new System.Windows.Forms.ToolStripButton();
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.PicRunRobot = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lwCameraRobot = new System.Windows.Forms.ListView();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.pictemplateRunning = new System.Windows.Forms.PictureBox();
-            this.lwCameraRobot = new System.Windows.Forms.ListView();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.uiPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicRunRobot)).BeginInit();
@@ -69,14 +64,9 @@
             this.toolStripSeparator2,
             this.tsbtnTrigger,
             this.tsbtnContinuousTrigger,
-            this.tsbtnRotation_left,
-            this.tsbtnRotation_right,
             this.toolStripSeparator1,
             this.tsbtnStart,
-            this.tsbtnStop,
-            this.tsbtnFixScr,
-            this.tsbtnZoomIn,
-            this.tsbtnZoomOut});
+            this.tsbtnStop});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStrip1.Location = new System.Drawing.Point(2, 2);
             this.toolStrip1.Name = "toolStrip1";
@@ -114,6 +104,11 @@
             this.tsbtnSaveFile.Size = new System.Drawing.Size(40, 29);
             this.tsbtnSaveFile.Text = "toolStripButton3";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
+            // 
             // tsbtnTrigger
             // 
             this.tsbtnTrigger.AutoSize = false;
@@ -135,27 +130,10 @@
             this.tsbtnContinuousTrigger.Size = new System.Drawing.Size(40, 29);
             this.tsbtnContinuousTrigger.Text = "toolStripButton2";
             // 
-            // tsbtnRotation_left
+            // toolStripSeparator1
             // 
-            this.tsbtnRotation_left.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tsbtnRotation_left.AutoSize = false;
-            this.tsbtnRotation_left.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnRotation_left.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnRotation_left.Image")));
-            this.tsbtnRotation_left.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnRotation_left.Name = "tsbtnRotation_left";
-            this.tsbtnRotation_left.Size = new System.Drawing.Size(40, 29);
-            this.tsbtnRotation_left.Text = "toolStripButton6";
-            // 
-            // tsbtnRotation_right
-            // 
-            this.tsbtnRotation_right.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tsbtnRotation_right.AutoSize = false;
-            this.tsbtnRotation_right.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnRotation_right.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnRotation_right.Image")));
-            this.tsbtnRotation_right.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnRotation_right.Name = "tsbtnRotation_right";
-            this.tsbtnRotation_right.Size = new System.Drawing.Size(40, 29);
-            this.tsbtnRotation_right.Text = "toolStripButton7";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
             // 
             // tsbtnStart
             // 
@@ -165,6 +143,7 @@
             this.tsbtnStart.Name = "tsbtnStart";
             this.tsbtnStart.Size = new System.Drawing.Size(100, 29);
             this.tsbtnStart.Text = "System Start";
+            this.tsbtnStart.Click += new System.EventHandler(this.tsbtnStart_Click);
             // 
             // tsbtnStop
             // 
@@ -174,39 +153,7 @@
             this.tsbtnStop.Name = "tsbtnStop";
             this.tsbtnStop.Size = new System.Drawing.Size(100, 29);
             this.tsbtnStop.Text = "System Stop";
-            // 
-            // tsbtnZoomIn
-            // 
-            this.tsbtnZoomIn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tsbtnZoomIn.AutoSize = false;
-            this.tsbtnZoomIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnZoomIn.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnZoomIn.Image")));
-            this.tsbtnZoomIn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnZoomIn.Name = "tsbtnZoomIn";
-            this.tsbtnZoomIn.Size = new System.Drawing.Size(40, 29);
-            this.tsbtnZoomIn.Text = "toolStripButton1";
-            // 
-            // tsbtnZoomOut
-            // 
-            this.tsbtnZoomOut.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tsbtnZoomOut.AutoSize = false;
-            this.tsbtnZoomOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnZoomOut.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnZoomOut.Image")));
-            this.tsbtnZoomOut.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnZoomOut.Name = "tsbtnZoomOut";
-            this.tsbtnZoomOut.Size = new System.Drawing.Size(40, 29);
-            this.tsbtnZoomOut.Text = "toolStripButton2";
-            // 
-            // tsbtnFixScr
-            // 
-            this.tsbtnFixScr.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tsbtnFixScr.AutoSize = false;
-            this.tsbtnFixScr.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnFixScr.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnFixScr.Image")));
-            this.tsbtnFixScr.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnFixScr.Name = "tsbtnFixScr";
-            this.tsbtnFixScr.Size = new System.Drawing.Size(40, 29);
-            this.tsbtnFixScr.Text = "toolStripButton3";
+            this.tsbtnStop.Click += new System.EventHandler(this.tsbtnStop_Click);
             // 
             // uiPanel1
             // 
@@ -238,16 +185,29 @@
             this.PicRunRobot.Size = new System.Drawing.Size(880, 666);
             this.PicRunRobot.TabIndex = 0;
             this.PicRunRobot.TabStop = false;
+            this.PicRunRobot.Paint += new System.Windows.Forms.PaintEventHandler(this.PicRunRobot_Paint);
+            this.PicRunRobot.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseDown);
+            this.PicRunRobot.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
+            this.PicRunRobot.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.uiPanel2);
             this.panel1.Controls.Add(this.lwCameraRobot);
+            this.panel1.Controls.Add(this.uiPanel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(895, 34);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(490, 676);
             this.panel1.TabIndex = 18;
+            // 
+            // lwCameraRobot
+            // 
+            this.lwCameraRobot.HideSelection = false;
+            this.lwCameraRobot.Location = new System.Drawing.Point(2, 2);
+            this.lwCameraRobot.Name = "lwCameraRobot";
+            this.lwCameraRobot.Size = new System.Drawing.Size(488, 435);
+            this.lwCameraRobot.TabIndex = 22;
+            this.lwCameraRobot.UseCompatibleStateImageBehavior = false;
             // 
             // uiPanel2
             // 
@@ -279,29 +239,6 @@
             this.pictemplateRunning.Size = new System.Drawing.Size(486, 225);
             this.pictemplateRunning.TabIndex = 0;
             this.pictemplateRunning.TabStop = false;
-            // 
-            // lwCameraRobot
-            // 
-            this.lwCameraRobot.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lwCameraRobot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lwCameraRobot.HideSelection = false;
-            this.lwCameraRobot.Location = new System.Drawing.Point(0, 0);
-            this.lwCameraRobot.Name = "lwCameraRobot";
-            this.lwCameraRobot.OwnerDraw = true;
-            this.lwCameraRobot.Size = new System.Drawing.Size(490, 437);
-            this.lwCameraRobot.TabIndex = 20;
-            this.lwCameraRobot.TileSize = new System.Drawing.Size(80, 80);
-            this.lwCameraRobot.UseCompatibleStateImageBehavior = false;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
             // 
             // FrRun
             // 
@@ -335,20 +272,15 @@
         private System.Windows.Forms.ToolStripButton tsbtnSaveFile;
         private System.Windows.Forms.ToolStripButton tsbtnTrigger;
         private System.Windows.Forms.ToolStripButton tsbtnContinuousTrigger;
-        private System.Windows.Forms.ToolStripButton tsbtnRotation_left;
-        private System.Windows.Forms.ToolStripButton tsbtnRotation_right;
         private System.Windows.Forms.ToolStripButton tsbtnStart;
         private System.Windows.Forms.ToolStripButton tsbtnStop;
-        private System.Windows.Forms.ToolStripButton tsbtnZoomIn;
-        private System.Windows.Forms.ToolStripButton tsbtnZoomOut;
-        private System.Windows.Forms.ToolStripButton tsbtnFixScr;
         private Sunny.UI.UIPanel uiPanel1;
         private System.Windows.Forms.PictureBox PicRunRobot;
         private System.Windows.Forms.Panel panel1;
         private Sunny.UI.UIPanel uiPanel2;
         private System.Windows.Forms.PictureBox pictemplateRunning;
-        private System.Windows.Forms.ListView lwCameraRobot;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ListView lwCameraRobot;
     }
 }

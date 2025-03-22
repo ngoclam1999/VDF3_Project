@@ -88,8 +88,11 @@ namespace VDF3_Solution3
                 realPoints[currentPointIndex].y = _y;
 
                 // Đồng thời cập nhật giá trị lên TextBox của điểm tương ứng
-                calibrationXTextBoxes[currentPointIndex].Text = _x.ToString("F2", CultureInfo.InvariantCulture);
-                calibrationYTextBoxes[currentPointIndex].Text = _y.ToString("F2", CultureInfo.InvariantCulture);
+                calibrationXTextBoxes[currentPointIndex].Text = _x.ToString("F6", CultureInfo.InvariantCulture);
+                calibrationYTextBoxes[currentPointIndex].Text = _y.ToString("F6", CultureInfo.InvariantCulture);
+
+                VariableRobot.calibrationArray[0,currentPointIndex] = (float)_x;
+                VariableRobot.calibrationArray[1, currentPointIndex] = (float)_y;
             }
             else
             {
@@ -211,16 +214,13 @@ namespace VDF3_Solution3
         private async Task Calibration(object sender, EventArgs e)
         {
             // Lưu lại kết quả tọa độ hiện tại trước khi lưu JSON
-            SaveCurrentReadingToList();
+            //SaveCurrentReadingToList();
 
             // Kiểm tra nếu danh sách đã có đủ 9 cặp tọa độ (thường luôn có vì đã khởi tạo 9 phần tử)
             if (realPoints.Count == 9)
             {
                 // Serialize danh sách realPoints thành chuỗi JSON với định dạng đẹp (indented)
                 string json = Newtonsoft.Json.JsonConvert.SerializeObject(realPoints, Formatting.Indented);
-                MessageBox.Show(json);
-                // Nếu muốn lưu vào file, uncomment dòng dưới đây:
-                File.WriteAllText("calibrationPoints.json", json);
 
                 try
                 {
@@ -314,6 +314,30 @@ namespace VDF3_Solution3
             }
         }
 
+        private void FrRobot_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                realPoints[i].x = VariableRobot.calibrationArray[0, i];
+                realPoints[i].y = VariableRobot.calibrationArray[1, i];
 
+                // Đồng thời cập nhật giá trị lên TextBox của điểm tương ứng
+                calibrationXTextBoxes[i].Text = realPoints[i].x.ToString("F6", CultureInfo.InvariantCulture);
+                calibrationYTextBoxes[i].Text = realPoints[i].y.ToString("F6", CultureInfo.InvariantCulture);
+            }
+        }
+
+        private void FrRobot_Activated(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                realPoints[i].x = VariableRobot.calibrationArray[0, i];
+                realPoints[i].y = VariableRobot.calibrationArray[1, i];
+
+                // Đồng thời cập nhật giá trị lên TextBox của điểm tương ứng
+                calibrationXTextBoxes[i].Text = realPoints[i].x.ToString("F6", CultureInfo.InvariantCulture);
+                calibrationYTextBoxes[i].Text = realPoints[i].y.ToString("F6", CultureInfo.InvariantCulture);
+            }
+        }
     }
 }

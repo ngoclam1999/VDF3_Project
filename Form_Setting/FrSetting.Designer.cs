@@ -68,6 +68,7 @@
             this.btnConnect = new Sunny.UI.UISymbolButton();
             this.cbDeviceList = new Sunny.UI.UIComboBox();
             this.btnRefresh = new FontAwesome.Sharp.IconButton();
+            this.btnSettingModbus = new Sunny.UI.UISymbolButton();
             this.panel1.SuspendLayout();
             this.uiGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_campreview)).BeginInit();
@@ -78,6 +79,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.btnSettingModbus);
             this.panel1.Controls.Add(this.btnRobot);
             this.panel1.Controls.Add(this.btnCamera);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -742,6 +744,33 @@
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // btnSettingModbus
+            // 
+            this.btnSettingModbus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSettingModbus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSettingModbus.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSettingModbus.FillDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnSettingModbus.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnSettingModbus.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnSettingModbus.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnSettingModbus.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.btnSettingModbus.Location = new System.Drawing.Point(346, -2);
+            this.btnSettingModbus.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnSettingModbus.Name = "btnSettingModbus";
+            this.btnSettingModbus.Radius = 0;
+            this.btnSettingModbus.RectColor = System.Drawing.Color.Green;
+            this.btnSettingModbus.RectHoverColor = System.Drawing.Color.Green;
+            this.btnSettingModbus.RectPressColor = System.Drawing.Color.Green;
+            this.btnSettingModbus.RectSelectedColor = System.Drawing.Color.Green;
+            this.btnSettingModbus.Size = new System.Drawing.Size(174, 42);
+            this.btnSettingModbus.Style = Sunny.UI.UIStyle.Custom;
+            this.btnSettingModbus.Symbol = 361450;
+            this.btnSettingModbus.SymbolSize = 30;
+            this.btnSettingModbus.TabIndex = 2;
+            this.btnSettingModbus.Text = "Register";
+            this.btnSettingModbus.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnSettingModbus.Click += new System.EventHandler(this.btnSettingModbus_Click);
+            // 
             // FrSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -806,5 +835,6 @@
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UITextBox txtVersion;
         private Sunny.UI.UITextBox txtSerial;
+        private Sunny.UI.UISymbolButton btnSettingModbus;
     }
 }

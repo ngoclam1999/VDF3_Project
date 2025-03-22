@@ -14,7 +14,7 @@ namespace VDF3_Solution3
     public partial class FrSettingRobot : Form
     {
         FrSetting _ConfigCamera;
-        
+        FrSettingModbus _SettingModbus;
         public FrSettingRobot()
         {
             InitializeComponent();
@@ -25,7 +25,27 @@ namespace VDF3_Solution3
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             BackgroundWorkerService.Instance.OnDataUpdated += UpdateUI;
         }
+        private void btnSettingModbus_Click(object sender, EventArgs e)
+        {
+            FrMain.Instance.lbTitleform.Text = "Setting/Register";
+            if (_SettingModbus == null)
+            {
+                _SettingModbus = new FrSettingModbus();
+                _SettingModbus.MdiParent = FrMain.Instance;
+                _SettingModbus.Dock = DockStyle.Fill;
+                _SettingModbus.FormClosed += _SettingModbus_FormClosed;
+                _SettingModbus.Show();
+            }
+            else
+            {
+                _SettingModbus.Activate();
+            }
+        }
 
+        private void _SettingModbus_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _SettingModbus = null;
+        }
         private void btnCamera_Click(object sender, EventArgs e)
         {
             FrMain.Instance.lbTitleform.Text = "Setting/Camera";

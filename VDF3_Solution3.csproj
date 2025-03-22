@@ -151,7 +151,14 @@
   <ItemGroup>
     <Compile Include="ApiClient.cs" />
     <Compile Include="BackgroundWorkerService.cs" />
+    <Compile Include="CalibrationService.cs" />
     <Compile Include="Camera\BaslerCamera .cs" />
+    <Compile Include="Form_Setting\FrSettingModbus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Setting\FrSettingModbus.Designer.cs">
+      <DependentUpon>FrSettingModbus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transform.cs" />
     <Compile Include="BoundingBoxDrawer.cs" />
     <Compile Include="Camera\CameraBase.cs" />
@@ -282,6 +289,9 @@
     <EmbeddedResource Include="Form_Setting\FrSettingRobot.resx">
       <DependentUpon>FrSettingRobot.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Setting\FrSettingModbus.resx">
+      <DependentUpon>FrSettingModbus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -315,5 +325,7 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\OpenCvSharp4.runtime.win.4.10.0.20241108\build\net48\OpenCvSharp4.runtime.win.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\OpenCvSharp4.runtime.win.4.10.0.20241108\build\net48\OpenCvSharp4.runtime.win.props'))" />
+  </Target>
+  <Target Name="AfterCompile">
   </Target>
 </Project>

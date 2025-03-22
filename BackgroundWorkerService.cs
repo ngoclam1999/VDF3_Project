@@ -13,7 +13,6 @@ public class BackgroundWorkerService
     private BackgroundWorker _workerReload;
     private ModbusClient _modbusClient;
     private bool _isRunning = false;
-
     // Dictionary chứa dữ liệu nhận từ UI
     private ConcurrentDictionary<string, object> _dataStore = new ConcurrentDictionary<string, object>();
 
@@ -103,6 +102,21 @@ public class BackgroundWorkerService
             }
         }
     }
+    static int[] ConvertFloatToRegisters(float value)
+    {
+        // Lấy byte array từ float (mặc định theo định dạng little-endian)
+        byte[] bytes = BitConverter.GetBytes((float)Math.Round(value, 6));
+
+        // Nếu thiết bị Modbus yêu cầu dữ liệu theo Big-Endian, cần đảo ngược thứ tự byte:
+        int reg1 = (bytes[3] << 8) | bytes[2]; // Thanh ghi đầu tiên
+        int reg2 = (bytes[1] << 8) | bytes[0]; // Thanh ghi thứ hai
+
+        // Nếu thiết bị sử dụng little-endian, đổi ngược lại:
+        // int reg1 = (bytes[1] << 8) | bytes[0];
+        // int reg2 = (bytes[3] << 8) | bytes[2];
+
+        return new int[] { reg1, reg2 };
+    }
 
     private void Worker_DoWork(object sender, DoWorkEventArgs e)
     {
@@ -139,6 +153,7 @@ public class BackgroundWorkerService
                 try
                 {
                     _modbusClient.Connect();
+                    UpdateData("DoworkMess", "Kết nối Modbus thành công");
                 }
                 catch (Exception ex)
                 {
@@ -159,7 +174,7 @@ public class BackgroundWorkerService
                 break;
             }
 
-            UpdateData("DoworkMess", "Kết nối Modbus thành công");
+            // Read/Write data to Modbus 
 
             try
             {
@@ -189,6 +204,7 @@ public class BackgroundWorkerService
                     // Giả sử VariableRobot là biến toàn cục hoặc thuộc tính của một lớp khác
                     VariableRobot.CurrentX = RobotX;
                     UpdateData("CurrentX", VariableRobot.CurrentX);
+                   
                 }
                 else
                 {
@@ -207,9 +223,49 @@ public class BackgroundWorkerService
                     UpdateData("DoworkMess", "Không nhận được dữ liệu từ Modbus");
                 }
 
+                
+
+                if (_dataStore.TryGetValue("CountPoint", out object CountPoint))
+                {
+                    
+                   if((int)CountPoint > 0)
+                   {
+                        for (int i = 0; i < Math.Min((int)CountPoint, 15); i++)
+                        {
+
+                            if (_dataStore.TryGetValue($"PointX{i + 1}", out object pointX))
+                                VariableRobot.PointsX[i] = (float)pointX;
+
+                            if (_dataStore.TryGetValue($"PointY{i + 1}", out object pointY))
+                                VariableRobot.PointsY[i] = (float)pointY;
+
+                            if (_dataStore.TryGetValue($"Angle{i + 1}", out object pointA))
+                                VariableRobot.PointsA[i] = (float)pointA;
+                            
+                            try
+                            {
+                                _modbusClient.WriteSingleRegister(58, (int)CountPoint);
+                                _modbusClient.WriteMultipleRegisters(60+i*6, ConvertFloatToRegisters(VariableRobot.PointsX[i]));
+                                _modbusClient.WriteMultipleRegisters(60 + i*6+2, ConvertFloatToRegisters(VariableRobot.PointsY[i]));
+                                _modbusClient.WriteMultipleRegisters(60 + i * 6 + 4, ConvertFloatToRegisters(VariableRobot.PointsA[i]));
+                            }
+                            catch
+                            {
+
+                            }
+                        }
+                    }    
+                    
+                }
+                else
+                {
+                   //UpdateData("DoworkMess", "Không nhận được dữ liệu gữi về sever");
+                    //return;
+                }
+
 
                 // Giảm tải CPU
-                Thread.Sleep(100);
+                Thread.Sleep(50);
             }
             catch (Exception ex)
             {

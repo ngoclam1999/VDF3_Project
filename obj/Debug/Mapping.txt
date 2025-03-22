@@ -1,0 +1,2202 @@
+Renamed Types:
+
+[VDF3_Solution3]쉣.쉗 -> [VDF3_Solution3]뽹.뾞
+{
+	[VDF3_Solution3]쉣.쉗::쉣[0]( ) -> 뽹
+	[VDF3_Solution3]쉣.쉗::쉗[0]( ) -> 뾞
+	[VDF3_Solution3]쉣.쉗::쉣[1]( [mscorlib]System.Globalization.CultureInfo ) -> 뽹
+
+	[VDF3_Solution3]쉣.쉗::.ctor[0]( ) skipped:  special name
+
+	System.Resources.ResourceManager [VDF3_Solution3]System.Resources.ResourceManager 쉣.쉗::슌쉲 -> 뿂뾚
+	System.Globalization.CultureInfo [VDF3_Solution3]System.Globalization.CultureInfo 쉣.쉗::슌쉀 -> 뿂뾀
+
+	System.Resources.ResourceManager [VDF3_Solution3]System.Resources.ResourceManager 쉣.쉗::숭쉫 -> 뾯뽳
+	System.Globalization.CultureInfo [VDF3_Solution3]System.Globalization.CultureInfo 쉣.쉗::숭슈 -> 뾯뾴
+}
+
+[VDF3_Solution3]쉣.슆 -> [VDF3_Solution3]뽹.뿎
+{
+
+	[VDF3_Solution3]쉣.슆::쉣[0]( ) skipped:  special name
+	[VDF3_Solution3]쉣.슆::.ctor[0]( ) skipped:  special name
+	[VDF3_Solution3]쉣.슆::.cctor[0]( ) skipped:  special name
+
+	쉣.슆 [VDF3_Solution3]쉣.슆 쉣.슆::슌쉼 -> 뿂뿁
+}
+
+[VDF3_Solution3]ApiClient/쉣 -> [VDF3_Solution3]ApiClient/뽹
+{
+
+	[VDF3_Solution3]ApiClient/쉣::.ctor[0]( ) skipped:  special name
+	[VDF3_Solution3]ApiClient/쉣::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]ApiClient/쉣::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [VDF3_Solution3]System.Int32 ApiClient/쉣::슌쉤 -> 뿂뾛
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String> [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String> ApiClient/쉣::슌쉺 -> 뿂뾶
+	System.Drawing.Image [VDF3_Solution3]System.Drawing.Image ApiClient/쉣::슌쉖 -> 뿂뽤
+	System.Drawing.Image [VDF3_Solution3]System.Drawing.Image ApiClient/쉣::슌슉 -> 뿂뾾
+	System.Single [VDF3_Solution3]System.Single ApiClient/쉣::슌숻 -> 뿂뾉
+	System.Net.Http.MultipartFormDataContent [VDF3_Solution3]System.Net.Http.MultipartFormDataContent ApiClient/쉣::슌숪 -> 뿂뽯
+	System.Byte[] [VDF3_Solution3]System.Byte[] ApiClient/쉣::슌숶 -> 뿂뾔
+	System.Byte[] [VDF3_Solution3]System.Byte[] ApiClient/쉣::슌숑 -> 뿂뾻
+	System.Net.Http.ByteArrayContent [VDF3_Solution3]System.Net.Http.ByteArrayContent ApiClient/쉣::슌쉨 -> 뿂뿏
+	System.Net.Http.ByteArrayContent [VDF3_Solution3]System.Net.Http.ByteArrayContent ApiClient/쉣::슌쉪 -> 뿂뾪
+	System.Net.Http.HttpResponseMessage [VDF3_Solution3]System.Net.Http.HttpResponseMessage ApiClient/쉣::슌숰 -> 뿂뽰
+	System.String [VDF3_Solution3]System.String ApiClient/쉣::슌숓 -> 뿂뿍
+	System.Net.Http.HttpResponseMessage [VDF3_Solution3]System.Net.Http.HttpResponseMessage ApiClient/쉣::슌쉝 -> 뿂뾷
+	System.String [VDF3_Solution3]System.String ApiClient/쉣::슌숙 -> 뿂뿈
+	System.Threading.Tasks.TaskCanceledException [VDF3_Solution3]System.Threading.Tasks.TaskCanceledException ApiClient/쉣::슌쉅 -> 뿂뽺
+	System.Net.Http.HttpRequestException [VDF3_Solution3]System.Net.Http.HttpRequestException ApiClient/쉣::슌숫 -> 뿂뾂
+	System.Exception [VDF3_Solution3]System.Exception ApiClient/쉣::슌숮 -> 뿂뾦
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Net.Http.HttpResponseMessage> [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter`1<System.Net.Http.HttpResponseMessage> ApiClient/쉣::슌숯 -> 뿂뽻
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.String> [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter`1<System.String> ApiClient/쉣::슌슃 -> 뿂뽘
+}
+
+[VDF3_Solution3]ApiClient/쉗 -> [VDF3_Solution3]ApiClient/뾞
+{
+
+	[VDF3_Solution3]ApiClient/쉗::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]ApiClient/쉗::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]ApiClient/쉗::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 ApiClient/쉗::슌숔 -> 뿂뾟
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.ValueTuple`5<System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Int32>>,System.Single[0...,0...],System.Single,System.Single,System.Collections.Generic.List`1<System.Single>>> [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.ValueTuple`5<System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Int32>>,System.Single[0...,0...],System.Single,System.Single,System.Collections.Generic.List`1<System.Single>>> ApiClient/쉗::슌쉓 -> 뿂뾽
+	System.Drawing.Image [VDF3_Solution3]System.Drawing.Image ApiClient/쉗::슌쉇 -> 뿂뽶
+	System.String [VDF3_Solution3]System.String ApiClient/쉗::슌쉽 -> 뿂뾩
+	System.String [VDF3_Solution3]System.String ApiClient/쉗::슌숾 -> 뿂뾏
+	System.Net.Http.HttpClient [VDF3_Solution3]System.Net.Http.HttpClient ApiClient/쉗::슌슂 -> 뿂뾓
+	System.Net.Http.MultipartFormDataContent [VDF3_Solution3]System.Net.Http.MultipartFormDataContent ApiClient/쉗::슌슄 -> 뿂뾘
+	System.Byte[] [VDF3_Solution3]System.Byte[] ApiClient/쉗::슌슎 -> 뿂뾠
+	System.Net.Http.ByteArrayContent [VDF3_Solution3]System.Net.Http.ByteArrayContent ApiClient/쉗::슌쉕 -> 뿂뽫
+	System.Net.Http.StringContent [VDF3_Solution3]System.Net.Http.StringContent ApiClient/쉗::슌쉶 -> 뿂뾫
+	System.Net.Http.HttpResponseMessage [VDF3_Solution3]System.Net.Http.HttpResponseMessage ApiClient/쉗::슌숲 -> 뿂뽢
+	System.Net.Http.HttpResponseMessage [VDF3_Solution3]System.Net.Http.HttpResponseMessage ApiClient/쉗::슌숩 -> 뿂뾍
+	System.String [VDF3_Solution3]System.String ApiClient/쉗::슌쉆 -> 뿂뾭
+	Newtonsoft.Json.Linq.JObject [VDF3_Solution3]Newtonsoft.Json.Linq.JObject ApiClient/쉗::슌쉩 -> 뿂뾈
+	Newtonsoft.Json.Linq.JArray [VDF3_Solution3]Newtonsoft.Json.Linq.JArray ApiClient/쉗::슌쉫 -> 뿂뽳
+	System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Int32>> [VDF3_Solution3]System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Int32>> ApiClient/쉗::슌슈 -> 뿂뾴
+	Newtonsoft.Json.Linq.JArray [VDF3_Solution3]Newtonsoft.Json.Linq.JArray ApiClient/쉗::슌쉃 -> 뿂뾿
+	System.Single[0...,0...] [VDF3_Solution3]System.Single[0...,0...] ApiClient/쉗::슌쉸 -> 뿂뾮
+	Newtonsoft.Json.Linq.JArray [VDF3_Solution3]Newtonsoft.Json.Linq.JArray ApiClient/쉗::슌숷 -> 뿂뽖
+	System.Collections.Generic.List`1<System.Single> [VDF3_Solution3]System.Collections.Generic.List`1<System.Single> ApiClient/쉗::슌슅 -> 뿂뽞
+	System.Single [VDF3_Solution3]System.Single ApiClient/쉗::슌쉒 -> 뿂뾼
+	System.Single [VDF3_Solution3]System.Single ApiClient/쉗::슌숽 -> 뿂뾨
+	System.String [VDF3_Solution3]System.String ApiClient/쉗::슌숱 -> 뿂뿔
+	System.Int32 [VDF3_Solution3]System.Int32 ApiClient/쉗::슌쉬 -> 뿂뿑
+	Newtonsoft.Json.Linq.JArray [VDF3_Solution3]Newtonsoft.Json.Linq.JArray ApiClient/쉗::슌슊 -> 뿂뾃
+	System.Int32 [VDF3_Solution3]System.Int32 ApiClient/쉗::슌순 -> 뿂뿀
+	System.String [VDF3_Solution3]System.String ApiClient/쉗::슌숿 -> 뿂뽠
+	System.String [VDF3_Solution3]System.String ApiClient/쉗::슌쉜 -> 뿂뽸
+	System.Exception [VDF3_Solution3]System.Exception ApiClient/쉗::슌쉱 -> 뿂뾳
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Net.Http.HttpResponseMessage> [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter`1<System.Net.Http.HttpResponseMessage> ApiClient/쉗::슌쉥 -> 뿂뽣
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.String> [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter`1<System.String> ApiClient/쉗::슌쉟 -> 뿂뾎
+}
+
+[VDF3_Solution3]TimerManager/쉣 -> [VDF3_Solution3]TimerManager/뽹
+{
+
+	[VDF3_Solution3]TimerManager/쉣::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]TimerManager/쉣::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]TimerManager/쉣::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 TimerManager/쉣::슌쉳 -> 뿂뽱
+	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [VDF3_Solution3]System.Runtime.CompilerServices.AsyncVoidMethodBuilder TimerManager/쉣::슌쉰 -> 뿂뾋
+	System.Object [VDF3_Solution3]System.Object TimerManager/쉣::슌쉄 -> 뿂뿄
+	System.EventArgs [VDF3_Solution3]System.EventArgs TimerManager/쉣::슌숥 -> 뿂뽙
+	TimerManager [VDF3_Solution3]TimerManager TimerManager/쉣::슌술 -> 뿂뽴
+}
+
+[VDF3_Solution3]ImageProcessingLib.ImageProcessor/쉣 -> [VDF3_Solution3]ImageProcessingLib.ImageProcessor/뽹
+{
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor/쉣::쉣[1]( [OpenCvSharp]OpenCvSharp.Point2f ) -> 뽹
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor/쉣::쉣[1]( [System.Drawing]System.Drawing.Point ) -> 뽹
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor/쉣::쉗[1]( [System.Drawing]System.Drawing.Point ) -> 뾞
+
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor/쉣::.cctor[0]( ) skipped:  special name
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor/쉣::.ctor[0]( ) skipped:  special name
+
+	ImageProcessingLib.ImageProcessor/쉣 [VDF3_Solution3]ImageProcessingLib.ImageProcessor/쉣 ImageProcessingLib.ImageProcessor/쉣::슌숹 -> 뿂뾌
+	System.Func`2<OpenCvSharp.Point2f,OpenCvSharp.Point> [VDF3_Solution3]System.Func`2<OpenCvSharp.Point2f,OpenCvSharp.Point> ImageProcessingLib.ImageProcessor/쉣::슌쉙 -> 뿂뿉
+	System.Func`2<System.Drawing.Point,System.Int32> [VDF3_Solution3]System.Func`2<System.Drawing.Point,System.Int32> ImageProcessingLib.ImageProcessor/쉣::슌쉊 -> 뿂뾹
+	System.Func`2<System.Drawing.Point,System.Int32> [VDF3_Solution3]System.Func`2<System.Drawing.Point,System.Int32> ImageProcessingLib.ImageProcessor/쉣::슌쉛 -> 뿂뽟
+}
+
+[VDF3_Solution3]ImageProcessingLib.ImageProcessor/쉗 -> [VDF3_Solution3]ImageProcessingLib.ImageProcessor/뾞
+{
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor/쉗::쉣[1]( [System.Drawing]System.Drawing.Point ) -> 뽹
+
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor/쉗::.ctor[0]( ) skipped:  special name
+
+	ImageProcessingLib.ImageProcessor [VDF3_Solution3]ImageProcessingLib.ImageProcessor ImageProcessingLib.ImageProcessor/쉗::슌쉎 -> 뿂뿅
+	ImageProcessingLib.ROI [VDF3_Solution3]ImageProcessingLib.ROI ImageProcessingLib.ImageProcessor/쉗::슌숗 -> 뿂뽿
+	System.Double [VDF3_Solution3]System.Double ImageProcessingLib.ImageProcessor/쉗::슌숟 -> 뿂뾄
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrMain/쉣 -> [VDF3_Solution3]VDF3_Solution3.FrMain/뽹
+{
+
+	[VDF3_Solution3]VDF3_Solution3.FrMain/쉣::.cctor[0]( ) skipped:  special name
+
+	System.Drawing.Color [VDF3_Solution3]System.Drawing.Color VDF3_Solution3.FrMain/쉣::슌쉠 -> 뿂뿕
+	System.Drawing.Color [VDF3_Solution3]System.Drawing.Color VDF3_Solution3.FrMain/쉣::슌슐 -> 뿂뽭
+	System.Drawing.Color [VDF3_Solution3]System.Drawing.Color VDF3_Solution3.FrMain/쉣::슌숕 -> 뿂뽾
+	System.Drawing.Color [VDF3_Solution3]System.Drawing.Color VDF3_Solution3.FrMain/쉣::슌수 -> 뿂뽧
+	System.Drawing.Color [VDF3_Solution3]System.Drawing.Color VDF3_Solution3.FrMain/쉣::슌쉈 -> 뿂뾵
+	System.Drawing.Color [VDF3_Solution3]System.Drawing.Color VDF3_Solution3.FrMain/쉣::슌쉯 -> 뿂뾧
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 -> [VDF3_Solution3]VDF3_Solution3.FrDetection/뽹
+{
+	VDF3_Solution3.FrDetection/쉣 [VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 VDF3_Solution3.FrDetection/쉣::슌숢 -> 뾙뽹
+	VDF3_Solution3.FrDetection/쉣 [VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 VDF3_Solution3.FrDetection/쉣::슌쉘 -> 뾙뾞
+	VDF3_Solution3.FrDetection/쉣 [VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 VDF3_Solution3.FrDetection/쉣::슌숨 -> 뾙뿎
+	VDF3_Solution3.FrDetection/쉣 [VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 VDF3_Solution3.FrDetection/쉣::숼쉣 -> 뾙뿇
+	VDF3_Solution3.FrDetection/쉣 [VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 VDF3_Solution3.FrDetection/쉣::숼쉗 -> 뾙뿂
+	VDF3_Solution3.FrDetection/쉣 [VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 VDF3_Solution3.FrDetection/쉣::숼슆 -> 뾙뾙
+	VDF3_Solution3.FrDetection/쉣 [VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 VDF3_Solution3.FrDetection/쉣::숼숞 -> 뾙뾯
+	VDF3_Solution3.FrDetection/쉣 [VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 VDF3_Solution3.FrDetection/쉣::숼슌 -> 뾙뾁
+	VDF3_Solution3.FrDetection/쉣 [VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 VDF3_Solution3.FrDetection/쉣::숼숼 -> 뾙뽚
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrDetection/쉣::value__ skipped:  special name
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrDetection/쉗 -> [VDF3_Solution3]VDF3_Solution3.FrDetection/뾞
+{
+	[VDF3_Solution3]VDF3_Solution3.FrDetection/쉗::쉣[1]( [mscorlib]System.String ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.FrDetection/쉗::.cctor[0]( ) skipped:  special name
+	[VDF3_Solution3]VDF3_Solution3.FrDetection/쉗::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.FrDetection/쉗 [VDF3_Solution3]VDF3_Solution3.FrDetection/쉗 VDF3_Solution3.FrDetection/쉗::숼숭 -> 뾙뽦
+	System.Func`2<System.String,System.Boolean> [VDF3_Solution3]System.Func`2<System.String,System.Boolean> VDF3_Solution3.FrDetection/쉗::숼숚 -> 뾙뿆
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrDetection/슆 -> [VDF3_Solution3]VDF3_Solution3.FrDetection/뿎
+{
+	[VDF3_Solution3]VDF3_Solution3.FrDetection/슆::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.FrDetection/슆::.ctor[0]( ) skipped:  special name
+
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrDetection/슆::숼슁 -> 뾙뾊
+	VDF3_Solution3.FrDetection [VDF3_Solution3]VDF3_Solution3.FrDetection VDF3_Solution3.FrDetection/슆::숼숺 -> 뾙뽲
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrDetection/숞 -> [VDF3_Solution3]VDF3_Solution3.FrDetection/뿇
+{
+
+	[VDF3_Solution3]VDF3_Solution3.FrDetection/숞::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrDetection/숞::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrDetection/숞::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrDetection/숞::숼숴 -> 뾙뽥
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder VDF3_Solution3.FrDetection/숞::숼쉻 -> 뾙뽜
+	VDF3_Solution3.FrDetection [VDF3_Solution3]VDF3_Solution3.FrDetection VDF3_Solution3.FrDetection/숞::숼쉋 -> 뾙뾆
+	System.ComponentModel.ComponentResourceManager [VDF3_Solution3]System.ComponentModel.ComponentResourceManager VDF3_Solution3.FrDetection/숞::숼숝 -> 뾙뾜
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrDetection/슌 -> [VDF3_Solution3]VDF3_Solution3.FrDetection/뿂
+{
+
+	[VDF3_Solution3]VDF3_Solution3.FrDetection/슌::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrDetection/슌::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrDetection/슌::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrDetection/슌::숼숒 -> 뾙뽩
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder VDF3_Solution3.FrDetection/슌::숼숸 -> 뾙뿓
+	System.Object [VDF3_Solution3]System.Object VDF3_Solution3.FrDetection/슌::숼숳 -> 뾙뾢
+	System.EventArgs [VDF3_Solution3]System.EventArgs VDF3_Solution3.FrDetection/슌::숼슍 -> 뾙뽨
+	VDF3_Solution3.FrDetection [VDF3_Solution3]VDF3_Solution3.FrDetection VDF3_Solution3.FrDetection/슌::숼쉔 -> 뾙뾥
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrDetection/슌::숼숛 -> 뾙뽝
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrDetection/슌::숼쉮 -> 뾙뾬
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrDetection/슌::숼쉴 -> 뾙뾺
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.String> [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter`1<System.String> VDF3_Solution3.FrDetection/슌::숼숖 -> 뾙뾇
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrProject/쉗 -> [VDF3_Solution3]VDF3_Solution3.FrProject/뾞
+{
+	[VDF3_Solution3]VDF3_Solution3.FrProject/쉗::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.MouseEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrProject/쉗::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrProject/쉗::쉗[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrProject/쉗::슆[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿎
+
+	[VDF3_Solution3]VDF3_Solution3.FrProject/쉗::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.FrProject [VDF3_Solution3]VDF3_Solution3.FrProject VDF3_Solution3.FrProject/쉗::숼슀 -> 뾙뿌
+	System.Windows.Forms.ToolStripMenuItem [VDF3_Solution3]System.Windows.Forms.ToolStripMenuItem VDF3_Solution3.FrProject/쉗::숼쉧 -> 뾙뽷
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrRobot/쉗 -> [VDF3_Solution3]VDF3_Solution3.FrRobot/뾞
+{
+	[VDF3_Solution3]VDF3_Solution3.FrRobot/쉗::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.FrRobot/쉗::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.FrRobot [VDF3_Solution3]VDF3_Solution3.FrRobot VDF3_Solution3.FrRobot/쉗::숼숦 -> 뾙뾒
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrRobot/쉗::숼쉂 -> 뾙뿐
+	System.Object [VDF3_Solution3]System.Object VDF3_Solution3.FrRobot/쉗::숼쉭 -> 뾙뿊
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrRobot/슆 -> [VDF3_Solution3]VDF3_Solution3.FrRobot/뿎
+{
+
+	[VDF3_Solution3]VDF3_Solution3.FrRobot/슆::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrRobot/슆::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrRobot/슆::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrRobot/슆::숼슏 -> 뾙뿒
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder VDF3_Solution3.FrRobot/슆::숼쉾 -> 뾙뾚
+	System.Object [VDF3_Solution3]System.Object VDF3_Solution3.FrRobot/슆::숼쉷 -> 뾙뾀
+	System.EventArgs [VDF3_Solution3]System.EventArgs VDF3_Solution3.FrRobot/슆::숼슇 -> 뾙뿁
+	VDF3_Solution3.FrRobot [VDF3_Solution3]VDF3_Solution3.FrRobot VDF3_Solution3.FrRobot/슆::숼쉲 -> 뾙뽬
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrRobot/슆::숼쉀 -> 뾙뾰
+	System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Int32>> [VDF3_Solution3]System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Int32>> VDF3_Solution3.FrRobot/슆::숼쉼 -> 뾙뽛
+	System.Single[0...,0...] [VDF3_Solution3]System.Single[0...,0...] VDF3_Solution3.FrRobot/슆::숼쉤 -> 뾙뾛
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRobot/슆::숼쉺 -> 뾙뾶
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRobot/슆::숼쉖 -> 뾙뽤
+	System.Collections.Generic.List`1<System.Single> [VDF3_Solution3]System.Collections.Generic.List`1<System.Single> VDF3_Solution3.FrRobot/슆::숼슉 -> 뾙뾾
+	System.ValueTuple`5<System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Int32>>,System.Single[0...,0...],System.Single,System.Single,System.Collections.Generic.List`1<System.Single>> [VDF3_Solution3]System.ValueTuple`5<System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Int32>>,System.Single[0...,0...],System.Single,System.Single,System.Collections.Generic.List`1<System.Single>> VDF3_Solution3.FrRobot/슆::숼숻 -> 뾙뾉
+	System.ValueTuple`5<System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Int32>>,System.Single[0...,0...],System.Single,System.Single,System.Collections.Generic.List`1<System.Single>> [VDF3_Solution3]System.ValueTuple`5<System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Int32>>,System.Single[0...,0...],System.Single,System.Single,System.Collections.Generic.List`1<System.Single>> VDF3_Solution3.FrRobot/슆::숼숪 -> 뾙뽯
+	System.Drawing.Bitmap [VDF3_Solution3]System.Drawing.Bitmap VDF3_Solution3.FrRobot/슆::숼숶 -> 뾙뾔
+	System.Drawing.Pen [VDF3_Solution3]System.Drawing.Pen VDF3_Solution3.FrRobot/슆::숼숑 -> 뾙뾻
+	System.Drawing.Graphics [VDF3_Solution3]System.Drawing.Graphics VDF3_Solution3.FrRobot/슆::숼쉨 -> 뾙뿏
+	System.Collections.Generic.List`1/Enumerator<System.Collections.Generic.List`1<System.Int32>> [VDF3_Solution3]System.Collections.Generic.List`1/Enumerator<System.Collections.Generic.List`1<System.Int32>> VDF3_Solution3.FrRobot/슆::숼쉪 -> 뾙뾪
+	System.Collections.Generic.List`1<System.Int32> [VDF3_Solution3]System.Collections.Generic.List`1<System.Int32> VDF3_Solution3.FrRobot/슆::숼숰 -> 뾙뽰
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrRobot/슆::숼숓 -> 뾙뿍
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrRobot/슆::숼쉝 -> 뾙뾷
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrRobot/슆::숼숙 -> 뾙뿈
+	System.Collections.Generic.List`1/Enumerator<System.Single> [VDF3_Solution3]System.Collections.Generic.List`1/Enumerator<System.Single> VDF3_Solution3.FrRobot/슆::숼쉅 -> 뾙뽺
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRobot/슆::숼숫 -> 뾙뾂
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.ValueTuple`5<System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Int32>>,System.Single[0...,0...],System.Single,System.Single,System.Collections.Generic.List`1<System.Single>>> [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter`1<System.ValueTuple`5<System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.Int32>>,System.Single[0...,0...],System.Single,System.Single,System.Collections.Generic.List`1<System.Single>>> VDF3_Solution3.FrRobot/슆::숼숮 -> 뾙뾦
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrRun/숞 -> [VDF3_Solution3]VDF3_Solution3.FrRun/뿇
+{
+	[VDF3_Solution3]VDF3_Solution3.FrRun/숞::쉣[1]( [System.Drawing]System.Drawing.PointF ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRun/숞::쉗[1]( [System.Drawing]System.Drawing.PointF ) -> 뾞
+
+	[VDF3_Solution3]VDF3_Solution3.FrRun/숞::.cctor[0]( ) skipped:  special name
+	[VDF3_Solution3]VDF3_Solution3.FrRun/숞::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.FrRun/숞 [VDF3_Solution3]VDF3_Solution3.FrRun/숞 VDF3_Solution3.FrRun/숞::숼숲 -> 뾙뽢
+	System.Func`2<System.Drawing.PointF,System.Single> [VDF3_Solution3]System.Func`2<System.Drawing.PointF,System.Single> VDF3_Solution3.FrRun/숞::숼숩 -> 뾙뾍
+	System.Func`2<System.Drawing.PointF,System.Single> [VDF3_Solution3]System.Func`2<System.Drawing.PointF,System.Single> VDF3_Solution3.FrRun/숞::숼쉆 -> 뾙뾭
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrRun/슌 -> [VDF3_Solution3]VDF3_Solution3.FrRun/뿂
+{
+
+	[VDF3_Solution3]VDF3_Solution3.FrRun/슌::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrRun/슌::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrRun/슌::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrRun/슌::숼쉩 -> 뾙뾈
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder VDF3_Solution3.FrRun/슌::숼쉫 -> 뾙뽳
+	System.Object [VDF3_Solution3]System.Object VDF3_Solution3.FrRun/슌::숼슈 -> 뾙뾴
+	System.EventArgs [VDF3_Solution3]System.EventArgs VDF3_Solution3.FrRun/슌::숼쉃 -> 뾙뾿
+	VDF3_Solution3.FrRun [VDF3_Solution3]VDF3_Solution3.FrRun VDF3_Solution3.FrRun/슌::숼쉸 -> 뾙뾮
+	System.Object [VDF3_Solution3]System.Object VDF3_Solution3.FrRun/슌::숼숷 -> 뾙뽖
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrRun/슌::숼슅 -> 뾙뽞
+	System.Drawing.Bitmap [VDF3_Solution3]System.Drawing.Bitmap VDF3_Solution3.FrRun/슌::숼쉒 -> 뾙뾼
+	System.Exception [VDF3_Solution3]System.Exception VDF3_Solution3.FrRun/슌::숼숽 -> 뾙뾨
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrRun/슌::숼숱 -> 뾙뿔
+	System.Exception [VDF3_Solution3]System.Exception VDF3_Solution3.FrRun/슌::숼쉬 -> 뾙뿑
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.String> [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter`1<System.String> VDF3_Solution3.FrRun/슌::숼슊 -> 뾙뾃
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrSettingRobot/쉣 -> [VDF3_Solution3]VDF3_Solution3.FrSettingRobot/뽹
+{
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot/쉣::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot/쉣::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.FrSettingRobot [VDF3_Solution3]VDF3_Solution3.FrSettingRobot VDF3_Solution3.FrSettingRobot/쉣::숼순 -> 뾙뿀
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrSettingRobot/쉣::숼숿 -> 뾙뽠
+	System.Object [VDF3_Solution3]System.Object VDF3_Solution3.FrSettingRobot/쉣::숼쉜 -> 뾙뽸
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉣 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뽹
+{
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉣::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉣::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/쉣::숼쉱 -> 뾙뾳
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/쉣::숼쉥 -> 뾙뽣
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉗 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뾞
+{
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉗::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉗::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/쉗::숼쉟 -> 뾙뾎
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/쉗::숼쉍 -> 뾙뽗
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/쉗::숼쉏 -> 뾙뾕
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슆 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뿎
+{
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슆::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슆::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/슆::숼쉐 -> 뾙뿃
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/슆::숼쉚 -> 뾙뾗
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.ModbusHelper/슆::숼쉿 -> 뾙뾅
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숞 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뿇
+{
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숞::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숞::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/숞::숼쉦 -> 뾙뾝
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숞::숼쉌 -> 뾙뾡
+	System.Boolean[] [VDF3_Solution3]System.Boolean[] VDF3_Solution3.ModbusHelper/숞::숼쉳 -> 뾙뽱
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슌 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뿂
+{
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슌::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슌::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/슌::숼쉰 -> 뾙뾋
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/슌::숼쉄 -> 뾙뿄
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/슌::숼숥 -> 뾙뽙
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숼 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뾙
+{
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숼::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숼::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/숼::숼술 -> 뾙뽴
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숼::숼숹 -> 뾙뾌
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숭 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뾯
+{
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숭::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숭::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/숭::숼쉙 -> 뾙뿉
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숭::숼쉊 -> 뾙뾹
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숭::숼쉛 -> 뾙뽟
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숚 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뾁
+{
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숚::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숚::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/숚::숼쉎 -> 뾙뿅
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숚::숼숗 -> 뾙뽿
+	System.Int32[] [VDF3_Solution3]System.Int32[] VDF3_Solution3.ModbusHelper/숚::숼숟 -> 뾙뾄
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슁 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뽚
+{
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슁::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슁::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슁::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/슁::숼쉠 -> 뾙뿕
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder VDF3_Solution3.ModbusHelper/슁::숼슐 -> 뾙뽭
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/슁::숼숕 -> 뾙뽾
+	VDF3_Solution3.FrSetting [VDF3_Solution3]VDF3_Solution3.FrSetting VDF3_Solution3.ModbusHelper/슁::숼수 -> 뾙뽧
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/슁::숼쉈 -> 뾙뾵
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.ModbusHelper/슁::숼쉯 -> 뾙뾧
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.ModbusHelper/슁::숼숢 -> 뾯뽹
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean> [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean> VDF3_Solution3.ModbusHelper/슁::숼쉘 -> 뾯뾞
+	System.Runtime.CompilerServices.TaskAwaiter [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter VDF3_Solution3.ModbusHelper/슁::숼숨 -> 뾯뿎
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숺 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뽦
+{
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숺::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숺::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숺::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숺::숭쉣 -> 뾯뿇
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Boolean> [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Boolean> VDF3_Solution3.ModbusHelper/숺::숭쉗 -> 뾯뿂
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/숺::숭슆 -> 뾯뾙
+	System.Exception [VDF3_Solution3]System.Exception VDF3_Solution3.ModbusHelper/숺::숭숞 -> 뾯뾯
+	System.Runtime.CompilerServices.TaskAwaiter [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter VDF3_Solution3.ModbusHelper/숺::숭슌 -> 뾯뾁
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숴 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뿆
+{
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숴::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숴::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숴::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숴::숭숼 -> 뾯뽚
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Boolean[]> [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Boolean[]> VDF3_Solution3.ModbusHelper/숴::숭숭 -> 뾯뽦
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숴::숭숚 -> 뾯뿆
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숴::숭슁 -> 뾯뾊
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/숴::숭숺 -> 뾯뽲
+	VDF3_Solution3.ModbusHelper/쉗 [VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉗 VDF3_Solution3.ModbusHelper/숴::숭숴 -> 뾯뽥
+	System.Boolean[] [VDF3_Solution3]System.Boolean[] VDF3_Solution3.ModbusHelper/숴::숭쉻 -> 뾯뽜
+	System.Boolean[] [VDF3_Solution3]System.Boolean[] VDF3_Solution3.ModbusHelper/숴::숭쉋 -> 뾯뾆
+	System.Exception [VDF3_Solution3]System.Exception VDF3_Solution3.ModbusHelper/숴::숭숝 -> 뾯뾜
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean[]> [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean[]> VDF3_Solution3.ModbusHelper/숴::숭숒 -> 뾯뽩
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉻 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뾊
+{
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉻::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉻::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉻::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/쉻::숭숸 -> 뾯뿓
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Int32[]> [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Int32[]> VDF3_Solution3.ModbusHelper/쉻::숭숳 -> 뾯뾢
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/쉻::숭슍 -> 뾯뽨
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/쉻::숭쉔 -> 뾯뾥
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/쉻::숭숛 -> 뾯뽝
+	VDF3_Solution3.ModbusHelper/슌 [VDF3_Solution3]VDF3_Solution3.ModbusHelper/슌 VDF3_Solution3.ModbusHelper/쉻::숭쉮 -> 뾯뾬
+	System.Int32[] [VDF3_Solution3]System.Int32[] VDF3_Solution3.ModbusHelper/쉻::숭쉴 -> 뾯뾺
+	System.Int32[] [VDF3_Solution3]System.Int32[] VDF3_Solution3.ModbusHelper/쉻::숭숖 -> 뾯뾇
+	System.Exception [VDF3_Solution3]System.Exception VDF3_Solution3.ModbusHelper/쉻::숭숣 -> 뾯뽵
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Int32[]> [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter`1<System.Int32[]> VDF3_Solution3.ModbusHelper/쉻::숭숬 -> 뾯뿋
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉋 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뽲
+{
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉋::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉋::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉋::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/쉋::숭숧 -> 뾯뾱
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Boolean> [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Boolean> VDF3_Solution3.ModbusHelper/쉋::숭쉑 -> 뾯뾐
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/쉋::숭숤 -> 뾯뾑
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/쉋::숭슋 -> 뾯뽼
+	VDF3_Solution3.ModbusHelper/쉣 [VDF3_Solution3]VDF3_Solution3.ModbusHelper/쉣 VDF3_Solution3.ModbusHelper/쉋::숭쉢 -> 뾯뾲
+	System.Boolean[] [VDF3_Solution3]System.Boolean[] VDF3_Solution3.ModbusHelper/쉋::숭쉡 -> 뾯뾸
+	System.Boolean[] [VDF3_Solution3]System.Boolean[] VDF3_Solution3.ModbusHelper/쉋::숭쉁 -> 뾯뽡
+	System.Exception [VDF3_Solution3]System.Exception VDF3_Solution3.ModbusHelper/쉋::숭쉞 -> 뾯뽮
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean[]> [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean[]> VDF3_Solution3.ModbusHelper/쉋::숭쉉 -> 뾯뽪
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숝 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뽥
+{
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숝::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숝::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숝::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숝::숭쉵 -> 뾯뾖
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Int32> [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Int32> VDF3_Solution3.ModbusHelper/숝::숭숵 -> 뾯뾣
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숝::숭슀 -> 뾯뿌
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/숝::숭쉧 -> 뾯뽷
+	VDF3_Solution3.ModbusHelper/숼 [VDF3_Solution3]VDF3_Solution3.ModbusHelper/숼 VDF3_Solution3.ModbusHelper/숝::숭숡 -> 뾯뾤
+	System.Int32[] [VDF3_Solution3]System.Int32[] VDF3_Solution3.ModbusHelper/숝::숭쉹 -> 뾯뽽
+	System.Int32[] [VDF3_Solution3]System.Int32[] VDF3_Solution3.ModbusHelper/숝::숭숦 -> 뾯뾒
+	System.Exception [VDF3_Solution3]System.Exception VDF3_Solution3.ModbusHelper/숝::숭쉂 -> 뾯뿐
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Int32[]> [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter`1<System.Int32[]> VDF3_Solution3.ModbusHelper/숝::숭쉭 -> 뾯뿊
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숒 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뽜
+{
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숒::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숒::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숒::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숒::숭슏 -> 뾯뿒
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder VDF3_Solution3.ModbusHelper/숒::숭쉾 -> 뾯뾚
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숒::숭쉷 -> 뾯뾀
+	System.Boolean[] [VDF3_Solution3]System.Boolean[] VDF3_Solution3.ModbusHelper/숒::숭슇 -> 뾯뿁
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/숒::숭쉲 -> 뾯뽬
+	VDF3_Solution3.ModbusHelper/숞 [VDF3_Solution3]VDF3_Solution3.ModbusHelper/숞 VDF3_Solution3.ModbusHelper/숒::숭쉀 -> 뾯뾰
+	System.Net.Sockets.SocketException [VDF3_Solution3]System.Net.Sockets.SocketException VDF3_Solution3.ModbusHelper/숒::숭쉼 -> 뾯뽛
+	System.IO.IOException [VDF3_Solution3]System.IO.IOException VDF3_Solution3.ModbusHelper/숒::숭쉤 -> 뾯뾛
+	System.Exception [VDF3_Solution3]System.Exception VDF3_Solution3.ModbusHelper/숒::숭쉺 -> 뾯뾶
+	System.Runtime.CompilerServices.TaskAwaiter [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter VDF3_Solution3.ModbusHelper/숒::숭쉖 -> 뾯뽤
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숸 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뾆
+{
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숸::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숸::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숸::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숸::숭슉 -> 뾯뾾
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder VDF3_Solution3.ModbusHelper/숸::숭숻 -> 뾯뾉
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숸::숭숪 -> 뾯뽯
+	System.Int32[] [VDF3_Solution3]System.Int32[] VDF3_Solution3.ModbusHelper/숸::숭숶 -> 뾯뾔
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/숸::숭숑 -> 뾯뾻
+	VDF3_Solution3.ModbusHelper/숚 [VDF3_Solution3]VDF3_Solution3.ModbusHelper/숚 VDF3_Solution3.ModbusHelper/숸::숭쉨 -> 뾯뿏
+	System.Net.Sockets.SocketException [VDF3_Solution3]System.Net.Sockets.SocketException VDF3_Solution3.ModbusHelper/숸::숭쉪 -> 뾯뾪
+	System.IO.IOException [VDF3_Solution3]System.IO.IOException VDF3_Solution3.ModbusHelper/숸::숭숰 -> 뾯뽰
+	System.Exception [VDF3_Solution3]System.Exception VDF3_Solution3.ModbusHelper/숸::숭숓 -> 뾯뿍
+	System.Runtime.CompilerServices.TaskAwaiter [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter VDF3_Solution3.ModbusHelper/숸::숭쉝 -> 뾯뾷
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숳 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뾜
+{
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숳::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숳::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/숳::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숳::숭숙 -> 뾯뿈
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder VDF3_Solution3.ModbusHelper/숳::숭쉅 -> 뾯뽺
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/숳::숭숫 -> 뾯뾂
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.ModbusHelper/숳::숭숮 -> 뾯뾦
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/숳::숭숯 -> 뾯뽻
+	VDF3_Solution3.ModbusHelper/슆 [VDF3_Solution3]VDF3_Solution3.ModbusHelper/슆 VDF3_Solution3.ModbusHelper/숳::숭슃 -> 뾯뽘
+	System.Net.Sockets.SocketException [VDF3_Solution3]System.Net.Sockets.SocketException VDF3_Solution3.ModbusHelper/숳::숭숔 -> 뾯뾟
+	System.IO.IOException [VDF3_Solution3]System.IO.IOException VDF3_Solution3.ModbusHelper/숳::숭쉓 -> 뾯뾽
+	System.Exception [VDF3_Solution3]System.Exception VDF3_Solution3.ModbusHelper/숳::숭쉇 -> 뾯뽶
+	System.Runtime.CompilerServices.TaskAwaiter [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter VDF3_Solution3.ModbusHelper/숳::숭쉽 -> 뾯뾩
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슍 -> [VDF3_Solution3]VDF3_Solution3.ModbusHelper/뽩
+{
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슍::MoveNext[0]( ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슍::SetStateMachine[1]( [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper/슍::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/슍::숭숾 -> 뾯뾏
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [VDF3_Solution3]System.Runtime.CompilerServices.AsyncTaskMethodBuilder VDF3_Solution3.ModbusHelper/슍::숭슂 -> 뾯뾓
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/슍::숭슄 -> 뾯뾘
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.ModbusHelper/슍::숭슎 -> 뾯뾠
+	VDF3_Solution3.ModbusHelper [VDF3_Solution3]VDF3_Solution3.ModbusHelper VDF3_Solution3.ModbusHelper/슍::숭쉕 -> 뾯뽫
+	VDF3_Solution3.ModbusHelper/숭 [VDF3_Solution3]VDF3_Solution3.ModbusHelper/숭 VDF3_Solution3.ModbusHelper/슍::숭쉶 -> 뾯뾫
+	System.Net.Sockets.SocketException [VDF3_Solution3]System.Net.Sockets.SocketException VDF3_Solution3.ModbusHelper/슍::숭숲 -> 뾯뽢
+	System.IO.IOException [VDF3_Solution3]System.IO.IOException VDF3_Solution3.ModbusHelper/슍::숭숩 -> 뾯뾍
+	System.Exception [VDF3_Solution3]System.Exception VDF3_Solution3.ModbusHelper/슍::숭쉆 -> 뾯뾭
+	System.Runtime.CompilerServices.TaskAwaiter [VDF3_Solution3]System.Runtime.CompilerServices.TaskAwaiter VDF3_Solution3.ModbusHelper/슍::숭쉩 -> 뾯뾈
+}
+
+[VDF3_Solution3]쉣.쉣 -> [VDF3_Solution3]뽹.뽹
+{
+	[VDF3_Solution3]쉣.쉣::쉣[0]( ) -> 뽹
+}
+
+Skipped Types:
+
+[VDF3_Solution3]ApiClient skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]ApiClient::쉣[1]( [System.Drawing]System.Drawing.Image ) -> 뽹
+
+	[VDF3_Solution3]ApiClient::MatchTemplate[3]( [System.Drawing]System.Drawing.Image, [System.Drawing]System.Drawing.Image, [mscorlib]System.Single ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]ApiClient::SendCalibrationRequest[2]( [System.Drawing]System.Drawing.Image, [mscorlib]System.String ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]ApiClient::.ctor[0]( ) skipped:  special name
+	[VDF3_Solution3]ApiClient::.cctor[0]( ) skipped:  special name
+
+	System.Net.Http.HttpClient [VDF3_Solution3]System.Net.Http.HttpClient ApiClient::쉣 -> 뽹
+}
+
+[VDF3_Solution3]BoundingBoxData skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]BoundingBoxData::get_Count[0]( ) skipped:  skip by property
+	[VDF3_Solution3]BoundingBoxData::set_Count[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]BoundingBoxData::get_Matches[0]( ) skipped:  skip by property
+	[VDF3_Solution3]BoundingBoxData::set_Matches[1]( [mscorlib]System.Collections.Generic.List`1<[VDF3_Solution3]Transform> ) skipped:  skip by property
+	[VDF3_Solution3]BoundingBoxData::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 BoundingBoxData::쉗 -> 뾞
+	System.Collections.Generic.List`1<Transform> [VDF3_Solution3]System.Collections.Generic.List`1<Transform> BoundingBoxData::슆 -> 뿎
+
+
+	System.Int32 [VDF3_Solution3]System.Int32 BoundingBoxData::Count skipped:  KeepPublicApi option in configuration
+	System.Collections.Generic.List`1<Transform> [VDF3_Solution3]System.Collections.Generic.List`1<Transform> BoundingBoxData::Matches skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]BackgroundWorkerService skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]BackgroundWorkerService::쉣[2]( [mscorlib]System.Object, [System]System.ComponentModel.RunWorkerCompletedEventArgs ) -> 뽹
+	[VDF3_Solution3]BackgroundWorkerService::쉗[2]( [mscorlib]System.Object, [System]System.ComponentModel.RunWorkerCompletedEventArgs ) -> 뾞
+	[VDF3_Solution3]BackgroundWorkerService::쉣[2]( [mscorlib]System.Object, [System]System.ComponentModel.DoWorkEventArgs ) -> 뽹
+	[VDF3_Solution3]BackgroundWorkerService::쉗[2]( [mscorlib]System.Object, [System]System.ComponentModel.DoWorkEventArgs ) -> 뾞
+	[VDF3_Solution3]BackgroundWorkerService::쉣[1]( [mscorlib]System.String ) -> 뽹
+
+	[VDF3_Solution3]BackgroundWorkerService::get_Instance[0]( ) skipped:  skip by property
+	[VDF3_Solution3]BackgroundWorkerService::add_OnDataUpdated[1]( [mscorlib]System.Action`2<[mscorlib]System.String,[mscorlib]System.Object> ) skipped:  skip by event
+	[VDF3_Solution3]BackgroundWorkerService::remove_OnDataUpdated[1]( [mscorlib]System.Action`2<[mscorlib]System.String,[mscorlib]System.Object> ) skipped:  skip by event
+	[VDF3_Solution3]BackgroundWorkerService::.ctor[0]( ) skipped:  special name
+	[VDF3_Solution3]BackgroundWorkerService::Start[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]BackgroundWorkerService::Stop[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]BackgroundWorkerService::UpdateData[2]( [mscorlib]System.String, [mscorlib]System.Object ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]BackgroundWorkerService::GetData[1]( [mscorlib]System.String ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]BackgroundWorkerService::.cctor[0]( ) skipped:  special name
+
+	BackgroundWorkerService [VDF3_Solution3]BackgroundWorkerService BackgroundWorkerService::숞 -> 뿇
+	System.Object [VDF3_Solution3]System.Object BackgroundWorkerService::슌 -> 뿂
+	System.ComponentModel.BackgroundWorker [VDF3_Solution3]System.ComponentModel.BackgroundWorker BackgroundWorkerService::숼 -> 뾙
+	System.ComponentModel.BackgroundWorker [VDF3_Solution3]System.ComponentModel.BackgroundWorker BackgroundWorkerService::숭 -> 뾯
+	EasyModbus.ModbusClient [VDF3_Solution3]EasyModbus.ModbusClient BackgroundWorkerService::숚 -> 뾁
+	System.Boolean [VDF3_Solution3]System.Boolean BackgroundWorkerService::슁 -> 뽚
+	System.Collections.Concurrent.ConcurrentDictionary`2<System.String,System.Object> [VDF3_Solution3]System.Collections.Concurrent.ConcurrentDictionary`2<System.String,System.Object> BackgroundWorkerService::숺 -> 뽦
+	System.Action`2<System.String,System.Object> [VDF3_Solution3]System.Action`2<System.String,System.Object> BackgroundWorkerService::숴 -> 뿆
+
+
+	BackgroundWorkerService [VDF3_Solution3]BackgroundWorkerService BackgroundWorkerService::Instance skipped:  KeepPublicApi option in configuration
+
+
+	System.Action`2<System.String,System.Object> [VDF3_Solution3]System.Action`2<System.String,System.Object> BackgroundWorkerService::OnDataUpdated skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]CalibrationService skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]CalibrationService::.ctor[0]( ) skipped:  special name
+	[VDF3_Solution3]CalibrationService::GetCalibrationPoints[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CalibrationService::UpdateCalibrationPoints[1]( [mscorlib]System.Collections.Generic.List`1<[VDF3_Solution3]CalibrationPoint> ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CalibrationService::GetHomographyMatrix[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CalibrationService::UpdateHomographyMatrix[1]( [VDF3_Solution3]HomographyMatrix ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CalibrationService::GetRegister[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CalibrationService::UpdateRegister[1]( [VDF3_Solution3]Register ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CalibrationService::SaveToJson[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CalibrationService::LoadFromJson[1]( [mscorlib]System.String ) skipped:  KeepPublicApi option in configuration
+
+	CalibrationData [VDF3_Solution3]CalibrationData CalibrationService::쉻 -> 뾊
+}
+
+[VDF3_Solution3]CalibrationPoint skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]CalibrationPoint::get_x[0]( ) skipped:  skip by property
+	[VDF3_Solution3]CalibrationPoint::set_x[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]CalibrationPoint::get_y[0]( ) skipped:  skip by property
+	[VDF3_Solution3]CalibrationPoint::set_y[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]CalibrationPoint::.ctor[0]( ) skipped:  special name
+
+	System.Single [VDF3_Solution3]System.Single CalibrationPoint::쉋 -> 뽲
+	System.Single [VDF3_Solution3]System.Single CalibrationPoint::숝 -> 뽥
+
+
+	System.Single [VDF3_Solution3]System.Single CalibrationPoint::x skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single CalibrationPoint::y skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]HomographyMatrix skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]HomographyMatrix::get_R11[0]( ) skipped:  skip by property
+	[VDF3_Solution3]HomographyMatrix::set_R11[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]HomographyMatrix::get_R12[0]( ) skipped:  skip by property
+	[VDF3_Solution3]HomographyMatrix::set_R12[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]HomographyMatrix::get_Tx[0]( ) skipped:  skip by property
+	[VDF3_Solution3]HomographyMatrix::set_Tx[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]HomographyMatrix::get_R21[0]( ) skipped:  skip by property
+	[VDF3_Solution3]HomographyMatrix::set_R21[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]HomographyMatrix::get_R22[0]( ) skipped:  skip by property
+	[VDF3_Solution3]HomographyMatrix::set_R22[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]HomographyMatrix::get_Ty[0]( ) skipped:  skip by property
+	[VDF3_Solution3]HomographyMatrix::set_Ty[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]HomographyMatrix::.ctor[0]( ) skipped:  special name
+
+	System.Single [VDF3_Solution3]System.Single HomographyMatrix::숒 -> 뽜
+	System.Single [VDF3_Solution3]System.Single HomographyMatrix::숸 -> 뾆
+	System.Single [VDF3_Solution3]System.Single HomographyMatrix::숳 -> 뾜
+	System.Single [VDF3_Solution3]System.Single HomographyMatrix::슍 -> 뽩
+	System.Single [VDF3_Solution3]System.Single HomographyMatrix::쉔 -> 뿓
+	System.Single [VDF3_Solution3]System.Single HomographyMatrix::숛 -> 뾢
+
+
+	System.Single [VDF3_Solution3]System.Single HomographyMatrix::R11 skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single HomographyMatrix::R12 skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single HomographyMatrix::Tx skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single HomographyMatrix::R21 skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single HomographyMatrix::R22 skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single HomographyMatrix::Ty skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]Register skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]Register::get_MessFormRbt[0]( ) skipped:  skip by property
+	[VDF3_Solution3]Register::set_MessFormRbt[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]Register::get_ModeRbt[0]( ) skipped:  skip by property
+	[VDF3_Solution3]Register::set_ModeRbt[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]Register::get_CurrentX[0]( ) skipped:  skip by property
+	[VDF3_Solution3]Register::set_CurrentX[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]Register::get_CurrentY[0]( ) skipped:  skip by property
+	[VDF3_Solution3]Register::set_CurrentY[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]Register::get_CurrentZ[0]( ) skipped:  skip by property
+	[VDF3_Solution3]Register::set_CurrentZ[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]Register::get_CurrentU[0]( ) skipped:  skip by property
+	[VDF3_Solution3]Register::set_CurrentU[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]Register::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 Register::쉮 -> 뽨
+	System.Int32 [VDF3_Solution3]System.Int32 Register::쉴 -> 뾥
+	System.Int32 [VDF3_Solution3]System.Int32 Register::숖 -> 뽝
+	System.Int32 [VDF3_Solution3]System.Int32 Register::숣 -> 뾬
+	System.Int32 [VDF3_Solution3]System.Int32 Register::숬 -> 뾺
+	System.Int32 [VDF3_Solution3]System.Int32 Register::숧 -> 뾇
+
+
+	System.Int32 [VDF3_Solution3]System.Int32 Register::MessFormRbt skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 Register::ModeRbt skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 Register::CurrentX skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 Register::CurrentY skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 Register::CurrentZ skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 Register::CurrentU skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]CalibrationData skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]CalibrationData::get_CalibrationPoint[0]( ) skipped:  skip by property
+	[VDF3_Solution3]CalibrationData::set_CalibrationPoint[1]( [mscorlib]System.Collections.Generic.List`1<[VDF3_Solution3]CalibrationPoint> ) skipped:  skip by property
+	[VDF3_Solution3]CalibrationData::get_homographyMatrix[0]( ) skipped:  skip by property
+	[VDF3_Solution3]CalibrationData::set_homographyMatrix[1]( [VDF3_Solution3]HomographyMatrix ) skipped:  skip by property
+	[VDF3_Solution3]CalibrationData::get_Register[0]( ) skipped:  skip by property
+	[VDF3_Solution3]CalibrationData::set_Register[1]( [VDF3_Solution3]Register ) skipped:  skip by property
+	[VDF3_Solution3]CalibrationData::.ctor[0]( ) skipped:  special name
+
+	System.Collections.Generic.List`1<CalibrationPoint> [VDF3_Solution3]System.Collections.Generic.List`1<CalibrationPoint> CalibrationData::쉑 -> 뽵
+	HomographyMatrix [VDF3_Solution3]HomographyMatrix CalibrationData::숤 -> 뿋
+	Register [VDF3_Solution3]Register CalibrationData::슋 -> 뾱
+
+
+	System.Collections.Generic.List`1<CalibrationPoint> [VDF3_Solution3]System.Collections.Generic.List`1<CalibrationPoint> CalibrationData::CalibrationPoint skipped:  KeepPublicApi option in configuration
+	HomographyMatrix [VDF3_Solution3]HomographyMatrix CalibrationData::homographyMatrix skipped:  KeepPublicApi option in configuration
+	Register [VDF3_Solution3]Register CalibrationData::Register skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]Transform skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]Transform::get_Matrix[0]( ) skipped:  skip by property
+	[VDF3_Solution3]Transform::set_Matrix[1]( [System.Drawing]System.Drawing.Drawing2D.Matrix ) skipped:  skip by property
+	[VDF3_Solution3]Transform::.ctor[0]( ) skipped:  special name
+	[VDF3_Solution3]Transform::Reset[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Transform::Translate[2]( [mscorlib]System.Single, [mscorlib]System.Single ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Transform::Rotate[3]( [mscorlib]System.Single, [mscorlib]System.Single, [mscorlib]System.Single ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Transform::Scale[4]( [mscorlib]System.Single, [mscorlib]System.Single, [mscorlib]System.Single, [mscorlib]System.Single ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Transform::Apply[1]( [System.Drawing]System.Drawing.Graphics ) skipped:  KeepPublicApi option in configuration
+
+	System.Drawing.Drawing2D.Matrix [VDF3_Solution3]System.Drawing.Drawing2D.Matrix Transform::쉢 -> 뾐
+
+
+	System.Drawing.Drawing2D.Matrix [VDF3_Solution3]System.Drawing.Drawing2D.Matrix Transform::Matrix skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]CameraStatus skipped:  KeepPublicApi option in configuration
+{
+
+	System.Int32 [VDF3_Solution3]System.Int32 CameraStatus::value__ skipped:  special name
+	CameraStatus [VDF3_Solution3]CameraStatus CameraStatus::Disconnected skipped:  KeepPublicApi option in configuration
+	CameraStatus [VDF3_Solution3]CameraStatus CameraStatus::Connected skipped:  KeepPublicApi option in configuration
+	CameraStatus [VDF3_Solution3]CameraStatus CameraStatus::Error skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]CameraBase skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]CameraBase::get_Name[0]( ) skipped:  skip by property
+	[VDF3_Solution3]CameraBase::set_Name[1]( [mscorlib]System.String ) skipped:  skip by property
+	[VDF3_Solution3]CameraBase::get_ConnectionInfo[0]( ) skipped:  skip by property
+	[VDF3_Solution3]CameraBase::set_ConnectionInfo[1]( [mscorlib]System.String ) skipped:  skip by property
+	[VDF3_Solution3]CameraBase::get_Status[0]( ) skipped:  skip by property
+	[VDF3_Solution3]CameraBase::set_Status[1]( [VDF3_Solution3]CameraStatus ) skipped:  skip by property
+	[VDF3_Solution3]CameraBase::get_ErrorCode[0]( ) skipped:  skip by property
+	[VDF3_Solution3]CameraBase::set_ErrorCode[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]CameraBase::Start[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CameraBase::Stop[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CameraBase::Capture[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CameraBase::SetExposure[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CameraBase::SetBrightness[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CameraBase::SetGain[1]( [mscorlib]System.Single ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]CameraBase::.ctor[0]( ) skipped:  special name
+
+	System.String [VDF3_Solution3]System.String CameraBase::쉡 -> 뾑
+	System.String [VDF3_Solution3]System.String CameraBase::쉁 -> 뽼
+	CameraStatus [VDF3_Solution3]CameraStatus CameraBase::쉞 -> 뾲
+	System.Int32 [VDF3_Solution3]System.Int32 CameraBase::쉉 -> 뾸
+
+
+	System.String [VDF3_Solution3]System.String CameraBase::Name skipped:  KeepPublicApi option in configuration
+	System.String [VDF3_Solution3]System.String CameraBase::ConnectionInfo skipped:  KeepPublicApi option in configuration
+	CameraStatus [VDF3_Solution3]CameraStatus CameraBase::Status skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 CameraBase::ErrorCode skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]SystemCongfig skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]SystemCongfig::.cctor[0]( ) skipped:  special name
+
+
+	System.String [VDF3_Solution3]System.String SystemCongfig::PresentFilePath skipped:  KeepPublicApi option in configuration
+	System.Boolean [VDF3_Solution3]System.Boolean SystemCongfig::_directControl skipped:  KeepPublicApi option in configuration
+	System.String [VDF3_Solution3]System.String SystemCongfig::ProjectName skipped:  KeepPublicApi option in configuration
+	System.String [VDF3_Solution3]System.String SystemCongfig::ProjectId skipped:  KeepPublicApi option in configuration
+	System.Boolean [VDF3_Solution3]System.Boolean SystemCongfig::Unlock skipped:  KeepPublicApi option in configuration
+	System.Boolean [VDF3_Solution3]System.Boolean SystemCongfig::DebugMode skipped:  KeepPublicApi option in configuration
+	System.Boolean [VDF3_Solution3]System.Boolean SystemCongfig::ModbusRunning skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addr_ProjectId skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addr_SystemMode skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrMW_Control skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrMW_UserControllDefined skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrMW_SetProgram skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrMW_SetSPeed skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrMW_SetAccel skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrMW_SetDeccel skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrMW_MinObj skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrMW_XCoordinate skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrMW_YCoordinate skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrMW_ZCoordinate skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrMW_UAngle skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrIW_RobotStatus0 skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrIW_RobotStatus1 skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrIW_CurProgram skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrIW_CurSPeed skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrIW_CurAccel skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrIW_CurDeccel skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrIW_ObjRemain skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemCongfig::addrIW_ErrCode skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]TimerManager skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]TimerManager::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+
+	[VDF3_Solution3]TimerManager::.ctor[0]( ) skipped:  special name
+	[VDF3_Solution3]TimerManager::Start[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]TimerManager::Stop[0]( ) skipped:  KeepPublicApi option in configuration
+
+	System.Windows.Forms.Timer [VDF3_Solution3]System.Windows.Forms.Timer TimerManager::쉵 -> 뽡
+
+	System.Action [VDF3_Solution3]System.Action TimerManager::OnTimerTickAction skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]SystemMode skipped:  KeepPublicApi option in configuration
+{
+
+	System.String [VDF3_Solution3]System.String SystemMode::PresentImagePath skipped:  KeepPublicApi option in configuration
+	System.String [VDF3_Solution3]System.String SystemMode::PresentTemplatePath skipped:  KeepPublicApi option in configuration
+	System.Drawing.Image [VDF3_Solution3]System.Drawing.Image SystemMode::PresentImage skipped:  KeepPublicApi option in configuration
+	System.Drawing.Image [VDF3_Solution3]System.Drawing.Image SystemMode::ImgTemplate skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemMode::ToolMode skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemMode::VacumPad_Diameter skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemMode::GripDistance_Close skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemMode::GripDistance_Open skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 SystemMode::Grip_Thickness skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VariableRobot skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]VariableRobot::.cctor[0]( ) skipped:  special name
+
+
+	System.Int32 [VDF3_Solution3]System.Int32 VariableRobot::MessFormRbt skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VariableRobot::RbtMode skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::CurrentX skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::CurrentY skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::CurrentZ skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::CurrentU skipped:  KeepPublicApi option in configuration
+	System.Single[0...,0...] [VDF3_Solution3]System.Single[0...,0...] VariableRobot::calibrationArray skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::R11 skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::R12 skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::Tx skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::R21 skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::R22 skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::Ty skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::Xc skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::Yc skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::theta_c skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::Xr skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::Yr skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VariableRobot::theta_r skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]ImageProcessingLib.ImageProcessor skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor::쉣[3]( [OpenCvSharp]OpenCvSharp.Mat, [VDF3_Solution3]ImageProcessingLib.ROI, [mscorlib]System.Double ) -> 뽹
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor::쉣[2]( [mscorlib]System.Collections.Generic.List`1<[System.Drawing]System.Drawing.Point>, [mscorlib]System.Int32 ) -> 뽹
+
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor::get_DetectedRegions[0]( ) skipped:  skip by property
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor::get_DetectedScores[0]( ) skipped:  skip by property
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor::.ctor[1]( [mscorlib]System.String ) skipped:  special name
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor::GetImage[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]ImageProcessingLib.ImageProcessor::FindMatchingRegions[3]( [VDF3_Solution3]ImageProcessingLib.ROI, [mscorlib]System.Double, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+
+	OpenCvSharp.Mat [VDF3_Solution3]OpenCvSharp.Mat ImageProcessingLib.ImageProcessor::숵 -> 뽮
+	System.String [VDF3_Solution3]System.String ImageProcessingLib.ImageProcessor::슀 -> 뽪
+	System.Collections.Generic.List`1<System.Drawing.Point> [VDF3_Solution3]System.Collections.Generic.List`1<System.Drawing.Point> ImageProcessingLib.ImageProcessor::쉧 -> 뾖
+	System.Collections.Generic.Dictionary`2<OpenCvSharp.RotatedRect,System.Double> [VDF3_Solution3]System.Collections.Generic.Dictionary`2<OpenCvSharp.RotatedRect,System.Double> ImageProcessingLib.ImageProcessor::숡 -> 뾣
+
+
+	System.Collections.Generic.List`1<OpenCvSharp.RotatedRect> [VDF3_Solution3]System.Collections.Generic.List`1<OpenCvSharp.RotatedRect> ImageProcessingLib.ImageProcessor::DetectedRegions skipped:  KeepPublicApi option in configuration
+	System.Collections.Generic.Dictionary`2<OpenCvSharp.RotatedRect,System.Double> [VDF3_Solution3]System.Collections.Generic.Dictionary`2<OpenCvSharp.RotatedRect,System.Double> ImageProcessingLib.ImageProcessor::DetectedScores skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]ImageProcessingLib.ROI skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]ImageProcessingLib.ROI::get_X[0]( ) skipped:  skip by property
+	[VDF3_Solution3]ImageProcessingLib.ROI::set_X[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]ImageProcessingLib.ROI::get_Y[0]( ) skipped:  skip by property
+	[VDF3_Solution3]ImageProcessingLib.ROI::set_Y[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]ImageProcessingLib.ROI::get_Width[0]( ) skipped:  skip by property
+	[VDF3_Solution3]ImageProcessingLib.ROI::set_Width[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]ImageProcessingLib.ROI::get_Height[0]( ) skipped:  skip by property
+	[VDF3_Solution3]ImageProcessingLib.ROI::set_Height[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]ImageProcessingLib.ROI::.ctor[4]( [mscorlib]System.Int32, [mscorlib]System.Int32, [mscorlib]System.Int32, [mscorlib]System.Int32 ) skipped:  special name
+	[VDF3_Solution3]ImageProcessingLib.ROI::ToRect[0]( ) skipped:  KeepPublicApi option in configuration
+
+	System.Int32 [VDF3_Solution3]System.Int32 ImageProcessingLib.ROI::쉹 -> 뿌
+	System.Int32 [VDF3_Solution3]System.Int32 ImageProcessingLib.ROI::숦 -> 뽷
+	System.Int32 [VDF3_Solution3]System.Int32 ImageProcessingLib.ROI::쉂 -> 뾤
+	System.Int32 [VDF3_Solution3]System.Int32 ImageProcessingLib.ROI::쉭 -> 뽽
+
+
+	System.Int32 [VDF3_Solution3]System.Int32 ImageProcessingLib.ROI::X skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 ImageProcessingLib.ROI::Y skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 ImageProcessingLib.ROI::Width skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 ImageProcessingLib.ROI::Height skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.BaslerCamera skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::get_Name[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::set_Name[1]( [mscorlib]System.String ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::get_ConnectionInfo[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::set_ConnectionInfo[1]( [mscorlib]System.String ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::get_ErrorCode[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::set_ErrorCode[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::get_IsConnected[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::.ctor[2]( [mscorlib]System.String, [mscorlib]System.String ) skipped:  special name
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::RefreshDeviceList[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::Open[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::Close[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::Capture[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::ReadImage[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::Trigger[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::StartLive[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::StopLive[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::GetLiveImage[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::GetDeviceInformation[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::ConfigureAOI[2]( [mscorlib]System.Int32, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::SetPixelFormat[1]( [mscorlib]System.String ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::GetPixelFormat[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::SetAutoGainOff[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::SetGainPercent[1]( [mscorlib]System.Double ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::SetExposurePercent[1]( [mscorlib]System.Double ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::SetGamma[1]( [mscorlib]System.Boolean ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::ToggleCenterX[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.BaslerCamera::SetBrandNewFeatureToMaximum[1]( [mscorlib]System.String ) skipped:  KeepPublicApi option in configuration
+
+	Basler.Pylon.Camera [VDF3_Solution3]Basler.Pylon.Camera VDF3_Solution3.BaslerCamera::슏 -> 뾒
+	Basler.Pylon.PixelDataConverter [VDF3_Solution3]Basler.Pylon.PixelDataConverter VDF3_Solution3.BaslerCamera::쉾 -> 뿐
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.BaslerCamera::쉷 -> 뿊
+	System.Threading.Thread [VDF3_Solution3]System.Threading.Thread VDF3_Solution3.BaslerCamera::슇 -> 뿒
+	System.Drawing.Bitmap [VDF3_Solution3]System.Drawing.Bitmap VDF3_Solution3.BaslerCamera::쉲 -> 뾚
+	System.Object [VDF3_Solution3]System.Object VDF3_Solution3.BaslerCamera::쉀 -> 뾀
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.BaslerCamera::쉼 -> 뿁
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.BaslerCamera::쉤 -> 뽬
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.BaslerCamera::쉺 -> 뾰
+
+
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.BaslerCamera::Name skipped:  KeepPublicApi option in configuration
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.BaslerCamera::ConnectionInfo skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.BaslerCamera::ErrorCode skipped:  KeepPublicApi option in configuration
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.BaslerCamera::IsConnected skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrSettingModbus skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrSettingModbus::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrSettingModbus::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosedEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrSettingModbus::쉗[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrSettingModbus::쉗[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosedEventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrSettingModbus::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.FrSettingModbus::.ctor[0]( ) skipped:  special name
+	[VDF3_Solution3]VDF3_Solution3.FrSettingModbus::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+
+	VDF3_Solution3.FrSetting [VDF3_Solution3]VDF3_Solution3.FrSetting VDF3_Solution3.FrSettingModbus::쉖 -> 뽛
+	VDF3_Solution3.FrSettingRobot [VDF3_Solution3]VDF3_Solution3.FrSettingRobot VDF3_Solution3.FrSettingModbus::슉 -> 뾛
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrSettingModbus::숻 -> 뾶
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingModbus::숪 -> 뽤
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingModbus::숶 -> 뾾
+	System.Windows.Forms.Panel [VDF3_Solution3]System.Windows.Forms.Panel VDF3_Solution3.FrSettingModbus::숑 -> 뾉
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingModbus::쉨 -> 뽯
+	System.Windows.Forms.FlowLayoutPanel [VDF3_Solution3]System.Windows.Forms.FlowLayoutPanel VDF3_Solution3.FrSettingModbus::쉪 -> 뾔
+	Sunny.UI.UIComboBox [VDF3_Solution3]Sunny.UI.UIComboBox VDF3_Solution3.FrSettingModbus::숰 -> 뾻
+	Sunny.UI.UITitlePanel [VDF3_Solution3]Sunny.UI.UITitlePanel VDF3_Solution3.FrSettingModbus::숓 -> 뿏
+	System.Windows.Forms.FlowLayoutPanel [VDF3_Solution3]System.Windows.Forms.FlowLayoutPanel VDF3_Solution3.FrSettingModbus::쉝 -> 뾪
+	Sunny.UI.UITitlePanel [VDF3_Solution3]Sunny.UI.UITitlePanel VDF3_Solution3.FrSettingModbus::숙 -> 뽰
+	System.Windows.Forms.FlowLayoutPanel [VDF3_Solution3]System.Windows.Forms.FlowLayoutPanel VDF3_Solution3.FrSettingModbus::쉅 -> 뿍
+	Sunny.UI.UITitlePanel [VDF3_Solution3]Sunny.UI.UITitlePanel VDF3_Solution3.FrSettingModbus::숫 -> 뾷
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSettingModbus::숮 -> 뿈
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSettingModbus::숯 -> 뽺
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSettingModbus::슃 -> 뾂
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSettingModbus::숔 -> 뾦
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSettingModbus::쉓 -> 뽻
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSettingModbus::쉇 -> 뽘
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingModbus::쉽 -> 뾟
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingModbus::숾 -> 뾽
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingModbus::슂 -> 뽶
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingModbus::슄 -> 뾩
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingModbus::슎 -> 뾏
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingModbus::쉕 -> 뾓
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrFinish skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrFinish::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.FrFinish::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrFinish::.ctor[0]( ) skipped:  special name
+
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrFinish::쉶 -> 뾘
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrMain skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrMain::쉣[0]( ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrMain::쉗[0]( ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrMain::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosedEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrMain::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrMain::쉗[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrMain::슆[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrMain::숞[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrMain::슌[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿂
+	[VDF3_Solution3]VDF3_Solution3.FrMain::숼[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾙
+	[VDF3_Solution3]VDF3_Solution3.FrMain::숭[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾯
+	[VDF3_Solution3]VDF3_Solution3.FrMain::숚[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾁
+	[VDF3_Solution3]VDF3_Solution3.FrMain::슁[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽚
+	[VDF3_Solution3]VDF3_Solution3.FrMain::숺[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽦
+	[VDF3_Solution3]VDF3_Solution3.FrMain::숴[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿆
+	[VDF3_Solution3]VDF3_Solution3.FrMain::슆[0]( ) -> 뿎
+
+	[VDF3_Solution3]VDF3_Solution3.FrMain::get_Instance[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrMain::set_Instance[1]( [VDF3_Solution3]VDF3_Solution3.FrMain ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrMain::get_lbTitleform[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrMain::set_lbTitleform[1]( [System.Windows.Forms]System.Windows.Forms.Label ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrMain::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrMain::.ctor[0]( ) skipped:  special name
+	[VDF3_Solution3]VDF3_Solution3.FrMain::ActivateButton[2]( [mscorlib]System.Object, [System.Drawing]System.Drawing.Color ) skipped:  KeepPublicApi option in configuration
+
+	VDF3_Solution3.FrMain [VDF3_Solution3]VDF3_Solution3.FrMain VDF3_Solution3.FrMain::숲 -> 뾠
+	System.Windows.Forms.Label [VDF3_Solution3]System.Windows.Forms.Label VDF3_Solution3.FrMain::숩 -> 뽫
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrMain::쉆 -> 뾫
+	System.Windows.Forms.Panel [VDF3_Solution3]System.Windows.Forms.Panel VDF3_Solution3.FrMain::쉩 -> 뽢
+	System.Windows.Forms.Form [VDF3_Solution3]System.Windows.Forms.Form VDF3_Solution3.FrMain::쉫 -> 뾍
+	VDF3_Solution3.FrSettingRobot [VDF3_Solution3]VDF3_Solution3.FrSettingRobot VDF3_Solution3.FrMain::슈 -> 뾭
+	VDF3_Solution3.FrMain [VDF3_Solution3]VDF3_Solution3.FrMain VDF3_Solution3.FrMain::쉃 -> 뾈
+	VDF3_Solution3.FrHome [VDF3_Solution3]VDF3_Solution3.FrHome VDF3_Solution3.FrMain::쉸 -> 뽳
+	VDF3_Solution3.FrSetting [VDF3_Solution3]VDF3_Solution3.FrSetting VDF3_Solution3.FrMain::숷 -> 뾴
+	VDF3_Solution3.FrProject [VDF3_Solution3]VDF3_Solution3.FrProject VDF3_Solution3.FrMain::슅 -> 뾿
+	VDF3_Solution3.FrVision [VDF3_Solution3]VDF3_Solution3.FrVision VDF3_Solution3.FrMain::쉒 -> 뾮
+	VDF3_Solution3.FrRun [VDF3_Solution3]VDF3_Solution3.FrRun VDF3_Solution3.FrMain::숽 -> 뽖
+	VDF3_Solution3.FrRobot [VDF3_Solution3]VDF3_Solution3.FrRobot VDF3_Solution3.FrMain::숱 -> 뽞
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrMain::쉬 -> 뾼
+	System.Windows.Forms.Panel [VDF3_Solution3]System.Windows.Forms.Panel VDF3_Solution3.FrMain::슊 -> 뾨
+	System.Windows.Forms.Panel [VDF3_Solution3]System.Windows.Forms.Panel VDF3_Solution3.FrMain::순 -> 뿔
+	System.Windows.Forms.Panel [VDF3_Solution3]System.Windows.Forms.Panel VDF3_Solution3.FrMain::숿 -> 뿑
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrMain::쉜 -> 뾃
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrMain::쉱 -> 뿀
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrMain::쉥 -> 뽠
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrMain::쉟 -> 뽸
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrMain::쉍 -> 뾳
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrMain::쉏 -> 뽣
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrMain::쉐 -> 뾎
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrMain::쉚 -> 뽗
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrMain::쉿 -> 뾕
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrMain::쉦 -> 뿃
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrMain::쉌 -> 뾗
+	System.Windows.Forms.Label [VDF3_Solution3]System.Windows.Forms.Label VDF3_Solution3.FrMain::쉳 -> 뾅
+	FontAwesome.Sharp.IconPictureBox [VDF3_Solution3]FontAwesome.Sharp.IconPictureBox VDF3_Solution3.FrMain::쉰 -> 뾝
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrMain::쉄 -> 뾡
+
+
+	VDF3_Solution3.FrMain [VDF3_Solution3]VDF3_Solution3.FrMain VDF3_Solution3.FrMain::Instance skipped:  KeepPublicApi option in configuration
+	System.Windows.Forms.Label [VDF3_Solution3]System.Windows.Forms.Label VDF3_Solution3.FrMain::lbTitleform skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrDetection skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉗[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::슆[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숞[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::슌[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿂
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숼[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾙
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숭[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾯
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숚[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾁
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::슁[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽚
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숺[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽦
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숴[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿆
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉻[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾊
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[0]( ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[1]( [mscorlib]System.String ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉗[1]( [mscorlib]System.String ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::슆[1]( [mscorlib]System.String ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉗[0]( ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[1]( [mscorlib]System.Single ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉗[1]( [mscorlib]System.Single ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::슆[0]( ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숞[0]( ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[2]( [SunnyUI]Sunny.UI.UIPanel, [System.Windows.Forms]System.Windows.Forms.PictureBox ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉗[2]( [SunnyUI]Sunny.UI.UIPanel, [System.Windows.Forms]System.Windows.Forms.PictureBox ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.PaintEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[1]( [System.Drawing]System.Drawing.Graphics ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.MouseEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉗[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.MouseEventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::슆[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.MouseEventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[1]( [System.Drawing]System.Drawing.PointF ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[2]( [System.Drawing]System.Drawing.PointF, [VDF3_Solution3]VDF3_Solution3.BoundingBox ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[1]( [VDF3_Solution3]VDF3_Solution3.BoundingBox ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[2]( [VDF3_Solution3]VDF3_Solution3.BoundingBox, [System.Drawing]System.Drawing.PointF ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[2]( [VDF3_Solution3]VDF3_Solution3.BoundingBox, [VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉗[2]( [VDF3_Solution3]VDF3_Solution3.BoundingBox, [VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉗[1]( [VDF3_Solution3]VDF3_Solution3.BoundingBox ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[2]( [System.Drawing]System.Drawing.PointF, [System.Drawing]System.Drawing.PointF ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉋[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽲
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숝[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽥
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::슌[0]( ) -> 뿂
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숒[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽜
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숸[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾆
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숳[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾜
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::슍[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽩
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉔[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿓
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숞[1]( [mscorlib]System.String ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숛[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾢
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉮[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽨
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉴[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾥
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::숼[0]( ) -> 뾙
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.ScrollEventArgs ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::get_btnTraning_Click[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::set_btnTraning_Click[1]( [mscorlib]System.EventHandler ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::.ctor[0]( ) skipped:  special name
+	[VDF3_Solution3]VDF3_Solution3.FrDetection::CropAndRotateImage[3]( [System.Drawing]System.Drawing.Image, [VDF3_Solution3]VDF3_Solution3.BoundingBox, [mscorlib]System.Single ) skipped:  KeepPublicApi option in configuration
+
+	Transform [VDF3_Solution3]Transform VDF3_Solution3.FrDetection::숥 -> 뽱
+	Transform [VDF3_Solution3]Transform VDF3_Solution3.FrDetection::술 -> 뾋
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrDetection::숹 -> 뿄
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrDetection::쉙 -> 뽙
+	System.Drawing.Image [VDF3_Solution3]System.Drawing.Image VDF3_Solution3.FrDetection::쉊 -> 뽴
+	System.Drawing.Point [VDF3_Solution3]System.Drawing.Point VDF3_Solution3.FrDetection::쉛 -> 뾌
+	System.Collections.Generic.List`1<System.String> [VDF3_Solution3]System.Collections.Generic.List`1<System.String> VDF3_Solution3.FrDetection::쉎 -> 뿉
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrDetection::숗 -> 뾹
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.FrDetection::숟 -> 뽟
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.FrDetection::쉠 -> 뿅
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.FrDetection::슐 -> 뽿
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrDetection::숕 -> 뾄
+	System.Drawing.Point [VDF3_Solution3]System.Drawing.Point VDF3_Solution3.FrDetection::수 -> 뿕
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrDetection::쉈 -> 뽭
+	VDF3_Solution3.FrDetection/쉣 [VDF3_Solution3]VDF3_Solution3.FrDetection/쉣 VDF3_Solution3.FrDetection::쉯 -> 뽾
+	System.Collections.Generic.List`1<VDF3_Solution3.BoundingBox> [VDF3_Solution3]System.Collections.Generic.List`1<VDF3_Solution3.BoundingBox> VDF3_Solution3.FrDetection::숢 -> 뽧
+	System.Drawing.PointF [VDF3_Solution3]System.Drawing.PointF VDF3_Solution3.FrDetection::쉘 -> 뾵
+	System.Drawing.PointF [VDF3_Solution3]System.Drawing.PointF VDF3_Solution3.FrDetection::숨 -> 뾧
+	System.Drawing.Rectangle [VDF3_Solution3]System.Drawing.Rectangle VDF3_Solution3.FrDetection::쉗쉣 -> 뾞뽹
+	System.Drawing.Rectangle [VDF3_Solution3]System.Drawing.Rectangle VDF3_Solution3.FrDetection::쉗쉗 -> 뾞뾞
+	VDF3_Solution3.BoundingBox [VDF3_Solution3]VDF3_Solution3.BoundingBox VDF3_Solution3.FrDetection::쉗슆 -> 뾞뿎
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.FrDetection::쉗숞 -> 뾞뿇
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.FrDetection::쉗슌 -> 뾞뿂
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.FrDetection::쉗숼 -> 뾞뾙
+	System.Drawing.Point [VDF3_Solution3]System.Drawing.Point VDF3_Solution3.FrDetection::쉗숭 -> 뾞뾯
+	System.Drawing.Rectangle [VDF3_Solution3]System.Drawing.Rectangle VDF3_Solution3.FrDetection::쉗숚 -> 뾞뾁
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrDetection::쉗슁 -> 뾞뽚
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrDetection::쉗숺 -> 뾞뽦
+	System.Drawing.PointF [VDF3_Solution3]System.Drawing.PointF VDF3_Solution3.FrDetection::쉗숴 -> 뾞뿆
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrDetection::쉗쉻 -> 뾞뾊
+	System.Windows.Forms.ToolStrip [VDF3_Solution3]System.Windows.Forms.ToolStrip VDF3_Solution3.FrDetection::쉗쉋 -> 뾞뽲
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗숝 -> 뾞뽥
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗숒 -> 뾞뽜
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗숸 -> 뾞뾆
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗숳 -> 뾞뾜
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗슍 -> 뾞뽩
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗쉔 -> 뾞뿓
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗숛 -> 뾞뾢
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗쉮 -> 뾞뽨
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrDetection::쉗쉴 -> 뾞뾥
+	Sunny.UI.UIPanel [VDF3_Solution3]Sunny.UI.UIPanel VDF3_Solution3.FrDetection::쉗숖 -> 뾞뽝
+	System.Windows.Forms.FlowLayoutPanel [VDF3_Solution3]System.Windows.Forms.FlowLayoutPanel VDF3_Solution3.FrDetection::쉗숣 -> 뾞뾬
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrDetection::쉗숬 -> 뾞뾺
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrDetection::쉗숧 -> 뾞뾇
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrDetection::쉗쉑 -> 뾞뽵
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrDetection::쉗숤 -> 뾞뿋
+	Sunny.UI.UIListBox [VDF3_Solution3]Sunny.UI.UIListBox VDF3_Solution3.FrDetection::쉗슋 -> 뾞뾱
+	Sunny.UI.UIPanel [VDF3_Solution3]Sunny.UI.UIPanel VDF3_Solution3.FrDetection::쉗쉢 -> 뾞뾐
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrDetection::쉗쉡 -> 뾞뾑
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗쉁 -> 뾞뽼
+	Sunny.UI.UIPanel [VDF3_Solution3]Sunny.UI.UIPanel VDF3_Solution3.FrDetection::쉗쉞 -> 뾞뾲
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrDetection::쉗쉉 -> 뾞뾸
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrDetection::쉗쉵 -> 뾞뽡
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗숵 -> 뾞뽮
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrDetection::쉗슀 -> 뾞뽪
+	System.Windows.Forms.ToolStripTextBox [VDF3_Solution3]System.Windows.Forms.ToolStripTextBox VDF3_Solution3.FrDetection::쉗쉧 -> 뾞뾖
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗숡 -> 뾞뾣
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗쉹 -> 뾞뿌
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrDetection::쉗숦 -> 뾞뽷
+	System.Windows.Forms.ToolStripSeparator [VDF3_Solution3]System.Windows.Forms.ToolStripSeparator VDF3_Solution3.FrDetection::쉗쉂 -> 뾞뾤
+	System.Windows.Forms.ToolStripSeparator [VDF3_Solution3]System.Windows.Forms.ToolStripSeparator VDF3_Solution3.FrDetection::쉗쉭 -> 뾞뽽
+	System.Windows.Forms.ToolStripSeparator [VDF3_Solution3]System.Windows.Forms.ToolStripSeparator VDF3_Solution3.FrDetection::쉗슏 -> 뾞뾒
+	System.EventHandler [VDF3_Solution3]System.EventHandler VDF3_Solution3.FrDetection::쉗쉾 -> 뾞뿐
+
+
+	System.EventHandler [VDF3_Solution3]System.EventHandler VDF3_Solution3.FrDetection::btnTraning_Click skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.BoundingBox skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]VDF3_Solution3.BoundingBox::get_imgpath[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BoundingBox::set_imgpath[1]( [mscorlib]System.String ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BoundingBox::get_OriginalVertices[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BoundingBox::set_OriginalVertices[1]( [mscorlib]System.Collections.Generic.List`1<[System.Drawing]System.Drawing.PointF> ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BoundingBox::get_Vertices[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BoundingBox::set_Vertices[1]( [mscorlib]System.Collections.Generic.List`1<[System.Drawing]System.Drawing.PointF> ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.BoundingBox::.ctor[0]( ) skipped:  special name
+
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.BoundingBox::쉗쉷 -> 뾞뿊
+	System.Collections.Generic.List`1<System.Drawing.PointF> [VDF3_Solution3]System.Collections.Generic.List`1<System.Drawing.PointF> VDF3_Solution3.BoundingBox::쉗슇 -> 뾞뿒
+	System.Collections.Generic.List`1<System.Drawing.PointF> [VDF3_Solution3]System.Collections.Generic.List`1<System.Drawing.PointF> VDF3_Solution3.BoundingBox::쉗쉲 -> 뾞뾚
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.BoundingBox::X skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.BoundingBox::Y skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.BoundingBox::Width skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.BoundingBox::Height skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.BoundingBox::Angle skipped:  KeepPublicApi option in configuration
+
+
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.BoundingBox::imgpath skipped:  KeepPublicApi option in configuration
+	System.Collections.Generic.List`1<System.Drawing.PointF> [VDF3_Solution3]System.Collections.Generic.List`1<System.Drawing.PointF> VDF3_Solution3.BoundingBox::OriginalVertices skipped:  KeepPublicApi option in configuration
+	System.Collections.Generic.List`1<System.Drawing.PointF> [VDF3_Solution3]System.Collections.Generic.List`1<System.Drawing.PointF> VDF3_Solution3.BoundingBox::Vertices skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.MatchData skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]VDF3_Solution3.MatchData::get_x[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchData::set_x[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchData::get_y[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchData::set_y[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchData::get_angle[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchData::set_angle[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchData::get_scale[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchData::set_scale[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchData::get_score[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchData::set_score[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchData::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.MatchData::쉗쉀 -> 뾞뾀
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.MatchData::쉗쉼 -> 뾞뿁
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.MatchData::쉗쉤 -> 뾞뽬
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.MatchData::쉗쉺 -> 뾞뾰
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.MatchData::쉗쉖 -> 뾞뽛
+
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.MatchData::x skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.MatchData::y skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.MatchData::angle skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.MatchData::scale skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.MatchData::score skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.MatchResult skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]VDF3_Solution3.MatchResult::get_count[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchResult::set_count[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchResult::get_matches[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchResult::set_matches[1]( [mscorlib]System.Collections.Generic.List`1<[VDF3_Solution3]VDF3_Solution3.MatchData> ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.MatchResult::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.MatchResult::쉗슉 -> 뾞뾛
+	System.Collections.Generic.List`1<VDF3_Solution3.MatchData> [VDF3_Solution3]System.Collections.Generic.List`1<VDF3_Solution3.MatchData> VDF3_Solution3.MatchResult::쉗숻 -> 뾞뾶
+
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.MatchResult::count skipped:  KeepPublicApi option in configuration
+	System.Collections.Generic.List`1<VDF3_Solution3.MatchData> [VDF3_Solution3]System.Collections.Generic.List`1<VDF3_Solution3.MatchData> VDF3_Solution3.MatchResult::matches skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrPickTeaching skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.MouseEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching::쉗[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.MouseEventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching::슆[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.MouseEventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.PaintEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching::쉗[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching::슆[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching::쉣[4]( [System.Drawing]System.Drawing.PointF, [mscorlib]System.Single, [mscorlib]System.Single, [mscorlib]System.Single ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching::.ctor[0]( ) skipped:  special name
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching::LoadImageAndDrawBoundingBoxes[3]( [System.Windows.Forms]System.Windows.Forms.PictureBox, [mscorlib]System.String, [mscorlib]System.Collections.Generic.List`1<[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox> ) skipped:  KeepPublicApi option in configuration
+
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrPickTeaching::쉗숪 -> 뾞뽤
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrPickTeaching::쉗숶 -> 뾞뾾
+	System.Windows.Forms.ToolStrip [VDF3_Solution3]System.Windows.Forms.ToolStrip VDF3_Solution3.FrPickTeaching::쉗숑 -> 뾞뾉
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrPickTeaching::쉗쉨 -> 뾞뽯
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrPickTeaching::쉗쉪 -> 뾞뾔
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrPickTeaching::쉗숰 -> 뾞뾻
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrPickTeaching::쉗숓 -> 뾞뿏
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrPickTeaching::쉗쉝 -> 뾞뾪
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrPickTeaching::쉗숙 -> 뾞뽰
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrPickTeaching::쉗쉅 -> 뾞뿍
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrPickTeaching::쉗숫 -> 뾞뾷
+	System.Windows.Forms.ListView [VDF3_Solution3]System.Windows.Forms.ListView VDF3_Solution3.FrPickTeaching::쉗숮 -> 뾞뿈
+	Sunny.UI.UIPanel [VDF3_Solution3]Sunny.UI.UIPanel VDF3_Solution3.FrPickTeaching::쉗숯 -> 뾞뽺
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrPickTeaching::쉗슃 -> 뾞뾂
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrPickTeaching::쉗숔 -> 뾞뾦
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrHome skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrHome::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.FrHome::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrHome::.ctor[0]( ) skipped:  special name
+
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrHome::쉗쉓 -> 뾞뽻
+	Sunny.UI.UILedLabel [VDF3_Solution3]Sunny.UI.UILedLabel VDF3_Solution3.FrHome::쉗쉇 -> 뾞뽘
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrProject skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrProject::쉣[0]( ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrProject::쉗[0]( ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrProject::슆[0]( ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrProject::숞[0]( ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrProject::슌[0]( ) -> 뿂
+	[VDF3_Solution3]VDF3_Solution3.FrProject::숼[0]( ) -> 뾙
+	[VDF3_Solution3]VDF3_Solution3.FrProject::숭[0]( ) -> 뾯
+	[VDF3_Solution3]VDF3_Solution3.FrProject::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.MouseEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrProject::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrProject::쉗[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrProject::슆[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrProject::숞[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrProject::슌[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿂
+	[VDF3_Solution3]VDF3_Solution3.FrProject::숼[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾙
+	[VDF3_Solution3]VDF3_Solution3.FrProject::숭[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾯
+	[VDF3_Solution3]VDF3_Solution3.FrProject::숚[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾁
+	[VDF3_Solution3]VDF3_Solution3.FrProject::숚[0]( ) -> 뾁
+
+	[VDF3_Solution3]VDF3_Solution3.FrProject::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrProject::.ctor[0]( ) skipped:  special name
+	[VDF3_Solution3]VDF3_Solution3.FrProject::SaveRecentProjects[1]( [mscorlib]System.Collections.Generic.List`1<[VDF3_Solution3]VDF3_Solution3.FrProject/RecentProject> ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.FrProject::LoadRecentProjects[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.FrProject::.cctor[0]( ) skipped:  special name
+
+	System.Collections.Generic.List`1<VDF3_Solution3.FrProject/RecentProject> [VDF3_Solution3]System.Collections.Generic.List`1<VDF3_Solution3.FrProject/RecentProject> VDF3_Solution3.FrProject::쉗쉽 -> 뾞뾟
+	System.Windows.Forms.ContextMenuStrip [VDF3_Solution3]System.Windows.Forms.ContextMenuStrip VDF3_Solution3.FrProject::쉗숾 -> 뾞뾽
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrProject::쉗슂 -> 뾞뽶
+	CalibrationService [VDF3_Solution3]CalibrationService VDF3_Solution3.FrProject::쉗슄 -> 뾞뾩
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrProject::쉗슎 -> 뾞뾏
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrProject::쉗쉕 -> 뾞뾓
+	System.Windows.Forms.ContextMenuStrip [VDF3_Solution3]System.Windows.Forms.ContextMenuStrip VDF3_Solution3.FrProject::쉗쉶 -> 뾞뾘
+	System.Windows.Forms.ToolStripMenuItem [VDF3_Solution3]System.Windows.Forms.ToolStripMenuItem VDF3_Solution3.FrProject::쉗숲 -> 뾞뾠
+	System.Windows.Forms.ToolStripMenuItem [VDF3_Solution3]System.Windows.Forms.ToolStripMenuItem VDF3_Solution3.FrProject::쉗숩 -> 뾞뽫
+	System.Windows.Forms.ToolStripMenuItem [VDF3_Solution3]System.Windows.Forms.ToolStripMenuItem VDF3_Solution3.FrProject::쉗쉆 -> 뾞뾫
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrProject::쉗쉩 -> 뾞뽢
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrProject::쉗쉫 -> 뾞뾍
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrProject::쉗슈 -> 뾞뾭
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrProject::쉗쉃 -> 뾞뾈
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrProject::쉗쉸 -> 뾞뽳
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrProject::쉗숷 -> 뾞뾴
+
+	System.Windows.Forms.ListView [VDF3_Solution3]System.Windows.Forms.ListView VDF3_Solution3.FrProject::listView1 skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrRobot skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::쉣[0]( ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::쉗[0]( ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::쉣[2]( [mscorlib]System.String, [mscorlib]System.Object ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::쉗[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::슆[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.PaintEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::숞[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::슌[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿂
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::숼[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾙
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::숭[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾯
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::숚[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾁
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::슆[0]( ) -> 뿎
+
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrRobot::.ctor[0]( ) skipped:  special name
+
+	Sunny.UI.UITextBox[] [VDF3_Solution3]Sunny.UI.UITextBox[] VDF3_Solution3.FrRobot::쉗슅 -> 뾞뾿
+	Sunny.UI.UITextBox[] [VDF3_Solution3]Sunny.UI.UITextBox[] VDF3_Solution3.FrRobot::쉗쉒 -> 뾞뾮
+	System.Collections.Generic.List`1<VDF3_Solution3.FrRobot/RobotPoint> [VDF3_Solution3]System.Collections.Generic.List`1<VDF3_Solution3.FrRobot/RobotPoint> VDF3_Solution3.FrRobot::쉗숽 -> 뾞뽖
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrRobot::쉗숱 -> 뾞뽞
+	System.Drawing.Image [VDF3_Solution3]System.Drawing.Image VDF3_Solution3.FrRobot::쉗쉬 -> 뾞뾼
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrRobot::쉗슊 -> 뾞뾨
+	System.Windows.Forms.ToolStrip [VDF3_Solution3]System.Windows.Forms.ToolStrip VDF3_Solution3.FrRobot::쉗순 -> 뾞뿔
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRobot::쉗숿 -> 뾞뿑
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRobot::쉗쉜 -> 뾞뾃
+	Sunny.UI.UIPanel [VDF3_Solution3]Sunny.UI.UIPanel VDF3_Solution3.FrRobot::쉗쉱 -> 뾞뿀
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrRobot::쉗쉥 -> 뾞뽠
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRobot::쉗쉟 -> 뾞뽸
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRobot::쉗쉍 -> 뾞뾳
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRobot::쉗쉏 -> 뾞뽣
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRobot::쉗쉐 -> 뾞뾎
+	System.Windows.Forms.Panel [VDF3_Solution3]System.Windows.Forms.Panel VDF3_Solution3.FrRobot::쉗쉚 -> 뾞뽗
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗쉿 -> 뾞뾕
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗쉦 -> 뾞뿃
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗쉌 -> 뾞뾗
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗쉳 -> 뾞뾅
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗쉰 -> 뾞뾝
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗쉄 -> 뾞뾡
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗숥 -> 뾞뽱
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗술 -> 뾞뾋
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗숹 -> 뾞뿄
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗쉙 -> 뾞뽙
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗쉊 -> 뾞뽴
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗쉛 -> 뾞뾌
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗쉎 -> 뾞뿉
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗숗 -> 뾞뾹
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗숟 -> 뾞뽟
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗쉠 -> 뾞뿅
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗슐 -> 뾞뽿
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrRobot::쉗숕 -> 뾞뾄
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrRobot::쉗수 -> 뾞뿕
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrRobot::쉗쉈 -> 뾞뽭
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrRobot::쉗쉯 -> 뾞뽾
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrRobot::쉗숢 -> 뾞뽧
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::쉗쉘 -> 뾞뾵
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrRobot::쉗숨 -> 뾞뾧
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉣 -> 뿎뽹
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrRobot::슆쉗 -> 뿎뾞
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆슆 -> 뿎뿎
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrRobot::슆숞 -> 뿎뿇
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆슌 -> 뿎뿂
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrRobot::슆숼 -> 뿎뾙
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숭 -> 뿎뾯
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숚 -> 뿎뾁
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆슁 -> 뿎뽚
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrRobot::슆숺 -> 뿎뽦
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숴 -> 뿎뿆
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉻 -> 뿎뾊
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉋 -> 뿎뽲
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숝 -> 뿎뽥
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숒 -> 뿎뽜
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숸 -> 뿎뾆
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숳 -> 뿎뾜
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆슍 -> 뿎뽩
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉔 -> 뿎뿓
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숛 -> 뿎뾢
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉮 -> 뿎뽨
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉴 -> 뿎뾥
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숖 -> 뿎뽝
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숣 -> 뿎뾬
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숬 -> 뿎뾺
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숧 -> 뿎뾇
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉑 -> 뿎뽵
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숤 -> 뿎뿋
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆슋 -> 뿎뾱
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉢 -> 뿎뾐
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉡 -> 뿎뾑
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉁 -> 뿎뽼
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉞 -> 뿎뾲
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉉 -> 뿎뾸
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉵 -> 뿎뽡
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숵 -> 뿎뽮
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆슀 -> 뿎뽪
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆쉧 -> 뿎뾖
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrRobot::슆숡 -> 뿎뾣
+	System.Windows.Forms.ToolStripLabel [VDF3_Solution3]System.Windows.Forms.ToolStripLabel VDF3_Solution3.FrRobot::슆쉹 -> 뿎뿌
+	System.Windows.Forms.ToolStripTextBox [VDF3_Solution3]System.Windows.Forms.ToolStripTextBox VDF3_Solution3.FrRobot::슆숦 -> 뿎뽷
+	System.Windows.Forms.ToolStripTextBox [VDF3_Solution3]System.Windows.Forms.ToolStripTextBox VDF3_Solution3.FrRobot::슆쉂 -> 뿎뾤
+	System.Windows.Forms.ToolStripLabel [VDF3_Solution3]System.Windows.Forms.ToolStripLabel VDF3_Solution3.FrRobot::슆쉭 -> 뿎뽽
+	System.Windows.Forms.ToolStripLabel [VDF3_Solution3]System.Windows.Forms.ToolStripLabel VDF3_Solution3.FrRobot::슆슏 -> 뿎뾒
+	System.Windows.Forms.ToolStripSeparator [VDF3_Solution3]System.Windows.Forms.ToolStripSeparator VDF3_Solution3.FrRobot::슆쉾 -> 뿎뿐
+	System.Windows.Forms.ToolStripSeparator [VDF3_Solution3]System.Windows.Forms.ToolStripSeparator VDF3_Solution3.FrRobot::슆쉷 -> 뿎뿊
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrRun skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrRun::쉣[0]( ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRun::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.DrawListViewColumnHeaderEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRun::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRun::쉗[0]( ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrRun::쉣[1]( [mscorlib]System.String ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRun::쉣[1]( [VDF3_Solution3]VDF3_Solution3.FrRun/BoundingBoxRun ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRun::쉗[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrRun::슆[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrRun::숞[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrRun::슌[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿂
+	[VDF3_Solution3]VDF3_Solution3.FrRun::숼[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾙
+	[VDF3_Solution3]VDF3_Solution3.FrRun::쉣[1]( [mscorlib]System.Single ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRun::슆[0]( ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrRun::숞[0]( ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrRun::숭[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾯
+	[VDF3_Solution3]VDF3_Solution3.FrRun::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.PaintEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRun::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.MouseEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRun::쉗[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.MouseEventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrRun::슆[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.MouseEventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrRun::쉣[1]( [System.Drawing]System.Drawing.Graphics ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrRun::슌[0]( ) -> 뿂
+
+	[VDF3_Solution3]VDF3_Solution3.FrRun::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrRun::.ctor[0]( ) skipped:  special name
+
+	System.Drawing.Image [VDF3_Solution3]System.Drawing.Image VDF3_Solution3.FrRun::슆슇 -> 뿎뿒
+	System.Drawing.Point [VDF3_Solution3]System.Drawing.Point VDF3_Solution3.FrRun::슆쉲 -> 뿎뾚
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrRun::슆쉀 -> 뿎뾀
+	System.Collections.Generic.List`1<VDF3_Solution3.FrRun/BoundingBoxRun> [VDF3_Solution3]System.Collections.Generic.List`1<VDF3_Solution3.FrRun/BoundingBoxRun> VDF3_Solution3.FrRun::슆쉼 -> 뿎뿁
+	Transform [VDF3_Solution3]Transform VDF3_Solution3.FrRun::슆쉤 -> 뿎뽬
+	System.Collections.Generic.List`1<VDF3_Solution3.FrRun/CoordinateData> [VDF3_Solution3]System.Collections.Generic.List`1<VDF3_Solution3.FrRun/CoordinateData> VDF3_Solution3.FrRun::슆쉺 -> 뿎뾰
+	System.Collections.Generic.List`1<VDF3_Solution3.FrRun/CoordinateData> [VDF3_Solution3]System.Collections.Generic.List`1<VDF3_Solution3.FrRun/CoordinateData> VDF3_Solution3.FrRun::슆쉖 -> 뿎뽛
+	System.Collections.Generic.List`1<VDF3_Solution3.FrRun/ListviewCoordinates> [VDF3_Solution3]System.Collections.Generic.List`1<VDF3_Solution3.FrRun/ListviewCoordinates> VDF3_Solution3.FrRun::슆슉 -> 뿎뾛
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrRun::슆숻 -> 뿎뾶
+	System.Windows.Forms.ToolStrip [VDF3_Solution3]System.Windows.Forms.ToolStrip VDF3_Solution3.FrRun::슆숪 -> 뿎뽤
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRun::슆숶 -> 뿎뾾
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRun::슆숑 -> 뿎뾉
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRun::슆쉨 -> 뿎뽯
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRun::슆쉪 -> 뿎뾔
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRun::슆숰 -> 뿎뾻
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRun::슆숓 -> 뿎뿏
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRun::슆쉝 -> 뿎뾪
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRun::슆숙 -> 뿎뽰
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRun::슆쉅 -> 뿎뿍
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRun::슆숫 -> 뿎뾷
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRun::슆숮 -> 뿎뿈
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrRun::슆숯 -> 뿎뽺
+	Sunny.UI.UIPanel [VDF3_Solution3]Sunny.UI.UIPanel VDF3_Solution3.FrRun::슆슃 -> 뿎뾂
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrRun::슆숔 -> 뿎뾦
+	System.Windows.Forms.Panel [VDF3_Solution3]System.Windows.Forms.Panel VDF3_Solution3.FrRun::슆쉓 -> 뿎뽻
+	Sunny.UI.UIPanel [VDF3_Solution3]Sunny.UI.UIPanel VDF3_Solution3.FrRun::슆쉇 -> 뿎뽘
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrRun::슆쉽 -> 뿎뾟
+	System.Windows.Forms.ToolStripSeparator [VDF3_Solution3]System.Windows.Forms.ToolStripSeparator VDF3_Solution3.FrRun::슆숾 -> 뿎뾽
+	System.Windows.Forms.ToolStripSeparator [VDF3_Solution3]System.Windows.Forms.ToolStripSeparator VDF3_Solution3.FrRun::슆슂 -> 뿎뽶
+	System.Windows.Forms.ListView [VDF3_Solution3]System.Windows.Forms.ListView VDF3_Solution3.FrRun::슆슄 -> 뿎뾩
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrSetting skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::쉣[0]( ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosedEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::쉗[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::쉗[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosedEventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::슆[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::숞[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::슌[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿂
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::숼[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾙
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::숭[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾯
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::숚[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾁
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::슁[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽚
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::숺[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽦
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::숴[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿆
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosingEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::쉗[0]( ) -> 뾞
+
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrSetting::.ctor[0]( ) skipped:  special name
+
+	System.Collections.Generic.List`1<System.String> [VDF3_Solution3]System.Collections.Generic.List`1<System.String> VDF3_Solution3.FrSetting::슆슎 -> 뿎뾏
+	CameraStatus [VDF3_Solution3]CameraStatus VDF3_Solution3.FrSetting::슆쉕 -> 뿎뾓
+	VDF3_Solution3.FrSettingRobot [VDF3_Solution3]VDF3_Solution3.FrSettingRobot VDF3_Solution3.FrSetting::슆쉶 -> 뿎뾘
+	VDF3_Solution3.FrSettingModbus [VDF3_Solution3]VDF3_Solution3.FrSettingModbus VDF3_Solution3.FrSetting::슆숲 -> 뿎뾠
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrSetting::슆숩 -> 뿎뽫
+	System.Windows.Forms.Panel [VDF3_Solution3]System.Windows.Forms.Panel VDF3_Solution3.FrSetting::슆쉆 -> 뿎뾫
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSetting::슆쉩 -> 뿎뽢
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSetting::슆쉫 -> 뿎뾍
+	Sunny.UI.UIGroupBox [VDF3_Solution3]Sunny.UI.UIGroupBox VDF3_Solution3.FrSetting::슆슈 -> 뿎뾭
+	Sunny.UI.UITrackBar [VDF3_Solution3]Sunny.UI.UITrackBar VDF3_Solution3.FrSetting::슆쉃 -> 뿎뾈
+	Sunny.UI.UITrackBar [VDF3_Solution3]Sunny.UI.UITrackBar VDF3_Solution3.FrSetting::슆쉸 -> 뿎뽳
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSetting::슆숷 -> 뿎뾴
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSetting::슆슅 -> 뿎뾿
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSetting::슆쉒 -> 뿎뾮
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrSetting::슆숽 -> 뿎뽖
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSetting::슆숱 -> 뿎뽞
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSetting::슆쉬 -> 뿎뾼
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSetting::슆슊 -> 뿎뾨
+	Sunny.UI.UIGroupBox [VDF3_Solution3]Sunny.UI.UIGroupBox VDF3_Solution3.FrSetting::슆순 -> 뿎뿔
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSetting::슆숿 -> 뿎뿑
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSetting::슆쉜 -> 뿎뾃
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSetting::슆쉱 -> 뿎뿀
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSetting::슆쉥 -> 뿎뽠
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSetting::슆쉟 -> 뿎뽸
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSetting::슆쉍 -> 뿎뾳
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSetting::슆쉏 -> 뿎뽣
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSetting::슆쉐 -> 뿎뾎
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSetting::슆쉚 -> 뿎뽗
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSetting::슆쉿 -> 뿎뾕
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSetting::슆쉦 -> 뿎뿃
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSetting::슆쉌 -> 뿎뾗
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSetting::슆쉳 -> 뿎뾅
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSetting::슆쉰 -> 뿎뾝
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSetting::슆쉄 -> 뿎뾡
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSetting::슆숥 -> 뿎뽱
+	Sunny.UI.UIGroupBox [VDF3_Solution3]Sunny.UI.UIGroupBox VDF3_Solution3.FrSetting::슆술 -> 뿎뾋
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSetting::슆숹 -> 뿎뿄
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSetting::슆쉙 -> 뿎뽙
+	Sunny.UI.UIComboBox [VDF3_Solution3]Sunny.UI.UIComboBox VDF3_Solution3.FrSetting::슆쉊 -> 뿎뽴
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrSetting::슆쉛 -> 뿎뾌
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSetting::슆쉎 -> 뿎뿉
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSetting::슆숗 -> 뿎뾹
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSetting::슆숟 -> 뿎뽟
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSetting::슆쉠 -> 뿎뿅
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSetting::슆슐 -> 뿎뽿
+
+	Hikcamera [VDF3_Solution3]Hikcamera VDF3_Solution3.FrSetting::hikCamera skipped:  KeepPublicApi option in configuration
+	VDF3_Solution3.BaslerCamera [VDF3_Solution3]VDF3_Solution3.BaslerCamera VDF3_Solution3.FrSetting::baslerCamera skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrStartingUp skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrStartingUp::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrStartingUp::쉗[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrStartingUp::슆[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrStartingUp::숞[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrStartingUp::슌[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿂
+	[VDF3_Solution3]VDF3_Solution3.FrStartingUp::숼[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾙
+	[VDF3_Solution3]VDF3_Solution3.FrStartingUp::숭[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾯
+	[VDF3_Solution3]VDF3_Solution3.FrStartingUp::숚[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾁
+	[VDF3_Solution3]VDF3_Solution3.FrStartingUp::슁[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽚
+	[VDF3_Solution3]VDF3_Solution3.FrStartingUp::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.FrStartingUp::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrStartingUp::.ctor[0]( ) skipped:  special name
+
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.FrStartingUp::슆숕 -> 뿎뾄
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.FrStartingUp::슆수 -> 뿎뿕
+	System.Diagnostics.Stopwatch [VDF3_Solution3]System.Diagnostics.Stopwatch VDF3_Solution3.FrStartingUp::슆쉈 -> 뿎뽭
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrStartingUp::슆쉯 -> 뿎뽾
+	Sunny.UI.UIPanel [VDF3_Solution3]Sunny.UI.UIPanel VDF3_Solution3.FrStartingUp::슆숢 -> 뿎뽧
+	Sunny.UI.UIPanel [VDF3_Solution3]Sunny.UI.UIPanel VDF3_Solution3.FrStartingUp::슆쉘 -> 뿎뾵
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrStartingUp::슆숨 -> 뿎뾧
+	System.Windows.Forms.ToolStrip [VDF3_Solution3]System.Windows.Forms.ToolStrip VDF3_Solution3.FrStartingUp::숞쉣 -> 뿇뽹
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞쉗 -> 뿇뾞
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞슆 -> 뿇뿎
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞숞 -> 뿇뿇
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞슌 -> 뿇뿂
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞숼 -> 뿇뾙
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞숭 -> 뿇뾯
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞숚 -> 뿇뾁
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞슁 -> 뿇뽚
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞숺 -> 뿇뽦
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞숴 -> 뿇뿆
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞쉻 -> 뿇뾊
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞쉋 -> 뿇뽲
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrStartingUp::숞숝 -> 뿇뽥
+	Sunny.UI.UIGroupBox [VDF3_Solution3]Sunny.UI.UIGroupBox VDF3_Solution3.FrStartingUp::숞숒 -> 뿇뽜
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrStartingUp::숞숸 -> 뿇뾆
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrStartingUp::숞숳 -> 뿇뾜
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrStartingUp::숞슍 -> 뿇뽩
+	Sunny.UI.UIPanel [VDF3_Solution3]Sunny.UI.UIPanel VDF3_Solution3.FrStartingUp::숞쉔 -> 뿇뿓
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞숛 -> 뿇뾢
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrStartingUp::숞쉮 -> 뿇뽨
+	Sunny.UI.UIPanel [VDF3_Solution3]Sunny.UI.UIPanel VDF3_Solution3.FrStartingUp::숞쉴 -> 뿇뾥
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞숖 -> 뿇뽝
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞숣 -> 뿇뾬
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞숬 -> 뿇뾺
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞숧 -> 뿇뾇
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞쉑 -> 뿇뽵
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞숤 -> 뿇뿋
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞슋 -> 뿇뾱
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞쉢 -> 뿇뾐
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞쉡 -> 뿇뾑
+	System.Windows.Forms.Timer [VDF3_Solution3]System.Windows.Forms.Timer VDF3_Solution3.FrStartingUp::숞쉁 -> 뿇뽼
+	Sunny.UI.UIGroupBox [VDF3_Solution3]Sunny.UI.UIGroupBox VDF3_Solution3.FrStartingUp::숞쉞 -> 뿇뾲
+	Sunny.UI.UIGroupBox [VDF3_Solution3]Sunny.UI.UIGroupBox VDF3_Solution3.FrStartingUp::숞쉉 -> 뿇뾸
+	Sunny.UI.UITrackBar [VDF3_Solution3]Sunny.UI.UITrackBar VDF3_Solution3.FrStartingUp::숞쉵 -> 뿇뽡
+	Sunny.UI.UITrackBar [VDF3_Solution3]Sunny.UI.UITrackBar VDF3_Solution3.FrStartingUp::숞숵 -> 뿇뽮
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrStartingUp::숞슀 -> 뿇뽪
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞쉧 -> 뿇뾖
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrStartingUp::숞숡 -> 뿇뾣
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrStartingUp::숞쉹 -> 뿇뿌
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞숦 -> 뿇뽷
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrStartingUp::숞쉂 -> 뿇뾤
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrStartingUp::숞쉭 -> 뿇뽽
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrStartingUp::숞슏 -> 뿇뾒
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrStartingUp::숞쉾 -> 뿇뿐
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞쉷 -> 뿇뿊
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞슇 -> 뿇뿒
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞쉲 -> 뿇뾚
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞쉀 -> 뿇뾀
+	Sunny.UI.UIComboBox [VDF3_Solution3]Sunny.UI.UIComboBox VDF3_Solution3.FrStartingUp::숞쉼 -> 뿇뿁
+	Sunny.UI.UIComboBox [VDF3_Solution3]Sunny.UI.UIComboBox VDF3_Solution3.FrStartingUp::숞쉤 -> 뿇뽬
+	Sunny.UI.UIComboBox [VDF3_Solution3]Sunny.UI.UIComboBox VDF3_Solution3.FrStartingUp::숞쉺 -> 뿇뾰
+	Sunny.UI.UIComboBox [VDF3_Solution3]Sunny.UI.UIComboBox VDF3_Solution3.FrStartingUp::숞쉖 -> 뿇뽛
+	Sunny.UI.UIComboBox [VDF3_Solution3]Sunny.UI.UIComboBox VDF3_Solution3.FrStartingUp::숞슉 -> 뿇뾛
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞숻 -> 뿇뾶
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞숪 -> 뿇뽤
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞숶 -> 뿇뾾
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞숑 -> 뿇뾉
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞쉨 -> 뿇뽯
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrStartingUp::숞쉪 -> 뿇뾔
+	Sunny.UI.UIComboBox [VDF3_Solution3]Sunny.UI.UIComboBox VDF3_Solution3.FrStartingUp::숞숰 -> 뿇뾻
+	Sunny.UI.UIComboBox [VDF3_Solution3]Sunny.UI.UIComboBox VDF3_Solution3.FrStartingUp::숞숓 -> 뿇뿏
+	Sunny.UI.UIComboBox [VDF3_Solution3]Sunny.UI.UIComboBox VDF3_Solution3.FrStartingUp::숞쉝 -> 뿇뾪
+	Sunny.UI.UIComboBox [VDF3_Solution3]Sunny.UI.UIComboBox VDF3_Solution3.FrStartingUp::숞숙 -> 뿇뽰
+	Sunny.UI.UIComboBox [VDF3_Solution3]Sunny.UI.UIComboBox VDF3_Solution3.FrStartingUp::숞쉅 -> 뿇뿍
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrVision skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrVision::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrVision::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosedEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrVision::쉗[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrVision::쉗[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosedEventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrVision::슆[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrVision::슆[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosedEventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrVision::숞[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrVision::숞[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosedEventArgs ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrVision::슌[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿂
+	[VDF3_Solution3]VDF3_Solution3.FrVision::슌[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosedEventArgs ) -> 뿂
+	[VDF3_Solution3]VDF3_Solution3.FrVision::숼[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾙
+	[VDF3_Solution3]VDF3_Solution3.FrVision::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.FrVision::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrVision::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.FrStartingUp [VDF3_Solution3]VDF3_Solution3.FrStartingUp VDF3_Solution3.FrVision::숞숫 -> 뿇뾷
+	VDF3_Solution3.FrDetection [VDF3_Solution3]VDF3_Solution3.FrDetection VDF3_Solution3.FrVision::숞숮 -> 뿇뿈
+	VDF3_Solution3.FrPickTeaching [VDF3_Solution3]VDF3_Solution3.FrPickTeaching VDF3_Solution3.FrVision::숞숯 -> 뿇뽺
+	VDF3_Solution3.FrResultEvaluation [VDF3_Solution3]VDF3_Solution3.FrResultEvaluation VDF3_Solution3.FrVision::숞슃 -> 뿇뾂
+	VDF3_Solution3.FrFinish [VDF3_Solution3]VDF3_Solution3.FrFinish VDF3_Solution3.FrVision::숞숔 -> 뿇뾦
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrVision::숞쉓 -> 뿇뽻
+	System.Windows.Forms.Label [VDF3_Solution3]System.Windows.Forms.Label VDF3_Solution3.FrVision::숞쉇 -> 뿇뽘
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrVision::숞쉽 -> 뿇뾟
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrVision::숞숾 -> 뿇뾽
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrVision::숞슂 -> 뿇뽶
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrVision::숞슄 -> 뿇뾩
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrVision::숞슎 -> 뿇뾏
+	System.Windows.Forms.Panel [VDF3_Solution3]System.Windows.Forms.Panel VDF3_Solution3.FrVision::숞쉕 -> 뿇뾓
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrSettingRobot skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::쉣[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::쉣[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosedEventArgs ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::쉗[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::쉗[2]( [mscorlib]System.Object, [System.Windows.Forms]System.Windows.Forms.FormClosedEventArgs ) -> 뾞
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::슆[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿎
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::숞[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿇
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::쉣[0]( ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::슌[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뿂
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::숼[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾙
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::숭[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾯
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::쉣[2]( [mscorlib]System.String, [mscorlib]System.Object ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::숚[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뾁
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::슁[2]( [mscorlib]System.Object, [mscorlib]System.EventArgs ) -> 뽚
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::쉗[0]( ) -> 뾞
+
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrSettingRobot::.ctor[0]( ) skipped:  special name
+
+	VDF3_Solution3.FrSetting [VDF3_Solution3]VDF3_Solution3.FrSetting VDF3_Solution3.FrSettingRobot::숞쉶 -> 뿇뾘
+	VDF3_Solution3.FrSettingModbus [VDF3_Solution3]VDF3_Solution3.FrSettingModbus VDF3_Solution3.FrSettingRobot::숞숲 -> 뿇뾠
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrSettingRobot::숞숩 -> 뿇뽫
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::숞쉆 -> 뿇뾫
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::숞쉩 -> 뿇뽢
+	System.Windows.Forms.Panel [VDF3_Solution3]System.Windows.Forms.Panel VDF3_Solution3.FrSettingRobot::숞쉫 -> 뿇뾍
+	Sunny.UI.UIGroupBox [VDF3_Solution3]Sunny.UI.UIGroupBox VDF3_Solution3.FrSettingRobot::숞슈 -> 뿇뾭
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSettingRobot::숞쉃 -> 뿇뾈
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::숞쉸 -> 뿇뽳
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::숞숷 -> 뿇뾴
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::숞슅 -> 뿇뾿
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSettingRobot::숞쉒 -> 뿇뾮
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::숞숽 -> 뿇뽖
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSettingRobot::숞숱 -> 뿇뽞
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSettingRobot::숞쉬 -> 뿇뾼
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::숞슊 -> 뿇뾨
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::숞순 -> 뿇뿔
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSettingRobot::숞숿 -> 뿇뿑
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::숞쉜 -> 뿇뾃
+	Sunny.UI.UILabel [VDF3_Solution3]Sunny.UI.UILabel VDF3_Solution3.FrSettingRobot::숞쉱 -> 뿇뿀
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::숞쉥 -> 뿇뽠
+	Sunny.UI.UIGroupBox [VDF3_Solution3]Sunny.UI.UIGroupBox VDF3_Solution3.FrSettingRobot::숞쉟 -> 뿇뽸
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::숞쉍 -> 뿇뾳
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::숞쉏 -> 뿇뽣
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrSettingRobot::숞쉐 -> 뿇뾎
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::숞쉚 -> 뿇뽗
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrSettingRobot::숞쉿 -> 뿇뾕
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrSettingRobot::숞쉦 -> 뿇뿃
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::숞쉌 -> 뿇뾗
+	Sunny.UI.UIGroupBox [VDF3_Solution3]Sunny.UI.UIGroupBox VDF3_Solution3.FrSettingRobot::숞쉳 -> 뿇뾅
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrSettingRobot::숞쉰 -> 뿇뾝
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrSettingRobot::숞쉄 -> 뿇뾡
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::숞숥 -> 뿇뽱
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::숞술 -> 뿇뾋
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::숞숹 -> 뿇뿄
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::숞쉙 -> 뿇뽙
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::숞쉊 -> 뿇뽴
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::숞쉛 -> 뿇뾌
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::숞쉎 -> 뿇뿉
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::숞숗 -> 뿇뾹
+	System.Windows.Forms.ListBox [VDF3_Solution3]System.Windows.Forms.ListBox VDF3_Solution3.FrSettingRobot::숞숟 -> 뿇뽟
+	System.Windows.Forms.ListBox [VDF3_Solution3]System.Windows.Forms.ListBox VDF3_Solution3.FrSettingRobot::숞쉠 -> 뿇뿅
+	Sunny.UI.UIGroupBox [VDF3_Solution3]Sunny.UI.UIGroupBox VDF3_Solution3.FrSettingRobot::숞슐 -> 뿇뽿
+	Sunny.UI.UIRadioButton [VDF3_Solution3]Sunny.UI.UIRadioButton VDF3_Solution3.FrSettingRobot::숞숕 -> 뿇뾄
+	Sunny.UI.UIRadioButton [VDF3_Solution3]Sunny.UI.UIRadioButton VDF3_Solution3.FrSettingRobot::숞수 -> 뿇뿕
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrSettingRobot::숞쉈 -> 뿇뽭
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::숞쉯 -> 뿇뽾
+	System.Windows.Forms.Label [VDF3_Solution3]System.Windows.Forms.Label VDF3_Solution3.FrSettingRobot::숞숢 -> 뿇뽧
+	System.Windows.Forms.Label [VDF3_Solution3]System.Windows.Forms.Label VDF3_Solution3.FrSettingRobot::숞쉘 -> 뿇뾵
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrSettingRobot::숞숨 -> 뿇뾧
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::슌쉣 -> 뿂뽹
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::슌쉗 -> 뿂뾞
+	Sunny.UI.UITextBox [VDF3_Solution3]Sunny.UI.UITextBox VDF3_Solution3.FrSettingRobot::슌슆 -> 뿂뿎
+	System.Windows.Forms.Label [VDF3_Solution3]System.Windows.Forms.Label VDF3_Solution3.FrSettingRobot::슌숞 -> 뿂뿇
+	System.Windows.Forms.Label [VDF3_Solution3]System.Windows.Forms.Label VDF3_Solution3.FrSettingRobot::슌슌 -> 뿂뿂
+	System.Windows.Forms.Label [VDF3_Solution3]System.Windows.Forms.Label VDF3_Solution3.FrSettingRobot::슌숼 -> 뿂뾙
+	System.Windows.Forms.Label [VDF3_Solution3]System.Windows.Forms.Label VDF3_Solution3.FrSettingRobot::슌숭 -> 뿂뾯
+	System.Windows.Forms.Label [VDF3_Solution3]System.Windows.Forms.Label VDF3_Solution3.FrSettingRobot::슌숚 -> 뿂뾁
+	System.Windows.Forms.Label [VDF3_Solution3]System.Windows.Forms.Label VDF3_Solution3.FrSettingRobot::슌슁 -> 뿂뽚
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::슌숺 -> 뿂뽦
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::슌숴 -> 뿂뿆
+	Sunny.UI.UISymbolLabel [VDF3_Solution3]Sunny.UI.UISymbolLabel VDF3_Solution3.FrSettingRobot::슌쉻 -> 뿂뾊
+	Sunny.UI.UISymbolButton [VDF3_Solution3]Sunny.UI.UISymbolButton VDF3_Solution3.FrSettingRobot::슌쉋 -> 뿂뽲
+}
+
+[VDF3_Solution3]VDF3_Solution3.mdiProperties skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.mdiProperties::쉣[2]( [mscorlib]System.IntPtr, [mscorlib]System.Int32 ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.mdiProperties::쉣[3]( [mscorlib]System.IntPtr, [mscorlib]System.Int32, [mscorlib]System.Int32 ) -> 뽹
+	[VDF3_Solution3]VDF3_Solution3.mdiProperties::쉣[7]( [mscorlib]System.IntPtr, [mscorlib]System.IntPtr, [mscorlib]System.Int32, [mscorlib]System.Int32, [mscorlib]System.Int32, [mscorlib]System.Int32, [mscorlib]System.UInt32 ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.mdiProperties::SetBevel[2]( [System.Windows.Forms]System.Windows.Forms.Form, [mscorlib]System.Boolean ) skipped:  KeepPublicApi option in configuration
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.mdiProperties::슌숝 -> 뿂뽥
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.mdiProperties::슌숒 -> 뿂뽜
+	System.UInt32 [VDF3_Solution3]System.UInt32 VDF3_Solution3.mdiProperties::슌숸 -> 뿂뾆
+	System.UInt32 [VDF3_Solution3]System.UInt32 VDF3_Solution3.mdiProperties::슌숳 -> 뿂뾜
+	System.UInt32 [VDF3_Solution3]System.UInt32 VDF3_Solution3.mdiProperties::슌슍 -> 뿂뽩
+	System.UInt32 [VDF3_Solution3]System.UInt32 VDF3_Solution3.mdiProperties::슌쉔 -> 뿂뿓
+	System.UInt32 [VDF3_Solution3]System.UInt32 VDF3_Solution3.mdiProperties::슌숛 -> 뿂뾢
+	System.UInt32 [VDF3_Solution3]System.UInt32 VDF3_Solution3.mdiProperties::슌쉮 -> 뿂뽨
+}
+
+[VDF3_Solution3]VDF3_Solution3.ModbusHelper skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::add_OnConnected[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.String> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::remove_OnConnected[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.String> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::add_OnDisconnected[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.String> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::remove_OnDisconnected[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.String> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::add_OnErrorOccurred[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.String> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::remove_OnErrorOccurred[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.String> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::add_OnDataRead[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.Int32[]> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::remove_OnDataRead[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.Int32[]> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::add_OnDataWritten[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.String> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::remove_OnDataWritten[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.String> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::add_OnCoilsRead[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.Boolean[]> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::remove_OnCoilsRead[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.Boolean[]> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::add_OnCoilsWritten[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.String> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::remove_OnCoilsWritten[1]( [mscorlib]System.EventHandler`1<[mscorlib]System.String> ) skipped:  skip by event
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::.ctor[2]( [mscorlib]System.String, [mscorlib]System.Int32 ) skipped:  special name
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::ConnectAsync[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::Disconnect[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::IsConnected[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::AutoReconnectAsync[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::ReadSingleCoilAsync[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::ReadMultipleCoilsAsync[2]( [mscorlib]System.Int32, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::WriteSingleCoilAsync[2]( [mscorlib]System.Int32, [mscorlib]System.Boolean ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::WriteMultipleCoilsAsync[2]( [mscorlib]System.Int32, [mscorlib]System.Boolean[] ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::ReadMultipleRegistersAsync[2]( [mscorlib]System.Int32, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::ReadSingleRegisterAsync[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::WriteSingleRegisterAsync[2]( [mscorlib]System.Int32, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::WriteMultipleRegistersAsync[2]( [mscorlib]System.Int32, [mscorlib]System.Int32[] ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::ConvertRegistersToInt[1]( [mscorlib]System.Int32[] ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::ConvertRegistersToFloat[1]( [mscorlib]System.Int32[] ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::ConvertIntToRegisters[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]VDF3_Solution3.ModbusHelper::ConvertFloatToRegisters[1]( [mscorlib]System.Single ) skipped:  KeepPublicApi option in configuration
+
+	EasyModbus.ModbusClient [VDF3_Solution3]EasyModbus.ModbusClient VDF3_Solution3.ModbusHelper::슌쉴 -> 뿂뾥
+	System.EventHandler`1<System.String> [VDF3_Solution3]System.EventHandler`1<System.String> VDF3_Solution3.ModbusHelper::슌숖 -> 뿂뽝
+	System.EventHandler`1<System.String> [VDF3_Solution3]System.EventHandler`1<System.String> VDF3_Solution3.ModbusHelper::슌숣 -> 뿂뾬
+	System.EventHandler`1<System.String> [VDF3_Solution3]System.EventHandler`1<System.String> VDF3_Solution3.ModbusHelper::슌숬 -> 뿂뾺
+	System.EventHandler`1<System.Int32[]> [VDF3_Solution3]System.EventHandler`1<System.Int32[]> VDF3_Solution3.ModbusHelper::슌숧 -> 뿂뾇
+	System.EventHandler`1<System.String> [VDF3_Solution3]System.EventHandler`1<System.String> VDF3_Solution3.ModbusHelper::슌쉑 -> 뿂뽵
+	System.EventHandler`1<System.Boolean[]> [VDF3_Solution3]System.EventHandler`1<System.Boolean[]> VDF3_Solution3.ModbusHelper::슌숤 -> 뿂뿋
+	System.EventHandler`1<System.String> [VDF3_Solution3]System.EventHandler`1<System.String> VDF3_Solution3.ModbusHelper::슌슋 -> 뿂뾱
+
+
+	System.EventHandler`1<System.String> [VDF3_Solution3]System.EventHandler`1<System.String> VDF3_Solution3.ModbusHelper::OnConnected skipped:  KeepPublicApi option in configuration
+	System.EventHandler`1<System.String> [VDF3_Solution3]System.EventHandler`1<System.String> VDF3_Solution3.ModbusHelper::OnDisconnected skipped:  KeepPublicApi option in configuration
+	System.EventHandler`1<System.String> [VDF3_Solution3]System.EventHandler`1<System.String> VDF3_Solution3.ModbusHelper::OnErrorOccurred skipped:  KeepPublicApi option in configuration
+	System.EventHandler`1<System.Int32[]> [VDF3_Solution3]System.EventHandler`1<System.Int32[]> VDF3_Solution3.ModbusHelper::OnDataRead skipped:  KeepPublicApi option in configuration
+	System.EventHandler`1<System.String> [VDF3_Solution3]System.EventHandler`1<System.String> VDF3_Solution3.ModbusHelper::OnDataWritten skipped:  KeepPublicApi option in configuration
+	System.EventHandler`1<System.Boolean[]> [VDF3_Solution3]System.EventHandler`1<System.Boolean[]> VDF3_Solution3.ModbusHelper::OnCoilsRead skipped:  KeepPublicApi option in configuration
+	System.EventHandler`1<System.String> [VDF3_Solution3]System.EventHandler`1<System.String> VDF3_Solution3.ModbusHelper::OnCoilsWritten skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrResultEvaluation skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]VDF3_Solution3.FrResultEvaluation::쉣[0]( ) -> 뽹
+
+	[VDF3_Solution3]VDF3_Solution3.FrResultEvaluation::Dispose[1]( [mscorlib]System.Boolean ) skipped:  external base class or interface
+	[VDF3_Solution3]VDF3_Solution3.FrResultEvaluation::.ctor[0]( ) skipped:  special name
+
+	System.ComponentModel.IContainer [VDF3_Solution3]System.ComponentModel.IContainer VDF3_Solution3.FrResultEvaluation::슌쉢 -> 뿂뾐
+	System.Windows.Forms.ToolStrip [VDF3_Solution3]System.Windows.Forms.ToolStrip VDF3_Solution3.FrResultEvaluation::슌쉡 -> 뿂뾑
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrResultEvaluation::슌쉁 -> 뿂뽼
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrResultEvaluation::슌쉞 -> 뿂뾲
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrResultEvaluation::슌쉉 -> 뿂뾸
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrResultEvaluation::슌쉵 -> 뿂뽡
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrResultEvaluation::슌숵 -> 뿂뽮
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrResultEvaluation::슌슀 -> 뿂뽪
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrResultEvaluation::슌쉧 -> 뿂뾖
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrResultEvaluation::슌숡 -> 뿂뾣
+	System.Windows.Forms.ToolStripButton [VDF3_Solution3]System.Windows.Forms.ToolStripButton VDF3_Solution3.FrResultEvaluation::슌쉹 -> 뿂뿌
+	System.Windows.Forms.ListBox [VDF3_Solution3]System.Windows.Forms.ListBox VDF3_Solution3.FrResultEvaluation::슌숦 -> 뿂뽷
+	System.Windows.Forms.ListBox [VDF3_Solution3]System.Windows.Forms.ListBox VDF3_Solution3.FrResultEvaluation::슌쉂 -> 뿂뾤
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrResultEvaluation::슌쉭 -> 뿂뽽
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrResultEvaluation::슌슏 -> 뿂뾒
+	FontAwesome.Sharp.IconButton [VDF3_Solution3]FontAwesome.Sharp.IconButton VDF3_Solution3.FrResultEvaluation::슌쉾 -> 뿂뿐
+	Sunny.UI.UIPanel [VDF3_Solution3]Sunny.UI.UIPanel VDF3_Solution3.FrResultEvaluation::슌쉷 -> 뿂뿊
+	System.Windows.Forms.PictureBox [VDF3_Solution3]System.Windows.Forms.PictureBox VDF3_Solution3.FrResultEvaluation::슌슇 -> 뿂뿒
+}
+
+[VDF3_Solution3]Hikcamera skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]Hikcamera::쉣[0]( ) -> 뽹
+	[VDF3_Solution3]Hikcamera::쉗[0]( ) -> 뾞
+	[VDF3_Solution3]Hikcamera::슆[0]( ) -> 뿎
+
+	[VDF3_Solution3]Hikcamera::Start[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Hikcamera::Stop[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Hikcamera::Capture[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Hikcamera::SetExposure[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Hikcamera::SetBrightness[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Hikcamera::SetGain[1]( [mscorlib]System.Single ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Hikcamera::.ctor[2]( [mscorlib]System.String, [mscorlib]System.String ) skipped:  special name
+	[VDF3_Solution3]Hikcamera::StartLive[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Hikcamera::StopLive[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Hikcamera::SaveImage[1]( [MvCameraControl.Net]MvCameraControl.ImageFormatInfo ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Hikcamera::RefreshDeviceList[0]( ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Hikcamera::GetDeviceInfo[1]( [mscorlib]System.String ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Hikcamera::ForceIp[4]( [mscorlib]System.String, [mscorlib]System.String, [mscorlib]System.String, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]Hikcamera::GetDeviceNetworkInfo[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+
+	MvCameraControl.DeviceTLayerType [VDF3_Solution3]MvCameraControl.DeviceTLayerType Hikcamera::슌쉍 -> 뿂뽗
+	System.Collections.Generic.List`1<MvCameraControl.IDeviceInfo> [VDF3_Solution3]System.Collections.Generic.List`1<MvCameraControl.IDeviceInfo> Hikcamera::슌쉏 -> 뿂뾕
+	MvCameraControl.IDevice [VDF3_Solution3]MvCameraControl.IDevice Hikcamera::슌쉐 -> 뿂뿃
+	System.Boolean [VDF3_Solution3]System.Boolean Hikcamera::슌쉚 -> 뿂뾗
+	System.Threading.Thread [VDF3_Solution3]System.Threading.Thread Hikcamera::슌쉿 -> 뿂뾅
+	MvCameraControl.IFrameOut [VDF3_Solution3]MvCameraControl.IFrameOut Hikcamera::슌쉦 -> 뿂뾝
+	System.Object [VDF3_Solution3]System.Object Hikcamera::슌쉌 -> 뿂뾡
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::get_imgpath[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::set_imgpath[1]( [mscorlib]System.String ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::get_X[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::set_X[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::get_Y[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::set_Y[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::get_Width[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::set_Width[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::get_Height[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::set_Height[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::get_Angle[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::set_Angle[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::get_Score[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::set_Score[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::get_Vertices[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::set_Vertices[1]( [mscorlib]System.Collections.Generic.List`1<[System.Drawing]System.Drawing.PointF> ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::get_TransformMatrix[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::set_TransformMatrix[1]( [System.Drawing]System.Drawing.Drawing2D.Matrix ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrPickTeaching/BoundingBox::.ctor[0]( ) skipped:  special name
+
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrPickTeaching/BoundingBox::숼숣 -> 뾙뽵
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrPickTeaching/BoundingBox::숼숬 -> 뾙뿋
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrPickTeaching/BoundingBox::숼숧 -> 뾙뾱
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrPickTeaching/BoundingBox::숼쉑 -> 뾙뾐
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrPickTeaching/BoundingBox::숼숤 -> 뾙뾑
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrPickTeaching/BoundingBox::숼슋 -> 뾙뽼
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrPickTeaching/BoundingBox::숼쉢 -> 뾙뾲
+	System.Collections.Generic.List`1<System.Drawing.PointF> [VDF3_Solution3]System.Collections.Generic.List`1<System.Drawing.PointF> VDF3_Solution3.FrPickTeaching/BoundingBox::숼쉡 -> 뾙뾸
+	System.Drawing.Drawing2D.Matrix [VDF3_Solution3]System.Drawing.Drawing2D.Matrix VDF3_Solution3.FrPickTeaching/BoundingBox::숼쉁 -> 뾙뽡
+
+
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrPickTeaching/BoundingBox::imgpath skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrPickTeaching/BoundingBox::X skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrPickTeaching/BoundingBox::Y skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrPickTeaching/BoundingBox::Width skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrPickTeaching/BoundingBox::Height skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrPickTeaching/BoundingBox::Angle skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrPickTeaching/BoundingBox::Score skipped:  KeepPublicApi option in configuration
+	System.Collections.Generic.List`1<System.Drawing.PointF> [VDF3_Solution3]System.Collections.Generic.List`1<System.Drawing.PointF> VDF3_Solution3.FrPickTeaching/BoundingBox::Vertices skipped:  KeepPublicApi option in configuration
+	System.Drawing.Drawing2D.Matrix [VDF3_Solution3]System.Drawing.Drawing2D.Matrix VDF3_Solution3.FrPickTeaching/BoundingBox::TransformMatrix skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrProject/RecentProject skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]VDF3_Solution3.FrProject/RecentProject::get_Name[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrProject/RecentProject::set_Name[1]( [mscorlib]System.String ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrProject/RecentProject::get_Path[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrProject/RecentProject::set_Path[1]( [mscorlib]System.String ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrProject/RecentProject::get_LastOpened[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrProject/RecentProject::set_LastOpened[1]( [mscorlib]System.DateTime ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrProject/RecentProject::get_IsPinned[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrProject/RecentProject::set_IsPinned[1]( [mscorlib]System.Boolean ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrProject/RecentProject::.ctor[4]( [mscorlib]System.String, [mscorlib]System.String, [mscorlib]System.DateTime, [mscorlib]System.Boolean ) skipped:  special name
+
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrProject/RecentProject::숼쉞 -> 뾙뽮
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrProject/RecentProject::숼쉉 -> 뾙뽪
+	System.DateTime [VDF3_Solution3]System.DateTime VDF3_Solution3.FrProject/RecentProject::숼쉵 -> 뾙뾖
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.FrProject/RecentProject::숼숵 -> 뾙뾣
+
+
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrProject/RecentProject::Name skipped:  KeepPublicApi option in configuration
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrProject/RecentProject::Path skipped:  KeepPublicApi option in configuration
+	System.DateTime [VDF3_Solution3]System.DateTime VDF3_Solution3.FrProject/RecentProject::LastOpened skipped:  KeepPublicApi option in configuration
+	System.Boolean [VDF3_Solution3]System.Boolean VDF3_Solution3.FrProject/RecentProject::IsPinned skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrRobot/RobotPoint skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]VDF3_Solution3.FrRobot/RobotPoint::get_x[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRobot/RobotPoint::set_x[1]( [mscorlib]System.Double ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRobot/RobotPoint::get_y[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRobot/RobotPoint::set_y[1]( [mscorlib]System.Double ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRobot/RobotPoint::.ctor[2]( [mscorlib]System.Double, [mscorlib]System.Double ) skipped:  special name
+
+	System.Double [VDF3_Solution3]System.Double VDF3_Solution3.FrRobot/RobotPoint::숼숡 -> 뾙뾤
+	System.Double [VDF3_Solution3]System.Double VDF3_Solution3.FrRobot/RobotPoint::숼쉹 -> 뾙뽽
+
+
+	System.Double [VDF3_Solution3]System.Double VDF3_Solution3.FrRobot/RobotPoint::x skipped:  KeepPublicApi option in configuration
+	System.Double [VDF3_Solution3]System.Double VDF3_Solution3.FrRobot/RobotPoint::y skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrRun/CoordinateData skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]VDF3_Solution3.FrRun/CoordinateData::get_x[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/CoordinateData::set_x[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/CoordinateData::get_y[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/CoordinateData::set_y[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/CoordinateData::get_angle[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/CoordinateData::set_angle[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/CoordinateData::.ctor[3]( [mscorlib]System.Single, [mscorlib]System.Single, [mscorlib]System.Single ) skipped:  special name
+	[VDF3_Solution3]VDF3_Solution3.FrRun/CoordinateData::ToString[0]( ) skipped:  external base class or interface
+
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/CoordinateData::숼숯 -> 뾙뽻
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/CoordinateData::숼슃 -> 뾙뽘
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/CoordinateData::숼숔 -> 뾙뾟
+
+
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/CoordinateData::x skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/CoordinateData::y skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/CoordinateData::angle skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrRun/BoundingBoxRun skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]VDF3_Solution3.FrRun/BoundingBoxRun::get_imgpath[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/BoundingBoxRun::set_imgpath[1]( [mscorlib]System.String ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/BoundingBoxRun::get_OriginalVertices[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/BoundingBoxRun::set_OriginalVertices[1]( [mscorlib]System.Collections.Generic.List`1<[System.Drawing]System.Drawing.PointF> ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/BoundingBoxRun::get_Vertices[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/BoundingBoxRun::set_Vertices[1]( [mscorlib]System.Collections.Generic.List`1<[System.Drawing]System.Drawing.PointF> ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/BoundingBoxRun::.ctor[0]( ) skipped:  special name
+
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrRun/BoundingBoxRun::숼쉓 -> 뾙뾽
+	System.Collections.Generic.List`1<System.Drawing.PointF> [VDF3_Solution3]System.Collections.Generic.List`1<System.Drawing.PointF> VDF3_Solution3.FrRun/BoundingBoxRun::숼쉇 -> 뾙뽶
+	System.Collections.Generic.List`1<System.Drawing.PointF> [VDF3_Solution3]System.Collections.Generic.List`1<System.Drawing.PointF> VDF3_Solution3.FrRun/BoundingBoxRun::숼쉽 -> 뾙뾩
+
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrRun/BoundingBoxRun::X skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrRun/BoundingBoxRun::Y skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrRun/BoundingBoxRun::Width skipped:  KeepPublicApi option in configuration
+	System.Int32 [VDF3_Solution3]System.Int32 VDF3_Solution3.FrRun/BoundingBoxRun::Height skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/BoundingBoxRun::Angle skipped:  KeepPublicApi option in configuration
+
+
+	System.String [VDF3_Solution3]System.String VDF3_Solution3.FrRun/BoundingBoxRun::imgpath skipped:  KeepPublicApi option in configuration
+	System.Collections.Generic.List`1<System.Drawing.PointF> [VDF3_Solution3]System.Collections.Generic.List`1<System.Drawing.PointF> VDF3_Solution3.FrRun/BoundingBoxRun::OriginalVertices skipped:  KeepPublicApi option in configuration
+	System.Collections.Generic.List`1<System.Drawing.PointF> [VDF3_Solution3]System.Collections.Generic.List`1<System.Drawing.PointF> VDF3_Solution3.FrRun/BoundingBoxRun::Vertices skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::get_Cx[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::set_Cx[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::get_Cy[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::set_Cy[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::get_Cangle[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::set_Cangle[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::get_Rx[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::set_Rx[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::get_Ry[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::set_Ry[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::get_Rangle[0]( ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::set_Rangle[1]( [mscorlib]System.Single ) skipped:  skip by property
+	[VDF3_Solution3]VDF3_Solution3.FrRun/ListviewCoordinates::.ctor[0]( ) skipped:  special name
+
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/ListviewCoordinates::숼숾 -> 뾙뾏
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/ListviewCoordinates::숼슂 -> 뾙뾓
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/ListviewCoordinates::숼슄 -> 뾙뾘
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/ListviewCoordinates::숼슎 -> 뾙뾠
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/ListviewCoordinates::숼쉕 -> 뾙뽫
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/ListviewCoordinates::숼쉶 -> 뾙뾫
+
+
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/ListviewCoordinates::Cx skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/ListviewCoordinates::Cy skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/ListviewCoordinates::Cangle skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/ListviewCoordinates::Rx skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/ListviewCoordinates::Ry skipped:  KeepPublicApi option in configuration
+	System.Single [VDF3_Solution3]System.Single VDF3_Solution3.FrRun/ListviewCoordinates::Rangle skipped:  KeepPublicApi option in configuration
+}
+
+[VDF3_Solution3]InvokeService skipped:  KeepPublicApi option in configuration
+{
+
+	[VDF3_Solution3]InvokeService::SendData[2]( [mscorlib]System.String, [mscorlib]System.Object ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]InvokeService::GetData[1]( [mscorlib]System.String ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]InvokeService::.ctor[0]( ) skipped:  special name
+}
+
+[VDF3_Solution3]BoundingBoxDrawer skipped:  KeepPublicApi option in configuration
+{
+	[VDF3_Solution3]BoundingBoxDrawer::쉣[4]( [System.Drawing]System.Drawing.PointF, [mscorlib]System.Single, [mscorlib]System.Single, [mscorlib]System.Single ) -> 뽹
+
+	[VDF3_Solution3]BoundingBoxDrawer::LoadImageAndDrawBoundingBox[7]( [System.Windows.Forms]System.Windows.Forms.PictureBox, [mscorlib]System.String, [mscorlib]System.Int32, [mscorlib]System.Int32, [mscorlib]System.Int32, [mscorlib]System.Int32, [mscorlib]System.Single ) skipped:  KeepPublicApi option in configuration
+	[VDF3_Solution3]BoundingBoxDrawer::.ctor[0]( ) skipped:  special name
+}
+
+Renamed Resources:
+
+쉣.쉗.resources -> 뽹.뾞.resources
+
+Skipped Resources:
+
+VDF3_Solution3.FrSettingModbus.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrFinish.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrMain.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrDetection.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrPickTeaching.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrHome.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrProject.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrRobot.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrRun.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrSetting.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrStartingUp.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrVision.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrSettingRobot.resources (KeepPublicApi option in configuration)
+VDF3_Solution3.FrResultEvaluation.resources (KeepPublicApi option in configuration)

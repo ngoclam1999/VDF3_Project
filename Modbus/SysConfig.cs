@@ -8,6 +8,13 @@ using System.Web;
 
 public static class SystemCongfig
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    public static string PresentFilePath;
+    /// <summary>
+    /// 
+    /// </summary>
     public static bool _directControl = false;
     /// <summary>
     /// Đường dẫn chương trình đang mở hiện tại

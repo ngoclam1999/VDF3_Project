@@ -75,75 +75,8 @@ public class ApiClient
         }
 
     }
-    /*
-    /// <summary>
-    /// Gửi ảnh (Image) và chuỗi JSON (string) đến FastAPI.
-    /// </summary>
-    /// <param name="image">Đối tượng Image từ PictureBox</param>
-    /// <param name="jsonString">Chuỗi JSON cần gửi</param>
-    public static async Task SendCalibrationRequest(Image image, string jsonString)
-    {
-        // Địa chỉ FastAPI endpoint
-        string url = "http://192.168.0.5:8000/api/calibrate/";
 
-        using (HttpClient client = new HttpClient())
-        using (MultipartFormDataContent form = new MultipartFormDataContent())
-        {
-            try
-            {
-                // Chuyển ảnh thành byte[]
-                byte[] imageBytes = ImageToByteArray(image);
-                var imageContent = new ByteArrayContent(imageBytes);
-                imageContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
-
-                // Chuyển chuỗi JSON thành StringContent
-                var jsonContent = new StringContent(jsonString, Encoding.UTF8, "application/json");
-
-                // Thêm dữ liệu vào form theo định dạng của cURL:
-                // - Key "file" với file ảnh, tên file có thể là "CalibPlate.jpg"
-                // - Key "coordinates_file" với JSON, tên file có thể là "test.json"
-                form.Add(imageContent, "file", "CalibPlate.jpg");
-                form.Add(jsonContent, "coordinates_file", "test.json");
-
-                // Gửi yêu cầu POST
-                HttpResponseMessage response = await client.PostAsync(url, form);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    string responseString = await response.Content.ReadAsStringAsync();
-                    // Parse JSON
-                    JObject jsonData = JObject.Parse(responseString);
-
-                    // Chuyển đổi ma trận 3x3 (homography_matrix)
-                    double[,] homographyMatrix = new double[3, 3];
-                    JArray homographyArray = (JArray)jsonData["homography_matrix"];
-
-                    for (int i = 0; i < 3; i++)
-                    {
-                        JArray row = (JArray)homographyArray[i];
-                        for (int j = 0; j < 3; j++)
-                        {
-                            homographyMatrix[i, j] = row[j].ToObject<double>();
-                        }
-                    }
-
-                    MessageBox.Show($"Success:\n{responseString}", "Server Response", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                }
-                else
-                {
-                    string errorResponse = await response.Content.ReadAsStringAsync();
-                    MessageBox.Show($"Error {response.StatusCode}:\n{errorResponse}", "Server Response", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Request failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-    }
-    */
-    public static async Task<(List<List<int>>, double[,], double, double, List<double>)> SendCalibrationRequest(Image image, string jsonString)
+    public static async Task<(List<List<int>>, float[,], float, float, List<float>)> SendCalibrationRequest(Image image, string jsonString)
     {
         // Địa chỉ FastAPI endpoint
         string url = "http://192.168.0.5:8000/api/calibrate/";
@@ -181,24 +114,24 @@ public class ApiClient
 
                     // Lấy ma trận homography 3x3
                     JArray homographyArray = (JArray)jsonData["homography_matrix"];
-                    double[,] homographyMatrix = new double[3, 3];
+                    float[,] homographyMatrix = new float[3, 3];
 
                     for (int i = 0; i < 3; i++)
                     {
                         JArray row = (JArray)homographyArray[i];
                         for (int j = 0; j < 3; j++)
                         {
-                            homographyMatrix[i, j] = row[j].ToObject<double>();
+                            homographyMatrix[i, j] = row[j].ToObject<float>();
                         }
                     }
 
                     // Lấy sai số từng điểm
                     JArray errorsArray = (JArray)jsonData["reprojection_errors"]["errors_per_point"];
-                    List<double> errorsPerPoint = errorsArray.ToObject<List<double>>();
+                    List<float> errorsPerPoint = errorsArray.ToObject<List<float>>();
 
                     // Lấy sai số trung bình và lớn nhất
-                    double meanError = jsonData["reprojection_errors"]["mean_error"].ToObject<double>();
-                    double maxError = jsonData["reprojection_errors"]["max_error"].ToObject<double>();
+                    float meanError = jsonData["reprojection_errors"]["mean_error"].ToObject<float>();
+                    float maxError = jsonData["reprojection_errors"]["max_error"].ToObject<float>();
 
                     return (cameraPoints, homographyMatrix, maxError, meanError, errorsPerPoint);
                 }

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <Var name="RegenerateDebugInfo" value="false" />
+  <Var name="MarkedOnly" value="false" />
+  <Var name="RenameProperties" value="true" />
+  <Var name="RenameEvents" value="true" />
+  <Var name="RenameFields" value="true" />
+  <Var name="KeepPublicApi" value="true" />
+  <Var name="HidePrivateApi" value="true" />
+  <Var name="ReuseNames" value="false" />
+  <Var name="HideStrings" value="true" />
+  <Var name="OptimizeMethods" value="true" />
+  <Var name="SuppressIldasm" value="true" />
+  <Var name="AnalyzeXaml" value="true" />
+  <Var name="UseUnicodeNames" value="false" />
+  <Var name="UseKoreanNames" value="true" />
+  <Module file="$(InPath)\VDF3_Solution3.exe">
+    <SkipType name="*AnonymousType*" skipProperties="true" skipMethods="true" skipFields="true" skipEvents="true" skipStringHiding="true" />
+  </Module>
+  <AssemblySearchPath path="bin\Debug\\" />
+  <AssemblySearchPath path="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\\" />
+  <AssemblySearchPath path="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Facades\\" />
+  <AssemblySearchPath path="GigE_ForceIP\bin\Debug\\" />
+  <AssemblySearchPath path="packages\Microsoft.Bcl.AsyncInterfaces.9.0.0\lib\net462\\" />
+  <AssemblySearchPath path="packages\OpenCvSharp4.4.10.0.20241108\lib\net48\\" />
+  <AssemblySearchPath path="packages\OpenCvSharp4.Extensions.4.10.0.20241108\lib\net48\\" />
+  <AssemblySearchPath path="packages\OpenCvSharp4.WpfExtensions.4.10.0.20241108\lib\net48\\" />
+  <AssemblySearchPath path="packages\System.Buffers.4.5.1\lib\net461\\" />
+  <AssemblySearchPath path="packages\System.Drawing.Common.8.0.0\lib\net462\\" />
+  <AssemblySearchPath path="packages\System.IO.Pipelines.9.0.0\lib\net462\\" />
+  <AssemblySearchPath path="packages\System.Memory.4.5.5\lib\net461\\" />
+  <AssemblySearchPath path="packages\System.Numerics.Vectors.4.5.0\lib\net46\\" />
+  <AssemblySearchPath path="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\\" />
+  <AssemblySearchPath path="packages\System.Text.Encodings.Web.9.0.0\lib\net462\\" />
+  <AssemblySearchPath path="packages\System.Text.Json.9.0.0\lib\net462\\" />
+  <AssemblySearchPath path="packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\\" />
+  <AssemblySearchPath path="packages\System.ValueTuple.4.5.0\lib\net47\\" />
+  <AssemblySearchPath path="packages\WindowsBase_Core.STW.4.0.30319.1\lib\net40\\" />
+</Include>

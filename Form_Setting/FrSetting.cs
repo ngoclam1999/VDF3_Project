@@ -24,6 +24,7 @@ namespace VDF3_Solution3
 
         
         FrSettingRobot _ConfigRobot;
+        FrSettingModbus _SettingModbus;
         public FrSetting()
         {
             InitializeComponent();
@@ -79,11 +80,33 @@ namespace VDF3_Solution3
                 _ConfigRobot.Activate();
             }
         }
-
         private void _ConfigRobot_FormClosed(object sender, FormClosedEventArgs e)
         {
             _ConfigRobot = null;
         }
+        private void btnSettingModbus_Click(object sender, EventArgs e)
+        {
+            FrMain.Instance.lbTitleform.Text = "Setting/Register";
+            if (_SettingModbus == null)
+            {
+                _SettingModbus = new FrSettingModbus();
+                _SettingModbus.MdiParent = FrMain.Instance;
+                _SettingModbus.Dock = DockStyle.Fill;
+                _SettingModbus.FormClosed += _SettingModbus_FormClosed;
+                _SettingModbus.Show();
+            }
+            else
+            {
+                _SettingModbus.Activate();
+            }
+        }
+
+        private void _SettingModbus_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _SettingModbus = null;
+        }
+
+        
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
@@ -230,5 +253,7 @@ namespace VDF3_Solution3
             }
             SDKSystem.Finalize();
         }
+
+       
     }
 }
