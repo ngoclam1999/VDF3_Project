@@ -68,11 +68,12 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(201, 734);
+            this.pnlMenu.Size = new System.Drawing.Size(201, 761);
             this.pnlMenu.TabIndex = 0;
             // 
             // btnRun
             // 
+            this.btnRun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(17)))), ((int)(((byte)(23)))));
             this.btnRun.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRun.FlatAppearance.BorderSize = 0;
             this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -90,7 +91,7 @@
             this.btnRun.TabIndex = 7;
             this.btnRun.Text = "Run";
             this.btnRun.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.UseVisualStyleBackColor = false;
             this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // btnHelp
@@ -105,7 +106,7 @@
             this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHelp.IconSize = 32;
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(0, 614);
+            this.btnHelp.Location = new System.Drawing.Point(0, 641);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnHelp.Size = new System.Drawing.Size(201, 60);
@@ -126,7 +127,7 @@
             this.btnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAbout.IconSize = 32;
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.Location = new System.Drawing.Point(0, 674);
+            this.btnAbout.Location = new System.Drawing.Point(0, 701);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnAbout.Size = new System.Drawing.Size(201, 60);
@@ -137,6 +138,7 @@
             // 
             // btnRobot
             // 
+            this.btnRobot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(17)))), ((int)(((byte)(23)))));
             this.btnRobot.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRobot.FlatAppearance.BorderSize = 0;
             this.btnRobot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -154,11 +156,12 @@
             this.btnRobot.TabIndex = 12;
             this.btnRobot.Text = "Robot";
             this.btnRobot.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRobot.UseVisualStyleBackColor = true;
+            this.btnRobot.UseVisualStyleBackColor = false;
             this.btnRobot.Click += new System.EventHandler(this.btnRobot_Click);
             // 
             // btnVision
             // 
+            this.btnVision.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(17)))), ((int)(((byte)(23)))));
             this.btnVision.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVision.FlatAppearance.BorderSize = 0;
             this.btnVision.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -176,11 +179,12 @@
             this.btnVision.TabIndex = 11;
             this.btnVision.Text = "Vision";
             this.btnVision.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVision.UseVisualStyleBackColor = true;
+            this.btnVision.UseVisualStyleBackColor = false;
             this.btnVision.Click += new System.EventHandler(this.btnVision_Click);
             // 
             // btnSystem
             // 
+            this.btnSystem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(17)))), ((int)(((byte)(23)))));
             this.btnSystem.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSystem.FlatAppearance.BorderSize = 0;
             this.btnSystem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -198,11 +202,12 @@
             this.btnSystem.TabIndex = 10;
             this.btnSystem.Text = "System Config";
             this.btnSystem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSystem.UseVisualStyleBackColor = true;
+            this.btnSystem.UseVisualStyleBackColor = false;
             this.btnSystem.Click += new System.EventHandler(this.btnSystem_Click);
             // 
             // btnSystembtnProject
             // 
+            this.btnSystembtnProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(17)))), ((int)(((byte)(23)))));
             this.btnSystembtnProject.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSystembtnProject.FlatAppearance.BorderSize = 0;
             this.btnSystembtnProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -220,7 +225,7 @@
             this.btnSystembtnProject.TabIndex = 9;
             this.btnSystembtnProject.Text = "Project";
             this.btnSystembtnProject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSystembtnProject.UseVisualStyleBackColor = true;
+            this.btnSystembtnProject.UseVisualStyleBackColor = false;
             this.btnSystembtnProject.Click += new System.EventHandler(this.btnProject_Click);
             // 
             // btnHome
@@ -362,12 +367,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1448, 734);
+            this.ClientSize = new System.Drawing.Size(1448, 761);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlMenu);
             this.IsMdiContainer = true;
-            this.MinimumSize = new System.Drawing.Size(1464, 740);
+            this.MinimumSize = new System.Drawing.Size(1450, 775);
             this.Name = "FrMain";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.FrMain_Load);

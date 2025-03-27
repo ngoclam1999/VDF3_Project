@@ -14,6 +14,7 @@ using OpenCvSharp.Flann;
 using Basler.Pylon;
 using System.Web.UI.WebControls;
 using Sunny.UI;
+using System.Web.UI;
 
 namespace VDF3_Solution3
 {
@@ -424,6 +425,22 @@ namespace VDF3_Solution3
                 float radius = 3; // Bán kính điểm trung tâm
                 g.FillEllipse(Brushes.Red, centerX - radius, centerY - radius, radius * 2, radius * 2);
             }
+        }
+
+        private void FrRun_Activated(object sender, EventArgs e)
+        { 
+            if (SystemMode.ImgTemplate != null)
+                pictemplateRunning.Image = SystemMode.ImgTemplate;
+            else
+                Console.WriteLine("Template image not found.");
+        }
+
+        private void FrRun_Load(object sender, EventArgs e)
+        {
+            if (SystemMode.ImgTemplate != null)
+                pictemplateRunning.Image = SystemMode.ImgTemplate;
+            else
+                Console.WriteLine("Template image not found.");
         }
     }
 }

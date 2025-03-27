@@ -237,6 +237,7 @@
             this.pictemplateRunning.Location = new System.Drawing.Point(2, 2);
             this.pictemplateRunning.Name = "pictemplateRunning";
             this.pictemplateRunning.Size = new System.Drawing.Size(486, 225);
+            this.pictemplateRunning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictemplateRunning.TabIndex = 0;
             this.pictemplateRunning.TabStop = false;
             // 
@@ -252,6 +253,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrRun";
             this.Padding = new System.Windows.Forms.Padding(2);
+            this.Activated += new System.EventHandler(this.FrRun_Activated);
+            this.Load += new System.EventHandler(this.FrRun_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.uiPanel1.ResumeLayout(false);

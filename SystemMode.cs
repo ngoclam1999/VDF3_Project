@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 
 public static class SystemMode
 {
-    
+
+    /// <summary>
+    /// Phân tầng từng bước
+    /// </summary>
+    public static int ProcessStep = 0;
     /// <summary>
     /// 
     /// </summary>

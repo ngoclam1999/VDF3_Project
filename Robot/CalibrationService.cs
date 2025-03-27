@@ -1,6 +1,9 @@
 ﻿using Microsoft.Win32;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 
 public class CalibrationService
 {
@@ -13,7 +16,8 @@ public class CalibrationService
         {
             CalibrationPoint = new List<CalibrationPoint>(),
             homographyMatrix = new HomographyMatrix(),
-            Register = new Register()
+            Register = new Register(),
+            imageTemplate = new ImageTemplate()
         };
     }
 
@@ -53,16 +57,48 @@ public class CalibrationService
         _calibrationData.Register = reg;
     }
 
+    // Hàm cập nhật imageTemplate từ một Image
+    public void UpdateTemplateImage(Image image)
+    {
+        if (image == null)
+            throw new ArgumentNullException(nameof(image));
+
+        using (MemoryStream ms = new MemoryStream())
+        {
+            // Lưu ảnh dưới định dạng PNG (có thể đổi sang định dạng khác nếu cần)
+            image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            // Chuyển đổi byte[] sang chuỗi Base64 và gán vào _base64Temlate
+            _calibrationData.imageTemplate.Base64Template = Convert.ToBase64String(ms.ToArray());
+        }
+    }
+
+    // Hàm lấy Image từ imageTemplate
+    public Image GetTemplateImage()
+    {
+        // Nếu chuỗi Base64 rỗng hoặc null thì trả về null
+        if (string.IsNullOrEmpty(_calibrationData.imageTemplate.Base64Template))
+            return null;
+
+        // Chuyển đổi chuỗi Base64 về mảng byte
+        byte[] imageBytes = Convert.FromBase64String(_calibrationData.imageTemplate.Base64Template);
+        using (MemoryStream ms = new MemoryStream(imageBytes))
+        {
+            return Image.FromStream(ms);
+        }
+    }
+
     // Serialize dữ liệu hiệu chuẩn sang chuỗi JSON
     public string SaveToJson()
     {
         return JsonConvert.SerializeObject(_calibrationData, Formatting.Indented);
+        
     }
 
     // Load dữ liệu hiệu chuẩn từ chuỗi JSON
     public void LoadFromJson(string json)
     {
         _calibrationData = JsonConvert.DeserializeObject<CalibrationData>(json);
+        
     }
 }
 public class CalibrationPoint
@@ -91,9 +127,16 @@ public class Register
     public int CurrentU { get; set; }
 }
 
+public class ImageTemplate
+{
+    public string Base64Template { get; set; }
+}
+
 public class CalibrationData
 {
     public List<CalibrationPoint> CalibrationPoint { get; set; }
     public HomographyMatrix homographyMatrix { get; set; }
     public Register Register { get; set; }
+    public ImageTemplate imageTemplate { get; set; }
 }
+

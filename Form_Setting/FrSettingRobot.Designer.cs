@@ -32,6 +32,7 @@
             this.btnRobot = new Sunny.UI.UISymbolButton();
             this.btnCamera = new Sunny.UI.UISymbolButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSettingModbus = new Sunny.UI.UISymbolButton();
             this.grb_RobotSetting = new Sunny.UI.UIGroupBox();
             this.uiLabel6 = new Sunny.UI.UILabel();
             this.btnCamApply = new Sunny.UI.UISymbolButton();
@@ -48,6 +49,7 @@
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.txtDeviceID = new Sunny.UI.UITextBox();
             this.grb_Robot = new Sunny.UI.UIGroupBox();
+            this.cmbConnectionType = new Sunny.UI.UIComboBox();
             this.lbSttModbus = new Sunny.UI.UISymbolLabel();
             this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
             this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
@@ -88,7 +90,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rdiGripper = new Sunny.UI.UIRadioButton();
             this.rdiVacum = new Sunny.UI.UIRadioButton();
-            this.btnSettingModbus = new Sunny.UI.UISymbolButton();
             this.panel1.SuspendLayout();
             this.grb_RobotSetting.SuspendLayout();
             this.grb_Robot.SuspendLayout();
@@ -164,6 +165,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1266, 40);
             this.panel1.TabIndex = 2;
+            // 
+            // btnSettingModbus
+            // 
+            this.btnSettingModbus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSettingModbus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSettingModbus.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSettingModbus.FillDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnSettingModbus.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnSettingModbus.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnSettingModbus.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnSettingModbus.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.btnSettingModbus.Location = new System.Drawing.Point(346, -2);
+            this.btnSettingModbus.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnSettingModbus.Name = "btnSettingModbus";
+            this.btnSettingModbus.Radius = 0;
+            this.btnSettingModbus.RectColor = System.Drawing.Color.Green;
+            this.btnSettingModbus.RectHoverColor = System.Drawing.Color.Green;
+            this.btnSettingModbus.RectPressColor = System.Drawing.Color.Green;
+            this.btnSettingModbus.RectSelectedColor = System.Drawing.Color.Green;
+            this.btnSettingModbus.Size = new System.Drawing.Size(174, 42);
+            this.btnSettingModbus.Style = Sunny.UI.UIStyle.Custom;
+            this.btnSettingModbus.Symbol = 361450;
+            this.btnSettingModbus.SymbolSize = 30;
+            this.btnSettingModbus.TabIndex = 73;
+            this.btnSettingModbus.Text = "Register";
+            this.btnSettingModbus.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnSettingModbus.Click += new System.EventHandler(this.btnSettingModbus_Click);
             // 
             // grb_RobotSetting
             // 
@@ -411,6 +439,7 @@
             // grb_Robot
             // 
             this.grb_Robot.BackColor = System.Drawing.SystemColors.Control;
+            this.grb_Robot.Controls.Add(this.cmbConnectionType);
             this.grb_Robot.Controls.Add(this.lbSttModbus);
             this.grb_Robot.Controls.Add(this.uiSymbolLabel2);
             this.grb_Robot.Controls.Add(this.uiSymbolLabel1);
@@ -433,11 +462,31 @@
             this.grb_Robot.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.grb_Robot.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // cmbConnectionType
+            // 
+            this.cmbConnectionType.DataSource = null;
+            this.cmbConnectionType.FillColor = System.Drawing.Color.White;
+            this.cmbConnectionType.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cmbConnectionType.Items.AddRange(new object[] {
+            "Espon",
+            "Mitsubishi"});
+            this.cmbConnectionType.Location = new System.Drawing.Point(194, 30);
+            this.cmbConnectionType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbConnectionType.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cmbConnectionType.Name = "cmbConnectionType";
+            this.cmbConnectionType.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cmbConnectionType.Size = new System.Drawing.Size(150, 29);
+            this.cmbConnectionType.Style = Sunny.UI.UIStyle.Custom;
+            this.cmbConnectionType.TabIndex = 16;
+            this.cmbConnectionType.Text = "Espon";
+            this.cmbConnectionType.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmbConnectionType.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // lbSttModbus
             // 
             this.lbSttModbus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.lbSttModbus.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lbSttModbus.Location = new System.Drawing.Point(12, 231);
+            this.lbSttModbus.Location = new System.Drawing.Point(12, 239);
             this.lbSttModbus.MinimumSize = new System.Drawing.Size(1, 1);
             this.lbSttModbus.Name = "lbSttModbus";
             this.lbSttModbus.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
@@ -453,7 +502,7 @@
             // 
             this.uiSymbolLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiSymbolLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiSymbolLabel2.Location = new System.Drawing.Point(12, 102);
+            this.uiSymbolLabel2.Location = new System.Drawing.Point(12, 116);
             this.uiSymbolLabel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel2.Name = "uiSymbolLabel2";
             this.uiSymbolLabel2.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
@@ -469,7 +518,7 @@
             // 
             this.uiSymbolLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiSymbolLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiSymbolLabel1.Location = new System.Drawing.Point(12, 35);
+            this.uiSymbolLabel1.Location = new System.Drawing.Point(12, 49);
             this.uiSymbolLabel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel1.Name = "uiSymbolLabel1";
             this.uiSymbolLabel1.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
@@ -487,7 +536,7 @@
             this.txtRobotPort.DoubleValue = 502D;
             this.txtRobotPort.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.txtRobotPort.IntValue = 502;
-            this.txtRobotPort.Location = new System.Drawing.Point(12, 138);
+            this.txtRobotPort.Location = new System.Drawing.Point(12, 152);
             this.txtRobotPort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRobotPort.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtRobotPort.Name = "txtRobotPort";
@@ -503,7 +552,7 @@
             // 
             this.txtRobotIPaddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRobotIPaddress.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtRobotIPaddress.Location = new System.Drawing.Point(12, 71);
+            this.txtRobotIPaddress.Location = new System.Drawing.Point(12, 85);
             this.txtRobotIPaddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRobotIPaddress.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtRobotIPaddress.Name = "txtRobotIPaddress";
@@ -519,7 +568,7 @@
             // 
             this.btnDisconnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDisconnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnDisconnect.Location = new System.Drawing.Point(158, 178);
+            this.btnDisconnect.Location = new System.Drawing.Point(158, 192);
             this.btnDisconnect.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnDisconnect.Name = "btnDisconnect";
             this.btnDisconnect.Size = new System.Drawing.Size(121, 41);
@@ -535,7 +584,7 @@
             // 
             this.btnConnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnConnect.Location = new System.Drawing.Point(12, 178);
+            this.btnConnect.Location = new System.Drawing.Point(12, 192);
             this.btnConnect.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(121, 41);
@@ -556,11 +605,12 @@
             this.btnRefresh.IconColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnRefresh.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRefresh.IconSize = 32;
-            this.btnRefresh.Location = new System.Drawing.Point(306, 75);
+            this.btnRefresh.Location = new System.Drawing.Point(306, 83);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(34, 33);
             this.btnRefresh.TabIndex = 5;
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // uiGroupBox1
             // 
@@ -1042,33 +1092,6 @@
             this.rdiVacum.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.rdiVacum.CheckedChanged += new System.EventHandler(this.rdiVacum_CheckedChanged);
             // 
-            // btnSettingModbus
-            // 
-            this.btnSettingModbus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSettingModbus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnSettingModbus.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnSettingModbus.FillDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.btnSettingModbus.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.btnSettingModbus.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.btnSettingModbus.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.btnSettingModbus.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.btnSettingModbus.Location = new System.Drawing.Point(346, -2);
-            this.btnSettingModbus.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnSettingModbus.Name = "btnSettingModbus";
-            this.btnSettingModbus.Radius = 0;
-            this.btnSettingModbus.RectColor = System.Drawing.Color.Green;
-            this.btnSettingModbus.RectHoverColor = System.Drawing.Color.Green;
-            this.btnSettingModbus.RectPressColor = System.Drawing.Color.Green;
-            this.btnSettingModbus.RectSelectedColor = System.Drawing.Color.Green;
-            this.btnSettingModbus.Size = new System.Drawing.Size(174, 42);
-            this.btnSettingModbus.Style = Sunny.UI.UIStyle.Custom;
-            this.btnSettingModbus.Symbol = 361450;
-            this.btnSettingModbus.SymbolSize = 30;
-            this.btnSettingModbus.TabIndex = 73;
-            this.btnSettingModbus.Text = "Register";
-            this.btnSettingModbus.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.btnSettingModbus.Click += new System.EventHandler(this.btnSettingModbus_Click);
-            // 
             // FrSettingRobot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1159,5 +1182,6 @@
         private Sunny.UI.UISymbolButton btnSaveVacum;
         private Sunny.UI.UISymbolLabel lbSttModbus;
         private Sunny.UI.UISymbolButton btnSettingModbus;
+        private Sunny.UI.UIComboBox cmbConnectionType;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -124,6 +125,8 @@ namespace VDF3_Solution3
             {
                 _Home.Activate();
             }
+
+            UIUpdatebtn();
         }
 
         private void btnProject_Click(object sender, EventArgs e)
@@ -147,73 +150,105 @@ namespace VDF3_Solution3
 
         private void btnSystem_Click(object sender, EventArgs e)
         {
-            lblTitleChildForm.Text = "Setting/Camera";
-            ActivateButton(sender, RGBColors.color1);
-            if (_Setting == null)
+            if (SystemMode.ProcessStep >= 1)
             {
-                _Setting = new FrSetting();
-                _Setting.MdiParent = this;
-                _Setting.Dock = DockStyle.Fill;
-                _Setting.FormClosed += _Main_FormClosed;
-                _Setting.Show();
+                lblTitleChildForm.Text = "Setting/Camera";
+                ActivateButton(sender, RGBColors.color1);
+                if (_Setting == null)
+                {
+                    _Setting = new FrSetting();
+                    _Setting.MdiParent = this;
+                    _Setting.Dock = DockStyle.Fill;
+                    _Setting.FormClosed += _Main_FormClosed;
+                    _Setting.Show();
+                }
+                else
+                {
+                    _Setting.Activate();
+                }
             }
             else
             {
-                _Setting.Activate();
+                MessageBox.Show("Please select the project Before config parameters", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);   
+                return;
             }
         }
 
         private void btnVision_Click(object sender, EventArgs e)
         {
-            lblTitleChildForm.Text = "Vision/Starting Up";
-            ActivateButton(sender, RGBColors.color1);
-            if (_Vision == null)
+            if (SystemMode.ProcessStep == 1)//(SystemMode.ProcessStep == 2 || SystemMode.ProcessStep == 4)
             {
-                _Vision = new FrVision();
-                _Vision.MdiParent = this;
-                _Vision.Dock = DockStyle.Fill;
-                _Vision.FormClosed += _Main_FormClosed;
-                _Vision.Show();
+                lblTitleChildForm.Text = "Vision/Starting Up";
+                ActivateButton(sender, RGBColors.color1);
+                if (_Vision == null)
+                {
+                    _Vision = new FrVision();
+                    _Vision.MdiParent = this;
+                    _Vision.Dock = DockStyle.Fill;
+                    _Vision.FormClosed += _Main_FormClosed;
+                    _Vision.Show();
+                }
+                else
+                {
+                    _Vision.Activate();
+                }
             }
             else
             {
-                _Vision.Activate();
-            }
+                MessageBox.Show("Please connect camera Before config vision parameters", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            } 
         }
 
         private void btnRobot_Click(object sender, EventArgs e)
         {
-            lblTitleChildForm.Text = "Robot";
-            ActivateButton(sender, RGBColors.color1);
-            if (_Robot == null)
+            if (SystemMode.ProcessStep == 1)//(SystemMode.ProcessStep >= 3)
             {
-                _Robot = new FrRobot();
-                _Robot.MdiParent = this;
-                _Robot.Dock = DockStyle.Fill;
-                _Robot.FormClosed += _Main_FormClosed;
-                _Robot.Show();
+                lblTitleChildForm.Text = "Robot";
+                ActivateButton(sender, RGBColors.color1);
+                if (_Robot == null)
+                {
+                    _Robot = new FrRobot();
+                    _Robot.MdiParent = this;
+                    _Robot.Dock = DockStyle.Fill;
+                    _Robot.FormClosed += _Main_FormClosed;
+                    _Robot.Show();
+                }
+                else
+                {
+                    _Robot.Activate();
+                }
             }
             else
             {
-                _Robot.Activate();
-            }
+                MessageBox.Show("Please connect robot modbus TCP/IP Before teaching robot", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            } 
         }
 
         private void btnRun_Click(object sender, EventArgs e)
         {
-            lblTitleChildForm.Text = "Run";
-            ActivateButton(sender, RGBColors.color1);
-            if (_Run == null)
+            if (SystemMode.ProcessStep == 1)//(SystemMode.ProcessStep >= 4)
             {
-                _Run = new FrRun();
-                _Run.MdiParent = this;
-                _Run.Dock = DockStyle.Fill;
-                _Run.FormClosed += _Main_FormClosed;
-                _Run.Show();
+                lblTitleChildForm.Text = "Run";
+                ActivateButton(sender, RGBColors.color1);
+                if (_Run == null)
+                {
+                    _Run = new FrRun();
+                    _Run.MdiParent = this;
+                    _Run.Dock = DockStyle.Fill;
+                    _Run.FormClosed += _Main_FormClosed;
+                    _Run.Show();
+                }
+                else
+                {
+                    _Run.Activate();
+                }
             }
             else
             {
-                _Run.Activate();
+                MessageBox.Show("Please complete all the device before running", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
         }
         private void btnHome_Click(object sender, EventArgs e)
@@ -240,15 +275,17 @@ namespace VDF3_Solution3
                    "Exit the application",
                    MessageBoxButtons.YesNo,
                    MessageBoxIcon.Question
-               );
+            );
 
             if (result == DialogResult.Yes)
             {
-                FrSetting.hikCamera.Stop();
-                BackgroundWorkerService.Instance.Stop();
+                if (FrSetting.hikCamera != null)
+                    FrSetting.hikCamera.Stop();
+                if(BackgroundWorkerService.Instance != null)
+                    BackgroundWorkerService.Instance.Stop();
+
                 Application.Exit(); // Đóng ứng dụng nếu người dùng chọn Yes
             }
-           
         }
         private void btnMaximize_Click(object sender, EventArgs e)
         {
@@ -270,6 +307,78 @@ namespace VDF3_Solution3
                 FormBorderStyle = FormBorderStyle.Sizable;
         }
 
-        
+        public void UIUpdatebtn()
+        {
+            if (SystemMode.ProcessStep == 0) // mới load form
+            {
+                btnSystem.ForeColor = SystemColors.AppWorkspace;
+                btnSystem.IconColor = SystemColors.AppWorkspace;
+
+                btnVision.ForeColor = SystemColors.AppWorkspace;
+                btnVision.IconColor = SystemColors.AppWorkspace;
+
+                btnRobot.ForeColor = SystemColors.AppWorkspace;
+                btnRobot.IconColor = SystemColors.AppWorkspace;
+
+                btnRun.ForeColor = SystemColors.AppWorkspace;
+                btnRun.IconColor = SystemColors.AppWorkspace;
+            }
+            else if (SystemMode.ProcessStep == 1) // chọn projet load thông số lên
+            {
+                btnSystem.ForeColor = SystemColors.ControlLightLight;
+                btnSystem.IconColor = Color.WhiteSmoke;
+
+                btnVision.ForeColor = SystemColors.AppWorkspace;
+                btnVision.IconColor = SystemColors.AppWorkspace;
+
+                btnRobot.ForeColor = SystemColors.AppWorkspace;
+                btnRobot.IconColor = SystemColors.AppWorkspace;
+
+                btnRun.ForeColor = SystemColors.AppWorkspace;
+                btnRun.IconColor = SystemColors.AppWorkspace;
+            }
+            else if (SystemMode.ProcessStep == 2) // cấu hình camera
+            {
+                btnSystem.ForeColor = SystemColors.ControlLightLight;
+                btnSystem.IconColor = Color.WhiteSmoke;
+
+                btnVision.ForeColor = SystemColors.ControlLightLight;
+                btnVision.IconColor = Color.WhiteSmoke;
+
+                btnRobot.ForeColor = SystemColors.AppWorkspace;
+                btnRobot.IconColor = SystemColors.AppWorkspace;
+
+                btnRun.ForeColor = SystemColors.AppWorkspace;
+                btnRun.IconColor = SystemColors.AppWorkspace;
+            }
+            else if (SystemMode.ProcessStep == 3) // cấu hình robot
+            {
+                btnSystem.ForeColor = SystemColors.ControlLightLight;
+                btnSystem.IconColor = Color.WhiteSmoke;
+
+                btnVision.ForeColor = SystemColors.AppWorkspace;
+                btnVision.IconColor = SystemColors.AppWorkspace;
+
+                btnRobot.ForeColor = SystemColors.ControlLightLight;
+                btnRobot.IconColor = Color.WhiteSmoke;
+
+                btnRun.ForeColor = SystemColors.AppWorkspace;
+                btnRun.IconColor = SystemColors.AppWorkspace;
+            }    
+            else if (SystemMode.ProcessStep == 4) // hoàn thành cấu hình camera và robot
+            {
+                btnSystem.ForeColor = SystemColors.ControlLightLight;
+                btnSystem.IconColor = Color.WhiteSmoke;
+
+                btnVision.ForeColor = SystemColors.ControlLightLight;
+                btnVision.IconColor = Color.WhiteSmoke;
+
+                btnRobot.ForeColor = SystemColors.ControlLightLight;
+                btnRobot.IconColor = Color.WhiteSmoke;
+
+                btnRun.ForeColor = SystemColors.ControlLightLight;
+                btnRun.IconColor = Color.WhiteSmoke;
+            }    
+        }
     }
 }

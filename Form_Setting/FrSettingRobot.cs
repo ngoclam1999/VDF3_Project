@@ -8,6 +8,8 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static BackgroundWorkerService;
+
 
 namespace VDF3_Solution3
 {
@@ -24,7 +26,9 @@ namespace VDF3_Solution3
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             BackgroundWorkerService.Instance.OnDataUpdated += UpdateUI;
+            Control.CheckForIllegalCrossThreadCalls = false;
         }
+
         private void btnSettingModbus_Click(object sender, EventArgs e)
         {
             FrMain.Instance.lbTitleform.Text = "Setting/Register";
@@ -139,7 +143,6 @@ namespace VDF3_Solution3
                 btnSaveGripper.Enabled = false;
                 btnSaveVacum.Enabled = false;
             }
-            
         }
 
         private void FrSettingRobot_Load(object sender, EventArgs e)
@@ -160,6 +163,7 @@ namespace VDF3_Solution3
             SystemMode.Grip_Thickness = Convert.ToInt32(txtGripA.Text);
             refresh();
         }
+
         private void UpdateUI(string key, object value)
         {
             if (this.InvokeRequired)
@@ -175,14 +179,74 @@ namespace VDF3_Solution3
  
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            BackgroundWorkerService.Instance.Start();
-            InvokeService.SendData("IpAddress", txtRobotIPaddress.Text);
+            try
+            {
+                string selectedType = cmbConnectionType.SelectedItem.ToString();
+                if (selectedType == "Espon")
+                {
+                    BackgroundWorkerService.Instance.ConnectionType = PlcConnectionType.Modbus;
+                }
+                else if (selectedType == "Mitsubishi")
+                {
+                    BackgroundWorkerService.Instance.ConnectionType = PlcConnectionType.ActUtl;
+                }
+
+                // Cập nhật địa chỉ IP nếu cần (dành cho Modbus)
+                BackgroundWorkerService.Instance.UpdateData("IpAddress", txtRobotIPaddress.Text);
+                BackgroundWorkerService.Instance.Start();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (SystemMode.ProcessStep == 2)
+                {
+                    SystemMode.ProcessStep = 4;
+                    FrMain.Instance.UIUpdatebtn();
+                }
+                else if (SystemMode.ProcessStep == 1)
+                {
+                    SystemMode.ProcessStep = 3;
+                    FrMain.Instance.UIUpdatebtn();
+                }
+            }
+            /*
+            try
+            {
+                BackgroundWorkerService.Instance.Start();
+                InvokeService.SendData("IpAddress", txtRobotIPaddress.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (SystemMode.ProcessStep == 2)
+                {
+                    SystemMode.ProcessStep = 4;
+                    FrMain.Instance.UIUpdatebtn();
+                }
+                else if (SystemMode.ProcessStep == 1)
+                {
+                    SystemMode.ProcessStep = 3;
+                    FrMain.Instance.UIUpdatebtn();
+                }
+            } 
+            */
         }
 
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
             BackgroundWorkerService.Instance.Stop();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
             
+    
         }
     }
 }

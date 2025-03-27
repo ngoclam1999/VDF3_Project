@@ -40,9 +40,12 @@ namespace VDF3_Solution3
             this.btnReset = new System.Windows.Forms.ToolStripButton();
             this.btnZoomOut = new System.Windows.Forms.ToolStripButton();
             this.btnZoomIn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnSaveImage = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnBoundTool = new System.Windows.Forms.ToolStripButton();
             this.tsbtnEditBoudingBox = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnRotateBouding = new System.Windows.Forms.ToolStripButton();
             this.btnManualRotateRight = new System.Windows.Forms.ToolStripButton();
             this.txtRotateDegrees = new System.Windows.Forms.ToolStripTextBox();
@@ -61,9 +64,6 @@ namespace VDF3_Solution3
             this.picTemplate = new System.Windows.Forms.PictureBox();
             this.btnPickTemplate = new FontAwesome.Sharp.IconButton();
             this.btnTraining = new FontAwesome.Sharp.IconButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip2.SuspendLayout();
             this.uiPanel4.SuspendLayout();
             this.pnlContaner.SuspendLayout();
@@ -181,6 +181,11 @@ namespace VDF3_Solution3
             this.btnZoomIn.Text = "toolStripButton1";
             this.btnZoomIn.Click += new System.EventHandler(this.btnZoomIn_Click);
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 32);
+            // 
             // tsbtnSaveImage
             // 
             this.tsbtnSaveImage.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSaveImage.Image")));
@@ -189,6 +194,11 @@ namespace VDF3_Solution3
             this.tsbtnSaveImage.Size = new System.Drawing.Size(96, 29);
             this.tsbtnSaveImage.Text = "Save Image";
             this.tsbtnSaveImage.Click += new System.EventHandler(this.tsbtnSaveImage_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
             // 
             // tsbtnBoundTool
             // 
@@ -208,6 +218,11 @@ namespace VDF3_Solution3
             this.tsbtnEditBoudingBox.Size = new System.Drawing.Size(104, 29);
             this.tsbtnEditBoudingBox.Text = "Edit Bouding";
             this.tsbtnEditBoudingBox.Click += new System.EventHandler(this.tsbtnEditBoudingBox_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
             // 
             // tsbtnRotateBouding
             // 
@@ -250,7 +265,7 @@ namespace VDF3_Solution3
             this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btnDelete.IconColor = System.Drawing.Color.Black;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDelete.Location = new System.Drawing.Point(1166, 463);
+            this.btnDelete.Location = new System.Drawing.Point(1170, 463);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 70);
             this.btnDelete.TabIndex = 25;
@@ -402,11 +417,11 @@ namespace VDF3_Solution3
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiListBox1.FillColor = System.Drawing.Color.White;
             this.uiListBox1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.uiListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiListBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.uiListBox1.ItemSelectBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.uiListBox1.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.uiListBox1.Location = new System.Drawing.Point(996, 47);
+            this.uiListBox1.Location = new System.Drawing.Point(964, 47);
             this.uiListBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiListBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiListBox1.Name = "uiListBox1";
@@ -416,7 +431,7 @@ namespace VDF3_Solution3
             this.uiListBox1.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.uiListBox1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.uiListBox1.ShowText = false;
-            this.uiListBox1.Size = new System.Drawing.Size(254, 153);
+            this.uiListBox1.Size = new System.Drawing.Size(292, 159);
             this.uiListBox1.Style = Sunny.UI.UIStyle.Custom;
             this.uiListBox1.TabIndex = 18;
             this.uiListBox1.Text = "uiListBox1";
@@ -438,7 +453,7 @@ namespace VDF3_Solution3
             this.pnlContaner.Name = "pnlContaner";
             this.pnlContaner.Radius = 1;
             this.pnlContaner.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.pnlContaner.Size = new System.Drawing.Size(978, 486);
+            this.pnlContaner.Size = new System.Drawing.Size(950, 486);
             this.pnlContaner.Style = Sunny.UI.UIStyle.Custom;
             this.pnlContaner.TabIndex = 17;
             this.pnlContaner.Text = null;
@@ -452,7 +467,7 @@ namespace VDF3_Solution3
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(972, 480);
+            this.pictureBox.Size = new System.Drawing.Size(944, 480);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             this.pictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Paint);
@@ -467,12 +482,12 @@ namespace VDF3_Solution3
             this.uiPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.uiPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiPanel1.Location = new System.Drawing.Point(996, 210);
+            this.uiPanel1.Location = new System.Drawing.Point(964, 210);
             this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.uiPanel1.Size = new System.Drawing.Size(254, 246);
+            this.uiPanel1.Size = new System.Drawing.Size(292, 246);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Gray;
             this.uiPanel1.TabIndex = 26;
             this.uiPanel1.Text = "uiPanel1";
@@ -485,7 +500,8 @@ namespace VDF3_Solution3
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picTemplate.Location = new System.Drawing.Point(3, 4);
             this.picTemplate.Name = "picTemplate";
-            this.picTemplate.Size = new System.Drawing.Size(248, 239);
+            this.picTemplate.Size = new System.Drawing.Size(286, 239);
+            this.picTemplate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picTemplate.TabIndex = 0;
             this.picTemplate.TabStop = false;
             // 
@@ -495,7 +511,7 @@ namespace VDF3_Solution3
             this.btnPickTemplate.IconChar = FontAwesome.Sharp.IconChar.TicketSimple;
             this.btnPickTemplate.IconColor = System.Drawing.Color.Black;
             this.btnPickTemplate.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPickTemplate.Location = new System.Drawing.Point(996, 463);
+            this.btnPickTemplate.Location = new System.Drawing.Point(964, 463);
             this.btnPickTemplate.Name = "btnPickTemplate";
             this.btnPickTemplate.Size = new System.Drawing.Size(85, 70);
             this.btnPickTemplate.TabIndex = 24;
@@ -511,7 +527,7 @@ namespace VDF3_Solution3
             this.btnTraining.IconChar = FontAwesome.Sharp.IconChar.BattleNet;
             this.btnTraining.IconColor = System.Drawing.Color.Black;
             this.btnTraining.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTraining.Location = new System.Drawing.Point(1081, 463);
+            this.btnTraining.Location = new System.Drawing.Point(1067, 463);
             this.btnTraining.Name = "btnTraining";
             this.btnTraining.Size = new System.Drawing.Size(85, 70);
             this.btnTraining.TabIndex = 24;
@@ -520,21 +536,6 @@ namespace VDF3_Solution3
             this.btnTraining.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTraining.UseVisualStyleBackColor = true;
             this.btnTraining.Click += new System.EventHandler(this.btnTraining_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 32);
             // 
             // FrDetection
             // 
@@ -557,6 +558,8 @@ namespace VDF3_Solution3
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrDetection";
             this.Padding = new System.Windows.Forms.Padding(5);
+            this.Activated += new System.EventHandler(this.FrDetection_Activated);
+            this.Load += new System.EventHandler(this.FrDetection_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.uiPanel4.ResumeLayout(false);

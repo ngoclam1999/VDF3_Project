@@ -142,6 +142,19 @@ namespace VDF3_Solution3
                 {
                     MessageBox.Show($"Error: {ex.Message}");
                 }
+                finally
+                {
+                    if (SystemMode.ProcessStep == 1)
+                    {
+                        SystemMode.ProcessStep = 2;
+                        FrMain.Instance.UIUpdatebtn();
+                    }
+                    else if (SystemMode.ProcessStep == 3)
+                    {
+                        SystemMode.ProcessStep = 4;
+                        FrMain.Instance.UIUpdatebtn();
+                    }
+                }
             }
             catch (Exception ex)
             {

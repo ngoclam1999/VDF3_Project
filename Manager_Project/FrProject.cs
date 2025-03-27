@@ -18,12 +18,17 @@ namespace VDF3_Solution3
     {
         private List<RecentProject> recentProjects = new List<RecentProject>();
         private ContextMenuStrip contextMenu;
-        string filePath1 = null; // Đường dẫn thư mục lưu file
-        CalibrationService calibService = new CalibrationService();
+        private string filePath1 = null; // Đường dẫn thư mục lưu file
+        public static CalibrationService calibService = new CalibrationService();
+        private string jsonContent;
+        private string Curentprojectpath;
+
+        public static FrProject Instance { get; private set; }
 
         public FrProject()
         {
             InitializeComponent();
+            Instance = this;
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
@@ -258,8 +263,6 @@ namespace VDF3_Solution3
             recentProjects.Add(new RecentProject(txtProjectName.Text, txtProjectPath.Text + "\\" + txtProjectName.Text + ".json", DateTime.Now, false));
             SaveRecentProjects(recentProjects);
             LoadProjectsIntoListView();
-
-
         }
 
         private void btnBrower_Click(object sender, EventArgs e)
@@ -277,6 +280,16 @@ namespace VDF3_Solution3
                     txtProjectPath.Text = filePath1;
                 }
             }
+        }
+
+        public void SaveProject()
+        {
+            if (SystemCongfig.PresentFilePath != null)
+            {
+                File.WriteAllText(SystemCongfig.PresentFilePath, calibService.SaveToJson());
+            }
+            else
+                MessageBox.Show("Can't find the Project file path", "Path not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void listView1_ItemActivate(object sender, EventArgs e)
@@ -303,7 +316,9 @@ namespace VDF3_Solution3
                     return; // Thoát khỏi hàm
                 }
 
-                string jsonContent = File.ReadAllText(project.Path);
+                Curentprojectpath = project.Path;
+
+                jsonContent = File.ReadAllText(project.Path);
                 calibService.LoadFromJson(jsonContent);
                 List<CalibrationPoint> currentPoints = calibService.GetCalibrationPoints();
                 for (int i = 0; i < currentPoints.Count; i++)
@@ -320,7 +335,13 @@ namespace VDF3_Solution3
                 VariableRobot.R21 = currentHM.R21;
                 VariableRobot.R22 = currentHM.R22;
                 VariableRobot.Ty = currentHM.Ty;
-            
+
+                System.Drawing.Image loadedImage = calibService.GetTemplateImage();
+                if (loadedImage != null)
+                {
+                    SystemMode.ImgTemplate = loadedImage;
+                }
+
                 SystemCongfig.PresentFilePath = project.Path;
 
                 // Cập nhật lại thời gian hiện tại
@@ -343,7 +364,12 @@ namespace VDF3_Solution3
 
                 //Load project và vào trang Login
                 LoadProjectsIntoListView();
- 
+                using (ProgressPopup fr = new ProgressPopup())
+                {
+                    fr.ShowDialog();
+                }
+                SystemMode.ProcessStep = 1;
+                FrMain.Instance.UIUpdatebtn();
             }
         }
         public class RecentProject
@@ -379,6 +405,7 @@ namespace VDF3_Solution3
         private void FrProject_FormClosing(object sender, FormClosingEventArgs e)
         {
             SaveRecentProjects(recentProjects);
+            
         }
     }
 }

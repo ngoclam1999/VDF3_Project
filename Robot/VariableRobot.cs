@@ -9,6 +9,11 @@ public static class VariableRobot
     // Read Modbus from robot
     //------------------------------------------------------------
     /// <summary>
+    /// 1: Espon (Modbus)
+    /// 2: Misubishi (Mx Component)
+    /// </summary>
+    public static int RobotType = 1;
+    /// <summary>
     /// Notice status from robots
     /// </summary>
     public static int MessFormRbt;

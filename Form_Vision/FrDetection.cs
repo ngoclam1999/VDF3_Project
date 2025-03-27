@@ -984,6 +984,10 @@ namespace VDF3_Solution3
                 picTemplate.Image = result;
                 SystemMode.ImgTemplate = result;
 
+                // lưu ảnh template vào project
+                FrProject.calibService.UpdateTemplateImage(result);
+                FrProject.Instance.SaveProject();
+
                 // Lưu ảnh crop ra nếu cần
                 string templateFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Template");
                 if (!Directory.Exists(templateFolder))
@@ -1005,6 +1009,10 @@ namespace VDF3_Solution3
                     SystemMode.PresentTemplatePath = ofd.FileName;
                     picTemplate.Image = templateImage;
                     SystemMode.ImgTemplate = templateImage;
+
+                    // lưu ảnh template vào project
+                    FrProject.calibService.UpdateTemplateImage(templateImage);
+                    FrProject.Instance.SaveProject();
                 }
             }
         }
@@ -1046,7 +1054,7 @@ namespace VDF3_Solution3
             Console.WriteLine(templatePath);
             try
             {
-                body_ApiResponse = await ApiClient.MatchTemplate(pictureBox.Image, picTemplate.Image, 0.3f);
+                body_ApiResponse = await ApiClient.MatchTemplate(pictureBox.Image, picTemplate.Image, 0.2f);
                 //body_ApiResponse = await ApiClient.MatchTemplate(SystemMode.PresentImagePath, SystemMode.PresentTemplatePath, 0.6f);
             }
             catch
@@ -1081,8 +1089,8 @@ namespace VDF3_Solution3
                     foreach (var match in result.matches)
                     {
                         // Giả sử kích thước mặc định của bounding box là 50x50
-                        int boxWidth = picTemplate.Image.Width;
-                        int boxHeight = picTemplate.Image.Height;
+                        int boxWidth = SystemMode.ImgTemplate.Width;
+                        int boxHeight = SystemMode.ImgTemplate.Height;
                         // Nếu giá trị x, y trong JSON là tâm, ta cần trừ đi một nửa kích thước để lấy tọa độ top-left
                         int topLeftX = match.x;
                         int topLeftY = match.y;
@@ -1196,6 +1204,22 @@ namespace VDF3_Solution3
                 MessageBox.Show("Save Image Failed, " + ex.Message);
                 return;
             }
+        }
+
+        private void FrDetection_Load(object sender, EventArgs e)
+        {
+            if (SystemMode.ImgTemplate != null)
+                picTemplate.Image = SystemMode.ImgTemplate;
+            else
+                Console.WriteLine("Template image not found.");
+        }
+
+        private void FrDetection_Activated(object sender, EventArgs e)
+        {
+            if (SystemMode.ImgTemplate != null)
+                picTemplate.Image = SystemMode.ImgTemplate;
+            else
+                Console.WriteLine("Template image not found.");
         }
     }
 
