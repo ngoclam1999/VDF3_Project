@@ -1,0 +1,5 @@
+C:\Users\trila\Desktop\VDF3\Solution_3\Runtime\RuntimeMcToModbus\obj\Debug\net5.0\RuntimeMcToModbus.csproj.AssemblyReference.cache
+C:\Users\trila\Desktop\VDF3\Solution_3\Runtime\RuntimeMcToModbus\obj\Debug\net5.0\RuntimeMcToModbus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\trila\Desktop\VDF3\Solution_3\Runtime\RuntimeMcToModbus\obj\Debug\net5.0\RuntimeMcToModbus.AssemblyInfoInputs.cache
+C:\Users\trila\Desktop\VDF3\Solution_3\Runtime\RuntimeMcToModbus\obj\Debug\net5.0\RuntimeMcToModbus.AssemblyInfo.cs
+C:\Users\trila\Desktop\VDF3\Solution_3\Runtime\RuntimeMcToModbus\obj\Debug\net5.0\RuntimeMcToModbus.csproj.CoreCompileInputs.cache
