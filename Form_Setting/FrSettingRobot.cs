@@ -179,6 +179,7 @@ namespace VDF3_Solution3
  
         private void btnConnect_Click(object sender, EventArgs e)
         {
+            /*
             try
             {
                 string selectedType = cmbConnectionType.SelectedItem.ToString();
@@ -212,7 +213,8 @@ namespace VDF3_Solution3
                     FrMain.Instance.UIUpdatebtn();
                 }
             }
-            /*
+            */
+            
             try
             {
                 BackgroundWorkerService.Instance.Start();
@@ -235,7 +237,7 @@ namespace VDF3_Solution3
                     FrMain.Instance.UIUpdatebtn();
                 }
             } 
-            */
+            
         }
 
         private void btnDisconnect_Click(object sender, EventArgs e)

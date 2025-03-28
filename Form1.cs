@@ -176,7 +176,7 @@ namespace VDF3_Solution3
 
         private void btnVision_Click(object sender, EventArgs e)
         {
-            if (SystemMode.ProcessStep == 1)//(SystemMode.ProcessStep == 2 || SystemMode.ProcessStep == 4)
+            if (SystemMode.ProcessStep >= 1)//(SystemMode.ProcessStep == 2 || SystemMode.ProcessStep == 4)
             {
                 lblTitleChildForm.Text = "Vision/Starting Up";
                 ActivateButton(sender, RGBColors.color1);
@@ -202,7 +202,7 @@ namespace VDF3_Solution3
 
         private void btnRobot_Click(object sender, EventArgs e)
         {
-            if (SystemMode.ProcessStep == 1)//(SystemMode.ProcessStep >= 3)
+            if (SystemMode.ProcessStep >= 1)//(SystemMode.ProcessStep >= 3)
             {
                 lblTitleChildForm.Text = "Robot";
                 ActivateButton(sender, RGBColors.color1);
@@ -228,7 +228,7 @@ namespace VDF3_Solution3
 
         private void btnRun_Click(object sender, EventArgs e)
         {
-            if (SystemMode.ProcessStep == 1)//(SystemMode.ProcessStep >= 4)
+            if (SystemMode.ProcessStep >= 1)//(SystemMode.ProcessStep >= 4)
             {
                 lblTitleChildForm.Text = "Run";
                 ActivateButton(sender, RGBColors.color1);

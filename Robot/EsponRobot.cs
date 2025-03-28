@@ -49,7 +49,7 @@ namespace VDF3_Solution3
         {
             // Ví dụ: startAddress là số địa chỉ thanh ghi (ví dụ "31")
             int address = int.Parse(startAddress);
-            double registers = ModbusClient.ConvertRegistersToFloat(_modbusClient.ReadInputRegisters(address, 2));
+            double registers = ModbusClient.ConvertRegistersToDouble(_modbusClient.ReadInputRegisters(address, 4));
 
             return registers;
         }

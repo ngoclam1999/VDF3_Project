@@ -49,7 +49,7 @@ public class ApiClient
 
             try
             {
-                HttpResponseMessage response = await client.PostAsync("http://192.168.0.5:8000/api/match-template/?threshold="+threshold.ToString(), content);
+                HttpResponseMessage response = await client.PostAsync("http://192.168.0.5:8000/api/match-template/?threshold="+threshold.ToString() + "&edge_base=false", content);
                 response.EnsureSuccessStatusCode();
                 string jsonResponse = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(jsonResponse);
